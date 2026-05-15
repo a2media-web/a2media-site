@@ -1,0 +1,382 @@
+.frame {
+  background: var(--a2-night-core);
+  padding: 56px 24px 96px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.frameInner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+.title em {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--a2-electric-purple);
+}
+.intro {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 auto 40px;
+  max-width: 580px;
+  line-height: 1.55;
+}
+
+/* ============ Concept 1 — Two Big Buttons ============ */
+.bigGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  text-align: left;
+  margin-bottom: 12px;
+}
+.bigCard {
+  position: relative;
+  padding: 36px 32px 28px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: border-color 200ms, background 200ms, transform 200ms, box-shadow 200ms;
+}
+.bigCard:hover {
+  border-color: rgba(90, 51, 255, 0.30);
+}
+.bigCardFeatured {
+  background:
+    linear-gradient(180deg, rgba(90, 51, 255, 0.10) 0%, rgba(90, 51, 255, 0.02) 100%),
+    var(--a2-night-core);
+  border-color: var(--a2-electric-purple);
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.18),
+    0 18px 50px rgba(90, 51, 255, 0.22),
+    0 0 60px rgba(143, 69, 238, 0.15);
+}
+.bigLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 14px;
+}
+.bigCardFeatured .bigLabel { color: var(--a2-electric-neon); }
+.bigNumber {
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.bigSub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+}
+.bigSub b { color: var(--a2-white); font-weight: 700; }
+.bigDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 20px 0 14px;
+}
+.bigPlain {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+.bigCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-top: 18px;
+  color: var(--a2-white);
+  background: var(--a2-electric-purple);
+  box-shadow: 0 8px 24px rgba(90, 51, 255, 0.35);
+}
+.bigIncluded {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+}
+.bigIncluded .plus { color: var(--a2-white); font-size: 18px; line-height: 1; }
+
+/* ============ Concept 2 — Math one-liner ============ */
+.mathTabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+  margin-bottom: 28px;
+}
+.mathTab {
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.mathTabActive {
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+}
+.equation {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.eqNum {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.eqOp {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: -0.02em;
+}
+.eqEquals {
+  color: var(--a2-electric-purple);
+  font-weight: 800;
+}
+.eqResult {
+  font-size: clamp(52px, 7vw, 88px);
+  font-weight: 800;
+  color: var(--a2-electric-neon);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.eqLabels {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.eqLabels .total { color: var(--a2-electric-neon); }
+.mathCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 20px;
+  padding: 40px 32px 32px;
+}
+.mathDesc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 18px auto 0;
+  max-width: 540px;
+}
+.mathDesc b { color: var(--a2-white); font-weight: 700; }
+.mathCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 24px;
+  color: var(--a2-white);
+  background: var(--a2-electric-purple);
+  box-shadow: 0 8px 24px rgba(90, 51, 255, 0.40);
+}
+
+/* ============ Concept 3 — Timeline ============ */
+.tlCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 20px;
+  padding: 32px;
+  text-align: left;
+}
+.tlTabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+.tlTab {
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.tlTabActive { background: var(--a2-electric-purple); color: var(--a2-white); }
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  margin-bottom: 24px;
+}
+.tlNode {
+  position: relative;
+  padding-top: 36px;
+  text-align: center;
+}
+.tlNode::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--a2-night-core);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.tlNodeActive::before {
+  background: var(--a2-electric-purple);
+  border-color: var(--a2-white);
+  box-shadow: 0 0 0 6px rgba(90, 51, 255, 0.25);
+}
+.tlNodeFinal::before {
+  background: var(--a2-electric-neon);
+  border-color: var(--a2-white);
+  box-shadow: 0 0 0 6px rgba(102, 247, 142, 0.25);
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 16.6%;
+  right: 16.6%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--a2-electric-purple) 0%, var(--a2-electric-purple) 50%, var(--a2-electric-neon) 100%);
+  z-index: 1;
+}
+.tlWhen {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
+}
+.tlEvent {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin-bottom: 4px;
+}
+.tlPay {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+.tlNodeFinal .tlPay { color: var(--a2-electric-neon); }
+.tlPay small {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0;
+  margin-top: 4px;
+}
+.tlBottom {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.tlBottomText {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+.tlBottomText b { color: var(--a2-white); font-weight: 700; }
+.tlCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--a2-white);
+  background: var(--a2-electric-purple);
+  box-shadow: 0 8px 24px rgba(90, 51, 255, 0.35);
+  white-space: nowrap;
+}
+.tlIncluded {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-between;
+}
+.tlIncluded .plus { color: var(--a2-white); font-size: 18px; line-height: 1; }
+
+@media (max-width: 800px) {
+  .bigGrid { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr; gap: 14px; }
+  .timeline::before { display: none; }
+  .tlNode { padding-top: 0; text-align: left; }
+  .tlNode::before { display: none; }
+  .tlBottom { flex-direction: column; align-items: flex-start; }
+}

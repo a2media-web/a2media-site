@@ -1,0 +1,359 @@
+.frame {
+  background: var(--a2-night-core);
+  padding: 56px 24px 96px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+.frameInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+.intro {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 auto 56px;
+  max-width: 640px;
+  line-height: 1.55;
+}
+
+/* ============ Variant 1 — Magazine Pull-Quote ============ */
+.pullQuote {
+  text-align: center;
+  padding: 24px 0;
+}
+.pullQuoteMark {
+  font-family: var(--a2-display);
+  font-size: clamp(72px, 12vw, 160px);
+  line-height: 0.6;
+  color: var(--a2-electric-purple);
+  display: block;
+  margin-bottom: 12px;
+}
+.pullQuoteText {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(28px, 4vw, 56px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--a2-white);
+  margin: 0 auto;
+  max-width: 880px;
+}
+.pullQuoteText em {
+  color: var(--a2-electric-purple);
+  font-style: italic;
+}
+.pullQuoteAttr {
+  margin-top: 28px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ============ Variant 2 — Signed Promise ============ */
+.signedWrap {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 36px 32px;
+  text-align: left;
+  position: relative;
+}
+.signedWrap::before,
+.signedWrap::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.20), transparent);
+  transform: translateX(-50%);
+}
+.signedWrap::before { top: 0; }
+.signedWrap::after { bottom: 0; }
+.signedLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 16px;
+}
+.signedText {
+  font-size: clamp(20px, 2.6vw, 28px);
+  line-height: 1.4;
+  color: var(--a2-white);
+  margin: 0 0 28px;
+  font-weight: 500;
+}
+.signedText b { font-weight: 700; }
+.signedSigBlock {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+.signedSig {
+  font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+  font-size: 44px;
+  color: var(--a2-electric-neon);
+  line-height: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+  padding: 0 8px 4px;
+  transform: rotate(-3deg) translateX(-2px);
+}
+.signedSigMeta {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+.signedSigMeta b { color: var(--a2-white); font-weight: 700; display: block; }
+
+/* ============ Variant 3 — Official Seal ============ */
+.sealStage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.seal {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  flex-shrink: 0;
+}
+.sealSvg {
+  width: 100%;
+  height: 100%;
+}
+.sealCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--a2-electric-neon);
+}
+.sealShield { font-size: 38px; line-height: 1; }
+.sealCenterText {
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--a2-white);
+  text-align: center;
+}
+.sealPromise {
+  flex: 1;
+  min-width: 280px;
+  max-width: 540px;
+}
+.sealPromiseLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 10px;
+}
+.sealPromiseText {
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.35;
+  color: var(--a2-white);
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ============ Variant 4 — Marquee Ticker ============ */
+.tickerOuter {
+  margin: 0 -24px;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  background:
+    linear-gradient(180deg, rgba(90, 51, 255, 0.08) 0%, rgba(90, 51, 255, 0.0) 100%),
+    var(--a2-night-core);
+  padding: 22px 0;
+  position: relative;
+}
+.tickerOuter::before,
+.tickerOuter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+.tickerOuter::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--a2-night-core), transparent);
+}
+.tickerOuter::after {
+  right: 0;
+  background: linear-gradient(-90deg, var(--a2-night-core), transparent);
+}
+.tickerTrack {
+  display: flex;
+  width: max-content;
+  animation: tickerScroll 40s linear infinite;
+}
+.tickerItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  padding: 0 28px;
+  font-size: clamp(22px, 2.6vw, 32px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--a2-white);
+  white-space: nowrap;
+}
+.tickerItem em {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--a2-electric-purple);
+}
+.tickerStar {
+  color: var(--a2-electric-neon);
+  font-size: 22px;
+}
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tickerTrack { animation: none; }
+}
+
+/* ============ Variant 5 — Engine card with stamp ============ */
+.stampStage {
+  display: flex;
+  justify-content: center;
+}
+.stampCard {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background:
+    linear-gradient(180deg, rgba(90, 51, 255, 0.08) 0%, rgba(90, 51, 255, 0.02) 100%),
+    var(--a2-night-core);
+  border: 1px solid var(--a2-electric-purple);
+  border-radius: var(--a2-radius-lg);
+  padding: 36px;
+  text-align: left;
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.18),
+    0 24px 60px rgba(90, 51, 255, 0.28);
+}
+.stampBadge {
+  display: inline-block;
+  padding: 5px 12px;
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.stampName {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 12px;
+}
+.stampPrice {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--a2-white);
+  line-height: 1.1;
+}
+.stampPrice small {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+  margin-left: 6px;
+}
+.stampDesc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 14px 0 0;
+}
+.stampOverlay {
+  position: absolute;
+  top: 26px;
+  right: -28px;
+  width: 156px;
+  height: 156px;
+  transform: rotate(14deg);
+  pointer-events: none;
+  z-index: 2;
+}
+.stampOverlaySvg { width: 100%; height: 100%; }
+.stampOverlayLabel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--a2-electric-neon);
+}
+.stampOverlayLabel .top {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+}
+.stampOverlayLabel .mid {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+.stampOverlayLabel .bot {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: rgba(102, 247, 142, 0.7);
+}
+.stampFootnote {
+  margin-top: 32px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+  text-align: center;
+}
+.stampFootnote b { color: var(--a2-white); font-weight: 700; font-style: normal; }
+
+@media (max-width: 700px) {
+  .sealStage { flex-direction: column; text-align: center; }
+  .stampOverlay { right: 12px; top: 12px; width: 110px; height: 110px; }
+}

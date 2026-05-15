@@ -1,0 +1,139 @@
+.section {
+  background: var(--a2-night-core);
+  color: var(--a2-white);
+  padding: var(--a2-section-padding-y) 24px;
+}
+
+.inner {
+  max-width: var(--a2-max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+}
+.heading .accent {
+  color: var(--a2-electric-purple);
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 400;
+  display: block;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--a2-text-on-dark);
+  max-width: 720px;
+  margin: 0 auto 24px;
+}
+
+.bodyEmphasis {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--a2-white);
+  font-size: 22px;
+}
+
+.tGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 56px;
+  text-align: left;
+}
+
+.tCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--a2-radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tQuote {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--a2-white);
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.tAuthor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.tName {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--a2-white);
+}
+
+.tRole {
+  font-size: 12.5px;
+  color: var(--a2-white);
+  margin-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .tGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+  .section { padding-left: 16px; padding-right: 16px; }
+  .heading {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    text-wrap: balance;
+  }
+  .heading .accent {
+    display: inline;
+    margin-left: 0.25em;
+  }
+  .body {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 40ch;
+    text-wrap: balance;
+  }
+  .bodyEmphasis {
+    font-family: var(--a2-sans);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 12px;
+  }
+}

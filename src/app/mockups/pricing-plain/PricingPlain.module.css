@@ -1,0 +1,486 @@
+.frame {
+  background: var(--a2-night-core);
+  padding: 56px 24px 96px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.frameInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.notes {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 auto 40px;
+  max-width: 660px;
+  line-height: 1.55;
+}
+
+/* Shared card visuals */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  padding: 32px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.featured {
+  background:
+    linear-gradient(180deg, rgba(90, 51, 255, 0.08) 0%, rgba(90, 51, 255, 0.02) 100%),
+    var(--a2-night-core);
+  border: 1px solid var(--a2-electric-purple);
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.18),
+    0 18px 50px rgba(90, 51, 255, 0.22),
+    0 0 60px rgba(143, 69, 238, 0.15);
+}
+.badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin-bottom: 14px;
+}
+.badgeGreen { background: var(--a2-electric-neon); color: var(--a2-night-core); }
+.badgePurple { background: var(--a2-electric-purple); color: var(--a2-white); }
+.planName {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 18px;
+  align-self: stretch;
+}
+.ctaOutline {
+  background: transparent;
+  border: 2px solid var(--a2-electric-neon);
+  color: var(--a2-white);
+  box-shadow: 0 0 0 3px rgba(102, 247, 142, 0.15);
+}
+.ctaFilled {
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+  border: 0;
+  box-shadow: 0 8px 24px rgba(90, 51, 255, 0.40);
+}
+.included {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.included .plus { color: var(--a2-white); font-size: 18px; line-height: 1; }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 20px;
+  text-align: left;
+}
+
+/* ============ Variant A — Plain English totals ============ */
+.aPrice {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.aPrice small {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  margin-left: 6px;
+}
+.aPlain {
+  font-size: 15px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 14px 0 0;
+}
+.aPlain b { color: var(--a2-white); font-weight: 700; }
+.aOptionRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+.aOption {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.aOptionActive {
+  background: rgba(90, 51, 255, 0.16);
+  border-color: var(--a2-electric-purple);
+  box-shadow: 0 0 0 1px rgba(90, 51, 255, 0.45);
+}
+.aOptionLabel {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.aOptionActive .aOptionLabel { color: var(--a2-electric-purple); }
+.aOptionTotal {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.02em;
+  margin-top: 4px;
+  line-height: 1;
+}
+.aOptionRate {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 4px;
+}
+
+/* ============ Variant B — Itemized receipt ============ */
+.bReceipt {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-top: 8px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13.5px;
+}
+.bRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+.bRow b { color: var(--a2-white); font-weight: 700; }
+.bDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  margin: 8px 0;
+}
+.bTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 6px;
+}
+.bTotalLabel {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.bTotalAmount {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--a2-electric-neon);
+  letter-spacing: -0.02em;
+}
+.bTabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+.bTab {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  color: rgba(255, 255, 255, 0.65);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.bTabActive { background: var(--a2-electric-purple); color: var(--a2-white); }
+
+/* ============ Variant C — Single unified engagement card ============ */
+.cCardSolo {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--a2-electric-purple);
+  border-radius: 22px;
+  padding: 36px;
+  text-align: left;
+  max-width: 760px;
+  margin: 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.18),
+    0 24px 60px rgba(90, 51, 255, 0.22);
+}
+.cEyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 12px;
+}
+.cTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 24px;
+  letter-spacing: -0.02em;
+}
+.cPhase {
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+.cPhaseFeatured {
+  background: rgba(90, 51, 255, 0.10);
+  border-color: rgba(90, 51, 255, 0.35);
+}
+.cPhaseHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.cPhaseLabel {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.cPhaseFeatured .cPhaseLabel { color: var(--a2-electric-purple); }
+.cPhaseTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--a2-white);
+}
+.cPhasePrice {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.02em;
+}
+.cPhasePrice small {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.55);
+  margin-left: 4px;
+}
+.cPhaseDesc {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+.cPhaseToggle {
+  display: inline-flex;
+  gap: 4px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  margin-top: 10px;
+}
+.cPhaseToggle button {
+  padding: 5px 11px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.cPhaseToggle .cPhaseTabActive {
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+}
+.cTotalLine {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.cTotalLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.cTotalValue {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.02em;
+}
+
+/* ============ Variant D — Total cost first ============ */
+.dHero {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.dHeroBig {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.dHeroUnit {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+.dSub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 6px;
+}
+.dSub b { color: var(--a2-white); font-weight: 700; }
+.dBreakdown {
+  margin-top: 18px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+}
+.dBreakdownRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 4px 0;
+}
+.dBreakdownRow b { color: var(--a2-white); font-weight: 700; }
+.dToggle {
+  display: inline-flex;
+  gap: 4px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  margin-top: 14px;
+}
+.dToggle button {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.dToggleActive {
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+}
+
+/* ============ Variant E — Q&A plain copy ============ */
+.eQA {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.eRow {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 14px;
+  align-items: baseline;
+}
+.eRowLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  padding-top: 2px;
+}
+.eRowValue {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--a2-white);
+  font-weight: 600;
+}
+.eRowValue .muted { color: rgba(255, 255, 255, 0.6); font-weight: 500; }
+.eToggle {
+  display: inline-flex;
+  gap: 4px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+.eToggle button {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.eToggleActive { background: var(--a2-electric-purple); color: var(--a2-white); }
+
+@media (max-width: 900px) {
+  .grid2 { grid-template-columns: 1fr; }
+  .aOptionRow { grid-template-columns: 1fr; }
+  .eRow { grid-template-columns: 1fr; gap: 4px; }
+}

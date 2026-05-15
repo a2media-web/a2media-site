@@ -1,0 +1,64 @@
+.wrap {
+  position: relative;
+  height: 200vh;
+  background: var(--a2-clear-gray);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  text-align: center;
+  gap: 28px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.phrase {
+  display: block;
+  transition: opacity 360ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 360ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    filter 360ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    color 360ms ease;
+  opacity: 0.18;
+  color: rgba(13, 5, 54, 0.5);
+  filter: blur(0.4px);
+}
+
+.past {
+  opacity: 0.4;
+  color: rgba(13, 5, 54, 0.6);
+}
+
+.active {
+  opacity: 1;
+  color: var(--a2-night-core);
+  filter: blur(0);
+  transform: scale(1.02);
+}
+
+.phrase:last-child.active {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--a2-electric-purple);
+}
+
+.arrow {
+  color: var(--a2-electric-purple);
+  transition: opacity 240ms ease, transform 240ms ease;
+}

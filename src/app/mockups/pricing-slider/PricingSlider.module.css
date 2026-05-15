@@ -1,0 +1,316 @@
+.frame {
+  background: var(--a2-night-core);
+  padding: 56px 24px 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.frameInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.notes {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 auto 32px;
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+.card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(90, 51, 255, 0.35);
+  border-radius: 24px;
+  padding: 36px 36px 32px;
+  text-align: left;
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.18),
+    0 24px 60px rgba(90, 51, 255, 0.20),
+    0 0 80px rgba(143, 69, 238, 0.18);
+}
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-white);
+  background: var(--a2-electric-purple);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 18px;
+}
+.planName {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--a2-white);
+  margin: 0 0 20px;
+}
+
+/* ===== Shared price display ===== */
+.priceMain {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.priceUnit {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 6px;
+}
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.priceSub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 6px;
+}
+.priceSub b {
+  color: var(--a2-white);
+  font-weight: 700;
+}
+.discountBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--a2-electric-neon);
+  background: rgba(102, 247, 142, 0.10);
+  border: 1px solid rgba(102, 247, 142, 0.30);
+  border-radius: 999px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+.creditBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  background: rgba(90, 51, 255, 0.10);
+  border: 1px solid rgba(90, 51, 255, 0.30);
+  border-radius: 999px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+.priceBlock {
+  margin-bottom: 24px;
+}
+
+.desc {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 18px 0 0;
+}
+
+/* ============ Variant A — Snap Slider ============ */
+.aLabelRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 12px;
+}
+.aLabelRow b { color: var(--a2-white); }
+.aTrack {
+  position: relative;
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
+.aRail {
+  position: absolute;
+  inset: 16px 8px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+}
+.aFill {
+  position: absolute;
+  inset: 16px auto 16px 8px;
+  height: 4px;
+  background: var(--a2-electric-purple);
+  border-radius: 999px;
+  transition: right 220ms cubic-bezier(.4,0,.2,1);
+}
+.aStops {
+  position: absolute;
+  inset: 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aStop {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.40);
+  cursor: pointer;
+  transition: transform 200ms;
+}
+.aStopActive {
+  background: var(--a2-electric-purple);
+  border-color: var(--a2-white);
+  box-shadow: 0 0 0 6px rgba(90, 51, 255, 0.25);
+  width: 22px;
+  height: 22px;
+}
+.aTicks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 12px 0 0;
+}
+.aTickActive { color: var(--a2-white); }
+
+/* ============ Variant B — Pill Segments ============ */
+.bGroup {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+.bSeg {
+  position: relative;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  min-width: 90px;
+  line-height: 1.1;
+}
+.bSegSub {
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.bSegActive {
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+  box-shadow: 0 0 0 1px rgba(90, 51, 255, 0.6), 0 8px 24px rgba(90, 51, 255, 0.40);
+}
+.bSegActive .bSegSub { color: rgba(255, 255, 255, 0.85); }
+
+/* ============ Variant C — Card Selector ============ */
+.cGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.cTile {
+  position: relative;
+  padding: 14px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 14px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 180ms, background 180ms, transform 180ms;
+}
+.cTile:hover {
+  border-color: rgba(90, 51, 255, 0.30);
+  background: rgba(255, 255, 255, 0.06);
+}
+.cTileActive {
+  background: rgba(90, 51, 255, 0.15);
+  border-color: var(--a2-electric-purple);
+  box-shadow: 0 0 0 1px rgba(90, 51, 255, 0.5), 0 12px 32px rgba(90, 51, 255, 0.30);
+}
+.cTileLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 4px;
+}
+.cTileActive .cTileLabel { color: var(--a2-electric-purple); }
+.cTileMonthly {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.cTileMonthlyUnit {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+}
+.cTileFlag {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 6px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: rgba(102, 247, 142, 0.10);
+  border: 1px solid rgba(102, 247, 142, 0.30);
+  color: var(--a2-electric-neon);
+}
+.cTileFlagCredit {
+  background: rgba(90, 51, 255, 0.12);
+  border-color: rgba(90, 51, 255, 0.30);
+  color: var(--a2-electric-purple);
+}
+.cTileFlagPlaceholder {
+  visibility: hidden;
+}

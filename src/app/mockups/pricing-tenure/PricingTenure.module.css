@@ -1,0 +1,299 @@
+.frame {
+  background: var(--a2-night-core);
+  padding: 56px 24px 96px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.frameInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.notes {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 auto 40px;
+  max-width: 580px;
+  line-height: 1.5;
+}
+
+/* Card wrapper shared */
+.card {
+  position: relative;
+  max-width: 540px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(90, 51, 255, 0.45);
+  border-radius: 24px;
+  padding: 32px;
+  text-align: left;
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.20),
+    0 24px 60px rgba(90, 51, 255, 0.22),
+    0 0 80px rgba(143, 69, 238, 0.18);
+}
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-white);
+  background: var(--a2-electric-purple);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 16px;
+}
+.planName {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--a2-white);
+  margin: 0 0 14px;
+}
+.priceMain {
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  transition: color 220ms ease;
+}
+.priceUnit {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 6px;
+}
+.priceFoot {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+.priceFoot b { color: var(--a2-white); font-weight: 700; }
+
+/* Slider block shared */
+.sliderBlock {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sliderHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 14px;
+}
+.sliderHead b { color: var(--a2-white); }
+
+/* Shared snap track */
+.track {
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.rail {
+  position: absolute;
+  inset: 18px 8px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+}
+.fill {
+  position: absolute;
+  inset: 18px auto 18px 8px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--a2-electric-neon) 0%, var(--a2-electric-purple) 100%);
+  border-radius: 999px;
+  transition: right 240ms cubic-bezier(.4,0,.2,1);
+}
+.stops {
+  position: absolute;
+  inset: 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.stop {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.40);
+  cursor: pointer;
+  transition: transform 200ms;
+}
+.stopActive {
+  background: var(--a2-electric-purple);
+  border-color: var(--a2-white);
+  box-shadow: 0 0 0 6px rgba(90, 51, 255, 0.25);
+  width: 22px;
+  height: 22px;
+}
+.ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 12px 0 0;
+}
+.tickActive { color: var(--a2-white); }
+
+/* ===== Variant A — Reveal Below ===== */
+.aReveal {
+  margin-top: 14px;
+  padding: 14px 16px;
+  background: rgba(90, 51, 255, 0.10);
+  border: 1px solid rgba(90, 51, 255, 0.30);
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.aRevealRate {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.02em;
+}
+.aRevealRate small {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 4px;
+}
+.aRevealLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+}
+
+/* ===== Variant B — Dynamic Hero ===== */
+.bPriceWrap {
+  position: relative;
+}
+.bPriceMain {
+  display: inline-block;
+  transition: transform 240ms ease, opacity 240ms ease;
+}
+.bSavingsRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+.bSavings {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--a2-electric-neon);
+  background: rgba(102, 247, 142, 0.10);
+  border: 1px solid rgba(102, 247, 142, 0.30);
+  border-radius: 999px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+}
+.bSavingsLine {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.bSavingsLine b { color: var(--a2-white); font-weight: 700; }
+
+/* ===== Variant C — Inline Stop Labels ===== */
+.cTrack {
+  position: relative;
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+.cRail {
+  position: absolute;
+  inset: 34px 8px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+}
+.cFill {
+  position: absolute;
+  inset: 34px auto 34px 8px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--a2-electric-neon) 0%, var(--a2-electric-purple) 100%);
+  border-radius: 999px;
+  transition: right 240ms cubic-bezier(.4,0,.2,1);
+}
+.cStops {
+  position: absolute;
+  inset: 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cStop {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+.cStopRate {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: -0.01em;
+  transition: color 200ms;
+}
+.cStopActive .cStopRate { color: var(--a2-white); font-size: 16px; }
+.cStopDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.40);
+  transition: all 200ms;
+}
+.cStopActive .cStopDot {
+  background: var(--a2-electric-purple);
+  border-color: var(--a2-white);
+  box-shadow: 0 0 0 6px rgba(90, 51, 255, 0.25);
+  width: 22px;
+  height: 22px;
+}
+.cStopLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 6px;
+}
+.cStopActive .cStopLabel { color: var(--a2-white); font-weight: 700; }

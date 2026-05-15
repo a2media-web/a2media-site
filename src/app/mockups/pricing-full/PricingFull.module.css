@@ -1,0 +1,332 @@
+.frame {
+  background: var(--a2-night-core);
+  padding: 48px 24px 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.frameInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.notes {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 auto 40px;
+  max-width: 580px;
+  line-height: 1.5;
+}
+
+/* Shared card visuals */
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 24px;
+  padding: 32px;
+  text-align: left;
+}
+.card.featured {
+  border-color: rgba(90, 51, 255, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.20),
+    0 24px 60px rgba(90, 51, 255, 0.22),
+    0 0 80px rgba(143, 69, 238, 0.18);
+}
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 16px;
+}
+.badgeGreen {
+  color: var(--a2-night-core);
+  background: var(--a2-electric-neon);
+}
+.badgePurple {
+  color: var(--a2-white);
+  background: var(--a2-electric-purple);
+}
+.planName {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--a2-white);
+  margin: 0 0 14px;
+}
+.priceMain {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.priceUnit {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 6px;
+}
+.priceFoot {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 10px;
+}
+.priceFoot b {
+  color: var(--a2-white);
+  font-weight: 700;
+}
+.priceFoot .rec {
+  color: var(--a2-electric-neon);
+}
+.desc {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 18px 0 0;
+}
+.desc .accent {
+  color: var(--a2-electric-neon);
+}
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 20px;
+}
+.ctaOutline {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  color: var(--a2-white);
+}
+.ctaFilled {
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+  box-shadow: 0 8px 24px rgba(90, 51, 255, 0.40);
+}
+
+/* ===== Variant A — Two cards + Expansion strip below ===== */
+.aGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: stretch;
+  text-align: left;
+}
+.aExpansion {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  text-align: left;
+}
+.aExpansionLabel {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 10px;
+}
+.aExpansionTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 14px;
+}
+.aExpansionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.aExpansionChip {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--a2-white);
+  background: rgba(90, 51, 255, 0.12);
+  border: 1px solid rgba(90, 51, 255, 0.35);
+  border-radius: 999px;
+  padding: 8px 14px;
+}
+.aExpansionFoot {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 14px;
+}
+
+@media (max-width: 800px) {
+  .aGrid { grid-template-columns: 1fr; }
+}
+
+/* ===== Variant B — Engine-led, Accelerator side + nested expansion ===== */
+.bGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+  text-align: left;
+}
+.bEngineCard {
+  display: flex;
+  flex-direction: column;
+}
+.bNested {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.bNestedLabel {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 8px;
+}
+.bNestedTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 12px;
+}
+.bNestedRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.bNestedChip {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--a2-white);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 7px 12px;
+}
+.bNestedFoot {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .bGrid { grid-template-columns: 1fr; }
+}
+
+/* ===== Variant C — Vertical 3-step journey ===== */
+.cStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+.cStep {
+  position: relative;
+  padding: 28px 32px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 76px 1fr auto;
+  gap: 22px;
+  align-items: center;
+}
+.cStep.featured {
+  border-color: rgba(90, 51, 255, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.20),
+    0 18px 60px rgba(90, 51, 255, 0.22);
+}
+.cNum {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--a2-electric-purple);
+  line-height: 1;
+}
+.cBody h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 4px;
+}
+.cBody .cStepDesc {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.5;
+  margin: 0;
+}
+.cBody .cStepDesc b { color: var(--a2-white); font-weight: 700; }
+.cBody .cChips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.cBody .cChip {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--a2-white);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 5px 10px;
+}
+.cPrice {
+  text-align: right;
+}
+.cPriceMain {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.cPriceMain small {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  display: block;
+  margin-top: 4px;
+}
+.cPriceWord {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  font-style: italic;
+}
+
+@media (max-width: 800px) {
+  .cStep {
+    grid-template-columns: 56px 1fr;
+    gap: 14px;
+    padding: 22px 22px 22px 20px;
+  }
+  .cNum { font-size: 28px; }
+  .cPrice { grid-column: 2; text-align: left; }
+}

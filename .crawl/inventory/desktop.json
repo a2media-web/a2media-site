@@ -1,0 +1,299 @@
+{
+  "assets": [
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/69bb4fea9bbb31477a24dbde_A2%20Media-Logo%20Lockup-Black-p-500.png",
+      "alt": "",
+      "srcset": "https://cdn.prod.website-files.com/64bfb907363259218e796320/69bb4fea9bbb31477a24dbde_A2%20Media-Logo%20Lockup-Black-p-500.png 500w, https://cdn.prod.website-files.com/64bfb907363259218e796320/69bb4fea9bbb31477a24dbde_A2%20Media-Logo%20Lockup-Black-p-800.png 800w, https://cdn.prod.website-files.com/64bfb907363259218e796320/69bb4fea9bbb31477a24dbde_A2%20Media-Logo%20Lockup-Black-p-1080.png 1080w, https://cdn.prod.website-files.com/64bfb907363259218e796320/69bb4fea9bbb31477a24dbde_A2%20Media-Logo%20Lockup-Black-p-1600.png 1600w, https://cdn.prod.website-files.com/64bfb907363259218e796320/69bb4fea9bbb31477a24dbde_A2%20Media-Logo%20Lockup-Black-p-2000.png 2000w, https://cdn.prod.website-files.com/64bfb907363259218e796320/69bb4fea9bbb31477a24dbde_A2%20Media-Logo%20Lockup-Black-p-2600.png 2600w, https://cdn.prod.website-files.com/64bfb907363259218e796320/69bb4fea9bbb31477a24dbde_A2%20Media-Logo%20Lockup-Black-p-3200.png 3200w, https://cdn.prod.website-files.com/64bfb907363259218e796320/69bb4fea9bbb31477a24dbde_A2%20Media-Logo%20Lockup-Black.png 8000w",
+      "path": "html.w-mod-js.w-mod-ix > body > div.navbar.w-nav > div.nav-container > a.brand.w-nav-brand > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/65e9e913df3011054a62442e_Okta_Logo_White_Medium.png",
+      "alt": "Okta",
+      "srcset": "",
+      "path": "div.header.w-embed > div.a2-hero-new > div.hero-inner > div.hero-logo-bar > div.hero-logo-grid > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/64cc83f851512b1224dc1573_SHOP_BIG.D-bc80c1f3.png",
+      "alt": "Shopify",
+      "srcset": "",
+      "path": "div.header.w-embed > div.a2-hero-new > div.hero-inner > div.hero-logo-bar > div.hero-logo-grid > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f1d717fe36ab2b51b4d2a4_chili%20piper.png",
+      "alt": "Chili Piper",
+      "srcset": "",
+      "path": "div.header.w-embed > div.a2-hero-new > div.hero-inner > div.hero-logo-bar > div.hero-logo-grid > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/66c5f4f2fcc977d035928abc_CB.svg",
+      "alt": "Crossbeam",
+      "srcset": "",
+      "path": "div.header.w-embed > div.a2-hero-new > div.hero-inner > div.hero-logo-bar > div.hero-logo-grid > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/66c5f6a4167c23e7116b4984_close.png",
+      "alt": "Close",
+      "srcset": "",
+      "path": "div.header.w-embed > div.a2-hero-new > div.hero-inner > div.hero-logo-bar > div.hero-logo-grid > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/68a31f15cb721ef5a93c8741_zobi1kSGMj5s0f0ZI8vLyfW2jw.jpeg",
+      "alt": "Tobi Oluwole",
+      "srcset": "",
+      "path": "div.a2-guide-a > div.inner-wide > div.t-grid > div.t-card > div.t-author > img.t-avatar"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/68ffe07880d0ae5c085ec9e1_1758139797919.png",
+      "alt": "Madeleine Work",
+      "srcset": "",
+      "path": "div.a2-guide-a > div.inner-wide > div.t-grid > div.t-card > div.t-author > img.t-avatar"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/699505f0ef9da222e04efd93_1741721282818.jpeg",
+      "alt": "Martin",
+      "srcset": "",
+      "path": "div.a2-guide-a > div.inner-wide > div.t-grid > div.t-card > div.t-author > img.t-avatar"
+    },
+    {
+      "tag": "video",
+      "url": "blob:https://www.a2media.ca/61c74dc5-e1b5-4d7f-b964-3262d9afeb72",
+      "alt": "",
+      "srcset": "",
+      "path": "video#wistia_simple_video_212"
+    },
+    {
+      "tag": "img",
+      "url": "https://embed-ssl.wistia.com/deliveries/1947ee5f5aa970bcb738af01ec09798c.webp?image_crop_resized=1280x720",
+      "alt": "Video Thumbnail",
+      "srcset": "https://embed-ssl.wistia.com/deliveries/1947ee5f5aa970bcb738af01ec09798c.webp?image_crop_resized=640x360 320w, https://embed-ssl.wistia.com/deliveries/1947ee5f5aa970bcb738af01ec09798c.webp?image_crop_resized=640x360 640w, https://embed-ssl.wistia.com/deliveries/1947ee5f5aa970bcb738af01ec09798c.webp?image_crop_resized=960x540 960w, https://embed-ssl.wistia.com/deliveries/1947ee5f5aa970bcb738af01ec09798c.webp?image_crop_resized=1280x720 1280w, https://embed-ssl.wistia.com/deliveries/1947ee5f5aa970bcb738af01ec09798c.webp?image_crop_resized=1280x720 1920w, https://embed-ssl.wistia.com/deliveries/1947ee5f5aa970bcb738af01ec09798c.webp?image_crop_resized=1280x720 3840w",
+      "path": "div#w-vulcan-v2-37 > div.w-vulcan--background.w-css-reset > div.w-css-reset > div > div.w-css-reset > img.w-css-reset"
+    },
+    {
+      "tag": "video",
+      "url": "blob:https://www.a2media.ca/9def1e33-5dd9-4527-9927-2adf5b779dea",
+      "alt": "",
+      "srcset": "",
+      "path": "video#wistia_simple_video_235"
+    },
+    {
+      "tag": "img",
+      "url": "https://embed-ssl.wistia.com/deliveries/b28891103db38be77b752b8b1b751b8f.webp?image_crop_resized=1920x1072",
+      "alt": "Video Thumbnail",
+      "srcset": "https://embed-ssl.wistia.com/deliveries/b28891103db38be77b752b8b1b751b8f.webp?image_crop_resized=640x357 320w, https://embed-ssl.wistia.com/deliveries/b28891103db38be77b752b8b1b751b8f.webp?image_crop_resized=640x357 640w, https://embed-ssl.wistia.com/deliveries/b28891103db38be77b752b8b1b751b8f.webp?image_crop_resized=960x536 960w, https://embed-ssl.wistia.com/deliveries/b28891103db38be77b752b8b1b751b8f.webp?image_crop_resized=1280x715 1280w, https://embed-ssl.wistia.com/deliveries/b28891103db38be77b752b8b1b751b8f.webp?image_crop_resized=1920x1072 1920w, https://embed-ssl.wistia.com/deliveries/b28891103db38be77b752b8b1b751b8f.webp?image_crop_resized=2096x1170 3840w",
+      "path": "div#w-vulcan-v2-122 > div.w-vulcan--background.w-css-reset > div.w-css-reset > div > div.w-css-reset > img.w-css-reset"
+    },
+    {
+      "tag": "video",
+      "url": "blob:https://www.a2media.ca/5b37f338-e3cf-48ed-a754-da58531f6e64",
+      "alt": "",
+      "srcset": "",
+      "path": "video#wistia_simple_video_287"
+    },
+    {
+      "tag": "img",
+      "url": "https://embed-ssl.wistia.com/deliveries/4a2bee14633e63ce6ec3418ca39101eeeb50cd7a.webp?image_crop_resized=1920x1080",
+      "alt": "Video Thumbnail",
+      "srcset": "https://embed-ssl.wistia.com/deliveries/4a2bee14633e63ce6ec3418ca39101eeeb50cd7a.webp?image_crop_resized=640x360 320w, https://embed-ssl.wistia.com/deliveries/4a2bee14633e63ce6ec3418ca39101eeeb50cd7a.webp?image_crop_resized=640x360 640w, https://embed-ssl.wistia.com/deliveries/4a2bee14633e63ce6ec3418ca39101eeeb50cd7a.webp?image_crop_resized=960x540 960w, https://embed-ssl.wistia.com/deliveries/4a2bee14633e63ce6ec3418ca39101eeeb50cd7a.webp?image_crop_resized=1280x720 1280w, https://embed-ssl.wistia.com/deliveries/4a2bee14633e63ce6ec3418ca39101eeeb50cd7a.webp?image_crop_resized=1920x1080 1920w, https://embed-ssl.wistia.com/deliveries/4a2bee14633e63ce6ec3418ca39101eeeb50cd7a.webp?image_crop_resized=1920x1080 3840w",
+      "path": "div#w-vulcan-v2-72 > div.w-vulcan--background.w-css-reset > div.w-css-reset > div > div.w-css-reset > img.w-css-reset"
+    },
+    {
+      "tag": "video",
+      "url": "blob:https://www.a2media.ca/17c9103c-4e28-41e8-abd1-4a78ef95068d",
+      "alt": "",
+      "srcset": "",
+      "path": "video#wistia_simple_video_261"
+    },
+    {
+      "tag": "img",
+      "url": "https://embed-ssl.wistia.com/deliveries/b48839a85b16ec9f5c92e0b8805c7587.webp?image_crop_resized=1920x1077",
+      "alt": "Video Thumbnail",
+      "srcset": "https://embed-ssl.wistia.com/deliveries/b48839a85b16ec9f5c92e0b8805c7587.webp?image_crop_resized=640x359 320w, https://embed-ssl.wistia.com/deliveries/b48839a85b16ec9f5c92e0b8805c7587.webp?image_crop_resized=640x359 640w, https://embed-ssl.wistia.com/deliveries/b48839a85b16ec9f5c92e0b8805c7587.webp?image_crop_resized=960x538 960w, https://embed-ssl.wistia.com/deliveries/b48839a85b16ec9f5c92e0b8805c7587.webp?image_crop_resized=1280x718 1280w, https://embed-ssl.wistia.com/deliveries/b48839a85b16ec9f5c92e0b8805c7587.webp?image_crop_resized=1920x1077 1920w, https://embed-ssl.wistia.com/deliveries/b48839a85b16ec9f5c92e0b8805c7587.webp?image_crop_resized=2054x1152 3840w",
+      "path": "div#w-vulcan-v2-144 > div.w-vulcan--background.w-css-reset > div.w-css-reset > div > div.w-css-reset > img.w-css-reset"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/685583659fd2cbacac97456d_will-smith-new-headshot-credit-lorenzo-agius_wide-e7290985cc97649f61eb4c28e84d6b272f69202d.jpg",
+      "alt": "Will Smith",
+      "srcset": "",
+      "path": "div.a2ed-wrapper > div.a2ed-inner > div.a2ed-grid > div.a2ed-card > div.a2ed-card-photo > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/685575c9a91573d1c350f372_Steven-Bartlett-Crop-3.png",
+      "alt": "Steven Bartlett",
+      "srcset": "",
+      "path": "div.a2ed-wrapper > div.a2ed-inner > div.a2ed-grid > div.a2ed-card > div.a2ed-card-photo > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/6855796f57835e2853587700_Ali_Abdaal_m3ulli.jpg",
+      "alt": "Ali Abdaal",
+      "srcset": "",
+      "path": "div.a2ed-wrapper > div.a2ed-inner > div.a2ed-grid > div.a2ed-card > div.a2ed-card-photo > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f4361b3999513c9390d815_1712899620456-p-130x130q80.jpeg",
+      "alt": "Greg Mares",
+      "srcset": "",
+      "path": "div.a2t-wrapper > div.a2t-inner > div.a2t-grid > div.a2t-card > div.a2t-author > img.a2t-avatar"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f4361bd1a25ac6d5020c62_1700705120887-p-130x130q80.jpeg",
+      "alt": "Andrew Jones",
+      "srcset": "",
+      "path": "div.a2t-wrapper > div.a2t-inner > div.a2t-grid > div.a2t-card > div.a2t-author > img.a2t-avatar"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f4361b24f74f27e5a2a996_1719406706007-p-130x130q80.jpeg",
+      "alt": "Shawnie Hamer",
+      "srcset": "",
+      "path": "div.a2t-wrapper > div.a2t-inner > div.a2t-grid > div.a2t-card > div.a2t-author > img.a2t-avatar"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/69921f28dfc62947225c4c99_1770923418055.png",
+      "alt": "Client",
+      "srcset": "",
+      "path": "div.code-embed-12.w-embed > div.a2-cta-yt > div.a2-cta-yt-inner > div.a2-cta-yt-avatars > div.a2-cta-yt-av > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/69921f286dce40d7485b4d3a_1767315543111.jpeg",
+      "alt": "Client",
+      "srcset": "",
+      "path": "div.code-embed-12.w-embed > div.a2-cta-yt > div.a2-cta-yt-inner > div.a2-cta-yt-avatars > div.a2-cta-yt-av > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/69921f287ead7017925ff94f_1735224274497.jpeg",
+      "alt": "Client",
+      "srcset": "",
+      "path": "div.code-embed-12.w-embed > div.a2-cta-yt > div.a2-cta-yt-inner > div.a2-cta-yt-avatars > div.a2-cta-yt-av > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/69921f28c84070bd03569d5d_1747749050965.jpeg",
+      "alt": "Client",
+      "srcset": "",
+      "path": "div.code-embed-12.w-embed > div.a2-cta-yt > div.a2-cta-yt-inner > div.a2-cta-yt-avatars > div.a2-cta-yt-av > img"
+    },
+    {
+      "tag": "img",
+      "url": "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f808904a74c88bfd9282f7_1730194988558.jpeg",
+      "alt": "",
+      "srcset": "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f808904a74c88bfd9282f7_1730194988558-p-500.jpeg 500w, https://cdn.prod.website-files.com/64bfb907363259218e796320/67f808904a74c88bfd9282f7_1730194988558.jpeg 800w",
+      "path": "html.w-mod-js.w-mod-ix > body > div.testimonial-card-three > div.testimonial-card-content > div.testimonial-info-four > img.testimonial-image-3.centered"
+    }
+  ],
+  "links": [
+    {
+      "href": "/",
+      "text": "",
+      "path": "html.w-mod-js.w-mod-ix > body > div.navbar.w-nav > div.nav-container > a.brand.w-nav-brand"
+    },
+    {
+      "href": "#our-process",
+      "text": "Our Process",
+      "path": "html.w-mod-js.w-mod-ix > body > div.navbar.w-nav > div.nav-container > nav.nav-menu.w-nav-menu > a.nav-links.w-nav-link"
+    },
+    {
+      "href": "#Studies",
+      "text": "Case Studies",
+      "path": "html.w-mod-js.w-mod-ix > body > div.navbar.w-nav > div.nav-container > nav.nav-menu.w-nav-menu > a.nav-links-copy.w-nav-link"
+    },
+    {
+      "href": "#Pricing",
+      "text": "Pricing",
+      "path": "html.w-mod-js.w-mod-ix > body > div.navbar.w-nav > div.nav-container > nav.nav-menu.w-nav-menu > a.nav-links.w-nav-link"
+    },
+    {
+      "href": "https://fast.wistia.com/embed/channel/fj6gynv9qi",
+      "text": "Our Portfolio",
+      "path": "html.w-mod-js.w-mod-ix > body > div.navbar.w-nav > div.nav-container > nav.nav-menu.w-nav-menu > a.nav-links-copy.w-nav-link"
+    },
+    {
+      "href": "https://9yqatx.short.gy/vpYuEX",
+      "text": "Our Swipe File",
+      "path": "html.w-mod-js.w-mod-ix > body > div.navbar.w-nav > div.nav-container > nav.nav-menu.w-nav-menu > a.nav-links-copy.w-nav-link"
+    },
+    {
+      "href": "#Pricing",
+      "text": "See if We're a Fit →",
+      "path": "html.w-mod-js.w-mod-ix > body > div.navbar.w-nav > div.nav-container > a.join-button-v1.margin-left-auto"
+    },
+    {
+      "href": "#pricing",
+      "text": "Pricing →",
+      "path": "div.container > div.header.w-embed > div.a2-hero-new > div.hero-inner > div.hero-buttons > a.btn-primary"
+    },
+    {
+      "href": "#work",
+      "text": "See The Videos",
+      "path": "div.container > div.header.w-embed > div.a2-hero-new > div.hero-inner > div.hero-buttons > a.btn-outline"
+    },
+    {
+      "href": "https://fast.wistia.com/embed/channel/fj6gynv9qi",
+      "text": "View Full Portfolio",
+      "path": "div#before-and-after > div.a2-video-hybrid > div.inner > div.cta-row > a"
+    },
+    {
+      "href": "https://www.a2media.ca/#Pricing",
+      "text": "Book a Discovery Call",
+      "path": "div#our-process > div.a2s-inner > div.a2s-cta > a.a2s-cta-btn"
+    },
+    {
+      "href": "https://9yqatx.short.gy/vQTine",
+      "text": "Book a Discovery Call",
+      "path": "div.code400.w-embed > div.a2-pricing > div.a2p-container > div.a2p-grid > div.a2p-card > a.a2p-cta.a2p-cta-outline"
+    },
+    {
+      "href": "https://9yqatx.short.gy/ZJGUin",
+      "text": "See if We're a Fit",
+      "path": "div.code400.w-embed > div.a2-pricing > div.a2p-container > div.a2p-grid > div.a2p-card.a2p-featured > a.a2p-cta.a2p-cta-filled"
+    },
+    {
+      "href": "https://9yqatx.short.gy/qeI5KF",
+      "text": "We Shoot Your Videos For You Pricing on Request Professional shoots anywhere in the world. Studio quality, on your turf.",
+      "path": "div.code400.w-embed > div.a2-pricing > div.a2p-container > div.a2p-projects > div.a2p-proj-grid > a.a2p-proj-card.a2p-proj-card-link"
+    },
+    {
+      "href": "https://9yqatx.short.gy/qeI5KF",
+      "text": "Choose-Your-Own Adventure Videos Pricing on Request Stop repeating yourself on sales calls. Interactive videos let prosp",
+      "path": "div.code400.w-embed > div.a2-pricing > div.a2p-container > div.a2p-projects > div.a2p-proj-grid > a.a2p-proj-card.a2p-proj-card-link"
+    },
+    {
+      "href": "https://9yqatx.short.gy/qeI5KF",
+      "text": "Talent Sourcing Pricing on Request Skip the casting calls and creator outreach. We handle talent end-to-end so your team",
+      "path": "div.code400.w-embed > div.a2-pricing > div.a2p-container > div.a2p-projects > div.a2p-proj-grid > a.a2p-proj-card.a2p-proj-card-link"
+    },
+    {
+      "href": "https://9YQatX.short.gy/2ZQANU",
+      "text": "Get The Guide",
+      "path": "div#a2StickyLead > div.a2-sticky-card > a.a2-sticky-btn"
+    },
+    {
+      "href": "https://cal.com/a2media/meeting",
+      "text": "Book a Discovery Call",
+      "path": "html.w-mod-js.w-mod-ix > body > div.code-embed-12.w-embed > div.a2-cta-yt > div.a2-cta-yt-inner > a.a2-cta-yt-btn"
+    }
+  ],
+  "stylesheets": [
+    "https://cdn.prod.website-files.com/64bfb907363259218e796320/css/a2media-new.webflow.shared.008941f8b.min.css",
+    "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css",
+    "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css",
+    "https://fonts.googleapis.com/css?family=DM+Sans:400,700&display=swap",
+    "https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap"
+  ]
+}

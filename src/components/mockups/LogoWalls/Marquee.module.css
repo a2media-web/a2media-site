@@ -1,0 +1,115 @@
+.section {
+  position: relative;
+  background: var(--a2-night-core);
+  padding: 96px 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(800px 320px at 20% 50%, rgba(90, 51, 255, 0.20) 0%, transparent 70%),
+    radial-gradient(700px 280px at 85% 50%, rgba(143, 69, 238, 0.16) 0%, transparent 70%);
+  filter: blur(2px);
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 24px;
+  margin-bottom: 56px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--a2-white);
+  margin: 0;
+}
+.title em {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--a2-electric-purple);
+}
+
+.viewport {
+  position: relative;
+  z-index: 1;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.row {
+  display: flex;
+  width: max-content;
+  gap: 64px;
+  animation: scroll var(--dur, 60s) linear infinite;
+  will-change: transform;
+}
+.row:hover { animation-play-state: paused; }
+
+.rowReverse {
+  animation-direction: reverse;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.cell {
+  flex: 0 0 auto;
+  height: 56px;
+  width: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.78;
+  transition: opacity var(--a2-dur-base);
+}
+.cell:hover { opacity: 1; }
+
+.cell img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.text {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--a2-white);
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .section { padding: 64px 0; }
+  .header { margin-bottom: 36px; }
+  .viewport { gap: 24px; }
+  .row { gap: 40px; animation-duration: 36s; }
+  .cell { height: 36px; width: 112px; }
+  .text { font-size: 16px; }
+}

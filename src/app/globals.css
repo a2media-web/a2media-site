@@ -1,0 +1,71 @@
+/* ────────────────────────────────────────────────────────────────────
+   A2 Media — design tokens + minimal reset.
+   Every section component pulls its colors / fonts from the variables
+   declared here. Change a token in one place and the whole site updates.
+   ──────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Brand palette — A2 Media Brand Design Guide (Mar 2026 rebrand). */
+  --a2-night-core: #0d0536;          /* deep dark purple — primary background */
+  --a2-night-deep: #07021f;          /* even deeper for layered glow effects */
+  --a2-electric-purple: #5a33ff;     /* primary brand accent */
+  --a2-electric-purple-soft: #8f45ee;/* alias to Flex Lilac for hover/soft states */
+  --a2-flex-lilac: #8f45ee;
+  --a2-aqua-teal: #28dfe8;
+  --a2-electric-neon: #66f78e;
+  --a2-clear-gray: #efefef;          /* the only light neutral in the brand */
+  --a2-cream: #efefef;               /* alias — legacy var name, mapped to Clear Gray */
+  --a2-white: #ffffff;
+  --a2-text-on-dark: rgba(255, 255, 255, 0.78);
+  --a2-text-on-light: rgba(13, 5, 54, 0.7);
+
+  /* Type tokens. */
+  --a2-sans: "Galano Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --a2-display: "Awesome Serif", Georgia, "Times New Roman", serif;
+
+  /* Layout tokens. */
+  --a2-max-width: 1200px;
+  --a2-section-padding-y: clamp(64px, 8vw, 120px);
+  --a2-radius: 14px;
+  --a2-radius-lg: 22px;
+  --a2-radius-pill: 999px;
+
+  /* Motion. */
+  --a2-ease-standard: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --a2-dur-base: 220ms;
+}
+
+/* Reset. */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--a2-night-core);
+  color: var(--a2-white);
+  font-family: var(--a2-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+img, video, svg { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-decoration: none; }
+
+button { font: inherit; color: inherit; cursor: pointer; }
+
+h1, h2, h3, h4, h5, h6, p { margin: 0; }
+
+/* Reduce-motion support. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

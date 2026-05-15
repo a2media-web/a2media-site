@@ -1,0 +1,102 @@
+.section {
+  position: relative;
+  background: var(--a2-clear-gray);
+  color: var(--a2-night-core);
+  padding: var(--a2-section-padding-y) 24px;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(640px, 80%);
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(90, 51, 255, 0.4) 50%,
+    transparent 100%
+  );
+}
+
+.inner {
+  position: relative;
+  max-width: var(--a2-max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 16px;
+}
+
+.heading {
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: var(--a2-night-core);
+}
+.heading span { display: block; }
+.heading .accent {
+  color: var(--a2-electric-purple);
+  font-style: italic;
+  font-family: var(--a2-display);
+  font-weight: 400;
+}
+
+.body {
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(13, 5, 54, 0.7);
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+
+.painRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: left;
+}
+
+.painItem {
+  background: var(--a2-white);
+  border: 1px solid rgba(13, 5, 54, 0.08);
+  border-radius: var(--a2-radius-lg);
+  padding: 28px;
+  box-shadow: 0 1px 2px rgba(13, 5, 54, 0.04);
+  transition: border-color var(--a2-dur-base), box-shadow var(--a2-dur-base),
+    transform var(--a2-dur-base);
+}
+.painItem:hover {
+  border-color: rgba(90, 51, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(90, 51, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+.painTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--a2-night-core);
+}
+
+.painDesc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(13, 5, 54, 0.7);
+}
+
+@media (max-width: 900px) {
+  .painRow { grid-template-columns: 1fr; }
+}

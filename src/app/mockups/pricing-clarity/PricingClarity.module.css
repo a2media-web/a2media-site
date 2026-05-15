@@ -1,0 +1,289 @@
+.frame {
+  background: var(--a2-night-core);
+  padding: 56px 24px 96px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.frameInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.notes {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 auto 40px;
+  max-width: 620px;
+  line-height: 1.5;
+}
+
+/* Intro sentence above cards (Variant A + B) */
+.intro {
+  text-align: center;
+  margin: 0 auto 28px;
+  max-width: 760px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+}
+.intro b { color: var(--a2-white); font-weight: 700; }
+.intro .accent {
+  color: var(--a2-electric-neon);
+  font-weight: 600;
+}
+
+/* Section heading variant (Variant C) */
+.sectionHead {
+  text-align: center;
+  margin: 0 auto 32px;
+  max-width: 720px;
+}
+.sectionHeadEyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 10px;
+}
+.sectionHeadTitle {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+.sectionHeadTitle em {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--a2-electric-purple);
+}
+.sectionHeadSub {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Grid variants */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 28px;
+  text-align: left;
+  align-items: start;
+}
+.grid3 {
+  display: grid;
+  grid-template-columns: 1fr 56px 1.3fr;
+  gap: 14px;
+  text-align: left;
+  align-items: stretch;
+}
+
+/* Card visuals (shared, mimics live styles) */
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 36px;
+  position: relative;
+}
+.featured {
+  background:
+    linear-gradient(180deg, rgba(90, 51, 255, 0.08) 0%, rgba(90, 51, 255, 0.02) 100%),
+    var(--a2-night-core);
+  border: 1px solid var(--a2-electric-purple);
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.18),
+    0 24px 60px rgba(90, 51, 255, 0.28),
+    0 0 80px rgba(90, 51, 255, 0.18);
+}
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  margin-bottom: 16px;
+}
+.badgeGreen { background: #166534; color: var(--a2-electric-neon); }
+.badgePurple { background: #581c87; color: #8f45ee; }
+.badgeBright {
+  background: var(--a2-electric-neon);
+  color: var(--a2-night-core);
+}
+.badgePurpleSolid {
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+}
+.planName {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--a2-white);
+  line-height: 1.3;
+}
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+.priceCrossed {
+  font-size: 22px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.40);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(255, 255, 255, 0.50);
+  letter-spacing: -0.02em;
+}
+.price {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--a2-white);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.price small {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 400;
+  margin-left: 6px;
+}
+.desc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 12px 0 18px;
+}
+.descAccent { color: var(--a2-electric-neon); }
+.descMuted {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  margin-top: 6px;
+}
+.cta {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ctaOutline {
+  background: transparent;
+  border: 2px solid var(--a2-electric-neon);
+  color: var(--a2-white);
+  box-shadow: 0 0 0 3px rgba(102, 247, 142, 0.15);
+}
+.ctaFilled {
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+  border: 0;
+  box-shadow: 0 8px 24px rgba(90, 51, 255, 0.35);
+}
+
+/* Connector (Variant B) */
+.connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.connectorLine {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(102, 247, 142, 0.0) 0%,
+    rgba(102, 247, 142, 0.55) 25%,
+    rgba(90, 51, 255, 0.55) 75%,
+    rgba(90, 51, 255, 0.0) 100%
+  );
+  transform: translateY(-50%);
+}
+.connectorPill {
+  position: relative;
+  z-index: 1;
+  background: var(--a2-night-core);
+  border: 1px solid rgba(143, 69, 238, 0.45);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-white);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.connectorPill .arrow {
+  color: var(--a2-electric-purple);
+  font-weight: 900;
+}
+
+/* Engine credit note (Variant C) */
+.creditNote {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: rgba(102, 247, 142, 0.08);
+  border: 1px solid rgba(102, 247, 142, 0.28);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--a2-electric-neon);
+}
+
+/* Tenure slider (cosmetic only here) */
+.tenureSlider {
+  margin: 4px 0 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.tenureTrack { position: relative; height: 76px; display: flex; align-items: center; }
+.tenureRail { position: absolute; inset: 36px 8px; height: 4px; background: rgba(255, 255, 255, 0.10); border-radius: 999px; }
+.tenureFill { position: absolute; inset: 36px auto 36px 8px; height: 4px; background: linear-gradient(90deg, var(--a2-electric-neon) 0%, var(--a2-electric-purple) 100%); border-radius: 999px; }
+.tenureStops { position: absolute; inset: 0 8px; display: flex; justify-content: space-between; align-items: center; }
+.tenureStop { display: flex; flex-direction: column; align-items: center; gap: 6px; background: transparent; border: 0; cursor: pointer; }
+.tenureStopRate { font-size: 14px; font-weight: 700; color: rgba(255, 255, 255, 0.55); }
+.tenureStopActive .tenureStopRate { color: var(--a2-white); font-size: 16px; }
+.tenureStopDot { width: 14px; height: 14px; border-radius: 50%; background: rgba(255, 255, 255, 0.18); border: 2px solid rgba(255, 255, 255, 0.40); }
+.tenureStopActive .tenureStopDot { background: var(--a2-electric-purple); border-color: var(--a2-white); box-shadow: 0 0 0 6px rgba(90, 51, 255, 0.25); width: 22px; height: 22px; }
+.tenureStopLabel { font-size: 11px; font-weight: 600; color: rgba(255, 255, 255, 0.5); margin-top: 4px; }
+.tenureStopActive .tenureStopLabel { color: var(--a2-white); font-weight: 700; }
+
+@media (max-width: 900px) {
+  .grid2, .grid3 { grid-template-columns: 1fr; }
+  .connector { display: none; }
+}

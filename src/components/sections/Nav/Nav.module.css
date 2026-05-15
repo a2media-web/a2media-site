@@ -1,0 +1,106 @@
+.shell {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 0 24px;
+}
+
+.bar {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+  max-width: 1180px;
+  padding: 14px 18px 14px 24px;
+  background: var(--a2-white);
+  border-radius: var(--a2-radius-pill);
+  box-shadow: 0 8px 24px rgba(13, 5, 54, 0.08);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: auto;
+  padding: 8px 4px;
+  min-height: 44px;
+}
+
+.brand img { height: 36px; width: auto; }
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu a {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--a2-night-core);
+  transition: color var(--a2-dur-base) var(--a2-ease-standard);
+}
+.menu a:hover { color: var(--a2-electric-purple); }
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 22px;
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: var(--a2-radius-pill);
+  transition: background var(--a2-dur-base), transform var(--a2-dur-base);
+}
+.cta:hover { background: var(--a2-electric-purple-soft); transform: translateY(-1px); }
+
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  padding: 12px;
+  border-radius: 10px;
+  min-width: 44px;
+  min-height: 44px;
+}
+.burger svg { width: 22px; height: 22px; stroke: var(--a2-night-core); }
+
+.overlay {
+  position: fixed;
+  inset: 70px 0 0 0;
+  background: rgba(13, 5, 54, 0.96);
+  z-index: 40;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--a2-dur-base) var(--a2-ease-standard);
+}
+.overlay.open { opacity: 1; pointer-events: auto; }
+.overlay a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 4px 0;
+  font-size: 22px;
+  color: var(--a2-white);
+  font-weight: 500;
+}
+.overlay a:hover { color: var(--a2-electric-purple); }
+
+@media (max-width: 920px) {
+  .menu, .cta { display: none; }
+  .burger { display: inline-flex; }
+}

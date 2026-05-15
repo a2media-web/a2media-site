@@ -1,0 +1,114 @@
+.section {
+  background: var(--a2-night-core);
+  color: var(--a2-white);
+  padding: clamp(56px, 7vw, 96px) 0;
+  overflow: hidden;
+}
+
+.head {
+  text-align: center;
+  padding: 0 24px 36px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.heading {
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--a2-white);
+}
+.heading span {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--a2-electric-purple);
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  margin: 14px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  will-change: transform;
+}
+.left  { animation: scrollL 50s linear infinite; }
+.right { animation: scrollR 60s linear infinite; }
+
+.row:hover .track { animation-play-state: paused; }
+
+@keyframes scrollL {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scrollR {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.tile {
+  position: relative;
+  flex-shrink: 0;
+  width: 280px;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--a2-radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 240ms ease, border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+.tile:hover {
+  transform: translateY(-4px);
+  border-color: rgba(90, 51, 255, 0.55);
+  box-shadow: 0 16px 40px rgba(90, 51, 255, 0.3);
+}
+
+.tile img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tileLabel {
+  position: absolute;
+  bottom: 10px;
+  left: 14px;
+  right: 14px;
+  z-index: 2;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--a2-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 5, 54, 0) 50%,
+    rgba(13, 5, 54, 0.85) 100%
+  );
+  pointer-events: none;
+}

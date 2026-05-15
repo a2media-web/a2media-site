@@ -1,0 +1,110 @@
+.section {
+  background: var(--a2-night-core);
+  padding: var(--a2-section-padding-y) 24px 0;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+.heading {
+  font-size: clamp(28px, 3.8vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  color: var(--a2-white);
+}
+.heading span {
+  color: var(--a2-electric-purple);
+}
+.sub {
+  font-size: 15px;
+  color: var(--a2-text-on-dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--a2-radius-lg);
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.02);
+}
+.card.featured {
+  border-color: rgba(90, 51, 255, 0.4);
+  background: rgba(90, 51, 255, 0.04);
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 24px;
+}
+.label.dim { color: rgba(255, 255, 255, 0.5); }
+.label.purple { color: var(--a2-electric-purple); }
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 0;
+  font-size: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.line:last-of-type { border-bottom: none; }
+.role { color: rgba(255, 255, 255, 0.7); }
+.cost { color: rgba(255, 255, 255, 0.85); font-weight: 500; }
+.cost.strike {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.total {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.totalLabel { font-size: 13px; color: rgba(255, 255, 255, 0.55); }
+.totalAmount { font-size: 32px; font-weight: 700; }
+.totalAmount.red { color: #ef4444; }
+.totalAmount.green { color: var(--a2-electric-neon); }
+
+.note {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
+.note .accent { color: var(--a2-electric-purple); font-weight: 600; }
+
+.savings {
+  text-align: center;
+  margin-top: 32px;
+  padding: 16px 24px;
+  border-radius: var(--a2-radius-pill);
+  border: 1px solid rgba(90, 51, 255, 0.18);
+  background: rgba(90, 51, 255, 0.04);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.savings strong { color: var(--a2-electric-purple); font-weight: 600; }
+
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+  .heading { font-size: 26px; }
+  .totalAmount { font-size: 26px; }
+}

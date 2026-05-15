@@ -1,0 +1,44 @@
+{
+  "name": "a2media-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "crawl": "node scripts/crawl-production.mjs",
+    "transform": "node scripts/transform-production.mjs",
+    "review": "node scripts/review.mjs",
+    "review:report": "node scripts/generate-final-report.mjs",
+    "snapshot": "node scripts/build-snapshot.mjs",
+    "integrate": "node scripts/integrate-snapshot.mjs",
+    "brand-review": "node scripts/brand-review.mjs",
+    "publish-now": "node scripts/publish-now.mjs",
+    "drive-auth": "node scripts/drive-oauth-setup.mjs",
+    "blog:generate": "curl -s -H \"Authorization: Bearer $(grep -E '^CRON_SECRET' .env.production | cut -d'\\\"' -f2)\" https://a2media.ca/api/cron/generate | jq"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.96.0",
+    "@octokit/rest": "^22.0.1",
+    "googleapis": "^171.4.0",
+    "gsap": "^3.14.2",
+    "next": "16.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "cheerio": "^1.2.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "pixelmatch": "^7.2.0",
+    "playwright": "^1.59.1",
+    "pngjs": "^7.0.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

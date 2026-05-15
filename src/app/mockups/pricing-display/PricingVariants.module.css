@@ -1,0 +1,523 @@
+.frame {
+  background: var(--a2-night-core);
+  padding: 56px 24px 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.frameInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.notes {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 auto 32px;
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+.card {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(90, 51, 255, 0.35);
+  border-radius: 24px;
+  padding: 36px 36px 32px;
+  text-align: left;
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.18),
+    0 24px 60px rgba(90, 51, 255, 0.20),
+    0 0 80px rgba(143, 69, 238, 0.18);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-white);
+  background: var(--a2-electric-purple);
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin-bottom: 18px;
+}
+
+.planName {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--a2-white);
+  margin: 0 0 18px;
+}
+
+.desc {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 18px 0 0;
+}
+
+/* ============ A — Big Monthly Hero ============ */
+.aPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.aBig {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.aUnit {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+.aFoot {
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 10px;
+}
+.aFoot strong {
+  color: var(--a2-white);
+  font-weight: 700;
+}
+
+/* ============ B — Stacked Equal Weight ============ */
+.bRow {
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+}
+.bCol {
+  flex: 1;
+}
+.bColLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 6px;
+}
+.bColPrice {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.bColSub {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 6px;
+}
+.bDiv {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+.bHighlight .bColPrice { color: var(--a2-electric-purple); }
+.bHighlight .bColLabel { color: var(--a2-electric-purple); }
+
+/* ============ C — Toggle ============ */
+.cTabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.cTab {
+  padding: 7px 14px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+}
+.cTabActive {
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+}
+.cPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.cBig {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.cUnit {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+.cFoot {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 8px;
+}
+
+/* ============ D — Math Breakdown ============ */
+.dPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.dBig {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.dUnit {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+.dMath {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  width: fit-content;
+}
+.dMath b {
+  color: var(--a2-white);
+  font-weight: 700;
+}
+.dMath .equals {
+  color: var(--a2-electric-purple);
+  font-weight: 700;
+}
+
+/* ============ E — Anchored Comparison ============ */
+.ePrice {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.eBig {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.eUnit {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+.eAnchor {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 8px 14px;
+  background: rgba(102, 247, 142, 0.10);
+  border: 1px solid rgba(102, 247, 142, 0.30);
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--a2-electric-neon);
+}
+.eAnchor::before {
+  content: "↓";
+  font-weight: 800;
+}
+.eFoot {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
+}
+
+/* ============ F — Receipt / Invoice ============ */
+.fReceipt {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.20);
+  border-radius: 14px;
+  padding: 20px 22px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.fHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.14);
+}
+.fRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 6px 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+.fRow b { color: var(--a2-white); font-weight: 700; }
+.fTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 14px;
+  margin-top: 10px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.20);
+}
+.fTotalLabel {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+.fTotalNum {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--a2-electric-purple);
+  letter-spacing: -0.02em;
+}
+
+/* ============ G — Cost-per-Video ============ */
+.gPriceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.gBig {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.gUnit {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+}
+.gBreakdown {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.gChip {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--a2-white);
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+}
+.gChip strong { color: var(--a2-electric-purple); font-weight: 700; }
+
+/* ============ H — Cost of Inaction ============ */
+.hWrap {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+.hCol {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+.hColBad {
+  background: rgba(255, 255, 255, 0.02);
+}
+.hColGood {
+  background: rgba(90, 51, 255, 0.10);
+  border-color: rgba(90, 51, 255, 0.35);
+}
+.hLabel {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 8px;
+}
+.hColGood .hLabel { color: var(--a2-electric-purple); }
+.hLine {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--a2-white);
+  font-weight: 600;
+}
+.hVs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.5);
+}
+.hFoot {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 14px;
+  text-align: center;
+}
+.hFoot b {
+  color: var(--a2-white);
+  font-weight: 700;
+}
+
+/* ============ I — Slider Calculator ============ */
+.iBig {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.iSub {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 4px;
+  margin-bottom: 18px;
+}
+.iSliderLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 8px;
+}
+.iSlider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.10);
+  outline: none;
+}
+.iSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--a2-electric-purple);
+  cursor: pointer;
+  box-shadow: 0 0 0 4px rgba(90, 51, 255, 0.25);
+}
+.iSlider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--a2-electric-purple);
+  cursor: pointer;
+  border: 0;
+}
+.iTicks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* ============ J — 6-Month Timeline ============ */
+.jBig {
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.jSub {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 16px;
+}
+.jTimeline {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.jCell {
+  position: relative;
+  padding: 10px 6px;
+  background: rgba(90, 51, 255, 0.12);
+  border: 1px solid rgba(90, 51, 255, 0.30);
+  border-radius: 8px;
+  text-align: center;
+}
+.jMonth {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 4px;
+}
+.jAmt {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--a2-white);
+}
+.jFoot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.jFoot b {
+  color: var(--a2-white);
+  font-weight: 700;
+}

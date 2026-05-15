@@ -1,0 +1,345 @@
+.frame {
+  background: var(--a2-night-core);
+  padding: 56px 24px 96px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.frameInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+.notes {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 auto 48px;
+  max-width: 580px;
+  line-height: 1.5;
+}
+
+/* ===== Shared card visuals ===== */
+.duo {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+  text-align: left;
+}
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 24px;
+  padding: 28px;
+  z-index: 2;
+}
+.cardFeatured {
+  border-color: rgba(90, 51, 255, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(90, 51, 255, 0.20),
+    0 24px 60px rgba(90, 51, 255, 0.22),
+    0 0 80px rgba(143, 69, 238, 0.18);
+}
+.badge {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin-bottom: 14px;
+}
+.badgeGreen { color: var(--a2-night-core); background: var(--a2-electric-neon); }
+.badgePurple { color: var(--a2-white); background: var(--a2-electric-purple); }
+.planName {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--a2-white);
+  margin: 0 0 12px;
+}
+.priceMain {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--a2-white);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.priceUnit {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 5px;
+}
+.priceFoot {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+}
+.priceFoot b { color: var(--a2-white); font-weight: 700; }
+.desc {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 14px 0 0;
+}
+.desc .accent { color: var(--a2-electric-neon); }
+
+/* ===== Shared connector slot ===== */
+.slot {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============ Variant A — Credit Token Flight ============ */
+.aSlot {
+  overflow: visible;
+}
+.aTrack {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aTrack::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(102, 247, 142, 0.0) 0%,
+    rgba(102, 247, 142, 0.55) 10%,
+    rgba(90, 51, 255, 0.55) 90%,
+    rgba(90, 51, 255, 0.0) 100%
+  );
+  transform: translateY(-50%);
+}
+.aTrack::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(143, 69, 238, 0.55) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(8px);
+  animation: aGlowPulse 3.6s ease-in-out infinite;
+}
+@keyframes aGlowPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.aToken {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--a2-white);
+  background: rgba(13, 5, 54, 0.85);
+  border: 1px solid rgba(102, 247, 142, 0.45);
+  border-radius: 999px;
+  padding: 6px 12px;
+  box-shadow:
+    0 0 0 1px rgba(102, 247, 142, 0.20),
+    0 0 24px rgba(102, 247, 142, 0.35);
+  animation: aTokenFly 3.6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  white-space: nowrap;
+  z-index: 3;
+}
+.aToken::before {
+  content: "+";
+  color: var(--a2-electric-neon);
+  font-weight: 900;
+  font-size: 13px;
+}
+@keyframes aTokenFly {
+  0%   { left: -8%; opacity: 0; transform: translate(0, -50%) scale(0.85); }
+  12%  { opacity: 1; transform: translate(0, -50%) scale(1); }
+  72%  { opacity: 1; transform: translate(0, -50%) scale(1); }
+  88%  { opacity: 0; transform: translate(0, -50%) scale(0.85); }
+  100% { left: 108%; opacity: 0; transform: translate(-100%, -50%) scale(0.85); }
+}
+
+/* ============ Variant B — Particle Stream ============ */
+.bSlot { overflow: visible; }
+.bRail {
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(102, 247, 142, 0.0) 0%,
+    rgba(102, 247, 142, 0.40) 12%,
+    rgba(90, 51, 255, 0.55) 50%,
+    rgba(143, 69, 238, 0.40) 88%,
+    rgba(143, 69, 238, 0.0) 100%
+  );
+  transform: translateY(-50%);
+  filter: blur(0.5px);
+}
+.bParticle {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--a2-electric-purple);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.3),
+    0 0 16px rgba(90, 51, 255, 0.75);
+  transform: translate(0, -50%);
+  animation: bParticleFly 2.6s linear infinite;
+}
+.bParticle.bP1 { animation-delay: 0s; background: var(--a2-electric-neon); box-shadow: 0 0 0 1px rgba(255,255,255,0.3), 0 0 14px rgba(102, 247, 142, 0.75); }
+.bParticle.bP2 { animation-delay: 0.65s; }
+.bParticle.bP3 { animation-delay: 1.3s; background: var(--a2-flex-lilac, #8F45EE); box-shadow: 0 0 0 1px rgba(255,255,255,0.3), 0 0 16px rgba(143, 69, 238, 0.7); }
+.bParticle.bP4 { animation-delay: 1.95s; }
+@keyframes bParticleFly {
+  0%   { left: -2%; opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { left: 102%; opacity: 0; }
+}
+.bLabel {
+  position: absolute;
+  top: calc(50% + 18px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+}
+
+/* ============ Variant C — Synced Bridge ============ */
+.cSlot { overflow: visible; }
+.cBridge {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.cBridgeLine {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cBridgeLine::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(102, 247, 142, 0.40) 0%,
+    rgba(90, 51, 255, 0.60) 50%,
+    rgba(143, 69, 238, 0.40) 100%
+  );
+  transform: translateY(-50%);
+}
+.cDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.cDotLeft {
+  left: -5px;
+  background: var(--a2-electric-neon);
+  box-shadow: 0 0 0 6px rgba(102, 247, 142, 0.16), 0 0 18px rgba(102, 247, 142, 0.55);
+  animation: cPulse 2.4s ease-in-out infinite;
+}
+.cDotRight {
+  right: -5px;
+  background: var(--a2-electric-purple);
+  box-shadow: 0 0 0 6px rgba(90, 51, 255, 0.20), 0 0 18px rgba(90, 51, 255, 0.60);
+  animation: cPulse 2.4s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+@keyframes cPulse {
+  0%, 100% { transform: translate(0, -50%) scale(1); opacity: 0.85; }
+  50%      { transform: translate(0, -50%) scale(1.35); opacity: 1; }
+}
+.cBridgeCenter {
+  position: relative;
+  z-index: 1;
+  background: var(--a2-night-core);
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--a2-white);
+  border: 1px solid rgba(143, 69, 238, 0.45);
+  border-radius: 999px;
+}
+.cBridgeCenter b { color: var(--a2-electric-neon); margin-right: 4px; }
+.cBridgeFoot {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== Mobile fallback ===== */
+@media (max-width: 860px) {
+  .duo { grid-template-columns: 1fr; gap: 12px; }
+  .slot {
+    height: 60px;
+    transform: rotate(90deg);
+    transform-origin: center;
+    width: 60px;
+    margin: -10px auto;
+  }
+  .bLabel, .cBridgeFoot { display: none; }
+}

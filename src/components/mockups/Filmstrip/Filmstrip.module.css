@@ -1,0 +1,196 @@
+.section {
+  background: #050217;
+  color: var(--a2-white);
+  padding: clamp(64px, 8vw, 110px) 0;
+  overflow: hidden;
+}
+
+.head {
+  text-align: center;
+  padding: 0 24px 36px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin-bottom: 14px;
+}
+.heading {
+  font-size: clamp(36px, 4.4vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  color: var(--a2-white);
+}
+.heading span {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--a2-electric-purple);
+}
+.sub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cinema {
+  position: relative;
+  background: #08051f;
+  border-top: 1px solid rgba(90, 51, 255, 0.18);
+  border-bottom: 1px solid rgba(90, 51, 255, 0.18);
+  padding: 24px 0;
+  overflow: hidden;
+}
+
+.sprocketTop,
+.sprocketBottom {
+  display: flex;
+  gap: 28px;
+  padding: 0 24px;
+  margin-bottom: 14px;
+  justify-content: space-around;
+}
+.sprocketBottom {
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+.sprocketTop span,
+.sprocketBottom span {
+  width: 26px;
+  height: 18px;
+  border-radius: 4px;
+  background: #050217;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.stripWrap {
+  position: relative;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+}
+
+.strip {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  animation: scroll 65s linear infinite;
+  padding: 0 24px;
+}
+.stripWrap:hover .strip { animation-play-state: paused; }
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.frame {
+  position: relative;
+  flex-shrink: 0;
+  width: 320px;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 360ms ease, border-color 360ms ease;
+}
+.frame:hover {
+  transform: scale(1.04);
+  border-color: rgba(90, 51, 255, 0.5);
+  z-index: 2;
+}
+
+.frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 2, 23, 0) 50%,
+    rgba(5, 2, 23, 0.92) 100%
+  );
+  pointer-events: none;
+}
+
+.label {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--a2-white);
+}
+.idx {
+  font-family: ui-monospace, "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--a2-electric-purple);
+  background: rgba(13, 5, 54, 0.7);
+  border: 1px solid rgba(90, 51, 255, 0.4);
+  border-radius: 4px;
+  padding: 2px 5px;
+  letter-spacing: 0.06em;
+}
+
+.playhead {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 3;
+}
+.playheadLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(90, 51, 255, 0.5) 30%,
+    rgba(90, 51, 255, 0.5) 70%,
+    transparent 100%
+  );
+}
+.playheadDot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--a2-electric-purple);
+  box-shadow: 0 0 16px rgba(90, 51, 255, 0.7);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50%      { transform: translate(-50%, -50%) scale(1.3); }
+}
