@@ -1,0 +1,119 @@
+{
+  "question": "How many videos per month should a B2B SaaS company produce?",
+  "slug": "how-many-videos-per-month-b2b-saas",
+  "answer": "Most B2B SaaS companies should produce 4 to 8 videos per month, not 20. The exact number depends on your funnel stage and distribution capacity, but the working range is one customer story per month, two product or thought-leadership pieces per week, and one repurposed long-form asset. Volume past that point usually means lower quality and worse pipeline contribution per video.",
+  "publishedAt": "2026-05-15",
+  "updatedAt": "2026-05-15",
+  "author": "Ademola Adelakun",
+  "cluster": "strategy",
+  "clusterLabel": "B2B SaaS Video Strategy",
+  "intent": "MOFU",
+  "ctaMode": "helpful",
+  "proprietaryInput": {
+    "type": "client-stat",
+    "source": "Reveal case study",
+    "detail": "Reveal published ~6 videos/month and attributed $600K closed-won + 40% sales cycle reduction to video."
+  },
+  "outboundCitations": [
+    {
+      "anchor": "Wistia's State of Video Report",
+      "url": "https://wistia.com/learn/marketing/state-of-video-report"
+    },
+    {
+      "anchor": "HubSpot's video marketing benchmarks",
+      "url": "https://blog.hubspot.com/marketing/video-marketing-statistics"
+    },
+    {
+      "anchor": "Gartner CMO Spend Survey",
+      "url": "https://www.gartner.com/en/marketing/research/cmo-spend-survey"
+    },
+    {
+      "anchor": "Demand Curve growth playbooks",
+      "url": "https://www.demandcurve.com/playbooks"
+    },
+    {
+      "anchor": "the first video a B2B SaaS company should make",
+      "url": "/blog/first-video-b2b-saas-company-should-make"
+    },
+    {
+      "anchor": "A2 Media case studies",
+      "url": "/#Studies"
+    },
+    {
+      "anchor": "how we scope quarterly video output",
+      "url": "/#our-process"
+    }
+  ],
+  "internalLinks": [
+    {
+      "anchor": "the first video a B2B SaaS company should make",
+      "url": "/blog/first-video-b2b-saas-company-should-make"
+    },
+    {
+      "anchor": "A2 Media case studies",
+      "url": "/#Studies"
+    },
+    {
+      "anchor": "how we scope quarterly video output",
+      "url": "/#our-process"
+    }
+  ],
+  "faqSchema": true,
+  "body": [
+    {
+      "type": "p",
+      "text": "By Ademola Adelakun · May 15, 2026"
+    },
+    {
+      "type": "h2",
+      "text": "What's the right monthly video output for a $10M+ ARR SaaS company?"
+    },
+    {
+      "type": "p",
+      "text": "If you're past $10M ARR with a marketing team of 3 to 8 people, 4 to 8 published videos per month is the sweet spot. That's enough to feed YouTube, LinkedIn, sales enablement, and lifecycle email without burning out your team or diluting quality. Below 4, you can't build a habit with your audience. Above 8, you're almost always sacrificing the strategic pieces, customer stories, founder POV, deep product walkthroughs, to chase volume on filler content that won't move pipeline."
+    },
+    {
+      "type": "ol",
+      "items": [
+        "1 customer or case study video per month (your highest-converting asset for MOFU and BOFU).",
+        "2 to 4 short product or POV videos per month (60 to 90 seconds, LinkedIn-native, sales-shareable).",
+        "1 long-form thought-leadership or founder interview per month (8 to 20 minutes, YouTube-anchored).",
+        "1 to 2 repurposed cuts per long-form (clips, audiograms, carousels) - these don't count as new productions.",
+        "0 trend-chasing content unless it ties directly to a product narrative you're already running."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Why do most SaaS marketing teams overproduce and underperform?"
+    },
+    {
+      "type": "p",
+      "text": "Because volume feels like progress. A Head of Demand Gen who ships 15 videos a month can point to a content calendar in the next QBR. But when you look at sourced pipeline per video, the curve almost always flattens after the 6th or 7th piece. The first few assets are tied to a campaign, a launch, a sales objection. The rest are filler your audience scrolls past. We'd rather see a team ship 5 sharp videos that each tie to a specific revenue motion than 20 that exist to fill a calendar."
+    },
+    {
+      "type": "proprietary",
+      "label": "From the Reveal case study",
+      "body": "When we worked with Reveal, we capped output at roughly 6 videos per month: one customer story, two product narratives, one founder POV, and two sales-enablement cuts. That mix contributed to $600K in closed-won pipeline attributed to video and a 40% reduction in sales cycle length. The point isn't that 6 is magic. It's that constrained output forced every video to have a job.",
+      "source": "Reveal case study, A2 Media"
+    },
+    {
+      "type": "h2",
+      "text": "How should you adjust volume based on your funnel goals?"
+    },
+    {
+      "type": "p",
+      "text": "Volume isn't one number. It shifts based on whether you're trying to grow YouTube subs, shorten sales cycles, or fill the top of funnel on LinkedIn. A subscriber-growth play needs consistency, so weekly cadence wins. A pipeline-acceleration play needs depth, so monthly customer stories and product deep-dives matter more than frequency. Here's the rough mapping we use with clients when we're scoping a quarter."
+    },
+    {
+      "type": "p",
+      "text": "The companies that get the most out of video aren't the ones publishing most often. They're the ones who decided what each video is supposed to do before they shot it. When we worked with Auth0, the YouTube channel hit 22K+ subscribers and drove 35% of event registrations on a publishing cadence most agencies would call slow. The reason: every video answered a real question their developer audience was already searching."
+    }
+  ],
+  "closing": {
+    "text": "If you take one thing from this, let it be that cadence is downstream of strategy. Pick the funnel motion you're trying to move, then back into a number, usually somewhere between 4 and 8 per month. Anything more and you're paying a tax on quality you'll feel two quarters later.",
+    "cta": {
+      "url": "https://wistia.com/learn/marketing/state-of-video-report",
+      "anchor": "See Wistia's benchmarks on B2B video cadence and engagement"
+    }
+  }
+}
