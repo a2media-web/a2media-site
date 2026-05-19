@@ -1,26 +1,23 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import styles from "./Receipts.module.css";
+import styles from "./Receipts13Printer.module.css";
 
 /**
- * Live thermal printer receipts.
+ * Option 13: Live thermal printer.
  *
- * Triggers when the printer is roughly half visible in viewport (single-
- * fire via ref guard). Whirs + feeds lines one at a time, ending on a
- * TOTAL summary line.
+ * A receipt that's actively printing in real-time. Lines unspool out of
+ * a printer head at the top with a subtle whir animation. New lines
+ * arrive one at a time as if being mechanically fed. Different from the
+ * static paper receipt — this one is happening NOW.
  *
- * REVERT to the previous staggered mosaic by:
- *   1. Restore from src/components/sections/Receipts/_backup-mosaic.tsx.txt
- *      and _backup-mosaic.module.css.txt
- *   2. Or import { Receipts4ClientCards } from "@/components/mockups/..."
- *      and re-export it as the default — same component, no styling drift.
+ * The printer is mounted to the section so the paper appears to be
+ * physically connected to a device, not just decorative.
  */
 
-type LineKind = "head" | "meta" | "div" | "col" | "line" | "total" | "foot";
-
-const LINES: { kind: LineKind; text: string }[] = [
-  { kind: "head",  text: "A2 MEDIA · CONTENT THAT CONVERTS" },
+const LINES = [
+  { kind: "head",  text: "A2 MEDIA — CONTENT THAT CONVERTS" },
+  { kind: "meta",  text: "a2media.ca" },
   { kind: "div",   text: "" },
   { kind: "col",   text: "ITEM                          VALUE" },
   { kind: "div",   text: "" },
@@ -31,25 +28,25 @@ const LINES: { kind: LineKind; text: string }[] = [
   { kind: "line",  text: "Videos delivered, total        600+" },
   { kind: "line",  text: "Client rating                  4.9/5" },
   { kind: "div",   text: "" },
-  { kind: "total", text: "TOTAL: OUR VIDEOS PRINT MONEY" },
+  { kind: "total", text: "TOTAL: OUR VIDEOS PRINT REVENUE" },
   { kind: "div",   text: "" },
   { kind: "foot",  text: "*** THANK YOU FOR YOUR INTEREST ***" },
+  { kind: "foot",  text: "cal.com/a2media/meeting" },
 ];
 
-export default function Receipts() {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const machineRef = useRef<HTMLDivElement | null>(null);
+export default function Receipts13Printer() {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const printerRef = useRef<HTMLDivElement | null>(null);
   const firedRef = useRef(false);
   const [printed, setPrinted] = useState(0);
   const [whirring, setWhirring] = useState(false);
 
-  // Observe the printer card specifically (not the whole section) so the
-  // animation only kicks off when the printer is genuinely on screen, not
-  // when its section's bottom edge is barely above the fold. Ref-guard
-  // prevents double-fire if multiple intersecting entries land before the
-  // disconnect() call resolves.
+  // Observe the printer card specifically (not the whole section). Fires
+  // once when the printer is roughly half on screen, then disconnects so
+  // it never re-triggers. Ref-guard prevents racing if the observer
+  // delivers two intersecting entries before disconnect lands.
   useEffect(() => {
-    const target = machineRef.current;
+    const target = printerRef.current ?? ref.current;
     if (!target) return;
     const io = new IntersectionObserver(
       (entries) => {
@@ -76,25 +73,15 @@ export default function Receipts() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="before-and-after" className={styles.section}>
+    <section ref={ref as unknown as React.RefObject<HTMLDivElement>} className={styles.section}>
       <div className={styles.inner}>
         <p className={styles.eyebrow}>What we&apos;ve already done</p>
         <h2 className={styles.heading}>
           The <span className={styles.italic}>receipts</span>.
         </h2>
-        <p className={styles.sub}>Helping B2B companies win with video since 2023.</p>
+        <p className={styles.sub}>What we&apos;ve accomplished in 4 years.</p>
 
-        <div className={styles.stage}>
-          <span
-            className={`${styles.ghostReceipt} ${styles.ghostA}`}
-            aria-hidden
-          />
-          <span
-            className={`${styles.ghostReceipt} ${styles.ghostB}`}
-            aria-hidden
-          />
-
-        <div className={styles.machine} ref={machineRef}>
+        <div className={styles.machine} ref={printerRef}>
           <div className={`${styles.printer} ${whirring ? styles.whir : ""}`}>
             <div className={styles.printerBody}>
               <div className={styles.indicator} />
@@ -113,19 +100,15 @@ export default function Receipts() {
           <div className={styles.paper}>
             <div className={styles.paperRoll}>
               {LINES.slice(0, printed).map((l, i) => (
-                <p key={i} className={`${styles.row} ${styles[l.kind]}`}>
-                  {l.kind === "div" ? (
-                    <span className={styles.dashed}>
-                      ·······································
-                    </span>
-                  ) : (
-                    l.text
-                  )}
+                <p
+                  key={i}
+                  className={`${styles.row} ${styles[l.kind] ?? ""}`}
+                >
+                  {l.kind === "div" ? <span className={styles.dashed}>·······································</span> : l.text}
                 </p>
               ))}
             </div>
           </div>
-        </div>
         </div>
       </div>
     </section>

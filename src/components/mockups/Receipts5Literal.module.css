@@ -1,0 +1,148 @@
+.section {
+  background: var(--a2-night-core);
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(90, 51, 255, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: var(--a2-max-width, 1180px);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 12px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(40px, 5.4vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 56px;
+  color: var(--a2-white);
+  line-height: 1;
+}
+
+.italic {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 500;
+  color: #c9b6ff;
+  text-shadow:
+    0 2px 24px rgba(90, 51, 255, 0.55),
+    0 0 36px rgba(143, 69, 238, 0.35);
+}
+
+.stage {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 480ms ease, transform 480ms ease;
+  pointer-events: none;
+}
+.slideActive {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.bigNumber {
+  font-family: var(--a2-sans);
+  font-size: clamp(96px, 16vw, 220px);
+  font-weight: 700;
+  color: var(--a2-white);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  margin-bottom: 18px;
+}
+
+.suffix {
+  font-size: 0.4em;
+  color: var(--a2-electric-purple);
+  margin-left: 6px;
+  font-weight: 600;
+  letter-spacing: 0;
+  vertical-align: top;
+  line-height: 1;
+  position: relative;
+  top: 0.3em;
+}
+
+.bigLabel {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-size: clamp(20px, 2.4vw, 32px);
+  color: #c9b6ff;
+  margin: 0 0 14px;
+}
+
+.bigCaption {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  max-width: 460px;
+}
+
+.pips {
+  margin-top: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pip {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.pip:focus-visible .pipFill {
+  outline: 2px solid var(--a2-electric-purple);
+  outline-offset: 3px;
+}
+
+.pipFill {
+  display: block;
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.18);
+  transition: background 320ms ease, width 320ms ease;
+}
+.pipActive .pipFill {
+  background: var(--a2-electric-purple);
+  width: 64px;
+}

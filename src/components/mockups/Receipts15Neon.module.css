@@ -1,0 +1,208 @@
+.section {
+  background: #0a0510;
+  /* faux brick wall */
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.6) 100%),
+    repeating-linear-gradient(0deg,
+      #1f1424 0px, #1f1424 28px,
+      #160e1c 28px, #160e1c 30px),
+    repeating-linear-gradient(90deg,
+      transparent 0 110px,
+      rgba(0,0,0,0.5) 110px 112px);
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 12px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(40px, 5.4vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  color: var(--a2-white);
+  line-height: 1;
+}
+
+.italic {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 500;
+  color: #c9b6ff;
+  text-shadow:
+    0 2px 24px rgba(90, 51, 255, 0.55),
+    0 0 36px rgba(143, 69, 238, 0.35);
+}
+
+.sub {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 56px;
+}
+
+.signWrap {
+  position: relative;
+  padding-top: 40px;
+}
+
+.chain {
+  position: absolute;
+  top: 0;
+  left: 22%;
+  width: 4px;
+  height: 60px;
+  background: repeating-linear-gradient(180deg,
+    #444 0 4px, #2a2a2a 4px 8px);
+}
+.chainRight {
+  left: auto;
+  right: 22%;
+}
+
+.sign {
+  background: linear-gradient(180deg, #0d0817 0%, #14091e 100%);
+  border: 6px solid #2a1f3a;
+  border-radius: 14px;
+  padding: 36px 40px 44px;
+  position: relative;
+  box-shadow:
+    inset 0 0 0 2px rgba(0,0,0,0.5),
+    0 30px 60px -20px rgba(90, 51, 255, 0.4),
+    0 0 120px -30px rgba(255, 105, 200, 0.3);
+}
+
+.neonOpen {
+  font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+  font-size: 56px;
+  font-weight: 700;
+  color: #ff6ec7;
+  margin: 0 0 18px;
+  text-shadow:
+    0 0 6px #ff6ec7,
+    0 0 14px #ff6ec7,
+    0 0 28px rgba(255, 110, 199, 0.7),
+    0 0 56px rgba(255, 110, 199, 0.4);
+  animation: pulseOpen 3.2s ease-in-out infinite;
+}
+
+@keyframes pulseOpen {
+  0%, 100% { opacity: 1; }
+  48% { opacity: 1; }
+  49% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+.bulbStrip {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.bulb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f5d36a;
+  box-shadow: 0 0 12px #f5d36a, 0 0 22px rgba(245, 211, 106, 0.7);
+  animation: bulbChase 1.6s ease-in-out infinite;
+}
+
+@keyframes bulbChase {
+  0%, 100% { opacity: 0.3; box-shadow: 0 0 6px #f5d36a; }
+  50% { opacity: 1; box-shadow: 0 0 16px #f5d36a, 0 0 28px rgba(245, 211, 106, 0.8); }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 36px;
+  margin-bottom: 32px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.neonValue {
+  font-family: var(--a2-sans);
+  font-size: clamp(40px, 4.6vw, 60px);
+  font-weight: 700;
+  color: #66f78e;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-shadow:
+    0 0 4px #66f78e,
+    0 0 10px #66f78e,
+    0 0 22px rgba(102, 247, 142, 0.8),
+    0 0 44px rgba(102, 247, 142, 0.4);
+}
+
+.neonLabel {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #28dfe8;
+  text-shadow:
+    0 0 4px #28dfe8,
+    0 0 12px rgba(40, 223, 232, 0.7);
+}
+
+.flicker .neonValue,
+.flicker .neonLabel {
+  animation: flicker 4.5s linear infinite;
+}
+
+@keyframes flicker {
+  0%, 17%, 19%, 100% { opacity: 1; }
+  18% { opacity: 0.3; }
+  62%, 64% { opacity: 0.6; }
+  63% { opacity: 0.2; }
+}
+
+.neonScript {
+  margin: 0;
+}
+
+.scriptText {
+  font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+  font-size: 64px;
+  font-weight: 700;
+  color: #c9b6ff;
+  letter-spacing: 0.04em;
+  text-shadow:
+    0 0 6px #c9b6ff,
+    0 0 16px var(--a2-electric-purple),
+    0 0 32px rgba(143, 69, 238, 0.7),
+    0 0 60px rgba(90, 51, 255, 0.4);
+}
+
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 22px 24px; }
+  .sign { padding: 28px 22px 36px; }
+  .neonOpen { font-size: 44px; }
+  .scriptText { font-size: 48px; }
+}

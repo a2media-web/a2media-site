@@ -1,0 +1,107 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import styles from "./Receipts.module.css";
+
+/**
+ * Staggered 2×3 mosaic. Six stats laid out in a 3-column grid; the middle
+ * card in each row is slightly larger and offset upward to break the rigid
+ * grid. Subtle chromatic variety (purple / lilac / neon accents) keeps the
+ * section interesting without violating the brand palette.
+ *
+ * Animation: numbers count up once the section enters viewport. Single
+ * fluid motion — no card flip / fade / reorder — per the "no disappearing
+ * elements" rule.
+ */
+
+const STATS = [
+  { target: 30, suffix: "+", label: "B2B Brands Served", decimals: 0, accent: "purple" },
+  { target: 18, suffix: "mo", label: "Avg. Client Tenure", decimals: 0, accent: "lilac" },
+  { target: 35, suffix: "%", label: "Faster Close Rates", decimals: 0, accent: "neon" },
+  { target: 72, suffix: "hr", label: "Avg. Turnaround Times", decimals: 0, accent: "lilac" },
+  { target: 600, suffix: "+", label: "Videos Delivered", decimals: 0, accent: "purple" },
+  { target: 4.9, suffix: "/5", label: "Client Rating", decimals: 1, accent: "neon" },
+] as const;
+
+function easeOutCubic(t: number) {
+  return 1 - Math.pow(1 - t, 3);
+}
+
+function Counter({
+  target,
+  suffix,
+  decimals,
+  animate,
+}: {
+  target: number;
+  suffix: string;
+  decimals: number;
+  animate: boolean;
+}) {
+  const [value, setValue] = useState(animate ? 0 : target);
+  useEffect(() => {
+    if (!animate) return;
+    let raf = 0;
+    const start = performance.now();
+    const duration = 1300;
+    const tick = (t: number) => {
+      const elapsed = Math.min(1, (t - start) / duration);
+      const eased = easeOutCubic(elapsed);
+      setValue(target * eased);
+      if (elapsed < 1) raf = requestAnimationFrame(tick);
+      else setValue(target);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [animate, target]);
+  return (
+    <>
+      {value.toFixed(decimals)}
+      <span className={styles.suffix}>{suffix}</span>
+    </>
+  );
+}
+
+export default function Receipts() {
+  const ref = useRef<HTMLElement>(null);
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    if (!ref.current) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (e.isIntersecting) setAnimate(true);
+      },
+      { threshold: 0.25 },
+    );
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <section ref={ref} id="before-and-after" className={styles.section}>
+      <div className={styles.inner}>
+        <p className={styles.eyebrow}>What we&apos;ve already done</p>
+        <h2 className={styles.heading}>The Receipts</h2>
+        <div className={styles.mosaic}>
+          {STATS.map((s, i) => (
+            <div
+              key={s.label}
+              className={`${styles.card} ${styles[s.accent]} ${
+                i === 1 || i === 4 ? styles.featured : ""
+              }`}
+            >
+              <div className={styles.number}>
+                <Counter
+                  target={s.target}
+                  suffix={s.suffix}
+                  decimals={s.decimals}
+                  animate={animate}
+                />
+              </div>
+              <div className={styles.label}>{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

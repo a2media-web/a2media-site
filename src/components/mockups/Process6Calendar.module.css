@@ -1,0 +1,190 @@
+.section {
+  background: #0d0824;
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+  /* cork-board texture */
+  background-image:
+    radial-gradient(circle at 50% 30%, rgba(90, 51, 255, 0.16) 0%, transparent 55%),
+    radial-gradient(circle at 25% 75%, rgba(166, 110, 60, 0.05) 0%, transparent 40%);
+}
+
+.inner { max-width: 1180px; margin: 0 auto; position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 14px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(36px, 4.8vw, 60px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 56px;
+  color: var(--a2-white);
+  line-height: 1.05;
+}
+
+.pinboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 32px 0;
+}
+
+.page {
+  position: relative;
+  background: #f7f4ea;
+  color: #181028;
+  padding: 28px 24px 26px;
+  border-radius: 4px;
+  font-family: "Inconsolata", "SF Mono", "Menlo", monospace;
+  transition: transform 280ms ease, box-shadow 280ms ease;
+  box-shadow:
+    0 1px 0 rgba(0,0,0,0.1),
+    0 14px 28px -10px rgba(0,0,0,0.5),
+    0 24px 48px -16px rgba(90, 51, 255, 0.3);
+}
+.page0 { transform: rotate(-2.4deg); }
+.page1 { transform: rotate(1.4deg); }
+.page2 { transform: rotate(-1deg); }
+
+.page:hover {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow:
+    0 1px 0 rgba(0,0,0,0.1),
+    0 22px 36px -10px rgba(0,0,0,0.55),
+    0 36px 64px -16px rgba(90, 51, 255, 0.45);
+  z-index: 2;
+}
+
+.pin {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ff8c42 0%, #ff5e3a 50%, #b03515 100%);
+  box-shadow:
+    inset -2px -3px 0 rgba(0,0,0,0.2),
+    0 6px 14px rgba(255, 94, 58, 0.45);
+  z-index: 1;
+}
+
+.pageHead {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed rgba(24,16,40,0.4);
+  margin-bottom: 16px;
+}
+
+.pageMonth {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--a2-night-core);
+}
+
+.pageDetail {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: rgba(24,16,40,0.55);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.miniCal {
+  font-size: 10px;
+  margin-bottom: 18px;
+}
+
+.miniRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.miniDayHead {
+  text-align: center;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(24,16,40,0.45);
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(24,16,40,0.1);
+}
+
+.miniDay {
+  text-align: center;
+  font-size: 10px;
+  padding: 4px 0;
+  color: rgba(24,16,40,0.6);
+  position: relative;
+}
+
+.miniDayCircled {
+  color: var(--a2-electric-purple);
+  font-weight: 800;
+}
+.miniDayCircled::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1.5px solid var(--a2-electric-purple);
+  border-radius: 50%;
+  transform: rotate(-8deg) scale(0.85);
+}
+
+.pageBody {
+  font-family: var(--a2-sans);
+}
+
+.stepEyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 6px;
+}
+
+.stepTitle {
+  font-family: var(--a2-sans);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--a2-night-core);
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.stepDesc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(24,16,40,0.78);
+  margin: 0;
+}
+
+.margin {
+  position: absolute;
+  top: 28px;
+  right: 20px;
+  font-size: 18px;
+  color: rgba(90, 51, 255, 0.7);
+  transform: rotate(-12deg);
+}
+
+@media (max-width: 960px) {
+  .pinboard { grid-template-columns: 1fr; gap: 40px; padding: 16px 0; }
+  .page0, .page1, .page2 { transform: rotate(0deg); }
+}

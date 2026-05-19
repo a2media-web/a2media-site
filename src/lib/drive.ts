@@ -143,6 +143,28 @@ export async function findUnprocessedRejectedDocs(): Promise<DriveDocSummary[]> 
 }
 
 /**
+ * List the names of every Doc across all three blog folders. Used by the
+ * generate cron as the single source of truth for "what topics have already
+ * been drafted/published/rejected" — TOPIC_QUEUE's in-memory status resets
+ * on every cold start, so we can't trust it.
+ */
+export async function listAllDocNames(): Promise<string[]> {
+  const drive = getClient();
+  const folders = [DRAFT_FOLDER_ID, PUBLISHED_FOLDER_ID, REJECTED_FOLDER_ID];
+  const q =
+    folders.map((id) => `'${id}' in parents`).join(" or ") +
+    ` and trashed = false`;
+  const res = await drive.files.list({
+    q: `(${q})`,
+    fields: "files(name)",
+    pageSize: 200,
+  });
+  return (res.data.files ?? [])
+    .map((f) => f.name ?? "")
+    .filter((n) => n.length > 0);
+}
+
+/**
  * Count Drive Docs created in the last `days` days across all three blog
  * folders (drafts + published + rejected). Used by the usage guard to
  * enforce a weekly draft cap and prevent runaway generation.

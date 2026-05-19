@@ -1,0 +1,117 @@
+.section {
+  background: var(--a2-night-core);
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 30%, rgba(90, 51, 255, 0.16) 0%, transparent 55%),
+    radial-gradient(circle at 20% 80%, rgba(143, 69, 238, 0.1) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.inner {
+  max-width: var(--a2-max-width, 1180px);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 12px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(40px, 5.4vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 56px;
+  color: var(--a2-white);
+  line-height: 1;
+}
+
+.italic {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 500;
+  color: #c9b6ff;
+  text-shadow:
+    0 2px 24px rgba(90, 51, 255, 0.55),
+    0 0 36px rgba(143, 69, 238, 0.35);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 56px minmax(200px, 280px) 1fr;
+  align-items: baseline;
+  gap: 32px;
+  padding: 28px 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 220ms ease;
+}
+.row:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.rowIndex {
+  font-family: var(--a2-sans);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--a2-electric-purple);
+  text-transform: uppercase;
+}
+
+.rowNumber {
+  font-family: var(--a2-sans);
+  font-size: clamp(56px, 8vw, 104px);
+  font-weight: 700;
+  color: var(--a2-white);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.suffix {
+  font-size: 0.5em;
+  color: var(--a2-electric-purple);
+  margin-left: 6px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.rowLabel {
+  font-size: clamp(18px, 2.2vw, 24px);
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+@media (max-width: 700px) {
+  .row {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto auto;
+    gap: 8px 16px;
+    padding: 20px 8px;
+  }
+  .rowIndex { grid-column: 1; grid-row: 1; }
+  .rowNumber { grid-column: 2; grid-row: 1; }
+  .rowLabel { grid-column: 2; grid-row: 2; }
+}

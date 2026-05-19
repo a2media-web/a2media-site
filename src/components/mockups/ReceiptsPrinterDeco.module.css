@@ -1,0 +1,287 @@
+/* Shared layout primitives */
+
+.layoutCentered {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layoutTwoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.layoutStack {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+@media (max-width: 880px) {
+  .layoutTwoCol { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* ────────── A: Stamp + watermark ────────── */
+.frameA {}
+
+.watermark {
+  position: absolute;
+  left: 6%;
+  top: 38%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: center center;
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  color: rgba(143, 69, 238, 0.45);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.watermarkBy {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: rgba(143, 69, 238, 0.3);
+}
+
+.stamp {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-14deg);
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.stampInner {
+  width: 100%;
+  height: 100%;
+  border: 4px solid rgba(255, 90, 90, 0.7);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: rgba(255, 90, 90, 0.8);
+  text-align: center;
+  /* faux ink imperfection */
+  box-shadow: inset 0 0 0 4px rgba(0,0,0,0.05);
+  filter: drop-shadow(0 0 6px rgba(255, 90, 90, 0.2));
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+}
+.stampMain {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+.stampSub {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+.stampDate {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  border-top: 2px solid rgba(255, 90, 90, 0.5);
+  padding-top: 4px;
+  margin-top: 4px;
+  min-width: 60px;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .watermark, .stamp { display: none; }
+}
+
+/* ────────── B: Brand mark column ────────── */
+.frameB {}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 24px;
+}
+
+.brandStamp {
+  font-family: var(--a2-sans);
+  font-size: 128px;
+  font-weight: 700;
+  color: var(--a2-electric-purple);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-shadow:
+    0 0 32px rgba(90, 51, 255, 0.5),
+    0 0 64px rgba(143, 69, 238, 0.3);
+}
+
+.brandLine {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-size: clamp(22px, 2.2vw, 28px);
+  color: var(--a2-white);
+  line-height: 1.3;
+  margin: 0;
+  max-width: 380px;
+}
+
+.brandList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+}
+.brandList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brandList li::before {
+  content: "→";
+  color: var(--a2-electric-purple);
+  font-weight: 700;
+}
+
+/* ────────── C: Ghost receipts stacked behind ────────── */
+.frameC {}
+
+.ghostReceipt {
+  position: absolute;
+  width: 480px;
+  height: 380px;
+  background: #f7f4ea;
+  border-radius: 4px;
+  opacity: 0.4;
+  box-shadow:
+    0 1px 0 rgba(0,0,0,0.1),
+    0 18px 36px -12px rgba(0,0,0,0.5);
+  -webkit-mask:
+    radial-gradient(circle at 6px 0, transparent 5px, black 5.5px) 0 0/12px 100% repeat-x,
+    radial-gradient(circle at 6px 100%, transparent 5px, black 5.5px) 0 0/12px 100% repeat-x,
+    linear-gradient(black, black);
+  mask:
+    radial-gradient(circle at 6px 0, transparent 5px, black 5.5px) 0 0/12px 100% repeat-x,
+    radial-gradient(circle at 6px 100%, transparent 5px, black 5.5px) 0 0/12px 100% repeat-x,
+    linear-gradient(black, black);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.ghostA {
+  transform: translateX(-110px) translateY(40px) rotate(-7deg);
+  opacity: 0.18;
+}
+.ghostB {
+  transform: translateX(110px) translateY(-30px) rotate(6deg);
+  opacity: 0.22;
+}
+
+@media (max-width: 880px) {
+  .ghostReceipt { display: none; }
+}
+
+/* ────────── D: Sticky note callouts ────────── */
+.frameD {}
+
+.sticky {
+  position: absolute;
+  background: #fff385;
+  color: #2a230a;
+  padding: 18px 16px;
+  width: 200px;
+  font-family: "Marker Felt", "Comic Sans MS", "Caveat", sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+  box-shadow:
+    0 1px 0 rgba(0,0,0,0.1),
+    0 14px 28px -10px rgba(0,0,0,0.45);
+  z-index: 2;
+}
+.stickyText {
+  display: block;
+}
+.stickyText b {
+  color: #5a33ff;
+}
+.stickyTape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 64px;
+  height: 18px;
+  background: rgba(255,255,255,0.5);
+  border-left: 1px dashed rgba(0,0,0,0.15);
+  border-right: 1px dashed rgba(0,0,0,0.15);
+  backdrop-filter: blur(2px);
+}
+
+.stickyA {
+  top: 10%;
+  left: 8%;
+  transform: rotate(-4deg);
+}
+.stickyB {
+  top: 50%;
+  right: 6%;
+  transform: rotate(5deg);
+}
+.stickyC {
+  bottom: 6%;
+  left: 12%;
+  transform: rotate(-3deg);
+}
+
+@media (max-width: 1100px) {
+  .sticky { display: none; }
+}
+
+/* ────────── E: Vertical side rails ────────── */
+.frameE {}
+
+.rail {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: center center;
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  color: rgba(255,255,255,0.45);
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.railLeft { left: 8%; }
+.railRight {
+  right: 8%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+@media (max-width: 1100px) {
+  .rail { display: none; }
+}

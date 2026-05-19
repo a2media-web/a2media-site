@@ -1,0 +1,204 @@
+.section {
+  background: var(--a2-night-core);
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(90, 51, 255, 0.18) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 12px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(40px, 5.4vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+  color: var(--a2-white);
+  line-height: 1;
+}
+
+.italic {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 500;
+  color: #c9b6ff;
+  text-shadow:
+    0 2px 24px rgba(90, 51, 255, 0.55),
+    0 0 36px rgba(143, 69, 238, 0.35);
+}
+
+.sub {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.receiptWrap {
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.receipt {
+  background: #f7f4ea;
+  color: #181028;
+  padding: 36px 32px 28px;
+  font-family: "SF Mono", "Menlo", "Consolas", "Courier New", monospace;
+  font-size: 13.5px;
+  line-height: 1.65;
+  box-shadow:
+    0 30px 60px -20px rgba(0,0,0,0.55),
+    0 60px 100px -30px rgba(90, 51, 255, 0.45);
+  position: relative;
+  /* torn-paper top + bottom edges */
+  -webkit-mask:
+    radial-gradient(circle at 7px 0, transparent 6px, black 6.5px) 0 0/14px 100% repeat-x,
+    radial-gradient(circle at 7px 100%, transparent 6px, black 6.5px) 0 0/14px 100% repeat-x,
+    linear-gradient(black, black);
+  mask:
+    radial-gradient(circle at 7px 0, transparent 6px, black 6.5px) 0 0/14px 100% repeat-x,
+    radial-gradient(circle at 7px 100%, transparent 6px, black 6.5px) 0 0/14px 100% repeat-x,
+    linear-gradient(black, black);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.receiptHead { text-align: center; margin-bottom: 16px; }
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 0 0 4px;
+}
+
+.tagline {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: rgba(24, 16, 40, 0.7);
+  margin: 0 0 12px;
+}
+
+.meta {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: rgba(24, 16, 40, 0.7);
+  margin: 0;
+}
+
+.dashed {
+  border-bottom: 1px dashed rgba(24, 16, 40, 0.45);
+  margin: 14px 0;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 70px 1fr 70px;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(24, 16, 40, 0.6);
+}
+
+.lines { list-style: none; padding: 0; margin: 0; }
+
+.line {
+  display: grid;
+  grid-template-columns: 70px 1fr 70px;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px dotted rgba(24, 16, 40, 0.15);
+}
+
+.line:last-child { border-bottom: 0; }
+
+.sku {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--a2-electric-purple);
+}
+
+.desc { color: rgba(24, 16, 40, 0.88); }
+
+.value {
+  font-weight: 700;
+  color: var(--a2-night-core);
+}
+
+.right { text-align: right; }
+
+.total {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 3px 0;
+}
+
+.footnote {
+  text-align: center;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  color: rgba(24, 16, 40, 0.7);
+  margin: 14px 0;
+  line-height: 1.7;
+}
+
+.barcode {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 1px;
+  height: 56px;
+  margin-bottom: 8px;
+}
+.barcode span {
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  background: var(--a2-night-core);
+}
+.barcode span:nth-child(2n) { width: 1px; height: 86%; }
+.barcode span:nth-child(3n) { width: 3px; }
+.barcode span:nth-child(5n) { height: 70%; }
+.barcode span:nth-child(7n) { width: 1px; }
+
+.barcodeId {
+  text-align: center;
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  color: var(--a2-night-core);
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .receipt { padding: 28px 22px; font-size: 12.5px; }
+  .cols, .line { grid-template-columns: 60px 1fr 60px; gap: 8px; }
+}

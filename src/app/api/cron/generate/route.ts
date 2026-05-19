@@ -22,7 +22,11 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { generateBlogPost } from "@/lib/anthropic";
-import { countDocsCreatedInLastDays, createDraftDoc } from "@/lib/drive";
+import {
+  countDocsCreatedInLastDays,
+  createDraftDoc,
+  listAllDocNames,
+} from "@/lib/drive";
 import { scoreDraft } from "@/lib/rubric";
 import {
   postDailyDigest,
@@ -115,12 +119,40 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  const topics = getNextQueuedTopics(DRAFTS_PER_DAY);
+  // Build the "already touched" set from Drive — the only source of truth
+  // that survives cold starts. Match by 40-char question prefix, same shape
+  // the publish-check uses.
+  let touchedQuestionPrefixes = new Set<string>();
+  try {
+    const allDocNames = await listAllDocNames();
+    touchedQuestionPrefixes = new Set(
+      allDocNames.map((n) =>
+        n
+          .replace(/^\[(DRAFT|PUBLISHED [^\]]+|REJECTED [^\]]+)\]\s*/, "")
+          .toLowerCase()
+          .slice(0, 40),
+      ),
+    );
+  } catch (err) {
+    await postSystemMessage(
+      `:warning: Blog cron: could not read Drive folder state (continuing with in-memory queue only): ${(err as Error).message}`,
+    ).catch(() => undefined);
+  }
+
+  // Skip topics whose question already appears in Drive (drafted/published/rejected).
+  const availableTopics = TOPIC_QUEUE.filter(
+    (t) =>
+      t.status === "queued" &&
+      !touchedQuestionPrefixes.has(t.question.toLowerCase().slice(0, 40)),
+  );
+
+  const topics = availableTopics.slice(0, DRAFTS_PER_DAY);
   if (topics.length === 0) {
     await postSystemMessage(
-      "*Blog cron:* queue is empty. Add topics to `src/content/blog/_queue.ts` to resume daily drafts.",
+      "*Blog cron:* no new topics to draft. Either the queue is empty or every queued topic already has a Doc in Drive. " +
+        "Add topics to `src/content/blog/_queue.ts` to resume daily drafts.",
     ).catch(() => undefined);
-    return NextResponse.json({ ok: true, generated: 0, reason: "empty queue" });
+    return NextResponse.json({ ok: true, generated: 0, reason: "no eligible topics" });
   }
 
   const summaries: DraftSummary[] = [];

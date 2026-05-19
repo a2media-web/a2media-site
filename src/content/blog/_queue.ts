@@ -92,7 +92,7 @@ export const TOPIC_QUEUE: Topic[] = [
     question: "Retainer vs. project-based pricing for B2B SaaS video — which is better for the buyer?",
     cluster: "pricing",
     intent: "MOFU",
-    suggestedCtaMode: "sell",
+    suggestedCtaMode: "helpful",
     status: "queued",
   },
 
@@ -102,7 +102,7 @@ export const TOPIC_QUEUE: Topic[] = [
     question: "What should a B2B SaaS video editor's job description include?",
     cluster: "team",
     intent: "BOFU",
-    suggestedCtaMode: "sell",
+    suggestedCtaMode: "helpful",
     status: "queued",
   },
   {
@@ -118,7 +118,7 @@ export const TOPIC_QUEUE: Topic[] = [
     question: "What does a B2B SaaS video team org chart actually look like?",
     cluster: "team",
     intent: "MOFU",
-    suggestedCtaMode: "sell",
+    suggestedCtaMode: "helpful",
     status: "queued",
   },
 
@@ -152,7 +152,7 @@ export const TOPIC_QUEUE: Topic[] = [
     question: "What goes into a B2B SaaS product launch video?",
     cluster: "formats",
     intent: "MOFU",
-    suggestedCtaMode: "sell",
+    suggestedCtaMode: "helpful",
     status: "queued",
   },
   {
@@ -178,7 +178,7 @@ export const TOPIC_QUEUE: Topic[] = [
     question: "How should sales teams use video in deal cycles?",
     cluster: "distribution",
     intent: "MOFU",
-    suggestedCtaMode: "sell",
+    suggestedCtaMode: "helpful",
     status: "queued",
   },
   {
@@ -220,7 +220,7 @@ export const TOPIC_QUEUE: Topic[] = [
     question: "How do you report video ROI to a CMO?",
     cluster: "measurement",
     intent: "BOFU",
-    suggestedCtaMode: "sell",
+    suggestedCtaMode: "helpful",
     status: "queued",
   },
   {

@@ -1,0 +1,108 @@
+.section {
+  background: var(--a2-night-core);
+  padding: clamp(64px, 8vw, 120px) 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(90, 51, 255, 0.18) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.head {
+  text-align: center;
+  padding: 0 24px;
+  margin-bottom: 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 12px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(40px, 5.4vw, 72px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--a2-white);
+  line-height: 1;
+}
+
+.italic {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 500;
+  color: #c9b6ff;
+  text-shadow:
+    0 2px 24px rgba(90, 51, 255, 0.55),
+    0 0 36px rgba(143, 69, 238, 0.35);
+}
+
+.marqueeWrap {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, black 96px, black calc(100% - 96px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, black 96px, black calc(100% - 96px), transparent 100%);
+}
+
+.marqueeWrap:hover .track {
+  animation-play-state: paused;
+}
+
+.track {
+  display: inline-flex;
+  align-items: center;
+  gap: 48px;
+  white-space: nowrap;
+  animation: marquee 38s linear infinite;
+  padding: 8px 24px;
+}
+
+.cell {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 14px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.value {
+  font-family: var(--a2-sans);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--a2-white);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.dot {
+  color: var(--a2-electric-purple);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.333%); }
+}

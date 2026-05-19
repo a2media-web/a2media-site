@@ -98,7 +98,7 @@ export async function postDailyDigest(drafts: DraftSummary[]): Promise<void> {
         type: "mrkdwn",
         text:
           "Drafts auto-archive to *03 Rejected* in 7 days if you don't action them. " +
-          "Watcher checks Drive every 15 min.",
+          "Watcher checks Drive once daily at 10 AM Toronto.",
       },
     ],
   });
