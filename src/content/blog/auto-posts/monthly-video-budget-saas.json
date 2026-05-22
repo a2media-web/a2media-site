@@ -1,0 +1,105 @@
+{
+  "question": "What should a $20M ARR B2B SaaS company budget for video each month?",
+  "slug": "monthly-video-budget-saas",
+  "answer": "A $20M ARR B2B SaaS company should budget $15K to $35K per month for video, all-in. That covers 4 to 8 finished assets monthly across demand gen, product, and sales enablement, plus the strategy layer. Below that, you get freelancer chaos. Above $35K you're usually paying for an in-house team you don't need yet at this stage.",
+  "publishedAt": "2026-05-21",
+  "updatedAt": "2026-05-22",
+  "author": "Ademola Adelakun",
+  "cluster": "pricing",
+  "clusterLabel": "Pricing & Budgeting",
+  "intent": "BOFU",
+  "ctaMode": "sell",
+  "proprietaryInput": {
+    "type": "client-stat",
+    "source": "Reveal case study",
+    "detail": "$600K closed-won attributed to video and 40% sales cycle reduction came from reallocating existing spend toward strategy, not increasing budget."
+  },
+  "outboundCitations": [
+    {
+      "anchor": "Wistia State of Video Report",
+      "url": "https://wistia.com/learn/marketing/state-of-video-report"
+    },
+    {
+      "anchor": "Gartner marketing spend benchmarks",
+      "url": "https://www.gartner.com/en/marketing/insights/articles/how-much-should-you-spend-on-marketing"
+    },
+    {
+      "anchor": "Demand Curve growth playbooks",
+      "url": "https://www.demandcurve.com/playbooks"
+    },
+    {
+      "anchor": "HubSpot marketing statistics",
+      "url": "https://www.hubspot.com/marketing-statistics"
+    },
+    {
+      "anchor": "how much SaaS video editing actually costs",
+      "url": "/blog/how-much-does-saas-video-editing-cost"
+    },
+    {
+      "anchor": "A2 Media pricing",
+      "url": "/#Pricing"
+    },
+    {
+      "anchor": "client case studies",
+      "url": "/#Studies"
+    }
+  ],
+  "internalLinks": [
+    {
+      "anchor": "how much SaaS video editing actually costs",
+      "url": "/blog/how-much-does-saas-video-editing-cost"
+    },
+    {
+      "anchor": "A2 Media pricing",
+      "url": "/#Pricing"
+    },
+    {
+      "anchor": "client case studies",
+      "url": "/#Studies"
+    }
+  ],
+  "faqSchema": true,
+  "body": [
+    {
+      "type": "p",
+      "text": "By Ademola Adelakun · May 21, 2026"
+    },
+    {
+      "type": "h2",
+      "text": "How is that $15K to $35K range actually spent?"
+    },
+    {
+      "type": "p",
+      "text": "The mistake is thinking of video budget as a per-asset cost. At $20M ARR you're funding a system: strategy, scripting, editing, motion graphics, and distribution support. Roughly 20% goes to strategy and planning, 50% to production and editing, 20% to motion and design, and 10% to distribution assets like cutdowns, captions, and thumbnails. If your current spend is 90% editing, that's why the work feels like content without a pipeline impact."
+    },
+    {
+      "type": "h2",
+      "text": "What does each budget tier actually get you?"
+    },
+    {
+      "type": "p",
+      "text": "Below is the honest breakdown of what monthly spend buys at this stage. These numbers assume a mix of customer stories, product explainers, demand-gen series content, and sales enablement clips. Hourly freelancer rates and one-off project shops sit at the bottom. Agencies with embedded strategy sit at the top. In-house hires only pencil out around $40K/month once you factor salary, benefits, gear, and software."
+    },
+    {
+      "type": "h2",
+      "text": "How do you know if you're getting the ROI?"
+    },
+    {
+      "type": "p",
+      "text": "At $20K/month you're spending $240K/year. To justify it, video needs to influence at least $1.2M in pipeline (a 5x return is the floor I'd accept at this stage). Track three things: sales cycle length on deals that consumed video versus deals that didn't, demo-to-close rate on video-warmed leads, and organic pipeline from YouTube or LinkedIn video. If you can't attribute any of those after six months, the problem is strategy, not budget."
+    },
+    {
+      "type": "proprietary",
+      "label": "Pattern from client work",
+      "body": "When Reveal restructured their video spend around a strategy-first model instead of one-off edits, they attributed $600K in closed-won revenue to video and cut their sales cycle by 40%. The monthly spend didn't increase dramatically. The allocation across strategy, production, and sales enablement did. That's the lever most teams miss.",
+      "source": "A2 Media client engagement, Reveal"
+    }
+  ],
+  "closing": {
+    "text": "At $20M ARR, the budget question is less about the number and more about the allocation. Spend $20K/month on strategy-led video and you'll outperform a competitor spending $40K on volume. If you want to see exactly what that allocation looks like at your stage, our pricing page lays it out.",
+    "cta": {
+      "url": "/#Pricing",
+      "anchor": "See A2 Media pricing"
+    }
+  }
+}
