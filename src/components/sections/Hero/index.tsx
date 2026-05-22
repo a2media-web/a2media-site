@@ -13,8 +13,9 @@ const SWAP_WORDS = [
 const TRUST_LOGOS = [
   { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/65e9e913df3011054a62442e_Okta_Logo_White_Medium.png", alt: "Okta" },
   { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/64cc83f851512b1224dc1573_SHOP_BIG.D-bc80c1f3.png", alt: "Shopify", className: "shopify" },
-  { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f1d717fe36ab2b51b4d2a4_chili%20piper.png", alt: "Chili Piper" },
-  { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/66c5f4f2fcc977d035928abc_CB.svg", alt: "Crossbeam" },
+  { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f1d717fe36ab2b51b4d2a4_chili%20piper.png", alt: "Chili Piper", className: "chili" },
+  { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/66c5f4f2fcc977d035928abc_CB.svg", alt: "Crossbeam", className: "hideOnMobile" },
+  { src: "/logos/Slate.png", alt: "Slate", className: "slate" },
 ];
 
 export default function Hero() {
@@ -105,11 +106,6 @@ export default function Hero() {
             See the videos
           </a>
         </div>
-
-        <p className={styles.note}>
-          <span className={styles.dot} aria-hidden />
-          Small team, high-touch work. We take on 5 clients per quarter.
-        </p>
 
         <div className={styles.trust}>
           <p className={styles.trustLabel}>Trusted by</p>

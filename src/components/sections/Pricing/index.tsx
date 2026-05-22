@@ -36,7 +36,7 @@ export default function Pricing() {
           One Path. <em>Two Steps.</em>
         </h2>
         <p className={styles.intro}>
-          Every engagement starts with the <b>3-Week Accelerator</b>.
+          Every engagement starts with the <b>2-Week Jumpstart</b>.
           <br />
           <span className={styles.introAccent}>
             We&apos;ll walk you through your exact monthly total on your discovery call.
@@ -47,7 +47,7 @@ export default function Pricing() {
           {/* Accelerator */}
           <div className={`${styles.card} ${styles.cardWhite}`}>
             <span className={`${styles.badge} ${styles.badgeBright}`}>Start Here</span>
-            <h2 className={styles.planName}>The 3-Week Accelerator</h2>
+            <h2 className={styles.planName}>The 2-Week Jumpstart</h2>
             <div className={styles.price}>$8K<small>one-time</small></div>
             <p className={styles.desc}>
               6-month video strategy + 3 videos. Required to start.
@@ -110,7 +110,7 @@ export default function Pricing() {
               </button>
               <div className={`${styles.collapseBody} ${openB ? styles.open : ""}`}>
                 <div className={styles.featLead}>
-                  Everything in the 3-Week Accelerator, plus:
+                  Everything in the 2-Week Jumpstart, plus:
                 </div>
                 {ENGINE_FEATURES.map((f) => (
                   <div key={f} className={`${styles.feat} ${styles.featPurple}`}>

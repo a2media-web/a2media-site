@@ -79,12 +79,12 @@ export const serviceSchema: JsonLdSchema = {
     itemListElement: [
       {
         "@type": "Offer",
-        name: "The 3-Week Accelerator",
+        name: "The 2-Week Jumpstart",
         description:
-          "6-month video strategy plus 3 sales-ready videos in 3 weeks. Required first step before the monthly engagement.",
+          "6-month video strategy plus 3 sales-ready videos in 2 weeks. Required first step before the monthly engagement.",
         price: "8000",
         priceCurrency: "USD",
-        eligibleDuration: { "@type": "QuantitativeValue", value: 3, unitCode: "WEE" },
+        eligibleDuration: { "@type": "QuantitativeValue", value: 2, unitCode: "WEE" },
       },
       {
         "@type": "Offer",

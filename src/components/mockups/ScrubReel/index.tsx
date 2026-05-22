@@ -26,6 +26,13 @@ const FORMATS = [
     client: "Chili Piper",
   },
   {
+    label: "Storytelling",
+    sub: "Entertain your customers while teaching them.",
+    videoId: "cbksj45v2l",
+    aspect: "16 / 9",
+    client: "Slate",
+  },
+  {
     label: "Animated Explainers",
     sub: "Visualize what cameras can't capture.",
     videoId: "qidqrdit0r",
@@ -52,6 +59,13 @@ const FORMATS = [
     videoId: "bdvyv8woqp",
     aspect: "16 / 9",
     client: "Close",
+  },
+  {
+    label: "YouTube Series",
+    sub: "Make your audience love learning things with you.",
+    videoId: "5trb6a2h4p",
+    aspect: "16 / 9",
+    client: "Powerchord",
   },
   {
     label: "Product Launches",

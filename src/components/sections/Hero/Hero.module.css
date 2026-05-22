@@ -125,7 +125,7 @@
   font-size: 17px;
   line-height: 1.6;
   max-width: 640px;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--a2-white);
   text-shadow: 0 2px 24px rgba(7, 2, 31, 0.55);
 }
 
@@ -174,7 +174,7 @@
   align-items: center;
   gap: 8px;
   font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--a2-white);
   margin-top: 0;
 }
 .note .dot {
@@ -213,6 +213,32 @@
   filter: brightness(0) invert(1);
 }
 .trustRow img.shopify { height: 24px; }
+.trustRow img.chili {
+  height: 22px;
+  transform: scale(1.35);
+  transform-origin: center;
+}
+.trustRow img.slate {
+  height: 28px;
+  max-width: 140px;
+  transform: scale(1.7);
+  transform-origin: center;
+}
+
+@media (max-width: 700px) {
+  .trustRow img.hideOnMobile { display: none; }
+  .trustRow img.chili {
+    height: 16px;
+    transform: scale(1.2);
+    margin: 0 6px;
+  }
+  .trustRow img.slate {
+    height: 20px;
+    max-width: 70px;
+    transform: scale(1.4);
+    margin: 0 10px;
+  }
+}
 
 @media (max-width: 991px) {
   .section { min-height: 760px; padding-top: 100px; }

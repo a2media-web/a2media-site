@@ -60,8 +60,7 @@ export default function StickyCurtain() {
           >
             <p className={styles.eyebrowFail}>Without a Video Engine</p>
             <h2 className={styles.headingFail}>
-              You&apos;re spending more and closing less, because each one of
-              your video attempts dies before it compounds.
+              Every month you&apos;re spending more and closing less.
             </h2>
             <div className={styles.tickerWrap}>
               <div className={styles.ticker}>
@@ -81,8 +80,8 @@ export default function StickyCurtain() {
           >
             <p className={styles.eyebrowSuccess}>With a Video Engine</p>
             <h2 className={styles.headingSuccess}>
-              Deals move faster because{" "}
-              <span>your prospects already trust you.</span>
+              Deals move 30-50% faster<br />
+              <span>because your prospects already trust you.</span>
             </h2>
             <p className={styles.proofCue}>See the proof</p>
             <div className={styles.scrollArrow} aria-hidden>
