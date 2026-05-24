@@ -55,12 +55,7 @@ export default function MockupsPage() {
           Every video we&apos;ve shipped, organized by format, client, and
           outcome.
         </p>
-        <a
-          href="https://fast.wistia.com/embed/channel/fj6gynv9qi"
-          target="_blank"
-          rel="noreferrer"
-          style={ctaBtn}
-        >
+        <a href="/#work" style={ctaBtn}>
           See our full portfolio <span aria-hidden>→</span>
         </a>
       </section>

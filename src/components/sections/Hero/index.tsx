@@ -97,12 +97,7 @@ export default function Hero() {
           <a href="#Pricing" className={styles.btnPrimary}>
             Pricing <span aria-hidden>→</span>
           </a>
-          <a
-            href="https://fast.wistia.com/embed/channel/fj6gynv9qi"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.btnGhost}
-          >
+          <a href="#work" className={styles.btnGhost}>
             See the videos
           </a>
         </div>

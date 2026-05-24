@@ -13,7 +13,7 @@ const CONNECT_LINKS = [
   { label: "Book a Call", href: "https://cal.com/a2media/meeting", external: true },
   { label: "Email Us", href: "mailto:ademola@a2media.ca", external: false },
   { label: "LinkedIn", href: "https://www.linkedin.com/company/a2media", external: true },
-  { label: "Our Portfolio", href: "https://fast.wistia.com/embed/channel/fj6gynv9qi", external: true },
+  { label: "Our Portfolio", href: "#work", external: false },
 ];
 
 export default function Footer() {

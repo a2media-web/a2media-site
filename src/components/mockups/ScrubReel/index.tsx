@@ -213,13 +213,8 @@ export default function ScrubReel() {
 
         <div className={styles.footer}>
           <span className={styles.scrollHint}>Scroll to explore →</span>
-          <a
-            href="https://fast.wistia.com/embed/channel/fj6gynv9qi"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.portfolioBtn}
-          >
-            See our full portfolio <span aria-hidden>→</span>
+          <a href="#Pricing" className={styles.portfolioBtn}>
+            See pricing <span aria-hidden>→</span>
           </a>
         </div>
       </div>

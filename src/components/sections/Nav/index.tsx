@@ -10,7 +10,7 @@ const LINKS = [
   { href: "#our-process", label: "Our Process" },
   { href: "#Studies", label: "Case Studies" },
   { href: "#Pricing", label: "Pricing" },
-  { href: "https://fast.wistia.com/embed/channel/fj6gynv9qi", label: "Our Portfolio", external: true },
+  { href: "#work", label: "Our Portfolio" },
   { href: "https://9yqatx.short.gy/vpYuEX", label: "The Vault", external: true },
 ];
 
