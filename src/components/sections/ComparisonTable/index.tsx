@@ -46,7 +46,7 @@ export default function ComparisonTable() {
             ))}
             <div className={styles.total}>
               <span className={styles.totalLabel}>6-month cost</span>
-              <span className={`${styles.totalAmount} ${styles.green}`}>$84K</span>
+              <span className={`${styles.totalAmount} ${styles.green}`}>$90K</span>
             </div>
             <div className={styles.note}>
               No recruiting. No ramp time. <span className={styles.accent}>Expertise from Day 1.</span>
@@ -54,7 +54,7 @@ export default function ComparisonTable() {
           </div>
         </div>
         <div className={styles.savings}>
-          Save over <strong>$352,000</strong>, and start in <strong>48 hours</strong>, not 6 months.
+          Save over <strong>$346,000</strong>, and start in <strong>48 hours</strong>, not 6 months.
         </div>
       </div>
     </section>

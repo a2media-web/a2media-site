@@ -85,7 +85,7 @@ export default function Pricing() {
             <span className={`${styles.badge} ${styles.badgePurpleSolid}`}>Then</span>
             <h2 className={styles.planName}>The Video Growth Engine</h2>
             <div className={styles.price}>
-              $14K — $20K<small>/ month</small>
+              $15K — $23K<small>/ month</small>
             </div>
             <p className={styles.desc}>
               Pick 3 or 6 months. Longer = Lower monthly rate.
