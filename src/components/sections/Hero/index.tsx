@@ -95,10 +95,10 @@ export default function Hero() {
 
         <div className={styles.ctas}>
           <a href="#Pricing" className={styles.btnPrimary}>
-            Pricing <span aria-hidden>→</span>
+            See if we&apos;re a fit <span aria-hidden>→</span>
           </a>
           <a href="#work" className={styles.btnGhost}>
-            See the videos
+            See the work
           </a>
         </div>
 
