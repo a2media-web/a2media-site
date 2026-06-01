@@ -39,7 +39,7 @@ export default function Pricing() {
           Every engagement starts with the <b>2-Week Jumpstart</b>.
           <br />
           <span className={styles.introAccent}>
-            We&apos;ll walk you through your exact monthly total on your discovery call.
+            Whether we work together or not, you&apos;ll leave the call with a direction for your video content.
           </span>
         </p>
 
