@@ -233,7 +233,7 @@ export default function Pricing() {
                   color: NEON,
                 }}
               >
-                THE DIRECTION CALL · 30 MIN
+                THE VIDEO STRATEGY CALL · 30 MIN
               </span>
             </span>
             <p
