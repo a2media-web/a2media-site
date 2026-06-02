@@ -210,15 +210,31 @@ export default function Pricing() {
           }}
         >
           <div style={{ flex: "1 1 460px" }}>
-            <span
-              style={{
-                fontSize: 11,
-                fontWeight: 800,
-                letterSpacing: "0.16em",
-                color: NEON,
-              }}
-            >
-              FREE · 30 MINUTES · THE DIRECTION CALL
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: NEON,
+                  color: "var(--a2-night-core)",
+                  fontWeight: 800,
+                  letterSpacing: "0.12em",
+                  borderRadius: 999,
+                  padding: "3px 10px",
+                  fontSize: 11,
+                }}
+              >
+                FREE
+              </span>
+              <span
+                style={{
+                  fontSize: 11,
+                  fontWeight: 800,
+                  letterSpacing: "0.16em",
+                  color: NEON,
+                }}
+              >
+                THE DIRECTION CALL · 30 MIN
+              </span>
             </span>
             <p
               style={{
