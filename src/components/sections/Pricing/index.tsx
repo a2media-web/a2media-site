@@ -192,6 +192,9 @@ export default function Pricing() {
         <h2 className={styles.heading}>
           3 Ways to Work <em>With Us</em>
         </h2>
+        <p className={styles.intro} style={{ marginBottom: 28 }}>
+          <span className={styles.introAccent}>{CREDIT}</span>
+        </p>
 
         {/* Direction Call — free, spans the top */}
         <div
@@ -249,9 +252,6 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p style={{ marginTop: 22, textAlign: "center", fontSize: 14 }}>
-          <span className={styles.introAccent}>{CREDIT}</span>
-        </p>
       </div>
     </section>
   );
