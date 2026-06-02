@@ -210,7 +210,7 @@ export default function Pricing() {
           }}
         >
           <div style={{ flex: "1 1 460px" }}>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <span
                 style={{
                   display: "inline-block",
@@ -225,25 +225,11 @@ export default function Pricing() {
               >
                 FREE
               </span>
-              <span
-                style={{
-                  fontSize: 11,
-                  fontWeight: 800,
-                  letterSpacing: "0.16em",
-                  color: NEON,
-                }}
-              >
-                THE VIDEO STRATEGY CALL
-              </span>
-            </span>
-            <p
-              style={{
-                color: "#fff",
-                fontSize: 17,
-                fontWeight: 600,
-                margin: "6px 0 0",
-              }}
-            >
+              <h3 className={styles.planName} style={{ fontSize: 22, margin: 0 }}>
+                The Video Strategy Call
+              </h3>
+            </div>
+            <p className={styles.desc} style={{ margin: "8px 0 0", fontSize: 14.5 }}>
               {POINT}
             </p>
           </div>
