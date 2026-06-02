@@ -11,7 +11,6 @@ import Editors from "@/components/sections/Editors";
 import ComparisonTable from "@/components/sections/ComparisonTable";
 import ClientTestimonials from "@/components/sections/ClientTestimonials";
 import Pricing from "@/components/sections/Pricing";
-import CustomProjects from "@/components/sections/CustomProjects";
 import Guarantee from "@/components/sections/Guarantee";
 import Testimonials from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
@@ -50,7 +49,6 @@ export default function Home() {
       <ComparisonTable />
       <ClientTestimonials />
       <Pricing />
-      <CustomProjects />
       <Guarantee />
       <Testimonials />
       <FAQ />
