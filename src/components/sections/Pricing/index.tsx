@@ -190,9 +190,8 @@ export default function Pricing() {
     <section id="Pricing" className={styles.section}>
       <div className={styles.inner}>
         <h2 className={styles.heading}>
-          Ways to work <em>with us.</em>
+          3 Ways to Work <em>With Us</em>
         </h2>
-        <p className={styles.intro}>3 plans, all the correct choices.</p>
 
         {/* Direction Call — free, spans the top */}
         <div
@@ -250,16 +249,8 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p
-          style={{
-            color: NEON,
-            fontSize: 14,
-            fontWeight: 600,
-            marginTop: 18,
-            textAlign: "center",
-          }}
-        >
-          {CREDIT}
+        <p style={{ marginTop: 22, textAlign: "center", fontSize: 14 }}>
+          <span className={styles.introAccent}>{CREDIT}</span>
         </p>
       </div>
     </section>
