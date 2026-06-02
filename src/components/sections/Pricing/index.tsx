@@ -4,7 +4,6 @@ import { useState } from "react";
 import styles from "./Pricing.module.css";
 
 const NEON = "var(--a2-electric-neon)";
-const LILAC = "var(--a2-flex-lilac)";
 const PURPLE = "var(--a2-electric-purple)";
 
 // Real booking links (carried over from the prior pricing + custom-projects blocks)
@@ -14,7 +13,7 @@ const ENGINE_LINK = "https://9yqatx.short.gy/ZJGUin";
 
 const POINT = "Even if you don't work with us, we'll point you in the right direction.";
 const CREDIT =
-  "It doesn't matter which one you pick; each plan gets credited to the one above it.";
+  "Every one-time project credits toward your monthly plan.";
 
 type Plan = {
   key: string;
@@ -53,7 +52,7 @@ const PLANS: Plan[] = [
     name: "2-Week Jumpstart",
     price: "$8K",
     unit: "one-time",
-    desc: "We do deep research on your buyer, map out six months of content + three videos.",
+    desc: "We research your buyer, map out 6 months of video, and give you 3 videos to test.",
     get: [
       "A clear content strategy built around your exact ICP",
       "3 high-impact videos you can use immediately",
@@ -62,7 +61,7 @@ const PLANS: Plan[] = [
     ],
     cta: "Get Started",
     href: DISCOVERY,
-    accent: LILAC,
+    accent: NEON,
     badge: "ONE-TIME",
   },
   {
