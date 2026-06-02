@@ -12,7 +12,7 @@ const DISCOVERY = "https://9yqatx.short.gy/vQTine";
 const CUSTOM = "https://9yqatx.short.gy/qeI5KF";
 const ENGINE_LINK = "https://9yqatx.short.gy/ZJGUin";
 
-const POINT = "Even if it's not us, we'll point you in the right direction.";
+const POINT = "Even if you don't work with us, we'll point you in the right direction.";
 const CREDIT =
   "It doesn't matter which one you pick; each plan gets credited to the one above it.";
 
@@ -36,12 +36,11 @@ const PLANS: Plan[] = [
   {
     key: "oneoff",
     name: "One-off Video",
-    price: "$2,000+",
-    unit: "one-time",
+    price: "$2K",
+    unit: "starting price",
     desc: "One storyboarded and edited video, start to finish.",
     get: [
       "We design and build your videos the A2 way.",
-      "A storyboard built around your buyer.",
       "One completely edited video, yours to own and post.",
     ],
     cta: "Get Started",
@@ -52,7 +51,7 @@ const PLANS: Plan[] = [
   {
     key: "jumpstart",
     name: "2-Week Jumpstart",
-    price: "$8,000",
+    price: "$8K",
     unit: "one-time",
     desc: "We do deep research on your buyer, map out six months of content + three videos.",
     get: [
