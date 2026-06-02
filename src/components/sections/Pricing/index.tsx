@@ -13,7 +13,7 @@ const ENGINE_LINK = "https://9yqatx.short.gy/ZJGUin";
 
 const POINT = "Even if you don't work with us, we'll point you in the right direction.";
 const CREDIT =
-  "Every one-time project credits toward your monthly plan.";
+  "Our one-time projects credit toward your monthly plan.";
 
 type Plan = {
   key: string;
