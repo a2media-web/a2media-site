@@ -21,6 +21,7 @@ type Plan = {
   price: string;
   unit: string;
   desc: string;
+  clarifier?: string;
   lead?: string;
   get: string[];
   cta: string;
@@ -38,6 +39,7 @@ const PLANS: Plan[] = [
     price: "$2K",
     unit: "starting price",
     desc: "One storyboarded and edited video, start to finish.",
+    clarifier: "You give us the raw footage. We make it look expensive.",
     get: [
       "We design and build your videos the A2 way.",
       "One completely edited video, yours to own and post.",
@@ -139,9 +141,22 @@ function PlanCard({ plan }: { plan: Plan }) {
         {plan.price}
         <small>{plan.unit}</small>
       </div>
-      <p className={styles.desc} style={{ margin: "10px 0 18px" }}>
+      <p className={styles.desc} style={{ margin: plan.clarifier ? "10px 0 6px" : "10px 0 18px" }}>
         {plan.desc}
       </p>
+      {plan.clarifier && (
+        <p
+          style={{
+            margin: "0 0 18px",
+            fontSize: 13.5,
+            fontStyle: "italic",
+            color: "rgba(255,255,255,0.55)",
+            lineHeight: 1.5,
+          }}
+        >
+          {plan.clarifier}
+        </p>
+      )}
 
       <div className={styles.collapse}>
         <button
