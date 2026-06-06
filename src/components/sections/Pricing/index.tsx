@@ -38,8 +38,7 @@ const PLANS: Plan[] = [
     name: "One-off Video",
     price: "$2K",
     unit: "starting price",
-    desc: "One storyboarded and edited video, start to finish.",
-    clarifier: "You give us the raw footage. We make it look expensive.",
+    desc: "You give us the raw footage. We make it look expensive.",
     get: [
       "We design and build your videos the A2 way.",
       "One completely edited video, yours to own and post.",
