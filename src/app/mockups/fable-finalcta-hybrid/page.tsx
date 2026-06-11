@@ -1,5 +1,14 @@
 "use client";
 
+/* Mockup: /mockups/fable-finalcta
+   "The Out Point" — Final CTA redesign concept.
+
+   The page is an edit and the visitor just scrubbed to the end of it. So the
+   closer behaves like the last frame of a cut: a scrub bar parked at 00:00,
+   a headline that admits the pitch is over, one oversized booking button,
+   a before/during/after strip that shows the call costs half an hour and
+   nothing else, and a relaxed founder sign-off. Confident, zero pressure. */
+
 import React from "react";
 
 const AVATARS = [
@@ -25,98 +34,123 @@ const STEPS = [
   },
 ];
 
-export default function FinalCTA() {
+export default function FableFinalCtaMockup() {
   return (
-    <section style={S.section}>
+    <main style={S.page}>
       <style dangerouslySetInnerHTML={{ __html: css }} />
-      <div style={S.glowA} aria-hidden />
-      <div style={S.glowB} aria-hidden />
 
-      <div style={S.inner}>
-        <div style={S.proofRow}>
-          <div style={S.avatars}>
-            {AVATARS.map((src, i) => (
-              <span key={i} style={S.avatar}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={src} alt="" style={S.avatarImg} />
-              </span>
-            ))}
-          </div>
-          <p style={S.proof}>
-            <strong style={S.proofStrong}>25+ B2B teams</strong> already building
-            trust through video.
-          </p>
-        </div>
+      {/* ---- Frame ---------------------------------------------------- */}
+      <header style={S.frameHeader}>
+        <span style={S.frameTag}>Hybrid · Fable concept + current avatar proof</span>
+        <h2 style={S.frameTitle}>The Out Point, with social proof</h2>
+        <p style={S.frameNotes}>
+          Same Fable closer as before. The only change: the avatar pill from
+          your current FinalCTA (5 client headshots, &quot;25+ B2B teams already
+          building trust through video&quot;) is grafted in at the top of the
+          section, above the scrub bar. You keep the concrete social-proof
+          signal you have today, and you get the distinctive closer.
+        </p>
+      </header>
 
-        <div style={S.scrubWrap} aria-hidden>
-          <div style={S.scrubLabels}>
-            <span>a2media.ca · 100% watched</span>
-            <span style={S.scrubRight}>00:00 left</span>
+      {/* ---- Section ---------------------------------------------------- */}
+      <section style={S.section}>
+        <div style={S.glowA} aria-hidden />
+        <div style={S.glowB} aria-hidden />
+
+        <div style={S.inner}>
+          {/* grafted from current FinalCTA: avatar proof pill */}
+          <div style={S.proofRow}>
+            <div style={S.avatars}>
+              {AVATARS.map((src, i) => (
+                <span key={i} style={S.avatar}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={src} alt="" style={S.avatarImg} />
+                </span>
+              ))}
+            </div>
+            <p style={S.proof}>
+              <strong style={S.proofStrong}>25+ B2B teams</strong> already building
+              trust through video.
+            </p>
           </div>
-          <div style={S.scrubTrack}>
-            <div style={S.scrubFill} />
-            <div style={S.playhead}>
-              <span style={S.playheadHandle} />
+
+          {/* scrub bar at the out point */}
+          <div style={S.scrubWrap} aria-hidden>
+            <div style={S.scrubLabels}>
+              <span>a2media.ca · 100% watched</span>
+              <span style={S.scrubRight}>00:00 left</span>
+            </div>
+            <div style={S.scrubTrack}>
+              <div style={S.scrubFill} />
+              <div style={S.playhead}>
+                <span style={S.playheadHandle} />
+              </div>
             </div>
           </div>
-        </div>
 
-        <h2 style={S.title}>You&apos;re just one conversation away.</h2>
+          <h2 style={S.title}>You&apos;re just one conversation away.</h2>
 
-        <p style={S.sub}>
-          It starts with one call. We look at how you sell, tell you where
-          video fits, and show you the first thing we&apos;d cut for you.
-        </p>
+          <p style={S.sub}>
+            It starts with one call. We look at how you sell, tell you where
+            video fits, and show you the first thing we&apos;d cut for you.
+          </p>
 
-        <div style={S.ctaBlock}>
-          <a
-            className="fcta-btn"
-            style={S.btn}
-            href="https://cal.com/a2media/meeting"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Book the call{" "}
-            <span className="fcta-arrow" aria-hidden>
-              →
+          <div style={S.ctaBlock}>
+            <a
+              className="fcta-btn"
+              style={S.btn}
+              href="https://cal.com/a2media/meeting"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Book the call{" "}
+              <span className="fcta-arrow" aria-hidden>
+                →
+              </span>
+            </a>
+            <p style={S.micro}>
+              Free · 30 minutes
+            </p>
+          </div>
+
+          {/* before / during / after strip */}
+          <div style={S.stepsWrap}>
+            <p style={S.stepsLabel}>What happens when you book</p>
+            <div className="fcta-steps">
+              {STEPS.map((s, i) => (
+                <div key={s.label} className="fcta-step" style={S.step}>
+                  <span style={S.stepNum}>{String(i + 1).padStart(2, "0")}</span>
+                  <p style={S.stepLabel}>{s.label}</p>
+                  <p style={S.stepBody}>{s.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* founder sign-off */}
+          <div style={S.signoff}>
+            <span style={S.signPhoto}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/ademola.png"
+                alt="Ademola, Founder of A2 Media"
+                style={S.signPhotoImg}
+              />
             </span>
-          </a>
-          <p style={S.micro}>Free · 30 minutes</p>
-        </div>
-
-        <div style={S.stepsWrap}>
-          <p style={S.stepsLabel}>What happens when you book</p>
-          <div className="fcta-steps">
-            {STEPS.map((s, i) => (
-              <div key={s.label} className="fcta-step" style={S.step}>
-                <span style={S.stepNum}>{String(i + 1).padStart(2, "0")}</span>
-                <p style={S.stepLabel}>{s.label}</p>
-                <p style={S.stepBody}>{s.body}</p>
-              </div>
-            ))}
+            <p style={S.signLine}>
+              <em>
+                Worst case, you leave with a free plan and a good conversation.
+              </em>
+            </p>
+            <p style={S.signName}>Ademola · Founder, A2 Media</p>
           </div>
         </div>
-
-        <div style={S.signoff}>
-          <span style={S.signPhoto}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/ademola.png"
-              alt="Ademola, Founder of A2 Media"
-              style={S.signPhotoImg}
-            />
-          </span>
-          <p style={S.signLine}>
-            <em>
-              Worst case, you leave with a free plan and a good conversation.
-            </em>
-          </p>
-          <p style={S.signName}>Ademola · Founder, A2 Media</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }
+
+/* ---- css (hover states + responsive grid) -------------------------------- */
 
 const css = `
   .fcta-btn { transition: transform .25s ease, background .25s ease, box-shadow .25s ease; }
@@ -135,7 +169,45 @@ const css = `
   }
 `;
 
+/* ---- styles --------------------------------------------------------------- */
+
 const S = {
+  page: { background: "#07021f" } as React.CSSProperties,
+
+  frameHeader: {
+    background: "#000",
+    borderTop: "2px solid #5A33FF",
+    padding: "40px 24px 28px",
+    textAlign: "center",
+    fontFamily: "var(--a2-sans)",
+  } as React.CSSProperties,
+  frameTag: {
+    display: "inline-block",
+    fontSize: 11,
+    fontWeight: 800,
+    letterSpacing: "0.18em",
+    textTransform: "uppercase",
+    padding: "5px 14px",
+    borderRadius: 999,
+    marginBottom: 12,
+    color: "#8F45EE",
+    border: "1px solid rgba(143,69,238,0.5)",
+  } as React.CSSProperties,
+  frameTitle: {
+    fontSize: 28,
+    fontWeight: 700,
+    color: "#fff",
+    margin: "0 0 8px",
+    letterSpacing: "-0.015em",
+  } as React.CSSProperties,
+  frameNotes: {
+    fontSize: 14,
+    lineHeight: 1.55,
+    color: "rgba(255,255,255,0.65)",
+    margin: "0 auto",
+    maxWidth: 720,
+  } as React.CSSProperties,
+
   section: {
     position: "relative",
     background: "#0D0536",
@@ -166,6 +238,7 @@ const S = {
     textAlign: "center",
   } as React.CSSProperties,
 
+  // ---- proof pill (grafted from current FinalCTA)
   proofRow: {
     display: "inline-flex",
     alignItems: "center",
@@ -177,7 +250,10 @@ const S = {
     margin: "0 auto 36px",
     backdropFilter: "blur(8px)",
   } as React.CSSProperties,
-  avatars: { display: "inline-flex", paddingLeft: 8 } as React.CSSProperties,
+  avatars: {
+    display: "inline-flex",
+    paddingLeft: 8,
+  } as React.CSSProperties,
   avatar: {
     width: 30,
     height: 30,
@@ -200,7 +276,10 @@ const S = {
     margin: 0,
     lineHeight: 1.4,
   } as React.CSSProperties,
-  proofStrong: { color: "#FFFFFF", fontWeight: 700 } as React.CSSProperties,
+  proofStrong: {
+    color: "#FFFFFF",
+    fontWeight: 700,
+  } as React.CSSProperties,
 
   scrubWrap: { maxWidth: 620, margin: "0 auto 60px" } as React.CSSProperties,
   scrubLabels: {
@@ -258,6 +337,17 @@ const S = {
     margin: "0 0 22px",
     color: "#FFFFFF",
     whiteSpace: "nowrap",
+  } as React.CSSProperties,
+  titleItalic: {
+    fontFamily: "var(--a2-display)",
+    fontStyle: "italic",
+    fontWeight: 500,
+    background: "linear-gradient(90deg, #8F45EE 0%, #5A33FF 100%)",
+    WebkitBackgroundClip: "text",
+    backgroundClip: "text",
+    color: "transparent",
+    display: "inline-block",
+    paddingRight: 4,
   } as React.CSSProperties,
 
   sub: {
@@ -349,6 +439,13 @@ const S = {
     height: "100%",
     objectFit: "cover",
     display: "block",
+  } as React.CSSProperties,
+  signPhotoInitial: {
+    fontSize: 26,
+    fontWeight: 800,
+    letterSpacing: "-0.02em",
+    color: "#FFFFFF",
+    fontFamily: "var(--a2-sans)",
   } as React.CSSProperties,
   signLine: {
     fontFamily: "var(--a2-display)",
