@@ -16,10 +16,10 @@
 import React, { useEffect, useRef, useState } from "react";
 
 const OFFER_URL =
-  "https://www.notion.so/a2-media/2ee7a0163fa480ea9305dd2ebb51a90b?v=2ee7a0163fa4810a963e000ca5982953&source=copy_link";
+  "https://a2-media.notion.site/2ee7a0163fa48117bd65e276d9284b66?pvs=105";
 
 const DISMISS_KEY = "a2-secret-printer-dismissed-v1";
-const SCROLL_TRIGGER_PCT = 0.1;
+const SCROLL_TRIGGER_PCT = 0.3;
 
 const MONO = "ui-monospace, SFMono-Regular, Menlo, monospace";
 
