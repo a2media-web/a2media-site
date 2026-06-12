@@ -1,0 +1,36 @@
+.section { background: var(--a2-clear-gray); padding: 96px 24px 120px; }
+.inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--a2-electric-purple); margin: 0 0 10px; }
+.heading { font-size: clamp(36px, 4.8vw, 60px); font-weight: 700; color: var(--a2-night-core); margin: 0 0 56px; letter-spacing: -0.02em; line-height: 1.05; }
+
+.bars { display: flex; flex-direction: column; gap: 36px; text-align: left; }
+
+.barRow { display: flex; flex-direction: column; gap: 14px; }
+.barHead { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+.barTitle { display: flex; align-items: baseline; gap: 16px; }
+.barNum {
+  font-family: "SF Mono", monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--a2-electric-purple);
+  letter-spacing: 0.08em;
+}
+.barText {
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 700;
+  color: var(--a2-night-core);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.bar { height: 12px; background: rgba(13,5,54,0.06); border-radius: 999px; overflow: hidden; }
+.fill { height: 100%; border-radius: 999px; transition: width 80ms linear; }
+
+.chip { padding: 6px 14px; border-radius: 999px; font-size: 11.5px; font-weight: 700; white-space: nowrap; }
+.chip_wait { background: rgba(0,0,0,0.05);          color: rgba(0,0,0,0.5); }
+.chip_up   { background: rgba(90, 51, 255, 0.12);   color: var(--a2-electric-purple); }
+.chip_live { background: rgba(102, 247, 142, 0.2);  color: #1f9a4a; }
+
+@media (max-width: 600px) {
+  .barHead { flex-direction: column; align-items: flex-start; gap: 8px; }
+}

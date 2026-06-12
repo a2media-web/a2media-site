@@ -1,0 +1,228 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import styles from "./Process.module.css";
+
+/**
+ * 3-step process — Gantt-style project timeline.
+ *
+ * Light Clear Gray section, white Gantt card with a NOW marker that
+ * sweeps left-to-right and lands at the end of Step Three. After the
+ * section first scrolls into view, the sweep loops every 15 seconds:
+ * full sweep takes ~3.4s, then idle until the next cycle starts.
+ *
+ * REVERT to the previous "three plain cards" layout by:
+ *   1. Restore from _backup-cards.tsx.txt / _backup-cards.module.css.txt
+ *   in this same folder.
+ */
+
+const HEADING = "3 Steps to Turning Video Into Pipeline";
+
+const STEPS = [
+  {
+    eyebrow: "Step One:",
+    title: "The 2-Week Jumpstart",
+    desc: "We study your buyer psychology — sales calls, competitor content, comments, anywhere your buyers show up online. Then we build your custom video roadmap. Where we tell you what you should be creating and how to distribute it. All based on our research.",
+  },
+  {
+    eyebrow: "Step Two:",
+    title: "We Build Your Video Engine.",
+    desc: "We design the video system that works for your team, then script, edit, and give world-class quality videos within 48-72 hours. We give you videos every week, all tailored to your buyers.",
+  },
+  {
+    eyebrow: "Step Three:",
+    title: "Your Videos Build Pipeline.",
+    desc: "Within a month, your sales team has videos they're proud to send out. Prospects show up to calls already educated. By month 6, video becomes one of your main drivers of buyer trust.",
+  },
+];
+
+// Step Three ends at 98% (not 100%) so the NOW label has 2% of breathing
+// room before the right edge.
+const BARS = [
+  { label: "Step One",   start: 0,  end: 18, weekLabel: "Weeks 1–2" },
+  { label: "Step Two",   start: 16, end: 70, weekLabel: "Weeks 4–12" },
+  { label: "Step Three", start: 60, end: 98, weekLabel: "Weeks 13–26" },
+];
+
+const ANIMATION_STEPS = [18, 60, 98];
+const LOOP_INTERVAL_MS = 15_000;
+
+export default function Process() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const firedRef = useRef(false);
+  const sweepTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const loopInterval = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [today, setToday] = useState(0);
+  // `instant` flips on for one paint when we need to snap NOW to 0 without
+  // animating backward (between loop cycles). CSS reads this and disables
+  // transitions while it's true.
+  const [instant, setInstant] = useState(false);
+
+  const clearSweep = () => {
+    sweepTimers.current.forEach((t) => clearTimeout(t));
+    sweepTimers.current = [];
+  };
+
+  const stopLoop = () => {
+    if (loopInterval.current) {
+      clearInterval(loopInterval.current);
+      loopInterval.current = null;
+    }
+  };
+
+  const runSweep = () => {
+    clearSweep();
+    // Snap to 0 with transitions disabled, then re-enable for the sweep.
+    setInstant(true);
+    setToday(0);
+    // Double rAF guarantees the browser paints with today=0 + no-transition
+    // BEFORE we flip transitions back on for the sweep targets.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setInstant(false);
+        ANIMATION_STEPS.forEach((t, i) => {
+          const id = setTimeout(() => setToday(t), 200 + i * 1300);
+          sweepTimers.current.push(id);
+        });
+      });
+    });
+  };
+
+  // Click handler — jumps NOW to that step's endpoint AND stops the loop
+  // so the user can read at their own pace without the chart resetting on
+  // them mid-thought.
+  const jumpTo = (stepIdx: number) => {
+    stopLoop();
+    clearSweep();
+    setInstant(false);
+    setToday(ANIMATION_STEPS[stepIdx]);
+  };
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting && !firedRef.current) {
+            firedRef.current = true;
+            io.disconnect();
+            runSweep();
+            loopInterval.current = setInterval(runSweep, LOOP_INTERVAL_MS);
+          }
+        }
+      },
+      { threshold: 0.3 },
+    );
+    io.observe(el);
+    return () => {
+      io.disconnect();
+      clearSweep();
+      stopLoop();
+    };
+  }, []);
+
+  return (
+    <section ref={sectionRef} id="our-process" className={styles.section}>
+      <div className={styles.inner}>
+        <p className={styles.eyebrow}>The plan · 4-6 months</p>
+        <h2 className={styles.heading}>{HEADING}</h2>
+
+        <div className={styles.gantt}>
+          <div className={styles.body}>
+            <div className={styles.labelCol}>
+              {BARS.map((b) => (
+                <div key={b.label} className={styles.labelRow}>
+                  <span className={styles.barLabelStep}>{b.label}</span>
+                  <span className={styles.barLabelWeeks}>{b.weekLabel}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className={styles.timelineCol}>
+              <div className={styles.scale}>
+                {["MONTH 1", "MONTH 2", "MONTH 3", "MONTH 4", "MONTH 5", "MONTH 6"].map((m, i) => (
+                  <div key={i} className={styles.scaleCell}>
+                    <span className={styles.scaleLabel}>{m}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className={`${styles.tracks} ${instant ? styles.instant : ""}`}>
+                {BARS.map((b, i) => {
+                  const fillStart = b.start;
+                  const fillEnd = Math.min(b.end, Math.max(b.start, today));
+                  const fillWidth = Math.max(0, fillEnd - fillStart);
+                  const isActive = today >= b.start && today <= b.end;
+                  return (
+                    <button
+                      type="button"
+                      key={b.label}
+                      className={styles.barTrack}
+                      onClick={() => jumpTo(i)}
+                      aria-label={`Jump to end of ${b.label}`}
+                    >
+                      <div
+                        className={`${styles.barOutline} ${isActive ? styles.barOutlineActive : ""}`}
+                        style={{ left: `${b.start}%`, width: `${b.end - b.start}%` }}
+                      >
+                        <div
+                          className={styles.barFill}
+                          style={{ left: 0, width: `${(fillWidth / (b.end - b.start)) * 100}%` }}
+                        />
+                      </div>
+                    </button>
+                  );
+                })}
+
+                <div className={styles.today} style={{ left: `${today}%` }} aria-hidden>
+                  <span className={styles.todayDot} />
+                  <span className={styles.todayLine} />
+                  <span className={styles.todayLabel}>NOW</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.cards}>
+            {STEPS.map((s, i) => {
+              const isActive = today >= BARS[i].start && today <= BARS[i].end;
+              const isDone = today > BARS[i].end;
+              return (
+                <button
+                  type="button"
+                  key={s.title}
+                  className={`${styles.card} ${isActive ? styles.cardActive : ""} ${isDone ? styles.cardDone : ""}`}
+                  onClick={() => jumpTo(i)}
+                  aria-label={`Jump to ${s.title}`}
+                >
+                  <div className={styles.cardHead}>
+                    <span className={styles.cardChip}>
+                      {isDone ? "✓ COMPLETE" : isActive ? "● IN PROGRESS" : "○ UPCOMING"}
+                    </span>
+                  </div>
+                  <p className={styles.stepEyebrow}>{s.eyebrow}</p>
+                  <h3 className={styles.stepTitle}>{s.title}</h3>
+                  <p className={styles.stepDesc}>{s.desc}</p>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className={styles.cta}>
+          <div className={styles.ctaTitle}>Let&apos;s Talk.</div>
+          <a
+            href="https://cal.com/a2media/meeting"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.ctaBtn}
+          >
+            Book a Discovery Call <span aria-hidden>→</span>
+          </a>
+          <div className={styles.ctaNote}>Free 30-minute call · No commitment</div>
+        </div>
+      </div>
+    </section>
+  );
+}

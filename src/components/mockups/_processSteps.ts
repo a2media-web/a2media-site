@@ -16,7 +16,7 @@ export type ProcessStep = {
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     eyebrow: "Step One:",
-    title: "The 3-Week Jumpstart",
+    title: "The 2-Week Jumpstart",
     desc: "We study your buyer psychology — sales calls, competitor content, comments, anywhere your buyers show up online. Then we build your custom video roadmap, write your scripts, and map out exactly what to create and how to distribute it.",
   },
   {

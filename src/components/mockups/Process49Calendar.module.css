@@ -1,0 +1,125 @@
+.section { background: var(--a2-clear-gray); padding: 72px 24px 96px; }
+.inner { max-width: 1180px; margin: 0 auto; text-align: center; }
+.eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--a2-electric-purple); margin: 0 0 10px; }
+.heading { font-size: clamp(34px, 4.4vw, 54px); font-weight: 700; color: var(--a2-night-core); margin: 0 0 28px; letter-spacing: -0.02em; line-height: 1.1; }
+
+.app {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(13,5,54,0.06);
+  box-shadow: 0 20px 60px rgba(13,5,54,0.1);
+  text-align: left;
+}
+
+.topbar {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 22px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 12.5px;
+}
+.brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; color: var(--a2-night-core); font-size: 15px; letter-spacing: -0.01em; }
+.brandIcon { font-size: 16px; }
+.crumb { color: rgba(13,5,54,0.55); }
+.bookBtn { margin-left: auto; background: var(--a2-electric-purple); color: #fff; border: 0; padding: 8px 14px; border-radius: 8px; font-weight: 600; font-size: 12.5px; cursor: pointer; }
+
+.weekView {
+  padding: 22px 32px 32px;
+  background: linear-gradient(180deg, rgba(90, 51, 255, 0.03), transparent);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.weekHead { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 22px; }
+.weekTitle { font-size: 13.5px; font-weight: 700; color: var(--a2-night-core); }
+.weekRange { font-size: 11.5px; color: rgba(13,5,54,0.5); font-family: "SF Mono", monospace; }
+
+.weekRail { position: relative; height: 64px; }
+.railLine {
+  position: absolute; left: 0; right: 0; top: 14px;
+  height: 3px;
+  background: rgba(13,5,54,0.06);
+  border-radius: 999px;
+}
+.dotRail {
+  position: absolute; top: 0;
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  transform: translateX(-50%);
+  opacity: 0.55;
+  transition: opacity 320ms ease;
+}
+.dotRailLive { opacity: 1; }
+.railDot {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid rgba(13,5,54,0.15);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 800;
+  color: rgba(13,5,54,0.5);
+  transition: all 240ms ease;
+}
+.dotRailLive .railDot { color: #fff; }
+.railDate { font-size: 10.5px; font-weight: 600; color: rgba(13,5,54,0.55); font-family: "SF Mono", monospace; }
+
+.meetings { padding: 6px 22px 14px; }
+.meeting {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  opacity: 0.55;
+  transition: opacity 360ms ease;
+}
+.meetingLive { opacity: 1; }
+
+.dayBlock {
+  width: 78px; height: 82px;
+  border-radius: 10px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px;
+  font-weight: 700;
+  transition: background 360ms ease, color 360ms ease;
+}
+.dayName { font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75; }
+.dayDate { font-size: 28px; font-weight: 900; letter-spacing: -0.04em; line-height: 1; }
+.dayMonth { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75; }
+
+.meetingBody { display: flex; flex-direction: column; gap: 8px; }
+.meetingHead { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; }
+.meetingTitleCol { display: flex; flex-direction: column; gap: 2px; }
+.meetingEyebrow { font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin: 0; }
+.meetingTitle { font-size: 18px; font-weight: 700; color: var(--a2-night-core); margin: 0; letter-spacing: -0.01em; }
+.statusPill { padding: 5px 12px; border-radius: 999px; font-size: 11.5px; font-weight: 700; white-space: nowrap; }
+.status_pending   { background: rgba(0,0,0,0.05);          color: rgba(0,0,0,0.5); }
+.status_scheduled { background: rgba(90, 51, 255, 0.12);   color: var(--a2-electric-purple); }
+.status_confirmed { background: rgba(255, 188, 46, 0.18);  color: #b87c00; }
+.status_joined    { background: rgba(102, 247, 142, 0.22); color: #1f9a4a; }
+
+.meetingDesc { font-size: 13px; line-height: 1.55; color: rgba(13,5,54,0.7); margin: 0; }
+
+.meetingMeta { display: flex; align-items: center; gap: 18px; padding-top: 8px; flex-wrap: wrap; font-size: 12px; color: rgba(13,5,54,0.65); }
+.metaItem { display: inline-flex; align-items: center; gap: 6px; }
+.attendees { display: inline-flex; align-items: center; }
+.miniAvatar { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid #fff; margin-left: -4px; }
+.miniAvatar:first-child { margin-left: 0; }
+.joinBtn { color: var(--a2-electric-purple); font-weight: 700; font-size: 12.5px; cursor: pointer; }
+
+.statusbar {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 22px;
+  background: #fafafa;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 12.5px;
+  color: rgba(13,5,54,0.65);
+}
+.statusDot { width: 8px; height: 8px; border-radius: 50%; background: #1f9a4a; box-shadow: 0 0 0 4px rgba(102, 247, 142, 0.2); }
+.calLink { color: var(--a2-electric-purple); font-weight: 700; font-family: "SF Mono", monospace; font-size: 11.5px; }
+
+@media (max-width: 760px) {
+  .meeting { grid-template-columns: 1fr; }
+  .dayBlock { width: 100%; height: 60px; flex-direction: row; gap: 10px; }
+  .dayDate { font-size: 22px; }
+  .meetingMeta { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .joinBtn { margin-left: 0 !important; }
+}

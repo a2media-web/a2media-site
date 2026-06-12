@@ -1,0 +1,394 @@
+.section {
+  background: var(--a2-clear-gray);
+  color: var(--a2-night-core);
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(90, 51, 255, 0.06) 0%, transparent 55%),
+    radial-gradient(circle at 80% 70%, rgba(143, 69, 238, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.inner { max-width: 1180px; margin: 0 auto; position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(36px, 4.8vw, 60px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 56px;
+  color: var(--a2-night-core);
+  line-height: 1.05;
+  text-align: center;
+}
+
+.gantt {
+  background: #ffffff;
+  border: 1px solid rgba(13, 5, 54, 0.08);
+  border-radius: 18px;
+  padding: 24px 28px 28px;
+  box-shadow: 0 20px 48px -24px rgba(13, 5, 54, 0.18);
+}
+
+/* Two-column layout: fixed-width labels + flexible timeline. */
+.body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.labelCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 38px;
+  padding-bottom: 8px;
+}
+
+.labelRow {
+  display: flex;
+  flex-direction: column;
+  height: 48px;
+  justify-content: center;
+}
+
+.barLabelStep {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--a2-night-core);
+}
+
+.barLabelWeeks {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  color: rgba(13, 5, 54, 0.55);
+  letter-spacing: 0.08em;
+}
+
+/* Timeline column — no overflow:hidden so NOW label can extend slightly. */
+.timelineCol {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.scale {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(13, 5, 54, 0.1);
+  padding-bottom: 8px;
+}
+
+.scaleCell { text-align: left; position: relative; }
+.scaleCell + .scaleCell::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  bottom: -8px;
+  width: 1px;
+  background: rgba(13, 5, 54, 0.06);
+}
+
+.scaleLabel {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(13, 5, 54, 0.5);
+}
+
+.tracks {
+  position: relative;
+  padding: 4px 0;
+}
+
+.barTrack {
+  position: relative;
+  height: 48px;
+  margin-bottom: 4px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+.barTrack:last-child { margin-bottom: 0; }
+.barTrack:hover .barOutline {
+  border-color: rgba(90, 51, 255, 0.45);
+}
+.barTrack:focus-visible { outline: none; }
+.barTrack:focus-visible .barOutline {
+  border-color: var(--a2-electric-purple);
+  box-shadow: 0 0 0 2px rgba(90, 51, 255, 0.28);
+}
+
+/* When the section is mid-reset (between loop cycles), kill transitions on
+   the parts that move so the bars + NOW marker snap to 0 instead of
+   animating backwards across the chart. */
+.instant .barFill,
+.instant .today {
+  transition: none !important;
+}
+
+.barOutline {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  background: rgba(90, 51, 255, 0.06);
+  border: 1px solid rgba(90, 51, 255, 0.2);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 320ms ease, background 320ms ease;
+}
+
+.barOutlineActive {
+  border-color: rgba(90, 51, 255, 0.5);
+  background: rgba(90, 51, 255, 0.08);
+  box-shadow: 0 0 0 1px rgba(90, 51, 255, 0.18);
+}
+
+.barFill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, var(--a2-electric-purple) 0%, #8f45ee 100%);
+  border-radius: 4px;
+  transition: width 1100ms cubic-bezier(0.45, 0, 0.5, 1);
+  box-shadow: 0 0 18px rgba(90, 51, 255, 0.35);
+}
+
+/* NOW indicator. left:0..100% maps to timeline width. Capped at 100% so it
+   lands exactly at the end of Step Three's bar. */
+.today {
+  position: absolute;
+  top: -6px;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  z-index: 3;
+  transform: translateX(-50%);
+  transition: left 1100ms cubic-bezier(0.45, 0, 0.5, 1);
+  pointer-events: none;
+}
+.todayDot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--a2-electric-purple);
+  box-shadow: 0 0 14px rgba(90, 51, 255, 0.6);
+}
+.todayLine {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  bottom: 24px;
+  background: var(--a2-electric-purple);
+  opacity: 0.55;
+}
+.todayLabel {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--a2-electric-purple);
+  background: #ffffff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid var(--a2-electric-purple);
+  white-space: nowrap;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.card {
+  padding: 22px 20px;
+  background: #ffffff;
+  border: 1px solid rgba(13, 5, 54, 0.08);
+  border-radius: 14px;
+  transition: background 320ms ease, border-color 320ms ease, transform 320ms ease, box-shadow 320ms ease;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  width: 100%;
+}
+.card:hover {
+  border-color: rgba(90, 51, 255, 0.28);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -14px rgba(90, 51, 255, 0.18);
+}
+.card:focus-visible {
+  outline: none;
+  border-color: var(--a2-electric-purple);
+  box-shadow: 0 0 0 2px rgba(90, 51, 255, 0.28);
+}
+.cardActive {
+  background: linear-gradient(160deg, rgba(90, 51, 255, 0.08), rgba(90, 51, 255, 0.02));
+  border-color: rgba(90, 51, 255, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 22px 44px -18px rgba(90, 51, 255, 0.3);
+}
+.cardDone {
+  background: linear-gradient(160deg, rgba(102, 247, 142, 0.12), rgba(102, 247, 142, 0.02));
+  border-color: rgba(102, 247, 142, 0.4);
+}
+
+.cardHead { margin-bottom: 12px; }
+
+.cardChip {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: rgba(13, 5, 54, 0.5);
+}
+.cardActive .cardChip { color: var(--a2-electric-purple); }
+.cardDone .cardChip { color: #199c44; }
+
+.stepEyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 6px;
+}
+
+.stepTitle {
+  font-family: var(--a2-sans);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--a2-night-core);
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.stepDesc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(13, 5, 54, 0.72);
+  margin: 0;
+}
+
+/* Tablet: ≤900px */
+@media (max-width: 900px) {
+  .body { grid-template-columns: 130px 1fr; }
+  .labelRow { height: 40px; }
+  .barLabelStep { font-size: 11.5px; }
+  .barLabelWeeks { font-size: 10px; }
+  .scaleLabel { font-size: 9.5px; letter-spacing: 0.12em; }
+  .barTrack { height: 40px; }
+  .cards { grid-template-columns: 1fr; }
+}
+
+/* Mobile: ≤560px */
+@media (max-width: 560px) {
+  .gantt { padding: 18px 16px 20px; }
+  .body { grid-template-columns: 96px 1fr; gap: 10px; }
+  .labelCol { padding-top: 32px; }
+  .labelRow { height: 36px; }
+  .barLabelStep { font-size: 10.5px; letter-spacing: 0.08em; }
+  .barLabelWeeks { font-size: 9.5px; letter-spacing: 0.04em; }
+  .scaleLabel { font-size: 8.5px; letter-spacing: 0.04em; }
+  .barTrack { height: 36px; }
+  .todayLabel { font-size: 8.5px; padding: 1px 5px; letter-spacing: 0.12em; }
+  .todayDot { width: 10px; height: 10px; }
+}
+
+/* Narrow phones ≤420px — abbreviate M1/M2/... */
+@media (max-width: 420px) {
+  .scaleLabel { font-size: 0; }
+  .scaleLabel::before {
+    content: "M";
+    font-size: 9px;
+    letter-spacing: 0.04em;
+    color: rgba(13, 5, 54, 0.5);
+  }
+  .scaleCell:nth-child(1) .scaleLabel::after { content: "1"; font-size: 9px; color: rgba(13, 5, 54, 0.5); }
+  .scaleCell:nth-child(2) .scaleLabel::after { content: "2"; font-size: 9px; color: rgba(13, 5, 54, 0.5); }
+  .scaleCell:nth-child(3) .scaleLabel::after { content: "3"; font-size: 9px; color: rgba(13, 5, 54, 0.5); }
+  .scaleCell:nth-child(4) .scaleLabel::after { content: "4"; font-size: 9px; color: rgba(13, 5, 54, 0.5); }
+  .scaleCell:nth-child(5) .scaleLabel::after { content: "5"; font-size: 9px; color: rgba(13, 5, 54, 0.5); }
+  .scaleCell:nth-child(6) .scaleLabel::after { content: "6"; font-size: 9px; color: rgba(13, 5, 54, 0.5); }
+}
+
+/* CTA block (preserved from the previous Process layout) */
+.cta {
+  text-align: center;
+  background: rgba(90, 51, 255, 0.06);
+  border: 1px solid rgba(90, 51, 255, 0.22);
+  border-radius: var(--a2-radius-lg, 18px);
+  padding: 32px 24px;
+  margin-top: 48px;
+}
+.ctaTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--a2-night-core);
+  margin-bottom: 12px;
+}
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: var(--a2-electric-purple);
+  color: var(--a2-white);
+  border-radius: var(--a2-radius-pill, 999px);
+  font-weight: 600;
+  font-size: 14.5px;
+  margin-top: 12px;
+  transition: background var(--a2-dur-base, 220ms), transform var(--a2-dur-base, 220ms),
+    box-shadow var(--a2-dur-base, 220ms);
+}
+.ctaBtn:hover {
+  background: var(--a2-electric-purple-soft, #8f45ee);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(90, 51, 255, 0.25);
+}
+.ctaNote {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: rgba(13, 5, 54, 0.55);
+}

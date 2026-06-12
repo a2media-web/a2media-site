@@ -58,8 +58,7 @@ export default function BookingModal({ open, onClose }: Props) {
             <p style={S.author}>Ademola Adelakun</p>
             <p style={S.role}>Founder, A2 Media</p>
             <h3 style={S.headline}>
-              <em style={S.headlineItalic}>30 minute free call.</em> We give
-              you actionable next steps.
+              Free 30 minute call. We give you actionable next steps.
             </h3>
             <ul style={S.list}>
               <li style={S.item}>
@@ -81,7 +80,7 @@ export default function BookingModal({ open, onClose }: Props) {
               </span>
               <p style={S.closerLine}>
                 <strong style={S.closerStrong}>
-                  Even if you don&apos;t sign.
+                  Even if you don&apos;t sign with us.
                 </strong>{" "}
                 <span style={S.closerFinish}>
                   We&apos;ll tell you how to choose the right partner.

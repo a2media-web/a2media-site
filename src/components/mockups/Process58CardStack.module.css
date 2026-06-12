@@ -1,0 +1,54 @@
+.section { background: var(--a2-clear-gray); padding: 80px 24px 100px; }
+.inner { max-width: 940px; margin: 0 auto; text-align: center; }
+.eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--a2-electric-purple); margin: 0 0 10px; }
+.heading { font-size: clamp(34px, 4.4vw, 54px); font-weight: 700; color: var(--a2-night-core); margin: 0 0 48px; letter-spacing: -0.02em; line-height: 1.1; }
+
+.cards { display: flex; flex-direction: column; gap: 14px; text-align: left; }
+
+.card {
+  display: grid;
+  grid-template-columns: 200px 1fr auto;
+  align-items: center;
+  gap: 24px;
+  background: #fff;
+  border: 1px solid rgba(13,5,54,0.06);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(13,5,54,0.05);
+  opacity: 0.55;
+  transition: opacity 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
+}
+.cardOn { opacity: 1; border-color: rgba(90, 51, 255, 0.25); box-shadow: 0 10px 28px rgba(13,5,54,0.08); }
+
+.thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.thumbDur {
+  position: absolute; bottom: 8px; right: 8px;
+  font-family: "SF Mono", monospace; font-size: 10.5px; font-weight: 700;
+  background: rgba(0,0,0,0.7); color: #fff;
+  padding: 3px 6px; border-radius: 3px;
+}
+
+.body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.stepLabel { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(13,5,54,0.5); }
+.title { font-size: 22px; font-weight: 700; color: var(--a2-night-core); margin: 0; letter-spacing: -0.01em; }
+.desc { font-size: 14px; line-height: 1.5; color: rgba(13,5,54,0.7); margin: 4px 0 8px; }
+.bar { height: 4px; background: rgba(13,5,54,0.08); border-radius: 999px; overflow: hidden; }
+.fill { height: 100%; border-radius: 999px; transition: width 80ms linear; }
+
+.chip { padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.chip_wait { background: rgba(0,0,0,0.05); color: rgba(0,0,0,0.5); }
+.chip_up   { background: rgba(90, 51, 255, 0.12); color: var(--a2-electric-purple); }
+.chip_live { background: rgba(102, 247, 142, 0.2); color: #1f9a4a; }
+
+@media (max-width: 720px) {
+  .card { grid-template-columns: 120px 1fr; gap: 14px; padding: 14px; }
+  .thumb { width: 120px; }
+  .chip { grid-column: 1 / -1; justify-self: start; }
+  .title { font-size: 18px; }
+}

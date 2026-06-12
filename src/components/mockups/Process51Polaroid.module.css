@@ -1,0 +1,119 @@
+.section { background: var(--a2-clear-gray); padding: 96px 24px 120px; }
+.inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+.eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--a2-electric-purple); margin: 0 0 10px; }
+.heading { font-size: clamp(34px, 4.4vw, 54px); font-weight: 700; color: var(--a2-night-core); margin: 0 0 56px; letter-spacing: -0.02em; line-height: 1.1; }
+
+.scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  padding: 40px 20px;
+  margin-bottom: 36px;
+}
+
+.polaroid {
+  width: 260px;
+  background: #f8f5ed;
+  padding: 16px 16px 60px;
+  box-shadow:
+    0 4px 6px rgba(0,0,0,0.08),
+    0 12px 28px rgba(13,5,54,0.18);
+  border-radius: 4px;
+  position: relative;
+  transition: transform 600ms cubic-bezier(0.22, 0.61, 0.36, 1), filter 800ms ease;
+}
+.polaroid:hover { transform: rotate(0deg) translateY(-4px) !important; }
+
+.image {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: background 1800ms ease;
+}
+.imageOverlay {
+  position: absolute; inset: 0;
+  background: transparent;
+  opacity: 0.4;
+  mix-blend-mode: screen;
+  transition: background 1800ms ease;
+}
+.frameNum {
+  position: absolute; top: 8px; left: 10px; z-index: 2;
+  font-family: "SF Mono", monospace;
+  font-size: 10px; font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.1em;
+  opacity: 0;
+  transition: opacity 1200ms ease 600ms;
+}
+.brand {
+  position: absolute; top: 8px; right: 10px; z-index: 2;
+  font-size: 11px; font-weight: 900;
+  color: rgba(255,255,255,0.85);
+  opacity: 0;
+  transition: opacity 1200ms ease 600ms;
+}
+.polaroidOn .frameNum, .polaroidOn .brand { opacity: 1; }
+
+.imageContent {
+  position: absolute; bottom: 12px; left: 14px; right: 14px; z-index: 2;
+  display: flex; flex-direction: column; gap: 4px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 1400ms ease 1000ms, transform 1400ms ease 1000ms;
+}
+.polaroidOn .imageContent { opacity: 1; transform: translateY(0); }
+.imgEyebrow { font-size: 9px; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin: 0; }
+.imgTitle { font-size: 14px; font-weight: 700; color: #fff; margin: 0; line-height: 1.2; letter-spacing: -0.01em; }
+
+.caption {
+  position: absolute;
+  bottom: 14px; left: 16px; right: 16px;
+  display: flex; flex-direction: column; gap: 2px;
+  text-align: center;
+  min-height: 28px;
+}
+.captionHandwriting {
+  font-family: "Caveat", "Bradley Hand", cursive;
+  font-size: 18px;
+  color: var(--a2-night-core);
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transition: opacity 800ms ease 1400ms;
+}
+.captionDate {
+  font-family: "SF Mono", monospace;
+  font-size: 10px;
+  color: rgba(13,5,54,0.5);
+  letter-spacing: 0.08em;
+  opacity: 0;
+  transition: opacity 800ms ease 1600ms;
+}
+.polaroidOn .captionHandwriting, .polaroidOn .captionDate { opacity: 1; }
+
+.descRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 940px;
+  margin: 0 auto;
+  text-align: center;
+}
+.desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(13,5,54,0.7);
+  margin: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+.descOn { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 900px) {
+  .scene { flex-direction: column; gap: 20px; }
+  .polaroid { transform: none !important; width: 100%; max-width: 320px; }
+  .descRow { grid-template-columns: 1fr; gap: 16px; }
+}

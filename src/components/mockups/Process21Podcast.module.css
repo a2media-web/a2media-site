@@ -1,0 +1,290 @@
+.section {
+  background: var(--a2-night-core);
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(90, 51, 255, 0.16) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 14px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(36px, 4.8vw, 60px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 56px;
+  color: var(--a2-white);
+  line-height: 1.05;
+}
+
+.player {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 32px 64px -20px rgba(0,0,0,0.6);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 88px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.cover {
+  width: 88px;
+  height: 88px;
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, var(--a2-electric-purple) 0%, #8f45ee 60%, #28dfe8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 28px -8px rgba(90,51,255,0.6);
+}
+
+.coverMark {
+  font-family: var(--a2-sans);
+  font-size: 36px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.04em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.meta { display: flex; flex-direction: column; gap: 4px; }
+
+.episodeTag {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+}
+
+.episodeTitle {
+  font-family: var(--a2-sans);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--a2-white);
+  letter-spacing: -0.01em;
+  margin: 2px 0 6px;
+}
+
+.chapterIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--a2-electric-purple-soft, #c9b6ff);
+  margin: 0;
+}
+
+.recDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--a2-electric-purple);
+  box-shadow: 0 0 10px rgba(90,51,255,0.7);
+  animation: recBlink 1.2s ease-in-out infinite alternate;
+}
+@keyframes recBlink {
+  from { opacity: 1; }
+  to { opacity: 0.45; }
+}
+
+.playBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 0;
+  background: linear-gradient(180deg, var(--a2-electric-purple) 0%, #8f45ee 100%);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 24px rgba(90,51,255,0.5);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.playBtn:hover { transform: scale(1.05); }
+.playBtnOn { box-shadow: 0 0 36px rgba(90,51,255,0.8); }
+
+.waveformWrap {
+  position: relative;
+  padding: 0 0 36px;
+}
+
+.waveform {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 100px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 10px;
+  padding: 6px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.waveBar {
+  flex: 1;
+  background: rgba(255,255,255,0.18);
+  min-width: 2px;
+  border-radius: 1px;
+  transition: background 320ms ease;
+}
+.waveBarPast {
+  background: linear-gradient(180deg, var(--a2-electric-purple) 0%, #c9b6ff 100%);
+  box-shadow: 0 0 8px rgba(90,51,255,0.4);
+}
+
+.chapterTick {
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  width: 2px;
+  background: rgba(255,255,255,0.35);
+  z-index: 2;
+}
+
+.playhead {
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  width: 0;
+  z-index: 3;
+  transition: left 1100ms cubic-bezier(0.45, 0, 0.5, 1);
+  pointer-events: none;
+}
+.playheadDot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--a2-electric-purple);
+  border: 3px solid #fff;
+  box-shadow: 0 0 16px rgba(90,51,255,0.7);
+}
+
+.chapterLabels {
+  position: relative;
+  height: 18px;
+  margin-top: 10px;
+}
+
+.chapterLabel {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: rgba(255,255,255,0.45);
+  padding: 0;
+}
+.chapterLabelActive {
+  color: var(--a2-electric-purple-soft, #c9b6ff);
+}
+
+.tcRow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.5);
+  padding: 0 4px;
+}
+
+.transcript {
+  padding: 20px 22px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  animation: transcriptIn 320ms ease;
+}
+@keyframes transcriptIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.transcriptHead {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.45);
+  margin: 0 0 12px;
+}
+
+.stepEyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 6px;
+}
+
+.stepTitle {
+  font-family: var(--a2-sans);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--a2-white);
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.stepDesc {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.78);
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .head { grid-template-columns: 64px 1fr auto; }
+  .cover { width: 64px; height: 64px; }
+  .coverMark { font-size: 24px; }
+  .episodeTitle { font-size: 17px; }
+  .playBtn { width: 48px; height: 48px; font-size: 18px; }
+}

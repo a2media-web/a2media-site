@@ -1,0 +1,118 @@
+.section { background: var(--a2-clear-gray); padding: 96px 24px 120px; }
+.inner { max-width: 1180px; margin: 0 auto; text-align: center; }
+.eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--a2-electric-purple); margin: 0 0 10px; }
+.heading { font-size: clamp(34px, 4.4vw, 54px); font-weight: 700; color: var(--a2-night-core); margin: 0 0 48px; letter-spacing: -0.02em; line-height: 1.1; }
+
+.monitor {
+  background: #0a0c10;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(13,5,54,0.25),
+    inset 0 0 0 1px rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.85);
+  text-align: left;
+  margin-bottom: 36px;
+}
+
+.monitorHead {
+  display: flex; align-items: center; gap: 18px;
+  padding: 14px 22px;
+  background: #050608;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  font-family: "SF Mono", monospace;
+  font-size: 11.5px;
+}
+.recDot { width: 10px; height: 10px; border-radius: 50%; box-shadow: 0 0 12px currentColor; animation: pulse 1.4s ease-in-out infinite; transition: background 700ms ease; }
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
+.monitorLabel { font-weight: 700; letter-spacing: 0.16em; color: rgba(255,255,255,0.7); }
+.bpm, .spo2 { display: inline-flex; align-items: baseline; gap: 6px; color: rgba(255,255,255,0.5); letter-spacing: 0.12em; }
+.bpm b, .spo2 b { font-size: 18px; font-weight: 800; font-family: -apple-system, sans-serif; transition: color 700ms ease; }
+.tc { letter-spacing: 0.16em; color: rgba(255,255,255,0.5); }
+
+.scope {
+  position: relative;
+  aspect-ratio: 18 / 7;
+  background: radial-gradient(ellipse at center, rgba(40, 223, 232, 0.04), transparent 70%);
+}
+.gridLines { position: absolute; inset: 0; pointer-events: none; }
+.gridH { position: absolute; left: 0; right: 0; height: 1px; background: rgba(255,255,255,0.04); }
+.gridV { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(255,255,255,0.03); }
+
+.svg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+}
+.pathBase {
+  fill: none;
+  stroke-opacity: 0.12;
+  stroke-width: 0.5;
+  transition: stroke 700ms ease;
+}
+
+.sweepLine {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 2px;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: background 700ms ease;
+}
+.sweepDot {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: background 700ms ease, box-shadow 700ms ease;
+}
+
+.peakLabel {
+  position: absolute;
+  top: 12%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; gap: 4px;
+  text-align: center;
+  opacity: 0.35;
+  transition: opacity 400ms ease;
+}
+.peakLabelOn { opacity: 1; }
+.peakNum { font-family: "SF Mono", monospace; font-size: 9px; font-weight: 700; letter-spacing: 0.16em; }
+.peakTitle { font-size: 12.5px; font-weight: 700; color: #fff; letter-spacing: -0.005em; max-width: 200px; line-height: 1.2; }
+
+.monitorFoot {
+  display: flex; align-items: center; gap: 18px;
+  padding: 10px 22px;
+  background: #050608;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  font-family: "SF Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.4);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  text-align: left;
+}
+.card {
+  background: var(--a2-white);
+  border: 1px solid rgba(13,5,54,0.08);
+  border-radius: 12px;
+  padding: 22px;
+  opacity: 0.55;
+  transition: all 320ms ease;
+}
+.cardOn { opacity: 1; border-color: rgba(90, 51, 255, 0.3); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(13,5,54,0.08); }
+.cardEyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 6px; }
+.cardTitle { font-size: 17px; font-weight: 700; color: var(--a2-night-core); margin: 0 0 8px; letter-spacing: -0.01em; }
+.cardDesc { font-size: 13px; line-height: 1.55; color: rgba(13,5,54,0.7); margin: 0; }
+
+@media (max-width: 820px) {
+  .peakTitle { font-size: 10px; max-width: 100px; }
+  .cards { grid-template-columns: 1fr; }
+  .monitorHead { flex-wrap: wrap; }
+}

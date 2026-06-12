@@ -1,0 +1,10 @@
+import { chromium } from "playwright";
+const out = "./.review/pricing-options-5";
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1040, height: 1500 }, deviceScaleFactor: 1 });
+await page.goto("http://localhost:3000/mockups/pricing-title", { waitUntil: "domcontentloaded" });
+await page.waitForTimeout(800);
+const el = await page.$("main > div");
+await el.screenshot({ path: `${out}/pricing-title.png` });
+await browser.close();
+console.log("done");

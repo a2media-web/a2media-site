@@ -1,0 +1,227 @@
+.section {
+  background: var(--a2-night-core);
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(90, 51, 255, 0.16) 0%, transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(40, 223, 232, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.inner { max-width: 1180px; margin: 0 auto; position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 14px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(36px, 4.8vw, 60px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 56px;
+  color: var(--a2-white);
+  line-height: 1.05;
+}
+
+.contraption {
+  position: relative;
+  padding: 0 16px;
+}
+
+.marble {
+  position: absolute;
+  top: 20px;
+  left: 12%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #c9b6ff 60%, var(--a2-electric-purple) 100%);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6), 0 0 16px rgba(90,51,255,0.5);
+  z-index: 5;
+  opacity: 0;
+}
+
+.marbleRun {
+  animation: marbleDown 5.6s cubic-bezier(0.45, 0.05, 0.55, 0.95) forwards;
+}
+
+@keyframes marbleDown {
+  0%   { top: 20px;  left: 12%; opacity: 1; }
+  /* Ramp 1: left → right */
+  6%   { top: 80px;  left: 14%; }
+  20%  { top: 200px; left: 80%; }
+  22%  { top: 210px; left: 80%; }
+  /* Ramp 2: right → left */
+  26%  { top: 250px; left: 80%; }
+  40%  { top: 380px; left: 16%; }
+  42%  { top: 390px; left: 16%; }
+  /* Ramp 3: left → right */
+  46%  { top: 430px; left: 16%; }
+  64%  { top: 560px; left: 80%; }
+  66%  { top: 570px; left: 80%; }
+  /* Drop into basket */
+  90%  { top: 680px; left: 50%; }
+  100% { top: 690px; left: 50%; opacity: 0.6; }
+}
+
+.rampRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 36px;
+  align-items: center;
+  opacity: 0.55;
+  transition: opacity 320ms ease;
+}
+.rampOn { opacity: 1; }
+
+.rampRow0 .ramp { transform: rotate(8deg); transform-origin: left center; }
+.rampRow1 { direction: rtl; }
+.rampRow1 .ramp { transform: rotate(8deg); transform-origin: left center; }
+.rampRow1 .card { direction: ltr; }
+.rampRow2 .ramp { transform: rotate(8deg); transform-origin: left center; }
+
+.ramp {
+  position: relative;
+  height: 60px;
+  background: linear-gradient(180deg, #2c2c38 0%, #14101e 50%, #2c2c38 100%);
+  border: 2px solid #14101e;
+  border-radius: 6px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 6px 12px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 10px;
+}
+
+.rampLabel {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: rgba(255,255,255,0.65);
+  text-transform: uppercase;
+}
+
+.gear {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #bbb 0%, #555 100%);
+  border: 2px solid #14101e;
+}
+.rampOn .gear {
+  animation: gearSpin 1.4s linear infinite;
+}
+@keyframes gearSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.gearTooth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 30px;
+  background: #555;
+  border: 1px solid #14101e;
+  transform-origin: 2px 14px;
+}
+.gearTooth:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg); }
+.gearTooth:nth-child(2) { transform: translate(-50%, -50%) rotate(90deg); }
+.gearTooth:nth-child(3) { transform: translate(-50%, -50%) rotate(45deg); }
+.gearTooth:nth-child(4) { transform: translate(-50%, -50%) rotate(135deg); }
+
+.card {
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  transition: background 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
+}
+.rampOn .card {
+  background: linear-gradient(160deg, rgba(90,51,255,0.18), rgba(90,51,255,0.04));
+  border-color: rgba(90,51,255,0.5);
+  box-shadow: 0 18px 36px -14px rgba(90,51,255,0.4);
+}
+
+.stepEyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 6px;
+}
+
+.stepTitle {
+  font-family: var(--a2-sans);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--a2-white);
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.stepDesc {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.72);
+  margin: 0;
+}
+
+.basket {
+  margin: 32px auto 0;
+  width: 200px;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(102,247,142,0.1) 0%, rgba(102,247,142,0.3) 100%);
+  border: 2px solid rgba(102,247,142,0.4);
+  border-radius: 16px 16px 8px 8px;
+  text-align: center;
+  transition: background 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+}
+
+.basketWin {
+  background: linear-gradient(180deg, rgba(102,247,142,0.4) 0%, rgba(102,247,142,0.85) 100%);
+  border-color: #66f78e;
+  box-shadow: 0 0 36px rgba(102,247,142,0.7);
+  animation: basketGlow 0.6s ease-in-out infinite alternate;
+}
+@keyframes basketGlow {
+  from { box-shadow: 0 0 28px rgba(102,247,142,0.6); }
+  to { box-shadow: 0 0 56px rgba(102,247,142,0.95); }
+}
+
+.basketLabel {
+  font-family: var(--a2-sans);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--a2-white);
+  text-shadow: 0 0 12px rgba(102,247,142,0.8);
+}
+
+@media (max-width: 760px) {
+  .rampRow { grid-template-columns: 1fr; gap: 12px; }
+  .rampRow1 { direction: ltr; }
+  .ramp { transform: none !important; }
+}

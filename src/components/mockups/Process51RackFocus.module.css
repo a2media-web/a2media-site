@@ -1,0 +1,134 @@
+.section { background: var(--a2-clear-gray); padding: 72px 24px 96px; }
+.inner { max-width: 1180px; margin: 0 auto; text-align: center; }
+.eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--a2-electric-purple); margin: 0 0 10px; }
+.heading { font-size: clamp(34px, 4.4vw, 54px); font-weight: 700; color: var(--a2-night-core); margin: 0 0 28px; letter-spacing: -0.02em; line-height: 1.1; }
+
+.stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  background: radial-gradient(ellipse at 30% 30%, #1a0d4a, var(--a2-night-core) 70%);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 12px solid #0a0420;
+  box-shadow: 0 20px 60px rgba(13, 5, 54, 0.25), inset 0 0 0 1px rgba(255,255,255,0.04);
+}
+
+.tc {
+  position: absolute; top: 14px; left: 16px; z-index: 6;
+  font-family: "SF Mono", monospace;
+  font-size: 10.5px;
+  color: #ff4d4d;
+  letter-spacing: 0.05em;
+  background: rgba(0,0,0,0.4);
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+.iris {
+  position: absolute; top: 14px; right: 16px; z-index: 6;
+  font-family: "SF Mono", monospace;
+  font-size: 10.5px;
+  color: rgba(255,255,255,0.6);
+  background: rgba(0,0,0,0.4);
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.plane {
+  position: absolute;
+  background: transparent;
+  border: 0;
+  display: flex; align-items: center; justify-content: flex-start;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  filter: blur(8px);
+  opacity: 0.45;
+  transition: filter 700ms cubic-bezier(0.22, 0.61, 0.36, 1), opacity 700ms cubic-bezier(0.22, 0.61, 0.36, 1), transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  color: #fff;
+  z-index: 1;
+}
+.planeActive { filter: blur(0); opacity: 1; transform: scale(1.02); z-index: 4; }
+
+.plane_0 { top: 22%; left: 6%;  width: 36%; height: 56%; }
+.plane_1 { top: 18%; left: 34%; width: 38%; height: 64%; z-index: 2; }
+.plane_2 { top: 12%; left: 60%; width: 36%; height: 72%; z-index: 3; }
+
+.planeContent {
+  position: relative;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 22px 24px;
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column; justify-content: center;
+  z-index: 2;
+}
+.planeNum {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 50%;
+  font-size: 13px; font-weight: 800; color: #fff;
+  margin-bottom: 14px;
+}
+.planeEyebrow { font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin: 0 0 4px; }
+.planeTitle { font-size: clamp(15px, 1.4vw, 19px); font-weight: 700; color: #fff; margin: 0 0 8px; line-height: 1.15; letter-spacing: -0.01em; }
+.planeDesc { font-size: 12px; line-height: 1.5; color: rgba(255,255,255,0.78); margin: 0; }
+
+.planeGlow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.18;
+  z-index: 1;
+}
+
+.crosshair {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; height: 80px;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.45;
+}
+.crossH { position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: var(--a2-electric-neon); }
+.crossV { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: var(--a2-electric-neon); }
+.crossLabel {
+  position: absolute;
+  bottom: -22px; left: 50%;
+  transform: translateX(-50%);
+  font-family: "SF Mono", monospace;
+  font-size: 9.5px;
+  color: var(--a2-electric-neon);
+  white-space: nowrap;
+  letter-spacing: 0.08em;
+}
+
+.depthBar {
+  position: absolute;
+  bottom: 16px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; align-items: center; gap: 12px;
+  z-index: 6;
+}
+.depthLabel { font-family: "SF Mono", monospace; font-size: 9px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; }
+.depthTrack { position: relative; width: 240px; height: 4px; background: rgba(255,255,255,0.1); border-radius: 999px; }
+.depthHead {
+  position: absolute;
+  top: 50%;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--a2-electric-neon);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.4), 0 0 12px rgba(102, 247, 142, 0.6);
+  transition: left 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@media (max-width: 900px) {
+  .plane_0 { top: 6%; left: 4%; width: 92%; height: 28%; }
+  .plane_1 { top: 36%; left: 4%; width: 92%; height: 28%; }
+  .plane_2 { top: 66%; left: 4%; width: 92%; height: 28%; }
+  .planeTitle { font-size: 14px; }
+}

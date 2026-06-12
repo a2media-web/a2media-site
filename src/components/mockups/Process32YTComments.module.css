@@ -1,0 +1,304 @@
+.section {
+  background: var(--a2-night-core);
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(90, 51, 255, 0.16) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.inner { max-width: 920px; margin: 0 auto; position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 14px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(36px, 4.8vw, 60px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 40px;
+  color: var(--a2-white);
+  line-height: 1.05;
+}
+
+.thread {
+  background: #0f0f0f;
+  border-radius: 14px;
+  padding: 24px 28px;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 32px 64px -20px rgba(0,0,0,0.6);
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 18px;
+}
+
+.composerAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--a2-sans);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.composerInput {
+  font-family: var(--a2-sans);
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.45);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 8px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.comment {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 14px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 360ms ease, transform 360ms ease;
+}
+.commentIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.commentAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--a2-electric-purple) 0%, #8f45ee 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--a2-sans);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.commentBody { min-width: 0; }
+
+.commentMeta { margin-bottom: 6px; }
+
+.pinned {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--a2-sans);
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+.pinIcon { font-size: 10px; }
+
+.commentHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.author {
+  font-family: var(--a2-sans);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--a2-white);
+}
+
+.verifiedDot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  background: rgba(255,255,255,0.55);
+  color: #0f0f0f;
+  border-radius: 50%;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.creator {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple-soft, #c9b6ff);
+  background: rgba(90, 51, 255, 0.18);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+}
+
+.stepEyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 6px 0 6px;
+}
+
+.stepTitle {
+  font-family: var(--a2-sans);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--a2-white);
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+.stepDesc {
+  font-family: var(--a2-sans);
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  color: rgba(255,255,255,0.7);
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--a2-sans);
+  font-size: 12.5px;
+  transition: background 200ms ease;
+}
+.actionBtn:hover { background: rgba(255,255,255,0.06); }
+
+.actionBtnHearted {
+  color: var(--a2-electric-purple-soft, #c9b6ff);
+}
+
+.thumbUp, .thumbDown { font-size: 14px; }
+
+.likeCount {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.replyBtn {
+  background: transparent;
+  border: 0;
+  color: var(--a2-white);
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--a2-sans);
+  font-size: 12.5px;
+  font-weight: 700;
+  transition: background 200ms ease;
+}
+.replyBtn:hover { background: rgba(255,255,255,0.06); }
+
+.creatorHeart {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+}
+.creatorHeartAvatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--a2-electric-purple) 0%, #8f45ee 100%);
+  color: #fff;
+  font-family: var(--a2-sans);
+  font-size: 9px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heartIcon {
+  position: absolute;
+  right: -6px;
+  bottom: -2px;
+  font-size: 14px;
+  color: #ff5e5e;
+  background: #0f0f0f;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewReplies {
+  background: transparent;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--a2-electric-purple-soft, #c9b6ff);
+  font-family: var(--a2-sans);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.repliesArrow {
+  font-size: 8px;
+}
+
+@media (max-width: 600px) {
+  .thread { padding: 18px 16px; }
+  .comment { gap: 10px; }
+  .stepTitle { font-size: 16px; }
+}

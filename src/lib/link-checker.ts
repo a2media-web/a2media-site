@@ -22,7 +22,16 @@ const AUTH_WALL_MARKERS = [
   /you need (access|permission)/i,
   /access denied/i,
   /couldn.t find this (file|folder|document)/i,
+  // Google Drive / Docs / Sheets / Slides / Forms lock pattern: returns 200
+  // with a sign-in page whose <title> is e.g. "Google Drive: Sign-in".
+  /<title>[^<]*google[^<]*sign[- ]?in[^<]*<\/title>/i,
+  /<title>[^<]*sign[- ]?in[^<]*google[^<]*<\/title>/i,
 ];
+
+// A response is also a locked-page if redirect chain landed us on a Google
+// auth-flow URL (accounts.google.com), even with HTTP 200. Google uses
+// various paths: /ServiceLogin, /signin, /v3/signin/identifier, etc.
+const GOOGLE_AUTH_REDIRECT_RE = /^https?:\/\/accounts\.google\.com\//i;
 
 export type LinkCheckResult = {
   url: string;
@@ -64,6 +73,7 @@ export function extractUrls(text: string | null | undefined): string[] {
 async function checkOne(url: string, field: string): Promise<LinkCheckResult> {
   let httpCode: number | null = null;
   let bodyForMarker: string | null = null;
+  let finalUrl: string | null = null;
 
   try {
     const ctrl = new AbortController();
@@ -77,6 +87,7 @@ async function checkOne(url: string, field: string): Promise<LinkCheckResult> {
     });
     clearTimeout(timeout);
     httpCode = res.status;
+    finalUrl = res.url;
 
     if (res.status >= 200 && res.status < 300) {
       // Only read body on 2xx — saves bandwidth on hard errors.
@@ -96,6 +107,20 @@ async function checkOne(url: string, field: string): Promise<LinkCheckResult> {
       reason: aborted ? "timeout" : "network-error",
       httpCode,
       marker: null,
+    };
+  }
+
+  // Even with HTTP 200, if we got redirected to Google's sign-in flow the
+  // link is locked. Catches the common Drive/Docs pattern where the target
+  // is private and the user lands on accounts.google.com/ServiceLogin.
+  if (finalUrl && GOOGLE_AUTH_REDIRECT_RE.test(finalUrl)) {
+    return {
+      url,
+      field,
+      ok: false,
+      reason: "auth-wall",
+      httpCode,
+      marker: "redirected to Google sign-in",
     };
   }
 

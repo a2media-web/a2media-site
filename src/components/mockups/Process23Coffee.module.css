@@ -1,0 +1,374 @@
+.section {
+  background: var(--a2-night-core);
+  padding: clamp(64px, 8vw, 120px) 24px;
+  position: relative;
+  overflow: hidden;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(90, 51, 255, 0.16) 0%, transparent 55%),
+    radial-gradient(circle at 75% 70%, rgba(255, 140, 66, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.inner { max-width: 1180px; margin: 0 auto; position: relative; z-index: 1; }
+
+.eyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 14px;
+}
+
+.heading {
+  font-family: var(--a2-sans);
+  font-size: clamp(36px, 4.8vw, 60px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0 0 56px;
+  color: var(--a2-white);
+  line-height: 1.05;
+}
+
+.counter {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 40px 24px 60px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.3) 100%),
+    repeating-linear-gradient(90deg, transparent 0 36px, rgba(255,255,255,0.02) 36px 38px);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 32px;
+}
+
+.appliance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.55;
+  transition: opacity 320ms ease;
+}
+.applianceOn { opacity: 1; }
+
+.applianceTop {
+  position: relative;
+  width: 110px;
+  height: 60px;
+  background: linear-gradient(180deg, #555 0%, #2c2c38 100%);
+  border: 2px solid #14101e;
+  border-radius: 6px 6px 0 0;
+  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.18);
+  overflow: hidden;
+}
+
+.applianceBody {
+  width: 130px;
+  padding: 8px 10px;
+  background: linear-gradient(180deg, #2c2c38 0%, #14101e 100%);
+  border: 2px solid #14101e;
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.statusLight {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transition: background 280ms ease, box-shadow 280ms ease;
+}
+.applianceOn .statusLight {
+  background: #66f78e;
+  box-shadow: 0 0 10px rgba(102,247,142,0.8);
+}
+
+.applianceLabel {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: rgba(255,255,255,0.7);
+}
+
+/* Grinder */
+
+.hopper {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 36px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 6px 6px 30px 30px;
+}
+
+.bean {
+  position: absolute;
+  width: 8px;
+  height: 5px;
+  background: linear-gradient(180deg, #6b3a1a 0%, #3d1f0a 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.4);
+}
+.bean1 { top: 6px;  left: 14px; transform: rotate(-12deg); }
+.bean2 { top: 12px; left: 28px; transform: rotate(8deg); }
+.bean3 { top: 8px;  left: 38px; transform: rotate(-4deg); }
+.bean4 { top: 18px; left: 18px; transform: rotate(16deg); }
+
+.applianceChute {
+  width: 14px;
+  height: 22px;
+  background: #14101e;
+  border: 2px solid #14101e;
+  border-top: 0;
+  position: relative;
+}
+
+.groundStream, .coffeeStream {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 18px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+.groundStream { background: #6b3a1a; }
+.coffeeStream { background: #2a1505; box-shadow: 0 0 6px rgba(255, 140, 66, 0.5); }
+
+.groundStreamOn, .coffeeStreamOn {
+  opacity: 1;
+  animation: streamPulse 0.4s ease-in-out infinite alternate;
+}
+@keyframes streamPulse {
+  from { opacity: 1; height: 18px; }
+  to { opacity: 0.7; height: 22px; }
+}
+
+/* Brewer */
+
+.brewerHead {
+  position: relative;
+  height: 14px;
+  width: 110px;
+  margin-bottom: 2px;
+}
+
+.steam {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 14px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.45) 0%, transparent 70%);
+  filter: blur(4px);
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.steamOn {
+  animation: steamRise 2.4s ease-in-out infinite;
+  animation-delay: calc(var(--s-i) * 0.5s);
+}
+@keyframes steamRise {
+  0%   { opacity: 0; transform: translateX(-50%) translateY(0) scale(0.8); }
+  40%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-50px) scale(1.5); }
+}
+
+.basket {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 38px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.grounds {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: linear-gradient(180deg, #6b3a1a 0%, #3d1f0a 100%);
+  transition: height 540ms ease;
+}
+.groundsOn { height: 55%; }
+
+/* Mug */
+
+.mugStation { justify-content: center; }
+.mugSpace {
+  width: 110px;
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.mug {
+  position: relative;
+  width: 80px;
+  height: 56px;
+  background: linear-gradient(180deg, #fff 0%, #e8e6e0 100%);
+  border-radius: 6px 6px 14px 14px;
+  border: 2px solid #14101e;
+  box-shadow:
+    inset 0 -3px 0 rgba(0,0,0,0.2),
+    0 8px 16px -6px rgba(0,0,0,0.6);
+}
+
+.mugInside {
+  position: absolute;
+  inset: 4px 8px 6px 8px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px 3px 8px 8px;
+  overflow: hidden;
+}
+
+.coffee {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: linear-gradient(180deg, #5c2e0e 0%, #3d1f0a 100%);
+  transition: height 760ms cubic-bezier(0.3, 0.1, 0.4, 1);
+  overflow: hidden;
+}
+.coffeeOn { height: 70%; }
+
+.coffeeSurface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(180deg, rgba(255, 140, 66, 0.4) 0%, transparent 100%);
+  border-radius: 50%;
+}
+
+.handle {
+  position: absolute;
+  top: 8px;
+  right: -10px;
+  width: 14px;
+  height: 28px;
+  border: 4px solid #14101e;
+  border-left: 0;
+  border-radius: 0 14px 14px 0;
+  background: transparent;
+}
+
+.mugBrand {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--a2-sans);
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--a2-electric-purple);
+  letter-spacing: -0.02em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  padding: 22px 22px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  transition: background 320ms ease, border-color 320ms ease, transform 320ms ease, box-shadow 320ms ease;
+}
+.cardOn {
+  background: linear-gradient(160deg, rgba(255, 140, 66, 0.12), rgba(90,51,255,0.06));
+  border-color: rgba(255, 140, 66, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 22px 44px -18px rgba(255, 140, 66, 0.35);
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.cardStage {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.06);
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+.cardOn .cardStage { color: #ffb86c; background: rgba(255, 140, 66, 0.18); }
+
+.cardStatus {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+.cardOn .cardStatus { color: #66f78e; font-style: normal; }
+
+.stepEyebrow {
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple);
+  margin: 0 0 6px;
+}
+
+.stepTitle {
+  font-family: var(--a2-sans);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--a2-white);
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.stepDesc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.72);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .counter { grid-template-columns: 1fr; gap: 32px; padding: 32px 16px; }
+  .cards { grid-template-columns: 1fr; }
+}

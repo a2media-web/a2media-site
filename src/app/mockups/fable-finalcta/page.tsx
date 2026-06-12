@@ -1,0 +1,385 @@
+"use client";
+
+/* Mockup: /mockups/fable-finalcta
+   "The Out Point" — Final CTA redesign concept.
+
+   The page is an edit and the visitor just scrubbed to the end of it. So the
+   closer behaves like the last frame of a cut: a scrub bar parked at 00:00,
+   a headline that admits the pitch is over, one oversized booking button,
+   a before/during/after strip that shows the call costs half an hour and
+   nothing else, and a relaxed founder sign-off. Confident, zero pressure. */
+
+import React from "react";
+
+const STEPS = [
+  {
+    label: "Before the call",
+    body: "We watch what you've already published and look at how you sell. You prep nothing.",
+  },
+  {
+    label: "On the call",
+    body: "We spend thirty minutes on your buyers, your funnel, and the first videos we'd cut.",
+  },
+  {
+    label: "After the call",
+    body: "You leave with a clear direction. Run it with us or run it in-house.",
+  },
+];
+
+export default function FableFinalCtaMockup() {
+  return (
+    <main style={S.page}>
+      <style dangerouslySetInnerHTML={{ __html: css }} />
+
+      {/* ---- Frame ---------------------------------------------------- */}
+      <header style={S.frameHeader}>
+        <span style={S.frameTag}>Fable · Final CTA redesign concept</span>
+        <h2 style={S.frameTitle}>The Out Point</h2>
+        <p style={S.frameNotes}>
+          The page is a timeline and the visitor just scrubbed to the end of
+          it, so the closer says that out loud: a scrub bar parked at 00:00 and
+          a headline that admits the pitch is over. The posture is a confident
+          handshake rather than a second pitch. One oversized booking button
+          carries the section, a before/during/after strip proves the call
+          costs half an hour and nothing else, and a founder sign-off closes
+          with the same no-pressure promise the Pricing section opens.
+        </p>
+      </header>
+
+      {/* ---- Section ---------------------------------------------------- */}
+      <section style={S.section}>
+        <div style={S.glowA} aria-hidden />
+        <div style={S.glowB} aria-hidden />
+
+        <div style={S.inner}>
+          {/* scrub bar at the out point */}
+          <div style={S.scrubWrap} aria-hidden>
+            <div style={S.scrubLabels}>
+              <span>a2media.ca · 100% watched</span>
+              <span style={S.scrubRight}>out point · 00:00 left</span>
+            </div>
+            <div style={S.scrubTrack}>
+              <div style={S.scrubFill} />
+              <div style={S.playhead}>
+                <span style={S.playheadHandle} />
+              </div>
+            </div>
+          </div>
+
+          <h2 style={S.title}>
+            That&apos;s the whole pitch.
+            <br />
+            <em style={S.titleItalic}>The rest is a conversation.</em>
+          </h2>
+
+          <p style={S.sub}>
+            It starts with one call. We look at how you sell, tell you where
+            video fits, and show you the first thing we&apos;d cut for you.
+          </p>
+
+          <div style={S.ctaBlock}>
+            <a
+              className="fcta-btn"
+              style={S.btn}
+              href="https://cal.com/a2media/meeting"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Book the call{" "}
+              <span className="fcta-arrow" aria-hidden>
+                →
+              </span>
+            </a>
+            <p style={S.micro}>
+              Free · 30 minutes · You keep the direction either way
+            </p>
+          </div>
+
+          {/* before / during / after strip */}
+          <div style={S.stepsWrap}>
+            <p style={S.stepsLabel}>What happens when you book</p>
+            <div className="fcta-steps">
+              {STEPS.map((s, i) => (
+                <div key={s.label} className="fcta-step" style={S.step}>
+                  <span style={S.stepNum}>{String(i + 1).padStart(2, "0")}</span>
+                  <p style={S.stepLabel}>{s.label}</p>
+                  <p style={S.stepBody}>{s.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* founder sign-off */}
+          <div style={S.signoff}>
+            <span style={S.signMark}>A2</span>
+            <p style={S.signLine}>
+              <em>
+                Worst case, you leave with a free plan and a good conversation.
+              </em>
+            </p>
+            <p style={S.signName}>Ademola · Founder, A2 Media</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+/* ---- css (hover states + responsive grid) -------------------------------- */
+
+const css = `
+  .fcta-btn { transition: transform .25s ease, background .25s ease, box-shadow .25s ease; }
+  .fcta-btn:hover {
+    transform: translateY(-2px);
+    background: #8F45EE;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.14), 0 22px 70px rgba(143,69,238,0.6), 0 0 110px rgba(90,51,255,0.35);
+  }
+  .fcta-arrow { display: inline-block; transition: transform .25s ease; }
+  .fcta-btn:hover .fcta-arrow { transform: translateX(4px); }
+  .fcta-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; text-align: left; }
+  .fcta-step { transition: border-color .25s ease, background .25s ease; }
+  .fcta-step:hover { border-color: rgba(90,51,255,0.55); background: rgba(90,51,255,0.09); }
+  @media (max-width: 760px) {
+    .fcta-steps { grid-template-columns: 1fr; }
+  }
+`;
+
+/* ---- styles --------------------------------------------------------------- */
+
+const S = {
+  page: { background: "#07021f" } as React.CSSProperties,
+
+  frameHeader: {
+    background: "#000",
+    borderTop: "2px solid #5A33FF",
+    padding: "40px 24px 28px",
+    textAlign: "center",
+    fontFamily: "var(--a2-sans)",
+  } as React.CSSProperties,
+  frameTag: {
+    display: "inline-block",
+    fontSize: 11,
+    fontWeight: 800,
+    letterSpacing: "0.18em",
+    textTransform: "uppercase",
+    padding: "5px 14px",
+    borderRadius: 999,
+    marginBottom: 12,
+    color: "#8F45EE",
+    border: "1px solid rgba(143,69,238,0.5)",
+  } as React.CSSProperties,
+  frameTitle: {
+    fontSize: 28,
+    fontWeight: 700,
+    color: "#fff",
+    margin: "0 0 8px",
+    letterSpacing: "-0.015em",
+  } as React.CSSProperties,
+  frameNotes: {
+    fontSize: 14,
+    lineHeight: 1.55,
+    color: "rgba(255,255,255,0.65)",
+    margin: "0 auto",
+    maxWidth: 720,
+  } as React.CSSProperties,
+
+  section: {
+    position: "relative",
+    background: "#0D0536",
+    color: "#FFFFFF",
+    fontFamily: "var(--a2-sans)",
+    padding: "104px 24px 96px",
+    overflow: "hidden",
+  } as React.CSSProperties,
+  glowA: {
+    position: "absolute",
+    inset: 0,
+    background:
+      "radial-gradient(70% 55% at 50% 18%, rgba(90,51,255,0.26), transparent 70%)",
+    pointerEvents: "none",
+  } as React.CSSProperties,
+  glowB: {
+    position: "absolute",
+    inset: 0,
+    background:
+      "radial-gradient(55% 40% at 18% 100%, rgba(143,69,238,0.14), transparent 70%)",
+    pointerEvents: "none",
+  } as React.CSSProperties,
+
+  inner: {
+    position: "relative",
+    maxWidth: 880,
+    margin: "0 auto",
+    textAlign: "center",
+  } as React.CSSProperties,
+
+  scrubWrap: { maxWidth: 620, margin: "0 auto 60px" } as React.CSSProperties,
+  scrubLabels: {
+    display: "flex",
+    justifyContent: "space-between",
+    fontSize: 10.5,
+    fontWeight: 700,
+    letterSpacing: "0.16em",
+    textTransform: "uppercase",
+    color: "rgba(255,255,255,0.42)",
+    marginBottom: 10,
+  } as React.CSSProperties,
+  scrubRight: { color: "rgba(102,247,142,0.85)" } as React.CSSProperties,
+  scrubTrack: {
+    position: "relative",
+    height: 4,
+    borderRadius: 999,
+    background: "rgba(255,255,255,0.08)",
+  } as React.CSSProperties,
+  scrubFill: {
+    width: "100%",
+    height: "100%",
+    borderRadius: 999,
+    background:
+      "linear-gradient(90deg, rgba(90,51,255,0.35) 0%, #5A33FF 65%, #8F45EE 100%)",
+  } as React.CSSProperties,
+  playhead: {
+    position: "absolute",
+    right: -1,
+    top: "50%",
+    transform: "translateY(-50%)",
+    width: 2,
+    height: 20,
+    background: "#66F78E",
+    boxShadow: "0 0 14px rgba(102,247,142,0.8)",
+  } as React.CSSProperties,
+  playheadHandle: {
+    position: "absolute",
+    top: -8,
+    left: "50%",
+    transform: "translateX(-50%)",
+    width: 9,
+    height: 9,
+    borderRadius: 999,
+    background: "#66F78E",
+    boxShadow: "0 0 12px rgba(102,247,142,0.9)",
+    display: "block",
+  } as React.CSSProperties,
+
+  title: {
+    fontSize: "clamp(40px, 5.6vw, 66px)",
+    fontWeight: 700,
+    lineHeight: 1.08,
+    letterSpacing: "-0.025em",
+    margin: "0 0 22px",
+  } as React.CSSProperties,
+  titleItalic: {
+    fontFamily: "var(--a2-display)",
+    fontStyle: "italic",
+    fontWeight: 500,
+    background: "linear-gradient(90deg, #8F45EE 0%, #5A33FF 100%)",
+    WebkitBackgroundClip: "text",
+    backgroundClip: "text",
+    color: "transparent",
+    display: "inline-block",
+    paddingRight: 4,
+  } as React.CSSProperties,
+
+  sub: {
+    fontSize: 17.5,
+    lineHeight: 1.6,
+    color: "rgba(255,255,255,0.72)",
+    maxWidth: 540,
+    margin: "0 auto 46px",
+  } as React.CSSProperties,
+
+  ctaBlock: { marginBottom: 76 } as React.CSSProperties,
+  btn: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 12,
+    padding: "22px 52px",
+    background: "#5A33FF",
+    color: "#FFFFFF",
+    fontSize: 19,
+    fontWeight: 700,
+    borderRadius: 999,
+    textDecoration: "none",
+    boxShadow:
+      "0 0 0 1px rgba(255,255,255,0.1), 0 18px 60px rgba(90,51,255,0.55), 0 0 90px rgba(90,51,255,0.3)",
+  } as React.CSSProperties,
+  micro: {
+    marginTop: 18,
+    fontSize: 13,
+    color: "rgba(255,255,255,0.55)",
+    letterSpacing: "0.02em",
+  } as React.CSSProperties,
+
+  stepsWrap: { maxWidth: 820, margin: "0 auto" } as React.CSSProperties,
+  stepsLabel: {
+    fontSize: 11,
+    fontWeight: 800,
+    letterSpacing: "0.2em",
+    textTransform: "uppercase",
+    color: "rgba(255,255,255,0.45)",
+    marginBottom: 18,
+  } as React.CSSProperties,
+  step: {
+    background: "rgba(255,255,255,0.045)",
+    border: "1px solid rgba(255,255,255,0.1)",
+    borderLeft: "3px solid #5A33FF",
+    borderRadius: 16,
+    padding: "20px 22px 22px",
+    backdropFilter: "blur(10px)",
+    WebkitBackdropFilter: "blur(10px)",
+  } as React.CSSProperties,
+  stepNum: {
+    fontSize: 11,
+    fontWeight: 800,
+    letterSpacing: "0.14em",
+    color: "#8F45EE",
+  } as React.CSSProperties,
+  stepLabel: {
+    fontSize: 15,
+    fontWeight: 700,
+    color: "#FFFFFF",
+    margin: "8px 0 6px",
+  } as React.CSSProperties,
+  stepBody: {
+    fontSize: 13.5,
+    lineHeight: 1.55,
+    color: "rgba(255,255,255,0.62)",
+    margin: 0,
+  } as React.CSSProperties,
+
+  signoff: {
+    marginTop: 76,
+    paddingTop: 44,
+    borderTop: "1px solid rgba(255,255,255,0.08)",
+  } as React.CSSProperties,
+  signMark: {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 44,
+    height: 44,
+    borderRadius: 999,
+    background: "linear-gradient(135deg, #5A33FF 0%, #8F45EE 100%)",
+    fontSize: 14,
+    fontWeight: 800,
+    letterSpacing: "-0.02em",
+    color: "#FFFFFF",
+    boxShadow: "0 8px 30px rgba(90,51,255,0.45)",
+  } as React.CSSProperties,
+  signLine: {
+    fontFamily: "var(--a2-display)",
+    fontSize: "clamp(20px, 2.4vw, 26px)",
+    lineHeight: 1.45,
+    color: "rgba(255,255,255,0.9)",
+    maxWidth: 540,
+    margin: "18px auto 12px",
+  } as React.CSSProperties,
+  signName: {
+    fontSize: 12.5,
+    fontWeight: 700,
+    letterSpacing: "0.14em",
+    textTransform: "uppercase",
+    color: "rgba(255,255,255,0.45)",
+    margin: 0,
+  } as React.CSSProperties,
+};

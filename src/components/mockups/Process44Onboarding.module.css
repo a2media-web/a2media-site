@@ -1,0 +1,110 @@
+.section { background: var(--a2-clear-gray); padding: 72px 24px 96px; }
+.inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+.eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--a2-electric-purple); margin: 0 0 10px; }
+.heading { font-size: clamp(34px, 4.4vw, 54px); font-weight: 700; color: var(--a2-night-core); margin: 0 0 28px; letter-spacing: -0.02em; line-height: 1.1; }
+
+.app {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(13,5,54,0.06);
+  box-shadow: 0 20px 60px rgba(13,5,54,0.1);
+  text-align: left;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 24px;
+  align-items: center;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, rgba(90, 51, 255, 0.04), rgba(40, 223, 232, 0.04));
+  border-bottom: 1px solid rgba(13,5,54,0.06);
+}
+.headerCopy { display: flex; flex-direction: column; gap: 4px; }
+.welcome { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--a2-electric-purple); margin: 0; }
+.headerTitle { font-size: 24px; font-weight: 700; color: var(--a2-night-core); margin: 4px 0 4px; letter-spacing: -0.01em; }
+.headerSub { font-size: 13.5px; line-height: 1.55; color: rgba(13,5,54,0.65); margin: 0; max-width: 540px; }
+
+.ringWrap { position: relative; width: 110px; height: 110px; }
+.ring { width: 110px; height: 110px; transform: rotate(-90deg); }
+.ringTrack { fill: none; stroke: rgba(13,5,54,0.08); stroke-width: 6; }
+.ringFill { fill: none; stroke: var(--a2-electric-purple); stroke-width: 6; stroke-linecap: round; transition: stroke-dashoffset 80ms linear; }
+.ringInner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; }
+.ringPct { font-size: 22px; font-weight: 800; color: var(--a2-night-core); letter-spacing: -0.02em; line-height: 1; }
+.ringLabel { font-size: 10px; font-weight: 600; color: rgba(13,5,54,0.5); letter-spacing: 0.06em; text-transform: uppercase; }
+
+.checklist { padding: 8px 0; }
+.task {
+  padding: 22px 32px;
+  border-bottom: 1px solid rgba(13,5,54,0.05);
+  transition: opacity 320ms ease, background 320ms ease;
+}
+.task_todo { opacity: 0.5; }
+.task_doing { background: rgba(90, 51, 255, 0.03); }
+.task_done {}
+
+.taskHead { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.check { background: transparent; border: 0; padding: 0; cursor: default; }
+.checkDone, .checkDoing, .checkTodo {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 800;
+  border: 2px solid;
+}
+.checkDone  { color: #fff; }
+.checkDoing { background: #fff; position: relative; }
+.checkSpin {
+  width: 18px; height: 18px;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-top-color: var(--a2-electric-purple);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.checkTodo  { background: rgba(13,5,54,0.05); border-color: rgba(13,5,54,0.12); color: rgba(13,5,54,0.5); font-size: 13px; }
+
+.taskTitleCol { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.taskEyebrow { font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; margin: 0; transition: color 240ms ease; }
+.taskTitle { font-size: 17px; font-weight: 700; color: var(--a2-night-core); margin: 0; letter-spacing: -0.01em; }
+
+.chip { padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; }
+.chip_todo  { background: rgba(13,5,54,0.05); color: rgba(13,5,54,0.5); }
+.chip_doing { background: rgba(90, 51, 255, 0.12); color: var(--a2-electric-purple); }
+.chip_done  { background: rgba(102, 247, 142, 0.18); color: #1f9a4a; }
+
+.taskBody { padding-left: 46px; }
+.taskDesc { font-size: 13.5px; line-height: 1.55; color: rgba(13,5,54,0.7); margin: 0 0 12px; }
+
+.subtasks { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.subItem { display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: rgba(13,5,54,0.65); transition: color 240ms ease; }
+.subDone { color: rgba(13,5,54,0.45); text-decoration: line-through; text-decoration-color: rgba(13,5,54,0.25); }
+.subCheck {
+  width: 16px; height: 16px; border-radius: 4px;
+  border: 1.5px solid rgba(13,5,54,0.18);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 800; color: #fff;
+  transition: all 240ms ease;
+}
+
+.statusbar {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 32px;
+  background: #fafafa;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  font-size: 12.5px;
+  color: rgba(13,5,54,0.65);
+}
+.statusbar b { color: var(--a2-night-core); font-weight: 700; }
+.barFull { flex: 0 0 220px; height: 4px; background: rgba(0,0,0,0.06); border-radius: 999px; overflow: hidden; }
+.barFullFill { height: 100%; background: var(--a2-electric-neon); transition: width 80ms linear; }
+
+@media (max-width: 760px) {
+  .header { grid-template-columns: 1fr; justify-items: start; }
+  .ringWrap { width: 80px; height: 80px; }
+  .ring { width: 80px; height: 80px; }
+  .taskBody { padding-left: 0; }
+  .taskTitle { font-size: 15.5px; }
+  .chip { display: none; }
+}
