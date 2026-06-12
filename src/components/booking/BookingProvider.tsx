@@ -27,6 +27,13 @@ export function BookingProvider({ children }: { children: React.ReactNode }) {
   });
 
   const open = useCallback((slug = "engine") => {
+    // On mobile the in-page iframe is cramped and the pitch panel pushes the
+    // calendar below the fold. Navigate to cal.com directly so the visitor
+    // gets Cal's native mobile booking flow.
+    if (typeof window !== "undefined" && window.innerWidth < 720) {
+      window.location.href = `https://cal.com/a2media/${slug}`;
+      return;
+    }
     setState({ open: true, slug });
   }, []);
 
