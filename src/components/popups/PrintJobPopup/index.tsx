@@ -122,21 +122,19 @@ export default function PrintJobPopup() {
                     <span style={S.receiptBullet} aria-hidden>
                       →
                     </span>
-                    <span>
-                      The video format your competitors are missing out on.
-                    </span>
+                    <span>Learn the format your competitors are missing.</span>
                   </li>
                   <li style={S.receiptListItem}>
                     <span style={S.receiptBullet} aria-hidden>
                       →
                     </span>
-                    <span>8 to 10x more demos booked.</span>
+                    <span>Book 8 to 10x more demos.</span>
                   </li>
                   <li style={S.receiptListItem}>
                     <span style={S.receiptBullet} aria-hidden>
                       →
                     </span>
-                    <span>Deals close 35% faster.</span>
+                    <span>Watch buyers sell themselves.</span>
                   </li>
                 </ul>
                 <div style={S.receiptRule} />

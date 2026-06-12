@@ -186,9 +186,9 @@ const COPY = [
   ],
   // Variant 02 — Insider Status (locked, this is the shipping copy)
   [
-    "The video format your competitors are missing out on.",
-    "8 to 10x more demos booked.",
-    "Deals close 35% faster.",
+    "Learn the format your competitors are missing.",
+    "Book 8 to 10x more demos.",
+    "Watch buyers sell themselves.",
   ],
   // Variant 03 — Confidence + Concrete
   [
