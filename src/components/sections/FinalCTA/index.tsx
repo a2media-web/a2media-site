@@ -358,7 +358,9 @@ const S = {
     lineHeight: 1.45,
     color: "rgba(255,255,255,0.9)",
     margin: "18px auto 12px",
-    whiteSpace: "nowrap",
+    maxWidth: 620,
+    textWrap: "balance",
+    padding: "0 12px",
   } as React.CSSProperties,
   signName: {
     fontSize: 12.5,
