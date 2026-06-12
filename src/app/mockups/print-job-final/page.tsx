@@ -151,7 +151,7 @@ function TriggerButton({ onClick }: { onClick: () => void }) {
         <span style={S.triggerLed} className="pj-led" />
       </span>
       <span style={S.triggerLabel}>
-        <span style={S.triggerLabelTop}>psst. Click to see</span>
+        <span style={S.triggerLabelTop}>psst! Click here to see</span>
         <span style={S.triggerLabelMain}>
           Our Best Kept Video Secret{" "}
           <span aria-hidden style={{ marginLeft: 2 }}>
