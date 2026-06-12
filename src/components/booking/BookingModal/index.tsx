@@ -10,14 +10,17 @@
 
 import React, { useEffect } from "react";
 
-const CAL_URL = "https://cal.com/a2media/engine?embed=true&layout=month_view";
+const DEFAULT_CAL_SLUG = "engine";
 
 type Props = {
   open: boolean;
   onClose: () => void;
+  /** Cal event slug after cal.com/a2media/, e.g. "engine" or "meeting". Defaults to "engine". */
+  calSlug?: string;
 };
 
-export default function BookingModal({ open, onClose }: Props) {
+export default function BookingModal({ open, onClose, calSlug = DEFAULT_CAL_SLUG }: Props) {
+  const CAL_URL = `https://cal.com/a2media/${calSlug}?embed=true&layout=month_view`;
   // Body scroll lock + Escape-to-close while open
   useEffect(() => {
     if (!open) return;
@@ -147,7 +150,7 @@ const S = {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "min(940px, calc(100% - 24px))",
+    width: "min(880px, calc(100% - 24px))",
     maxHeight: "calc(100vh - 24px)",
     overflow: "auto" as const,
     background: "linear-gradient(180deg, #1A0F4D, #0D0536)",
@@ -304,12 +307,12 @@ const S = {
     borderRadius: 14,
     overflow: "hidden" as const,
     background: "#fff",
-    minHeight: 500,
+    minHeight: 460,
   } as React.CSSProperties,
   iframe: {
     width: "100%",
-    height: 500,
-    minHeight: 500,
+    height: 460,
+    minHeight: 460,
     border: "none",
     display: "block",
   } as React.CSSProperties,

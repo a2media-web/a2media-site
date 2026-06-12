@@ -1,4 +1,7 @@
+"use client";
+
 import styles from "./Footer.module.css";
+import { useBookingModal } from "@/components/booking/BookingProvider";
 
 const NAV_LINKS = [
   { label: "Pricing", href: "#Pricing" },
@@ -9,14 +12,19 @@ const NAV_LINKS = [
   { label: "Blog", href: "/blog" },
 ];
 
-const CONNECT_LINKS = [
-  { label: "Book a Call", href: "https://cal.com/a2media/meeting", external: true },
-  { label: "Email Us", href: "mailto:ademola@a2media.ca", external: false },
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/a2media", external: true },
-  { label: "Our Portfolio", href: "#work", external: false },
+type ConnectLink =
+  | { label: string; kind: "booking" }
+  | { label: string; kind: "link"; href: string; external: boolean };
+
+const CONNECT_LINKS: ConnectLink[] = [
+  { label: "Book a Call", kind: "booking" },
+  { label: "Email Us", kind: "link", href: "mailto:ademola@a2media.ca", external: false },
+  { label: "LinkedIn", kind: "link", href: "https://www.linkedin.com/company/a2media", external: true },
+  { label: "Our Portfolio", kind: "link", href: "#work", external: false },
 ];
 
 export default function Footer() {
+  const { open: openBooking } = useBookingModal();
   return (
     <footer className={styles.section}>
       <div className={styles.inner}>
@@ -53,15 +61,26 @@ export default function Footer() {
               <ul className={styles.list}>
                 {CONNECT_LINKS.map((l) => (
                   <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className={styles.link}
-                      {...(l.external
-                        ? { target: "_blank", rel: "noreferrer" }
-                        : {})}
-                    >
-                      {l.label}
-                    </a>
+                    {l.kind === "booking" ? (
+                      <button
+                        type="button"
+                        onClick={() => openBooking("meeting")}
+                        className={styles.link}
+                        style={{ cursor: "pointer", fontFamily: "inherit", background: "none", border: "none", padding: 0 }}
+                      >
+                        {l.label}
+                      </button>
+                    ) : (
+                      <a
+                        href={l.href}
+                        className={styles.link}
+                        {...(l.external
+                          ? { target: "_blank", rel: "noreferrer" }
+                          : {})}
+                      >
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

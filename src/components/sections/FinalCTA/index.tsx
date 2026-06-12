@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useBookingModal } from "@/components/booking/BookingProvider";
 
 const AVATARS = [
   "https://cdn.prod.website-files.com/64bfb907363259218e796320/69921f28dfc62947225c4c99_1770923418055.png",
@@ -26,6 +27,7 @@ const STEPS = [
 ];
 
 export default function FinalCTA() {
+  const { open } = useBookingModal();
   return (
     <section style={S.section}>
       <style dangerouslySetInnerHTML={{ __html: css }} />
@@ -69,18 +71,17 @@ export default function FinalCTA() {
         </p>
 
         <div style={S.ctaBlock}>
-          <a
+          <button
+            type="button"
             className="fcta-btn"
-            style={S.btn}
-            href="https://cal.com/a2media/meeting"
-            target="_blank"
-            rel="noreferrer"
+            style={{ ...S.btn, cursor: "pointer", fontFamily: "inherit", border: "none" }}
+            onClick={() => open("meeting")}
           >
             Book the call{" "}
             <span className="fcta-arrow" aria-hidden>
               →
             </span>
-          </a>
+          </button>
           <p style={S.micro}>Free · 30 minutes</p>
         </div>
 

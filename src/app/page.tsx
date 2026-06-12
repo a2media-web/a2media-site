@@ -18,6 +18,7 @@ import FinalCTA from "@/components/sections/FinalCTA";
 import TrailingTestimonial from "@/components/sections/TrailingTestimonial";
 import Footer from "@/components/sections/Footer";
 import PrintJobPopup from "@/components/popups/PrintJobPopup";
+import { BookingProvider } from "@/components/booking/BookingProvider";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
   faqSchema,
@@ -36,7 +37,7 @@ export default function Home() {
   ];
 
   return (
-    <>
+    <BookingProvider>
       <Nav />
       <Hero />
       <Pain />
@@ -58,6 +59,6 @@ export default function Home() {
       <Footer />
       <PrintJobPopup />
       <JsonLd data={pageSchemas} />
-    </>
+    </BookingProvider>
   );
 }

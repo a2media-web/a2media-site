@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./Process.module.css";
+import { useBookingModal } from "@/components/booking/BookingProvider";
 
 /**
  * Engagement checklist — the live 3-step layout for a2media.ca.
@@ -146,19 +147,27 @@ export default function Process() {
           })}
         </div>
 
-        <div className={styles.cta}>
-          <div className={styles.ctaTitle}>Be the team buyers already trust. With video.</div>
-          <a
-            href="https://cal.com/a2media/meeting"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.ctaBtn}
-          >
-            Book a Discovery Call <span aria-hidden>→</span>
-          </a>
-          <div className={styles.ctaNote}>Free 30-minute call · No commitment</div>
-        </div>
+        <ProcessCta />
       </div>
     </section>
   );
 }
+
+function ProcessCta() {
+  const { open } = useBookingModal();
+  return (
+    <div className={styles.cta}>
+      <div className={styles.ctaTitle}>Be the team buyers already trust. With video.</div>
+      <button
+        type="button"
+        onClick={() => open("meeting")}
+        className={styles.ctaBtn}
+        style={{ cursor: "pointer", fontFamily: "inherit", border: "none" }}
+      >
+        Book a Discovery Call <span aria-hidden>→</span>
+      </button>
+      <div className={styles.ctaNote}>Free 30-minute call · No commitment</div>
+    </div>
+  );
+}
+

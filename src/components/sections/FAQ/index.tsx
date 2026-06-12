@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./FAQ.module.css";
+import { useBookingModal } from "@/components/booking/BookingProvider";
 
 const QA: { q: string; a: React.ReactNode }[] = [
   {
@@ -119,6 +120,7 @@ const QA: { q: string; a: React.ReactNode }[] = [
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { open: openBooking } = useBookingModal();
   return (
     <section id="FAQ-Section" className={styles.section}>
       <div className={styles.inner}>
@@ -131,14 +133,14 @@ export default function FAQ() {
             The answers we give on most discovery calls. If yours isn&apos;t
             here, we&apos;ll cover it on the call.
           </p>
-          <a
-            href="https://cal.com/a2media/meeting"
-            target="_blank"
-            rel="noreferrer"
+          <button
+            type="button"
+            onClick={() => openBooking("meeting")}
             className={styles.askLink}
+            style={{ cursor: "pointer", fontFamily: "inherit", background: "none", border: "none", padding: 0 }}
           >
             Don&apos;t see your question? <span aria-hidden>→</span>
-          </a>
+          </button>
         </div>
         <dl className={styles.list}>
           {QA.map((item, i) => {

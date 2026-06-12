@@ -1,16 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./Pricing.module.css";
-import BookingModal from "@/components/booking/BookingModal";
+import { useBookingModal } from "@/components/booking/BookingProvider";
 
 const NEON = "var(--a2-electric-neon)";
 const PURPLE = "var(--a2-electric-purple)";
 
 // Real booking links (carried over from the prior pricing + custom-projects blocks)
-const DISCOVERY = "https://9yqatx.short.gy/vQTine";
+// DISCOVERY / ENGINE now route through the in-page BookingModal (see useBookingModal).
+// CUSTOM stays a hard link because it points at the custom-projects intake, not a Cal event.
 const CUSTOM = "https://9yqatx.short.gy/qeI5KF";
-const ENGINE_LINK = "https://9yqatx.short.gy/ZJGUin";
 
 const POINT = "Even if you don't work with us, we'll point you in the right direction.";
 const CREDIT =
@@ -62,7 +62,7 @@ const PLANS: Plan[] = [
       "A roadmap that shows how video will move pipeline",
     ],
     cta: "Get Started",
-    href: DISCOVERY,
+    href: "",
     accent: NEON,
     badge: "ONE-TIME",
   },
@@ -97,7 +97,7 @@ const PLANS: Plan[] = [
       "1:1 executive video coaching for your leadership team",
     ],
     cta: "See if We're a Fit",
-    href: ENGINE_LINK,
+    href: "",
     accent: PURPLE,
     badge: "MONTHLY",
     featured: true,
@@ -105,14 +105,10 @@ const PLANS: Plan[] = [
   },
 ];
 
-function PlanCard({
-  plan,
-  onEngineCta,
-}: {
-  plan: Plan;
-  onEngineCta?: () => void;
-}) {
+function PlanCard({ plan }: { plan: Plan }) {
   const [open, setOpen] = useState(false);
+  const { open: openBooking } = useBookingModal();
+  const usesBookingModal = plan.key === "engine" || plan.key === "jumpstart";
   return (
     <div
       className={`${styles.card} ${plan.featured ? styles.featured : ""}`}
@@ -192,10 +188,10 @@ function PlanCard({
 
       <div style={{ flexGrow: 1, minHeight: 20 }} />
 
-      {plan.key === "engine" && onEngineCta ? (
+      {usesBookingModal ? (
         <button
           type="button"
-          onClick={onEngineCta}
+          onClick={() => openBooking(plan.key === "engine" ? "engine" : "meeting")}
           className={`${styles.cta} ${plan.ctaFilled ? styles.ctaFilled : styles.ctaOutline}`}
           style={{ marginTop: 14, marginBottom: 0, border: plan.ctaFilled ? "none" : undefined, cursor: "pointer", fontFamily: "inherit" }}
         >
@@ -217,10 +213,9 @@ function PlanCard({
 }
 
 export default function Pricing() {
-  const [bookingOpen, setBookingOpen] = useState(false);
+  const { open: openBooking } = useBookingModal();
   return (
     <section id="Pricing" className={styles.section}>
-      <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
       <div className={styles.inner}>
         <h2 className={styles.heading}>
           3 Ways to Work <em>With Us</em>
@@ -268,20 +263,19 @@ export default function Pricing() {
               {POINT}
             </p>
           </div>
-          <a
-            href={DISCOVERY}
-            target="_blank"
-            rel="noreferrer"
+          <button
+            type="button"
+            onClick={() => openBooking("meeting")}
             className={`${styles.cta} ${styles.ctaOutline}`}
-            style={{ width: "auto", margin: 0, padding: "13px 26px" }}
+            style={{ width: "auto", margin: 0, padding: "13px 26px", cursor: "pointer", fontFamily: "inherit" }}
           >
             Book the Call
-          </a>
+          </button>
         </div>
 
         <div className={styles.grid}>
           {PLANS.map((p) => (
-            <PlanCard key={p.key} plan={p} onEngineCta={() => setBookingOpen(true)} />
+            <PlanCard key={p.key} plan={p} />
           ))}
         </div>
 
