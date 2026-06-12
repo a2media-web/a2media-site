@@ -256,9 +256,10 @@ const S = {
     fontWeight: 700,
     lineHeight: 1.1,
     letterSpacing: "-0.025em",
-    margin: "0 0 22px",
+    margin: "0 auto 22px",
     color: "#FFFFFF",
-    whiteSpace: "nowrap",
+    maxWidth: 760,
+    textWrap: "balance",
   } as React.CSSProperties,
 
   sub: {
