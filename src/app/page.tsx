@@ -17,6 +17,7 @@ import FAQ from "@/components/sections/FAQ";
 import FinalCTA from "@/components/sections/FinalCTA";
 import TrailingTestimonial from "@/components/sections/TrailingTestimonial";
 import Footer from "@/components/sections/Footer";
+import PrintJobPopup from "@/components/popups/PrintJobPopup";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
   faqSchema,
@@ -55,6 +56,7 @@ export default function Home() {
       <FinalCTA />
       <TrailingTestimonial />
       <Footer />
+      <PrintJobPopup />
       <JsonLd data={pageSchemas} />
     </>
   );
