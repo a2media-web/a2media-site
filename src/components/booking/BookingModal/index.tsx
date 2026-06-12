@@ -10,7 +10,7 @@
 
 import React, { useEffect } from "react";
 
-const CAL_URL = "https://cal.com/a2media/meeting?embed=true&layout=month_view";
+const CAL_URL = "https://cal.com/a2media/engine?embed=true&layout=month_view";
 
 type Props = {
   open: boolean;
