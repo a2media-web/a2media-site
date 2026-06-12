@@ -175,14 +175,21 @@
   padding: 32px 24px;
 }
 .ctaTitle {
-  font-size: clamp(22px, 2.6vw, 30px);
+  font-size: clamp(20px, 2.2vw, 28px);
   font-weight: 800;
   color: var(--a2-night-core);
   margin: 0 auto 16px;
-  max-width: 620px;
   line-height: 1.25;
   letter-spacing: -0.01em;
-  text-wrap: balance;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .ctaTitle {
+    white-space: normal;
+    font-size: 22px;
+    text-wrap: balance;
+    max-width: 320px;
+  }
 }
 .ctaBtn {
   display: inline-flex;
