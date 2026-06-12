@@ -123,7 +123,7 @@ export default function PrintJobPopup() {
                       →
                     </span>
                     <span>
-                      The format your competitors are missing out on.
+                      The video format your competitors are missing out on.
                     </span>
                   </li>
                   <li style={S.receiptListItem}>

@@ -186,7 +186,7 @@ const COPY = [
   ],
   // Variant 02 — Insider Status (locked, this is the shipping copy)
   [
-    "The format your competitors are missing out on.",
+    "The video format your competitors are missing out on.",
     "8 to 10x more demos booked.",
     "Deals close 35% faster.",
   ],
