@@ -32,7 +32,7 @@ export const PROCESS_STEPS: ProcessStep[] = [
 ];
 
 export const PROCESS_CTA = {
-  title: "Let's Talk.",
+  title: "Be the team buyers already trust. With video.",
   btn: "Book a Discovery Call",
   href: "https://cal.com/a2media/meeting",
   note: "Free 30-minute call · No commitment",
