@@ -7,10 +7,8 @@ import { useBookingModal } from "@/components/booking/BookingProvider";
 const NEON = "var(--a2-electric-neon)";
 const PURPLE = "var(--a2-electric-purple)";
 
-// Real booking links (carried over from the prior pricing + custom-projects blocks)
-// DISCOVERY / ENGINE now route through the in-page BookingModal (see useBookingModal).
-// CUSTOM stays a hard link because it points at the custom-projects intake, not a Cal event.
-const CUSTOM = "https://9yqatx.short.gy/qeI5KF";
+// All three plan CTAs now open the in-page BookingModal via useBookingModal —
+// Engine routes to the "engine" Cal event, the other two route to "meeting".
 
 const POINT = "Even if you don't work with us, we'll point you in the right direction.";
 const CREDIT =
@@ -45,7 +43,7 @@ const PLANS: Plan[] = [
       "One completely edited video, yours to own and post.",
     ],
     cta: "Get Started",
-    href: CUSTOM,
+    href: "",
     accent: NEON,
     badge: "ONE-TIME",
   },
@@ -108,7 +106,10 @@ const PLANS: Plan[] = [
 function PlanCard({ plan }: { plan: Plan }) {
   const [open, setOpen] = useState(false);
   const { open: openBooking } = useBookingModal();
-  const usesBookingModal = plan.key === "engine" || plan.key === "jumpstart";
+  const usesBookingModal =
+    plan.key === "engine" ||
+    plan.key === "jumpstart" ||
+    plan.key === "oneoff";
   return (
     <div
       className={`${styles.card} ${plan.featured ? styles.featured : ""}`}
