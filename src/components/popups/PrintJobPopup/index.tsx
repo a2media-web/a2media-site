@@ -9,7 +9,7 @@
    (slower dot-matrix line-by-line feed), reveal a teaser of the offer,
    and a "View the playbook" CTA opens the Notion form in a new tab.
 
-   Dismissal persists in localStorage so the visitor only sees it once
+   Dismissal persists in sessionStorage so the visitor only sees it once
    per browser. Swap OFFER_URL for a Kit form/sequence when ready.
 */
 
@@ -31,7 +31,7 @@ export default function PrintJobPopup() {
     if (typeof window === "undefined") return;
     // respect a prior dismissal
     try {
-      if (localStorage.getItem(DISMISS_KEY) === "1") {
+      if (sessionStorage.getItem(DISMISS_KEY) === "1") {
         armed.current = false;
         return;
       }
@@ -59,7 +59,7 @@ export default function PrintJobPopup() {
 
   const dismiss = () => {
     try {
-      localStorage.setItem(DISMISS_KEY, "1");
+      sessionStorage.setItem(DISMISS_KEY, "1");
     } catch {
       // ignore
     }
