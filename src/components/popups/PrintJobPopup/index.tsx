@@ -83,7 +83,7 @@ export default function PrintJobPopup() {
             <span style={S.triggerLed} className="pj-led" />
           </span>
           <span style={S.triggerLabel}>
-            <span style={S.triggerLabelMain}>psst. Click to see</span>
+            <span style={S.triggerLabelTop}>psst. Click to see</span>
             <span style={S.triggerLabelMain}>
               Our Best Kept Video Secret{" "}
               <span aria-hidden style={{ marginLeft: 2 }}>
@@ -259,10 +259,18 @@ const S = {
     display: "inline-flex",
     flexDirection: "column" as const,
     alignItems: "flex-start",
-    lineHeight: 1.15,
-    gap: 2,
+    lineHeight: 1.05,
     textAlign: "left" as const,
   },
+  triggerLabelTop: {
+    fontFamily: MONO,
+    fontSize: 8.5,
+    fontWeight: 800,
+    letterSpacing: "0.18em",
+    textTransform: "uppercase" as const,
+    color: "rgba(255,255,255,0.7)",
+    marginBottom: 3,
+  } as React.CSSProperties,
   triggerLabelMain: {
     fontSize: 13.5,
     fontWeight: 700,
