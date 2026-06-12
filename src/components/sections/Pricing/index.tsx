@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Pricing.module.css";
+import BookingModal from "@/components/booking/BookingModal";
 
 const NEON = "var(--a2-electric-neon)";
 const PURPLE = "var(--a2-electric-purple)";
@@ -104,7 +105,13 @@ const PLANS: Plan[] = [
   },
 ];
 
-function PlanCard({ plan }: { plan: Plan }) {
+function PlanCard({
+  plan,
+  onEngineCta,
+}: {
+  plan: Plan;
+  onEngineCta?: () => void;
+}) {
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -185,22 +192,35 @@ function PlanCard({ plan }: { plan: Plan }) {
 
       <div style={{ flexGrow: 1, minHeight: 20 }} />
 
-      <a
-        href={plan.href}
-        target="_blank"
-        rel="noreferrer"
-        className={`${styles.cta} ${plan.ctaFilled ? styles.ctaFilled : styles.ctaOutline}`}
-        style={{ marginTop: 14, marginBottom: 0 }}
-      >
-        {plan.cta}
-      </a>
+      {plan.key === "engine" && onEngineCta ? (
+        <button
+          type="button"
+          onClick={onEngineCta}
+          className={`${styles.cta} ${plan.ctaFilled ? styles.ctaFilled : styles.ctaOutline}`}
+          style={{ marginTop: 14, marginBottom: 0, border: plan.ctaFilled ? "none" : undefined, cursor: "pointer", fontFamily: "inherit" }}
+        >
+          {plan.cta}
+        </button>
+      ) : (
+        <a
+          href={plan.href}
+          target="_blank"
+          rel="noreferrer"
+          className={`${styles.cta} ${plan.ctaFilled ? styles.ctaFilled : styles.ctaOutline}`}
+          style={{ marginTop: 14, marginBottom: 0 }}
+        >
+          {plan.cta}
+        </a>
+      )}
     </div>
   );
 }
 
 export default function Pricing() {
+  const [bookingOpen, setBookingOpen] = useState(false);
   return (
     <section id="Pricing" className={styles.section}>
+      <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
       <div className={styles.inner}>
         <h2 className={styles.heading}>
           3 Ways to Work <em>With Us</em>
@@ -261,7 +281,7 @@ export default function Pricing() {
 
         <div className={styles.grid}>
           {PLANS.map((p) => (
-            <PlanCard key={p.key} plan={p} />
+            <PlanCard key={p.key} plan={p} onEngineCta={() => setBookingOpen(true)} />
           ))}
         </div>
 
