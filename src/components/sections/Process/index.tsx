@@ -160,7 +160,7 @@ function ProcessCta() {
       <div className={styles.ctaTitle}>Be the team buyers already trust. With video.</div>
       <button
         type="button"
-        onClick={() => open("meeting")}
+        onClick={(e) => open("meeting", e)}
         className={styles.ctaBtn}
         style={{ cursor: "pointer", fontFamily: "inherit", border: "none" }}
       >

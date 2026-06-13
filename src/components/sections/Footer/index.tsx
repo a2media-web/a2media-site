@@ -64,7 +64,7 @@ export default function Footer() {
                     {l.kind === "booking" ? (
                       <button
                         type="button"
-                        onClick={() => openBooking("meeting")}
+                        onClick={(e) => openBooking("meeting", e)}
                         className={styles.link}
                         style={{ cursor: "pointer", fontFamily: "inherit", background: "none", border: "none", padding: 0 }}
                       >

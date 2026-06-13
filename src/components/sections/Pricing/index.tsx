@@ -192,7 +192,7 @@ function PlanCard({ plan }: { plan: Plan }) {
       {usesBookingModal ? (
         <button
           type="button"
-          onClick={() => openBooking(plan.key === "engine" ? "engine" : "meeting")}
+          onClick={(e) => openBooking(plan.key === "engine" ? "engine" : "meeting", e)}
           className={`${styles.cta} ${plan.ctaFilled ? styles.ctaFilled : styles.ctaOutline}`}
           style={{ marginTop: 14, marginBottom: 0, border: plan.ctaFilled ? "none" : undefined, cursor: "pointer", fontFamily: "inherit" }}
         >
@@ -266,7 +266,7 @@ export default function Pricing() {
           </div>
           <button
             type="button"
-            onClick={() => openBooking("meeting")}
+            onClick={(e) => openBooking("meeting", e)}
             className={`${styles.cta} ${styles.ctaOutline}`}
             style={{ width: "auto", margin: 0, padding: "13px 26px", cursor: "pointer", fontFamily: "inherit" }}
           >

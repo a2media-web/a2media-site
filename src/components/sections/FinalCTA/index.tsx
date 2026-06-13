@@ -75,7 +75,7 @@ export default function FinalCTA() {
             type="button"
             className="fcta-btn"
             style={{ ...S.btn, cursor: "pointer", fontFamily: "inherit", border: "none" }}
-            onClick={() => open("meeting")}
+            onClick={(e) => open("meeting", e)}
           >
             Book the call{" "}
             <span className="fcta-arrow" aria-hidden>

@@ -114,11 +114,14 @@ const css = `
   }
   .bm-fade-in { animation: bmFadeIn 220ms ease both; }
 
+  /* The pop-in only fades the content. The size + position transition is
+     owned by the BookingProvider's MorphLayer, so we don't want a competing
+     scale animation here. */
   @keyframes bmPop {
-    from { transform: translate(-50%, -50%) scale(0.94); opacity: 0; }
-    to   { transform: translate(-50%, -50%) scale(1);    opacity: 1; }
+    from { transform: translate(-50%, -50%); opacity: 0; }
+    to   { transform: translate(-50%, -50%); opacity: 1; }
   }
-  .bm-pop { animation: bmPop 280ms cubic-bezier(.2,.7,.2,1.1) both; }
+  .bm-pop { animation: bmPop 240ms ease both; }
 
   @keyframes bmLed {
     0%, 100% { box-shadow: 0 0 8px rgba(143,69,238,0.9); opacity: 1; }
