@@ -17,9 +17,18 @@ type Props = {
   onClose: () => void;
   /** Cal event slug after cal.com/a2media/, e.g. "engine" or "meeting". Defaults to "engine". */
   calSlug?: string;
+  /** When the BookingProvider's morph layer is already darkening the page,
+      we suppress this component's own backdrop so they don't stack. The
+      morph backdrop also catches click-to-close itself. */
+  hideOwnBackdrop?: boolean;
 };
 
-export default function BookingModal({ open, onClose, calSlug = DEFAULT_CAL_SLUG }: Props) {
+export default function BookingModal({
+  open,
+  onClose,
+  calSlug = DEFAULT_CAL_SLUG,
+  hideOwnBackdrop = false,
+}: Props) {
   const CAL_URL = `https://cal.com/a2media/${calSlug}?embed=true&layout=month_view`;
   // Body scroll lock + Escape-to-close while open
   useEffect(() => {
@@ -41,7 +50,14 @@ export default function BookingModal({ open, onClose, calSlug = DEFAULT_CAL_SLUG
   return (
     <div style={S.root} role="dialog" aria-modal="true" aria-label="Book your discovery call">
       <style dangerouslySetInnerHTML={{ __html: css }} />
-      <div style={S.backdrop} onClick={onClose} className="bm-fade-in" />
+      {!hideOwnBackdrop && (
+        <div style={S.backdrop} onClick={onClose} className="bm-fade-in" />
+      )}
+      {hideOwnBackdrop && (
+        /* Invisible click-catcher so backdrop clicks still close the modal
+           when the BookingProvider's morph backdrop is what the user sees. */
+        <div style={{ position: "absolute", inset: 0 }} onClick={onClose} />
+      )}
       <div style={S.modal} className="bm-pop">
         <button
           type="button"
