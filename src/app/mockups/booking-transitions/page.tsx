@@ -4,7 +4,8 @@
    Each variant: idle button → mid-animation → fake modal.
    Click any "Book the Call" button to see its transition fire. */
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 const PURPLE = "#5A33FF";
 const LILAC = "#8F45EE";
@@ -112,7 +113,24 @@ function TransitionLayer({
   origin: { x: number; y: number };
   onClose: () => void;
 }) {
-  return (
+  // Portal escapes the card's backdrop-filter stacking context so the
+  // animation actually covers the viewport instead of being clipped to the card.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [onClose]);
+
+  if (!mounted) return null;
+
+  return createPortal(
     <div style={S.layer} role="dialog" aria-modal="true">
       {/* Phase 1 — the transition itself */}
       {phase === "running" && (
@@ -126,7 +144,8 @@ function TransitionLayer({
 
       {/* Phase 2 — settled modal */}
       {phase === "modal" && <FakeModal onClose={onClose} />}
-    </div>
+    </div>,
+    document.body
   );
 }
 
