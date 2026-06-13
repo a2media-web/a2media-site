@@ -92,16 +92,19 @@ export function BookingProvider({ children }: { children: React.ReactNode }) {
   // The morph layer stays mounted through both "morphing" and "open" so the
   // shell that grew from the button doesn't disappear — it just crossfades
   // into the real modal sitting on top of it at the exact same position.
-  const showMorph =
-    (phase.kind === "morphing" || phase.kind === "open") &&
-    (phase.kind === "morphing" ? phase.origin : phase.origin) !== null;
+  const morphOrigin: Origin | null =
+    phase.kind === "morphing"
+      ? phase.origin
+      : phase.kind === "open"
+      ? phase.origin
+      : null;
 
   return (
     <BookingContext.Provider value={{ open, close }}>
       {children}
-      {showMorph && phase.kind !== "idle" && phase.origin && (
+      {morphOrigin && (
         <MorphLayer
-          origin={phase.origin}
+          origin={morphOrigin}
           fading={phase.kind === "open"}
         />
       )}
