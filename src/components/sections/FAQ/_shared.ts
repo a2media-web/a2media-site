@@ -78,6 +78,6 @@ export const SCRUB_VIDEOS = [
   {
     label: "Product Launches",
     description: "Big swings. High production value.",
-    videoId: "qrr3taje3a",
+    videoId: "sunf403e3b",
   },
 ];

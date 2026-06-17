@@ -12,6 +12,13 @@ const FORMATS = [
     client: "BlueConic",
   },
   {
+    label: "Product Launches",
+    sub: "Keep your customers excited about what's coming.",
+    videoId: "sunf403e3b",
+    aspect: "16 / 9",
+    client: "Slate",
+  },
+  {
     label: "Sizzle reel",
     sub: "Trailers that bring the hype.",
     videoId: "io59i5b5fc",
@@ -66,13 +73,6 @@ const FORMATS = [
     videoId: "5trb6a2h4p",
     aspect: "16 / 9",
     client: "Powerchord",
-  },
-  {
-    label: "Product Launches",
-    sub: "Keep your customers excited about what's coming.",
-    videoId: "qrr3taje3a",
-    aspect: "16 / 9",
-    client: "Warmly",
   },
 ];
 
