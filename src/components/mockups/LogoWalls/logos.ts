@@ -55,6 +55,9 @@ export const LOGOS: Logo[] = [
   { name: "Warmly", domain: "warmly.ai", src: "/logos/idFho75bLH_1778400941443.png", scale: 0.85 },
   { name: "BlueConic", domain: "blueconic.com", src: "/logos/BlueConic_idjjd1-xqj_0.png", scale: 0.95 },
   { name: "Brainlabs", domain: "brainlabs.com", src: "/logos/Brainlabs_idezU5eZwN_1.png", scale: 1.0 },
+  { name: "ActiveCampaign", domain: "activecampaign.com", src: "/logos/activecampaign.svg", scale: 1.1 },
+  { name: "Miovision", domain: "miovision.com", src: "/logos/miovision.svg", scale: 1.0 },
+  { name: "Stran", domain: "stran.com", src: "/logos/stran.svg", scale: 1.0 },
   {
     name: "ContactMonkey",
     domain: "contactmonkey.com",
