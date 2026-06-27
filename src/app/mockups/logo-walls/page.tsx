@@ -2,10 +2,60 @@ import MarqueeWall from "@/components/mockups/LogoWalls/Marquee";
 import Belt3DWall from "@/components/mockups/LogoWalls/Belt3D";
 import ParallaxWall from "@/components/mockups/LogoWalls/Parallax";
 import EditorialWall from "@/components/mockups/LogoWalls/Editorial";
+import BentoWall from "@/components/mockups/LogoWalls/Bento";
+import HoneycombWall from "@/components/mockups/LogoWalls/Honeycomb";
+import SpotlightWall from "@/components/mockups/LogoWalls/Spotlight";
+import ReceiptWall from "@/components/mockups/LogoWalls/Receipt";
 
 export default function LogoWallsMockup() {
   return (
     <main>
+      {/* ----- NEW VARIANTS ----- */}
+      <header style={hdr}>
+        <span style={tagNew}>Logo Wall · Variant E (new)</span>
+        <h1 style={title}>Bento Wall of Fame</h1>
+        <p style={sub}>
+          Fixed asymmetric grid. No scrolling. Mixed cell sizes create
+          visual hierarchy (Shopify huge, others medium). Hover glow on
+          each cell. Strong for scanning + accessibility.
+        </p>
+      </header>
+      <BentoWall />
+
+      <header style={hdr}>
+        <span style={tagNew}>Logo Wall · Variant F (new)</span>
+        <h1 style={title}>Honeycomb</h1>
+        <p style={sub}>
+          Hexagonal cells in honeycomb tiling. Glassmorphic fills. Most
+          distinctive shape on the site. Hover lifts + drop-shadows the
+          cell in Electric Purple.
+        </p>
+      </header>
+      <HoneycombWall />
+
+      <header style={hdr}>
+        <span style={tagNew}>Logo Wall · Variant G (new)</span>
+        <h1 style={title}>Spotlight Rotator</h1>
+        <p style={sub}>
+          One large featured logo at a time with a stat/quote beside it.
+          Auto-rotates every 5s. Thumbnails on the left for the rest.
+          Best when each client has a real outcome to point to.
+        </p>
+      </header>
+      <SpotlightWall />
+
+      <header style={hdr}>
+        <span style={tagNew}>Logo Wall · Variant H (new)</span>
+        <h1 style={title}>Printed Receipt</h1>
+        <p style={sub}>
+          Plays off the existing PrintJobPopup aesthetic. Client list
+          rendered as a paid receipt with order numbers, pipeline total
+          at the bottom. Quirky, memorable, on-brand.
+        </p>
+      </header>
+      <ReceiptWall />
+
+      {/* ----- EXISTING VARIANTS ----- */}
       <header style={hdr}>
         <span style={tag}>Logo Wall · Variant B</span>
         <h1 style={title}>3D Belt</h1>
@@ -71,6 +121,12 @@ const tag: React.CSSProperties = {
   textTransform: "uppercase",
   color: "#5a33ff",
   marginBottom: "10px",
+};
+const tagNew: React.CSSProperties = {
+  ...tag,
+  background: "rgba(102, 247, 142, 0.16)",
+  border: "1px solid rgba(102, 247, 142, 0.5)",
+  color: "#66f78e",
 };
 const title: React.CSSProperties = {
   fontSize: "26px",
