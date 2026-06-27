@@ -6,11 +6,63 @@ import BentoWall from "@/components/mockups/LogoWalls/Bento";
 import HoneycombWall from "@/components/mockups/LogoWalls/Honeycomb";
 import SpotlightWall from "@/components/mockups/LogoWalls/Spotlight";
 import ReceiptWall from "@/components/mockups/LogoWalls/Receipt";
+import TieredWall from "@/components/mockups/LogoWalls/Tiered";
+import UniformGridWall from "@/components/mockups/LogoWalls/UniformGrid";
+import InlineRowWall from "@/components/mockups/LogoWalls/InlineRow";
+import ConstellationWall from "@/components/mockups/LogoWalls/Constellation";
 
 export default function LogoWallsMockup() {
   return (
     <main>
-      {/* ----- NEW VARIANTS ----- */}
+      {/* ----- STATIC ONLY VARIANTS (no animation, no scroll) ----- */}
+      <header style={hdr}>
+        <span style={tagStatic}>Static · Variant I (new)</span>
+        <h1 style={title}>Tiered</h1>
+        <p style={sub}>
+          Three horizontal tiers, each with a labelled divider above:
+          <em> Marquee Accounts</em> · <em> Growth Stage</em> · <em> + Plenty More</em>.
+          Hero logos at 56px, growth at 40px, the rest at 28px and faded
+          to signal hierarchy without text labels on every logo.
+        </p>
+      </header>
+      <TieredWall />
+
+      <header style={hdr}>
+        <span style={tagStatic}>Static · Variant J (new)</span>
+        <h1 style={title}>Uniform Grid</h1>
+        <p style={sub}>
+          Clean 6-column grid of identically sized cells with thin
+          dividers. Most conservative + scannable of the static variants.
+          Hover fills a cell in soft purple. Built for credibility, not
+          for showing off.
+        </p>
+      </header>
+      <UniformGridWall />
+
+      <header style={hdr}>
+        <span style={tagStatic}>Static · Variant K (new)</span>
+        <h1 style={title}>Inline Row + Stat</h1>
+        <p style={sub}>
+          Most compact option — single horizontal row of evenly-sized
+          logos sandwiched by a pill stat above (<em>30+ B2B SaaS teams · $87M
+          attributed pipeline</em>) and an italic tagline below. Half the
+          vertical height of the others. Drops in between sections.
+        </p>
+      </header>
+      <InlineRowWall />
+
+      <header style={hdr}>
+        <span style={tagStatic}>Static · Variant L (new)</span>
+        <h1 style={title}>Constellation</h1>
+        <p style={sub}>
+          Logos as glassmorphic round nodes on a starfield, connected by
+          subtle dotted lines drawn between hand-picked pairs. Premium,
+          distinctive. Implies a network of brands building together.
+        </p>
+      </header>
+      <ConstellationWall />
+
+      {/* ----- ANIMATED / MIXED VARIANTS (earlier round) ----- */}
       <header style={hdr}>
         <span style={tagNew}>Logo Wall · Variant E (new)</span>
         <h1 style={title}>Bento Wall of Fame</h1>
@@ -127,6 +179,12 @@ const tagNew: React.CSSProperties = {
   background: "rgba(102, 247, 142, 0.16)",
   border: "1px solid rgba(102, 247, 142, 0.5)",
   color: "#66f78e",
+};
+const tagStatic: React.CSSProperties = {
+  ...tag,
+  background: "rgba(40, 223, 232, 0.16)",
+  border: "1px solid rgba(40, 223, 232, 0.5)",
+  color: "#28dfe8",
 };
 const title: React.CSSProperties = {
   fontSize: "26px",
