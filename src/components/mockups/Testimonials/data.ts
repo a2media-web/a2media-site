@@ -26,7 +26,7 @@ export const QUOTES: Quote[] = [
   },
   {
     quote:
-      "I've worked with the A2 Media team at two different companies now and they're just great people to work with. They rolled with my shifting priorities and got video content out the door way faster than I could have done alone.",
+      "I've worked with the A2 Media team at two different companies now and they're just great people to work with. They rolled with my shifting priorities and got video content out the door super fast.",
     name: "Chelsea Lassen",
     role: "Director of Content, Comms & Storytelling, Cority",
     avatar: "/cority-chelsea-lassen.webp",
