@@ -19,11 +19,10 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "Working with A2 Media completely changed how we approach video. They brought a level of strategy and execution we hadn't seen from any other agency.",
-    name: "Martin",
-    role: "Owner, CEG Consult",
-    avatar:
-      "https://cdn.prod.website-files.com/64bfb907363259218e796320/699505f0ef9da222e04efd93_1741721282818.jpeg",
+      "I've worked with the A2 Media team at two different companies now and they're just great people to work with. They rolled with my shifting priorities and got video content out the door way faster than I could have done alone.",
+    name: "Chelsea Lassen",
+    role: "Director of Content, Comms & Storytelling, Cority",
+    avatar: "/cority-chelsea-lassen.webp",
   },
 ];
 
