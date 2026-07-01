@@ -89,7 +89,7 @@ export const serviceSchema: JsonLdSchema = {
         "@type": "Offer",
         name: "The Video Growth Engine",
         description:
-          "Dedicated video team on a 3 to 6-month engagement. 10 to 12 done-for-you videos per month, 72-hour turnaround, and ongoing strategy. Rates from $15K to $25K per month based on engagement length.",
+          "Dedicated video team on a 3 to 6-month engagement. 10 to 12 done-for-you videos per month, 72-hour turnaround, and ongoing strategy. Rates from $15K to $35K per month based on engagement length.",
         price: "90000",
         priceCurrency: "USD",
         eligibleDuration: { "@type": "QuantitativeValue", value: 6, unitCode: "MON" },
