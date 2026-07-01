@@ -67,7 +67,7 @@ const PLANS: Plan[] = [
   {
     key: "engine",
     name: "Video Growth Engine",
-    price: "$15–35K",
+    price: "$15-35K",
     unit: "/ month",
     desc: "We run your whole video department. Script to screen.",
     lead: "Everything in the 2-Week Jumpstart, plus:",
