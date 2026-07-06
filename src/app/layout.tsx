@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s | A2 Media",
   },
   description:
-    "B2B SaaS video content strategy and editing. We map video to your buyer journey, write scripts that move deals, and ship in 72 hours. Trusted by Reveal, Auth0, and PartnerHacker.",
+    "B2B SaaS video content strategy and editing. We map video to your buyer journey, write scripts that move deals, and ship in 72 hours. Trusted by Okta, Shopify, and Crossbeam.",
   applicationName: "A2 Media",
   authors: [
     { name: "Ademola Adelakun", url: "https://www.linkedin.com/company/a2media" },
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     siteName: "A2 Media",
     title: "A2 Media — B2B SaaS video that turns viewers into pipeline.",
     description:
-      "B2B SaaS video content strategy and editing. Strategy mapped to your buyer journey, scripts that move deals, 72-hour turnarounds. Trusted by Reveal, Auth0, and PartnerHacker.",
+      "B2B SaaS video content strategy and editing. Strategy mapped to your buyer journey, scripts that move deals, 72-hour turnarounds. Trusted by Okta, Shopify, and Crossbeam.",
     url: "/",
     locale: "en_US",
   },
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "A2 Media — B2B SaaS video that turns viewers into pipeline.",
     description:
-      "Strategy, scripts, and editing built for B2B SaaS pipeline. Trusted by Reveal, Auth0, and PartnerHacker.",
+      "Strategy, scripts, and editing built for B2B SaaS pipeline. Trusted by Okta, Shopify, and Crossbeam.",
   },
   icons: {
     icon: "/favicon.png",

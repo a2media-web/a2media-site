@@ -168,16 +168,6 @@ export default async function OpenGraphImage() {
             <div style={{ display: "flex", color: "rgba(255,255,255,0.4)" }}>•</div>
             <div style={{ display: "flex" }}>PartnerHacker · 8mo to acquired</div>
           </div>
-          <div
-            style={{
-              display: "flex",
-              fontSize: 22,
-              fontWeight: 600,
-              color: "#c9b6ff",
-            }}
-          >
-            a2media.ca
-          </div>
         </div>
       </div>
     ),
