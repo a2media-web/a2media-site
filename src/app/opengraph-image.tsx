@@ -137,36 +137,55 @@ export default async function OpenGraphImage() {
             }}
           >
             B2B SaaS video content strategy + editing. Strategy mapped to your
-            buyer journey, scripts that move deals, 72-hour turnarounds.
+            buyer journey, scripts that move deals.
           </div>
         </div>
 
-        {/* Footer row */}
+        {/* Trusted-by bar */}
         <div
           style={{
             display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
+            flexDirection: "column",
+            gap: 14,
             position: "relative",
-            paddingTop: 24,
+            paddingTop: 28,
             borderTop: "1px solid rgba(255,255,255,0.12)",
           }}
         >
           <div
             style={{
               display: "flex",
-              alignItems: "center",
-              gap: 32,
-              fontSize: 22,
+              fontSize: 17,
               fontWeight: 600,
-              color: "rgba(255,255,255,0.75)",
+              letterSpacing: 4,
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.5)",
             }}
           >
-            <div style={{ display: "flex" }}>Reveal · $600K closed-won</div>
-            <div style={{ display: "flex", color: "rgba(255,255,255,0.4)" }}>•</div>
-            <div style={{ display: "flex" }}>Auth0 · 22K+ subs</div>
-            <div style={{ display: "flex", color: "rgba(255,255,255,0.4)" }}>•</div>
-            <div style={{ display: "flex" }}>PartnerHacker · 8mo to acquired</div>
+            Trusted by
+          </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: 16,
+              fontSize: 32,
+              fontWeight: 600,
+              letterSpacing: "-0.01em",
+              color: "#fff",
+            }}
+          >
+            <div style={{ display: "flex" }}>Okta</div>
+            <div style={{ display: "flex", color: "rgba(255,255,255,0.3)" }}>·</div>
+            <div style={{ display: "flex" }}>Shopify</div>
+            <div style={{ display: "flex", color: "rgba(255,255,255,0.3)" }}>·</div>
+            <div style={{ display: "flex" }}>Crossbeam</div>
+            <div style={{ display: "flex", color: "rgba(255,255,255,0.3)" }}>·</div>
+            <div style={{ display: "flex" }}>Goldcast</div>
+            <div style={{ display: "flex", color: "rgba(255,255,255,0.3)" }}>·</div>
+            <div style={{ display: "flex" }}>Chili Piper</div>
+            <div style={{ display: "flex", fontSize: 26, color: "#66f78e" }}>+ 30 more*</div>
           </div>
         </div>
       </div>
