@@ -86,7 +86,7 @@ const PLANS: Plan[] = [
     //   "Monthly competitor video audits so you always know what's working in your space",
     get: [
       "10 to 12 done-for-you videos per month (long-form + short-form cuts)",
-      "We put a creator on your brand full-time, so your video series runs even when your team doesn't have the time",
+      "We put an on-camera creator on your brand full-time, so your video series runs even when your team doesn't have the time",
       "72-hour turnaround (most agencies take 1 to 2 weeks)",
       "AEO video ranking: be the first brand AI suggests to your buyers",
       "Full-funnel scripts that move buyers from aware to ready to close",
