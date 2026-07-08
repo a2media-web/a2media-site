@@ -37,7 +37,7 @@ const PLANS: Plan[] = [
     name: "One-off Video",
     price: "$2K",
     unit: "starting price",
-    desc: "You give us the raw footage. We make it look expensive.",
+    desc: "You tell us the idea or give us raw footage. We make it look expensive.",
     get: [
       "We design and build your videos the A2 way.",
       "One completely edited video, yours to own and post.",
@@ -69,7 +69,7 @@ const PLANS: Plan[] = [
     name: "Video Growth Engine",
     price: "$15-35K",
     unit: "/ month",
-    desc: "We run your whole video department. Script to screen.",
+    desc: "We run your whole video department. From creator to script to screen.",
     lead: "Everything in the 2-Week Jumpstart, plus:",
     // FULL 12 (original, in case we revert):
     //   "10 to 12 done-for-you videos per month (long-form + short-form cuts)",
@@ -86,6 +86,7 @@ const PLANS: Plan[] = [
     //   "Monthly competitor video audits so you always know what's working in your space",
     get: [
       "10 to 12 done-for-you videos per month (long-form + short-form cuts)",
+      "We put a creator on your brand full-time, so your video series runs even when your team doesn't have the time",
       "72-hour turnaround (most agencies take 1 to 2 weeks)",
       "AEO video ranking: be the first brand AI suggests to your buyers",
       "Full-funnel scripts that move buyers from aware to ready to close",
