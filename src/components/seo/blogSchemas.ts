@@ -24,7 +24,7 @@ export function articleSchema(post: BlogPost): JsonLdSchema {
     author: {
       "@type": "Person",
       name: post.author,
-      url: "https://www.linkedin.com/in/ademolaadelakun",
+      url: "https://www.linkedin.com/in/ademola-adelakun/",
     },
     publisher: { "@id": ORG_ID },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },

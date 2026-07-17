@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     "B2B SaaS video content strategy and editing. We map video to your buyer journey, write scripts that move deals, and ship in 72 hours. Trusted by Okta, Shopify, and Crossbeam.",
   applicationName: "A2 Media",
   authors: [
-    { name: "Ademola Adelakun", url: "https://www.linkedin.com/company/a2media" },
+    { name: "Ademola Adelakun", url: "https://www.linkedin.com/in/ademola-adelakun/" },
   ],
   creator: "Ademola Adelakun",
   publisher: "A2 Media",

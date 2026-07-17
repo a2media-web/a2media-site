@@ -36,7 +36,7 @@ export const organizationSchema: JsonLdSchema = {
   },
   email: "ademola@a2media.ca",
   sameAs: [
-    "https://www.linkedin.com/company/a2media",
+    "https://www.linkedin.com/in/ademola-adelakun/",
   ],
   areaServed: { "@type": "Place", name: "Worldwide" },
   knowsAbout: [

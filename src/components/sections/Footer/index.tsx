@@ -19,7 +19,7 @@ type ConnectLink =
 const CONNECT_LINKS: ConnectLink[] = [
   { label: "Book a Call", kind: "booking" },
   { label: "Email Us", kind: "link", href: "mailto:ademola@a2media.ca", external: false },
-  { label: "LinkedIn", kind: "link", href: "https://www.linkedin.com/company/a2media", external: true },
+  { label: "LinkedIn", kind: "link", href: "https://www.linkedin.com/in/ademola-adelakun/", external: true },
   { label: "Our Portfolio", kind: "link", href: "#work", external: false },
 ];
 
