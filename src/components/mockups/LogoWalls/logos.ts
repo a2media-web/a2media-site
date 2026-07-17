@@ -5,6 +5,8 @@ export type Logo = {
   featured?: boolean;
   scale?: number;
   noFilter?: boolean;
+  /** Hidden below 700px. Mirrors the Hero trust row's hideOnMobile behaviour. */
+  desktopOnly?: boolean;
 };
 
 const WF = "https://cdn.prod.website-files.com/64bfb907363259218e796320";
@@ -71,6 +73,14 @@ export const LOGOS: Logo[] = [
   { name: "Treasury4", domain: "treasury4.com", src: "/logos/Treasury4_Logo_1.png", scale: 1.0 },
   { name: "Slate", domain: "slate.so", src: "/logos/Slate.png", scale: 1.0 },
   { name: "UBS", domain: "ubs.com", src: "/logos/UBS.png", scale: 0.95 },
+  // Stacked lockup, so it needs ~1.45x to match a plain wordmark's optical weight.
+  {
+    name: "Wishly Group",
+    domain: "wishlygroup.ca",
+    src: "/logos/wishly.png",
+    scale: 1.45,
+    desktopOnly: true,
+  },
 ];
 
 export function logoSrc(logo: Logo): string | null {

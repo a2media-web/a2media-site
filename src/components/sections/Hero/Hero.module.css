@@ -224,6 +224,10 @@
   transform: scale(1.7);
   transform-origin: center;
 }
+/* Stacked lockup (mark + wordmark + descriptor), so it needs more box height
+   than a plain wordmark to read at the same weight. 40px is the ceiling before
+   max-width clamps it. */
+.trustRow img.wishly { height: 32px; }
 
 @media (max-width: 700px) {
   .trustRow img.hideOnMobile { display: none; }

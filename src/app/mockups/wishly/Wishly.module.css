@@ -1,0 +1,151 @@
+/* Review-only route. trustRow rules are copied verbatim from Hero.module.css. */
+
+.section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--a2-night-deep);
+  overflow: hidden;
+  isolation: isolate;
+  padding: 64px 0 96px;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: saturate(0.9) brightness(0.78) contrast(1.05);
+}
+
+.veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(720px 420px at 50% 32%, rgba(7, 2, 31, 0.78) 0%, rgba(13, 5, 54, 0.55) 38%, transparent 75%),
+    linear-gradient(180deg, rgba(13, 5, 54, 0.55) 0%, rgba(26, 15, 77, 0.40) 35%, rgba(13, 5, 54, 0.85) 100%);
+}
+
+.body {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--a2-white);
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.pageNote {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 8px;
+  text-align: center;
+  max-width: 62ch;
+  line-height: 1.5;
+}
+
+.variant {
+  width: 100%;
+  padding: 34px 0 38px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.variantLabel {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.sizeTag {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--a2-electric-neon);
+}
+
+.sizeMeta {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- verbatim from Hero.module.css --- */
+
+.trustLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--a2-white);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.trustRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.trustRow img {
+  height: 22px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: brightness(0) invert(1);
+}
+
+.trustRow img.shopify { height: 24px; }
+
+.trustRow img.chili {
+  height: 22px;
+  transform: scale(1.35);
+  transform-origin: center;
+}
+
+.trustRow img.slate {
+  height: 28px;
+  max-width: 140px;
+  transform: scale(1.7);
+  transform-origin: center;
+}
+
+/* --- review chrome --- */
+
+.subject {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.subject::after {
+  content: "";
+  position: absolute;
+  inset: -8px -6px;
+  border: 1px dashed rgba(102, 247, 142, 0.55);
+  border-radius: 5px;
+  pointer-events: none;
+}

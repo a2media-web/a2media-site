@@ -122,6 +122,10 @@
 }
 
 @media (max-width: 700px) {
+  /* Hidden in both marquee copies, so the row stays symmetrical and the
+     translateX(-50%) loop still lands seamlessly. */
+  .hideOnMobile { display: none; }
+
   .header { margin-bottom: 24px; padding: 0 16px; }
   .stack { gap: 16px; }
   .row { gap: 32px; }

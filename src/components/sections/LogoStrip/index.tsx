@@ -14,8 +14,11 @@ export default function LogoStrip() {
     const src = logoSrc(l);
     const scale = l.scale ?? 1;
     const imgClass = l.noFilter ? styles.imgRaw : styles.imgFiltered;
+    const cellClass = l.desktopOnly
+      ? `${styles.cell} ${styles.hideOnMobile}`
+      : styles.cell;
     return (
-      <div key={key} className={styles.cell}>
+      <div key={key} className={cellClass}>
         {src ? (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img

@@ -16,6 +16,7 @@ const TRUST_LOGOS = [
   { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f1d717fe36ab2b51b4d2a4_chili%20piper.png", alt: "Chili Piper", className: "chili" },
   { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/66c5f4f2fcc977d035928abc_CB.svg", alt: "Crossbeam", className: "hideOnMobile" },
   { src: "/logos/Slate.png", alt: "Slate", className: "slate" },
+  { src: "/logos/wishly.png", alt: "Wishly Group", className: "wishly hideOnMobile" },
 ];
 
 export default function Hero() {
@@ -111,7 +112,10 @@ export default function Hero() {
                 key={l.alt}
                 src={l.src}
                 alt={l.alt}
-                className={l.className ? styles[l.className] : undefined}
+                className={l.className
+                  ?.split(" ")
+                  .map((c) => styles[c])
+                  .join(" ")}
               />
             ))}
           </div>
