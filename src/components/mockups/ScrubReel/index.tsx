@@ -41,6 +41,13 @@ export const DEFAULT_FORMATS: ScrubFormat[] = [
     client: "Chili Piper",
   },
   {
+    label: "Sponsored Videos",
+    sub: "Create videos your partners can't wait to show off.",
+    videoId: "2y63fijosj",
+    aspect: "16 / 9",
+    client: "Christina Le",
+  },
+  {
     label: "Storytelling",
     sub: "Entertain your customers while teaching them.",
     videoId: "cbksj45v2l",
