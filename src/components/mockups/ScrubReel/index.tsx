@@ -3,7 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./ScrubReel.module.css";
 
-const FORMATS = [
+export type ScrubFormat = {
+  label: string;
+  sub: string;
+  videoId: string;
+  aspect: string;
+  client: string;
+};
+
+export const DEFAULT_FORMATS: ScrubFormat[] = [
   {
     label: "Shorts & Ads",
     sub: "Reels and paid ads built for the feed.",
@@ -82,14 +90,16 @@ const ambientSrc = (id: string) =>
 const lightboxSrc = (id: string) =>
   `https://fast.wistia.net/embed/iframe/${id}?autoPlay=true&seo=false&videoFoam=true`;
 
-export default function ScrubReel() {
+export default function ScrubReel({
+  formats = DEFAULT_FORMATS,
+}: { formats?: ScrubFormat[] } = {}) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const stripRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
   const [maxTranslate, setMaxTranslate] = useState(0);
   const [openId, setOpenId] = useState<string | null>(null);
 
-  const open = FORMATS.find((f) => f.videoId === openId);
+  const open = formats.find((f) => f.videoId === openId);
 
   useEffect(() => {
     let raf = 0;
@@ -163,7 +173,7 @@ export default function ScrubReel() {
             className={styles.strip}
             style={{ transform: `translate3d(${translatePx}px, 0, 0)` }}
           >
-            {FORMATS.map((f, i) => (
+            {formats.map((f, i) => (
               <button
                 key={f.videoId}
                 type="button"
