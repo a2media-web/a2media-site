@@ -14,6 +14,10 @@
    Direction 3: Live Stage — cursor casts a soft teal spotlight across the
      background as you move. Subtle ambient particles drift behind the copy.
      Interactive + atmospheric.
+
+   Direction 4: Iced Over — the word "cooler" has a frosted teal-white glow
+     and small ice crystals fall from the letters like they're literally
+     frozen. Visual pun on "cooler." Ongoing subtle motion.
 */
 
 import React, { useEffect, useRef, useState } from "react";
@@ -220,6 +224,56 @@ function LiveStage() {
   );
 }
 
+// ---------- Direction 4: Iced Over ----------
+
+function IcedOver() {
+  const flakes = Array.from({ length: 12 }, (_, i) => i);
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: icedCss }} />
+      <section style={S.section}>
+        <VideoBg />
+        <div style={S.body}>
+          <div style={S.headRow}>
+            <span style={S.mockLabel}>DIRECTION 4</span>
+            <span style={S.variantChip}>Iced Over (visual pun on &ldquo;cooler&rdquo;)</span>
+          </div>
+          <p style={S.eyebrow}>
+            <span style={S.dot} aria-hidden />
+            600+ Sales-Driven Videos for B2B SaaS Teams
+          </p>
+
+          <LockedH1>
+            <span className="hd-iced" style={S.tealAccent}>
+              cooler.
+              <span className="hd-ice-flakes" aria-hidden>
+                {flakes.map((i) => (
+                  <span
+                    key={i}
+                    className="hd-flake"
+                    style={{
+                      left: `${(i * 8.5) % 100}%`,
+                      animationDelay: `${(i * 0.4) % 3.6}s`,
+                      animationDuration: `${3.6 + (i % 4) * 0.6}s`,
+                      width: `${3 + (i % 3)}px`,
+                      height: `${3 + (i % 3)}px`,
+                    }}
+                  />
+                ))}
+              </span>
+              <span className="hd-frost-shimmer" aria-hidden />
+            </span>
+          </LockedH1>
+
+          <LockedSub />
+          <Ctas />
+          <TrustRow />
+        </div>
+      </section>
+    </>
+  );
+}
+
 // ---------- Page ----------
 
 export default function Page() {
@@ -228,10 +282,10 @@ export default function Page() {
       <header style={S.pageHead}>
         <p style={S.pageEyebrow}>Mockup preview</p>
         <h1 style={S.pageTitle}>
-          Hero design v1 · <em style={{ color: TEAL }}>3 dynamic treatments</em>
+          Hero design v1 · <em style={{ color: TEAL }}>4 dynamic treatments</em>
         </h1>
         <p style={S.pageLede}>
-          Same copy across all three (your locked headline + sub). Only the
+          Same copy across all four (your locked headline + sub). Only the
           motion and interactive elements differ, so you can see how much life
           each adds without touching the words. Reload the page to see the
           load-in animation on Direction 1 again.
@@ -241,6 +295,7 @@ export default function Page() {
       <KineticLoadIn />
       <NeonSignature />
       <LiveStage />
+      <IcedOver />
     </main>
   );
 }
@@ -558,5 +613,78 @@ const liveStageCss = `
     12%  { opacity: 0.7; }
     88%  { opacity: 0.7; }
     100% { transform: translateY(-90vh) scale(1); opacity: 0; }
+  }
+`;
+
+const icedCss = `
+  .hd-iced {
+    position: relative;
+    display: inline-block;
+    text-shadow:
+      0 0 12px rgba(255, 255, 255, 0.5),
+      0 0 28px rgba(40, 223, 232, 0.55),
+      0 0 60px rgba(40, 223, 232, 0.32);
+    animation: hdIcedBreath 4.2s ease-in-out infinite;
+  }
+  @keyframes hdIcedBreath {
+    0%, 100% { text-shadow:
+      0 0 12px rgba(255, 255, 255, 0.45),
+      0 0 24px rgba(40, 223, 232, 0.5),
+      0 0 50px rgba(40, 223, 232, 0.28); }
+    50%      { text-shadow:
+      0 0 16px rgba(255, 255, 255, 0.7),
+      0 0 32px rgba(40, 223, 232, 0.75),
+      0 0 70px rgba(40, 223, 232, 0.45); }
+  }
+  .hd-ice-flakes {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.9em;
+    height: 90px;
+    pointer-events: none;
+  }
+  .hd-flake {
+    position: absolute;
+    top: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow:
+      0 0 6px rgba(255, 255, 255, 0.7),
+      0 0 12px rgba(40, 223, 232, 0.6);
+    opacity: 0;
+    animation-name: hdFlakeFall;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+    animation-iteration-count: infinite;
+  }
+  @keyframes hdFlakeFall {
+    0%   { transform: translateY(-4px) translateX(0) scale(0.7); opacity: 0; }
+    15%  { opacity: 0.9; }
+    50%  { transform: translateY(45px) translateX(8px) scale(1); opacity: 0.7; }
+    100% { transform: translateY(90px) translateX(-4px) scale(0.5); opacity: 0; }
+  }
+  .hd-frost-shimmer {
+    position: absolute;
+    inset: -4px -8px;
+    background: linear-gradient(115deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.25) 48%,
+      rgba(40, 223, 232, 0.35) 52%,
+      transparent 70%
+    );
+    background-size: 200% 100%;
+    background-position: -100% 0;
+    animation: hdFrostShimmer 5.5s ease-in-out infinite;
+    pointer-events: none;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    mix-blend-mode: screen;
+    border-radius: 4px;
+  }
+  @keyframes hdFrostShimmer {
+    0%, 20%  { background-position: -100% 0; }
+    60%      { background-position: 200% 0; }
+    100%     { background-position: 200% 0; }
   }
 `;
