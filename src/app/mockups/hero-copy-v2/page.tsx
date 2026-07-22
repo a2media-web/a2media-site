@@ -68,7 +68,7 @@ function H1Editorial() {
 function SubFinal() {
   return (
     <p style={S.sub}>
-      We study the shit out of your buyers. Then ideate and edit videos that sell them before they even notice.
+      We study the shit out of your buyers. Then ideate, produce, and edit videos that sell them before they even notice.
     </p>
   );
 }
@@ -88,7 +88,17 @@ function HeroShell({
 }) {
   return (
     <section style={S.section}>
-      <div style={S.aurora} aria-hidden />
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <video
+        style={S.video}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        src="/videos/hero-bg.mp4"
+        aria-hidden
+      />
       <div style={S.veil} aria-hidden />
       <div style={S.body}>
         <div style={S.headRow}>
@@ -188,20 +198,21 @@ const S = {
     display: "flex",
     alignItems: "center",
   } as React.CSSProperties,
-  aurora: {
+  video: {
     position: "absolute" as const,
-    inset: "-10%",
+    inset: 0,
+    width: "100%",
+    height: "100%",
+    objectFit: "cover" as const,
     zIndex: 0,
     pointerEvents: "none" as const,
-    background:
-      `radial-gradient(700px 320px at 22% 25%, rgba(90,51,255,0.28) 0%, transparent 65%),` +
-      `radial-gradient(600px 280px at 78% 75%, rgba(143,69,238,0.2) 0%, transparent 70%)`,
-    filter: "blur(10px)",
   } as React.CSSProperties,
   veil: {
     position: "absolute" as const,
     inset: 0,
-    background: "linear-gradient(180deg, rgba(7,2,31,0.2), rgba(7,2,31,0.55))",
+    background:
+      "linear-gradient(180deg, rgba(7,2,31,0.35) 0%, rgba(7,2,31,0.6) 60%, rgba(7,2,31,0.8) 100%)",
+    zIndex: 0,
     pointerEvents: "none" as const,
   } as React.CSSProperties,
 
