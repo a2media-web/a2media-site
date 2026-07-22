@@ -30,6 +30,35 @@ export type Study = {
 
 export const STUDIES: Study[] = [
   {
+    id: "partnerhacker",
+    name: "PartnerHacker",
+    bigStat: "8 mo",
+    bigLabel: "from launch to acquired",
+    bigSub: "PartnerHacker, $0 → exit",
+    tabName: "PartnerHacker",
+    tabOutcome: "$0 to acquired in 8mo",
+    stats: [
+      { num: "$900K+", label: "Closed-won", sub: "in sponsorships" },
+      { num: "5,000", label: "Attendees at their", sub: "virtual summit" },
+      { num: "8 mo", label: "From launch", sub: "to acquisition" },
+      { num: "50", label: "Videos", sub: "produced" },
+    ],
+    before:
+      "PartnerHacker was a brand new company with a hypothesis: partnerships needed its own media brand. They had an audience, but no video team and a small content library. They needed to turn attention into authority fast in a space dominated by established players.",
+    after:
+      "We became their first video hire and built the content engine from day one. Within months, PartnerHacker was recognized at events, leading conversations on LinkedIn, and positioned as the definitive voice in the partnerships space. Alongside them, using video, we coined Nearbound, a term that became an industry standard alongside inbound and outbound. It showed up on hiring boards, was adopted by other companies to describe their go-to-market motions, and the term has since evolved into ELG (Ecosystem Led Growth).",
+    videoEngine: {
+      title: "The Video Engine",
+      body:
+        "We produced 50 pieces of content across webinars, podcasts, short video clips, and full-funnel video (top, middle, and bottom of funnel). We helped host the largest partnerships webinar in history at the time (5,000 attendees), closed $900K+ in sponsorships, and built the video presence that made PartnerHacker synonymous with partner-led growth.",
+    },
+    closingPill: {
+      text: "PartnerHacker was",
+      emphasis:
+        "acquired just 8 months after launch. Content made the brand impossible to ignore.",
+    },
+  },
+  {
     id: "reveal",
     name: "Reveal",
     bigStat: "$600K",
@@ -85,35 +114,6 @@ export const STUDIES: Study[] = [
       text: "Engagement ongoing since Feb 2024.",
       emphasis:
         "Video now drives event registrations, developer adoption, and stakeholder buy-in.",
-    },
-  },
-  {
-    id: "partnerhacker",
-    name: "PartnerHacker",
-    bigStat: "8 mo",
-    bigLabel: "from launch to acquired",
-    bigSub: "PartnerHacker, $0 → exit",
-    tabName: "PartnerHacker",
-    tabOutcome: "$0 to acquired in 8mo",
-    stats: [
-      { num: "$900K+", label: "Closed-won", sub: "in sponsorships" },
-      { num: "5,000", label: "Attendees at their", sub: "virtual summit" },
-      { num: "8 mo", label: "From launch", sub: "to acquisition" },
-      { num: "50", label: "Videos", sub: "produced" },
-    ],
-    before:
-      "PartnerHacker was a brand new company with a hypothesis: partnerships needed its own media brand. They had an audience, but no video team and a small content library. They needed to turn attention into authority fast in a space dominated by established players.",
-    after:
-      "We became their first video hire and built the content engine from day one. Within months, PartnerHacker was recognized at events, leading conversations on LinkedIn, and positioned as the definitive voice in the partnerships space. Alongside them, using video, we coined Nearbound, a term that became an industry standard alongside inbound and outbound. It showed up on hiring boards, was adopted by other companies to describe their go-to-market motions, and the term has since evolved into ELG (Ecosystem Led Growth).",
-    videoEngine: {
-      title: "The Video Engine",
-      body:
-        "We produced 50 pieces of content across webinars, podcasts, short video clips, and full-funnel video (top, middle, and bottom of funnel). We helped host the largest partnerships webinar in history at the time (5,000 attendees), closed $900K+ in sponsorships, and built the video presence that made PartnerHacker synonymous with partner-led growth.",
-    },
-    closingPill: {
-      text: "PartnerHacker was",
-      emphasis:
-        "acquired just 8 months after launch. Content made the brand impossible to ignore.",
     },
   },
 ];

@@ -19,7 +19,6 @@ export default function Pain() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <p className={styles.eyebrow}>Sound familiar?</p>
         <h2 className={styles.heading}>
           <span>You&apos;ve tried video.</span>
           <span>It didn&apos;t move the needle.</span>

@@ -220,7 +220,7 @@ export default function Pricing() {
     <section id="Pricing" className={styles.section}>
       <div className={styles.inner}>
         <h2 className={styles.heading}>
-          3 Ways to Work <em>With Us</em>
+          3 Ways to Work <em style={{ color: "var(--a2-aqua-teal)" }}>With Us</em>
         </h2>
         <p className={styles.intro} style={{ marginBottom: 28 }}>
           <span className={styles.introAccent}>{CREDIT}</span>

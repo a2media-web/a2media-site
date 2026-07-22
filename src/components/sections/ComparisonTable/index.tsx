@@ -15,7 +15,7 @@ export default function ComparisonTable() {
       <div className={styles.inner}>
         <div className={styles.header}>
           <h2 className={styles.heading}>
-            Hire 9 People &amp; Tools. <span>Or Just Us.</span>
+            Hire 9 People &amp; Tools. <span style={{ color: "var(--a2-aqua-teal)" }}>Or Just Us.</span>
           </h2>
           <p className={styles.sub}>
             The cost of building this team yourself vs. working with A2 Media.
@@ -37,7 +37,7 @@ export default function ComparisonTable() {
             <div className={styles.note}>Before recruiting, ramp time, and turnover.</div>
           </div>
           <div className={`${styles.card} ${styles.featured}`}>
-            <div className={`${styles.label} ${styles.purple}`}>Working With A2 Media (6 Months)</div>
+            <div className={`${styles.label} ${styles.purple}`} style={{ color: "var(--a2-aqua-teal)" }}>Working With A2 Media (6 Months)</div>
             {ROLES.map((r) => (
               <div key={r.role} className={styles.line}>
                 <span className={styles.role}>{r.role}</span>
@@ -49,12 +49,12 @@ export default function ComparisonTable() {
               <span className={`${styles.totalAmount} ${styles.green}`}>$90K</span>
             </div>
             <div className={styles.note}>
-              No recruiting. No ramp time. <span className={styles.accent}>Expertise from Day 1.</span>
+              No recruiting. No ramp time. <span className={styles.accent} style={{ color: "var(--a2-aqua-teal)" }}>Expertise from Day 1.</span>
             </div>
           </div>
         </div>
         <div className={styles.savings}>
-          Save over <strong>$346,000</strong>, and start in <strong>48 hours</strong>, not 6 months.
+          Save over <strong style={{ color: "var(--a2-aqua-teal)" }}>$346,000</strong>, and start in <strong style={{ color: "var(--a2-aqua-teal)" }}>48 hours</strong>, not 6 months.
         </div>
       </div>
     </section>

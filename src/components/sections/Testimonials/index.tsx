@@ -13,7 +13,7 @@ export default function Testimonials() {
       <div className={styles.aurora} aria-hidden />
       <div className={styles.inner}>
         <div className={styles.head}>
-          <p className={styles.eyebrow}>Testimonials</p>
+          <p className={styles.eyebrow} style={{ color: "var(--a2-aqua-teal)" }}>Testimonials</p>
           <h2 className={styles.title}>Our Customers Love Us.</h2>
           <div className={styles.tabs}>
             <button

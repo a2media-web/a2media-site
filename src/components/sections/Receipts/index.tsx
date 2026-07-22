@@ -78,7 +78,6 @@ export default function Receipts() {
   return (
     <section ref={sectionRef} id="before-and-after" className={styles.section}>
       <div className={styles.inner}>
-        <p className={styles.eyebrow}>What we&apos;ve already done</p>
         <h2 className={styles.heading}>
           The <span className={styles.italic}>receipts</span>.
         </h2>

@@ -30,10 +30,9 @@ export default function Guide() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <p className={styles.eyebrow}>We&apos;ve been there</p>
         <h2 className={styles.heading}>
           We know what it&apos;s like to spend $30K
-          <span className={styles.accent}>on a video that makes&nbsp;$0.</span>
+          <span className={styles.accent} style={{ color: "var(--a2-aqua-teal)" }}>on a video that makes&nbsp;$0.</span>
         </h2>
         <p className={styles.body}>
           So we built A2 Media differently. Every video we make starts with one

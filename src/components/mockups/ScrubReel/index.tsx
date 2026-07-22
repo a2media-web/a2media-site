@@ -167,10 +167,10 @@ export default function ScrubReel({
     <section ref={wrapRef} id="work" className={styles.wrap}>
       <div className={styles.sticky}>
         <div className={styles.head}>
-          <p className={styles.eyebrow}>What we make</p>
+          <p className={styles.eyebrow} style={{ color: "var(--a2-aqua-teal)" }}>What we make</p>
           <h2 className={styles.heading}>
             Any video format you can think of,{" "}
-            <span>we make it.</span>
+            <span style={{ color: "var(--a2-aqua-teal)" }}>we make it.</span>
           </h2>
         </div>
 
