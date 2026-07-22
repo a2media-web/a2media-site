@@ -98,12 +98,28 @@
   white-space: normal;
 }
 
-/* Aqua Teal accent on the single word "cooler" in the H1. */
+/* Aqua Teal accent on the single word "cooler" in the H1.
+   Gentle 3.6s pulse — always alive without being distracting. */
 .teal {
+  display: inline-block;
   color: #28DFE8;
   text-shadow:
     0 2px 24px rgba(40, 223, 232, 0.4),
     0 0 36px rgba(40, 223, 232, 0.25);
+  animation: heroCoolerPulse 3.6s ease-in-out infinite;
+}
+@keyframes heroCoolerPulse {
+  0%, 100% {
+    text-shadow: 0 2px 22px rgba(40, 223, 232, 0.38), 0 0 32px rgba(40, 223, 232, 0.22);
+    filter: brightness(1);
+  }
+  50% {
+    text-shadow: 0 2px 32px rgba(40, 223, 232, 0.7), 0 0 55px rgba(40, 223, 232, 0.42);
+    filter: brightness(1.12);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .teal { animation: none; }
 }
 
 .italic {
