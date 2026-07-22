@@ -65,12 +65,43 @@ function H1Editorial() {
 
 // -------- Sub renderers --------
 
-function SubFinal() {
+function SubCurrent() {
   return (
     <p style={S.sub}>
       We study the shit out of your buyers.
       <br />
       Then ideate, build, and edit videos that sell them before they even notice.
+    </p>
+  );
+}
+
+function SubBalance() {
+  // No manual break — CSS `text-wrap: balance` finds the even midpoint.
+  return (
+    <p style={{ ...S.sub, textWrap: "balance" }}>
+      We study the shit out of your buyers. Then ideate, build, and edit videos that sell them before they even notice.
+    </p>
+  );
+}
+
+function SubThreeBeat() {
+  return (
+    <p style={S.sub}>
+      We study the shit out of your buyers.
+      <br />
+      Then ideate, build, and edit videos.
+      <br />
+      They sell before your prospects even notice.
+    </p>
+  );
+}
+
+function SubMatched() {
+  return (
+    <p style={S.sub}>
+      We study your buyers until we know their fears cold.
+      <br />
+      Then ideate, build, and edit videos that sell without them noticing.
     </p>
   );
 }
@@ -139,17 +170,31 @@ export default function Page() {
       </header>
 
       <HeroShell
-        label="TREATMENT A"
-        variant="Understated"
-        h1={<H1Understated />}
-        sub={<SubFinal />}
+        label="SUB V1"
+        variant="Current (unbalanced)"
+        h1={<H1Editorial />}
+        sub={<SubCurrent />}
       />
 
       <HeroShell
-        label="TREATMENT B"
-        variant='"cooler" in teal'
+        label="SUB V2"
+        variant="CSS text-wrap: balance (no manual break)"
         h1={<H1Editorial />}
-        sub={<SubFinal />}
+        sub={<SubBalance />}
+      />
+
+      <HeroShell
+        label="SUB V3"
+        variant="Three-beat burst"
+        h1={<H1Editorial />}
+        sub={<SubThreeBeat />}
+      />
+
+      <HeroShell
+        label="SUB V4"
+        variant="Rewritten for length parity"
+        h1={<H1Editorial />}
+        sub={<SubMatched />}
       />
     </main>
   );
