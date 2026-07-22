@@ -68,7 +68,7 @@ function H1Editorial() {
 function SubFinal() {
   return (
     <p style={S.sub}>
-      We study the shit out of your buyers. Then ideate, produce, and edit videos that sell them before they even notice.
+      We study the shit out of your buyers. Then ideate, build, and edit videos that sell them before they even notice.
     </p>
   );
 }
