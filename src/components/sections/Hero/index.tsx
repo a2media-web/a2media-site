@@ -40,7 +40,7 @@ export default function Hero() {
         </h1>
 
         <p className={styles.sub}>
-          We study the shit out of your buyers. Then ideate, build, and edit the videos that convert them without them feeling sold to.
+          We study the shit out of your buyers. Then ideate, build, and edit the videos that convert without them ever feeling sold to.
         </p>
 
         <div className={styles.ctas}>
