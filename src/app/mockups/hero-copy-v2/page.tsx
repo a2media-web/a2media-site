@@ -18,23 +18,27 @@ const PURPLE = "#5A33FF";
 const LILAC = "#8F45EE";
 const NEON = "#66F78E";
 
-const CTAS = (
-  <div style={S.ctas}>
-    <a href="#" style={S.btnPrimary}>
-      See if we&apos;re a fit <span aria-hidden>→</span>
-    </a>
-    <a href="#" style={S.btnGhost}>See the work</a>
-  </div>
-);
+function Ctas() {
+  return (
+    <div style={S.ctas}>
+      <a href="#" style={S.btnPrimary}>
+        See if we&apos;re a fit <span aria-hidden>→</span>
+      </a>
+      <a href="#" style={S.btnGhost}>See the work</a>
+    </div>
+  );
+}
 
-const TRUST_ROW = (
-  <div style={S.trust}>
-    <p style={S.trustLabel}>Trusted by</p>
-    <p style={S.trustList}>
-      Okta · Shopify · Chili Piper · Crossbeam · <em style={{fontStyle: "italic", color: NEON}}>Slate</em> · Wishly Group
-    </p>
-  </div>
-);
+function TrustRow() {
+  return (
+    <div style={S.trust}>
+      <p style={S.trustLabel}>Trusted by</p>
+      <p style={S.trustList}>
+        Okta · Shopify · Chili Piper · Crossbeam · <em style={{ fontStyle: "italic", color: NEON }}>Slate</em> · Wishly Group
+      </p>
+    </div>
+  );
+}
 
 // -------- H1 renderers --------
 
@@ -123,8 +127,8 @@ function HeroShell({
         </p>
         {h1}
         {sub}
-        {CTAS}
-        {TRUST_ROW}
+        <Ctas />
+        <TrustRow />
       </div>
     </section>
   );
