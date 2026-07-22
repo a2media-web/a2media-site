@@ -222,6 +222,10 @@ const S = {
     width: "100%",
     maxWidth: 1080,
     margin: "0 auto",
+    textAlign: "center" as const,
+    display: "flex",
+    flexDirection: "column" as const,
+    alignItems: "center",
   } as React.CSSProperties,
 
   headRow: {
@@ -306,7 +310,7 @@ const S = {
     fontSize: "clamp(17px, 1.5vw, 20px)",
     lineHeight: 1.55,
     color: "rgba(255,255,255,0.82)",
-    margin: "0 0 30px",
+    margin: "0 auto 30px",
     maxWidth: 720,
     fontFamily: "var(--a2-sans, system-ui)",
   } as React.CSSProperties,
@@ -322,6 +326,7 @@ const S = {
     display: "flex",
     gap: 14,
     flexWrap: "wrap" as const,
+    justifyContent: "center",
     marginBottom: 32,
   } as React.CSSProperties,
   btnPrimary: {

@@ -1,14 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import styles from "./Hero.module.css";
-
-const SWAP_WORDS = [
-  "closing deals",
-  "driving pipeline",
-  "converting buyers",
-  "building trust",
-];
 
 const TRUST_LOGOS = [
   { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/65e9e913df3011054a62442e_Okta_Logo_White_Medium.png", alt: "Okta" },
@@ -20,41 +12,6 @@ const TRUST_LOGOS = [
 ];
 
 export default function Hero() {
-  const [wordIndex, setWordIndex] = useState(0);
-  const [phase, setPhase] = useState<"in" | "out" | "idle">("idle");
-  const fadeMs = 700;
-  const holdMs = 2400;
-  const rafRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    const cycle = () => {
-      if (cancelled) return;
-      // Out
-      setPhase("out");
-      const swapTimeout = window.setTimeout(() => {
-        if (cancelled) return;
-        setWordIndex((i) => (i + 1) % SWAP_WORDS.length);
-        setPhase("in");
-        const idleTimeout = window.setTimeout(() => {
-          if (cancelled) return;
-          setPhase("idle");
-        }, fadeMs);
-        rafRef.current = idleTimeout as unknown as number;
-      }, fadeMs);
-      rafRef.current = swapTimeout as unknown as number;
-    };
-    const id = window.setInterval(cycle, holdMs + fadeMs * 2);
-    return () => {
-      cancelled = true;
-      window.clearInterval(id);
-      if (rafRef.current) window.clearTimeout(rafRef.current);
-    };
-  }, []);
-
-  const italicClass =
-    phase === "out" ? styles.italicOut : phase === "in" ? styles.italicIn : "";
-
   return (
     <header id="Hero" className={styles.section}>
       <video
@@ -76,22 +33,15 @@ export default function Hero() {
         </p>
 
         <h1 className={styles.title}>
-          <span className={styles.line}>Your videos should be</span>
-          <span className={`${styles.line} ${styles.lineDesktop}`}>
-            <em className={`${styles.italic} ${italicClass}`}>
-              {SWAP_WORDS[wordIndex]}
-            </em>
-            <span>for you.</span>
-          </span>
-          <span className={`${styles.line} ${styles.lineMobile}`} aria-hidden>
-            <em className={styles.italic}>closing deals</em>
-            <span>for you.</span>
+          <span className={styles.line}>Going viral is cool.</span>
+          <span className={styles.line}>
+            Making money is <span className={styles.teal}>cooler.</span>
           </span>
         </h1>
 
         <p className={styles.sub}>
-          We go deep on your buyer psychology, map out 6&nbsp;months of video, then
-          hand your team content that looks as good as it performs.
+          We study the shit out of your buyers. Then ideate, build, and edit
+          videos that sell them before they even notice.
         </p>
 
         <div className={styles.ctas}>

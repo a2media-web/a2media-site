@@ -98,6 +98,14 @@
   white-space: normal;
 }
 
+/* Aqua Teal accent on the single word "cooler" in the H1. */
+.teal {
+  color: #28DFE8;
+  text-shadow:
+    0 2px 24px rgba(40, 223, 232, 0.4),
+    0 0 36px rgba(40, 223, 232, 0.25);
+}
+
 .italic {
   font-family: var(--a2-display);
   font-style: italic;
