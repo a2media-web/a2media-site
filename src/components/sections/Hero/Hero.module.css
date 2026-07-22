@@ -135,6 +135,8 @@
   max-width: 640px;
   color: var(--a2-white);
   text-shadow: 0 2px 24px rgba(7, 2, 31, 0.55);
+  /* Let the browser find an even midpoint break instead of a manual <br />. */
+  text-wrap: balance;
 }
 
 .ctas {
