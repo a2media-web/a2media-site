@@ -17,6 +17,7 @@ const NIGHT = "#0D0536";
 const PURPLE = "#5A33FF";
 const LILAC = "#8F45EE";
 const NEON = "#66F78E";
+const TEAL = "#28DFE8";
 
 function Ctas() {
   return (
@@ -56,7 +57,7 @@ function H1Editorial() {
     <h1 style={S.title}>
       <span style={S.titleLine}>Going viral is cool.</span>
       <span style={S.titleLine}>
-        Making money is <em style={S.italicAccent}>cooler.</em>
+        Making money is <span style={S.teal}>cooler.</span>
       </span>
     </h1>
   );
@@ -64,37 +65,10 @@ function H1Editorial() {
 
 // -------- Sub renderers --------
 
-function Sub1Understated() {
+function SubFinal() {
   return (
     <p style={S.sub}>
-      We study the shit out of your buyers. Then ideate and edit video streams that sell them before they even notice.
-    </p>
-  );
-}
-
-function Sub1Editorial() {
-  return (
-    <p style={S.sub}>
-      We study the shit out of <em style={S.subAccent}>your buyers</em>. Then ideate and edit video streams that sell them{" "}
-      <em style={S.subAccent}>before they even notice</em>.
-    </p>
-  );
-}
-
-function Sub2Understated() {
-  return (
-    <p style={S.sub}>
-      We study the shit out of your buyers. Their objections, their fears, their 2am Google searches. Then ideate and edit the video series that sell without them feeling sold.
-    </p>
-  );
-}
-
-function Sub2Editorial() {
-  return (
-    <p style={S.sub}>
-      We study the shit out of <em style={S.subAccent}>your buyers</em>. Their objections, their fears, their{" "}
-      <em style={S.subAccent}>2am Google searches</em>. Then ideate and edit the video series that sell{" "}
-      <em style={S.subAccent}>without them feeling sold</em>.
+      We study the shit out of your buyers. Then ideate and edit videos that sell them before they even notice.
     </p>
   );
 }
@@ -153,31 +127,17 @@ export default function Page() {
       </header>
 
       <HeroShell
-        label="SUB 1 · TREATMENT A"
+        label="TREATMENT A"
         variant="Understated"
         h1={<H1Understated />}
-        sub={<Sub1Understated />}
+        sub={<SubFinal />}
       />
 
       <HeroShell
-        label="SUB 1 · TREATMENT B"
-        variant="Editorial accent"
+        label="TREATMENT B"
+        variant='"cooler" in teal'
         h1={<H1Editorial />}
-        sub={<Sub1Editorial />}
-      />
-
-      <HeroShell
-        label="SUB 2 · TREATMENT A"
-        variant="Understated"
-        h1={<H1Understated />}
-        sub={<Sub2Understated />}
-      />
-
-      <HeroShell
-        label="SUB 2 · TREATMENT B"
-        variant="Editorial accent"
-        h1={<H1Editorial />}
-        sub={<Sub2Editorial />}
+        sub={<SubFinal />}
       />
     </main>
   );
@@ -326,6 +286,9 @@ const S = {
     fontStyle: "italic" as const,
     fontWeight: 500,
     color: LILAC,
+  } as React.CSSProperties,
+  teal: {
+    color: TEAL,
   } as React.CSSProperties,
 
   sub: {
