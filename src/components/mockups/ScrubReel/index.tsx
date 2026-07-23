@@ -180,7 +180,7 @@ export default function ScrubReel({
               fontStyle: "italic",
             }}
           >
-            Say it with us as you scroll. &ldquo;ooooh. ahhhhh&rdquo;
+            Say it with us as you scroll. &ldquo;ooooh. ahhhhh.&rdquo;
           </p>
         </div>
 
