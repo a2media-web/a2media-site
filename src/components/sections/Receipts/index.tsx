@@ -81,7 +81,7 @@ export default function Receipts() {
         <h2 className={styles.heading}>
           The <span className={styles.italic}>receipts</span>.
         </h2>
-        <p className={styles.sub}>Helping B2B companies win with video since 2023.</p>
+        <p className={styles.sub}>Best in class since 2023. Just look at the receipts bb.</p>
 
         <div className={styles.stage}>
           <span
