@@ -39,7 +39,7 @@ export default function Guide() {
           question:
           <br />
           <span className={styles.bodyEmphasis}>
-            &ldquo;how does this video help close deals?&rdquo;
+            &ldquo;would this actually move someone closer to buying?&rdquo;
           </span>
         </p>
 
