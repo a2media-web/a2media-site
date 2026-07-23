@@ -175,7 +175,6 @@ export default function ScrubReel({
           <p
             style={{
               color: "#fff",
-              opacity: 0.7,
               fontSize: 13.5,
               letterSpacing: "0.01em",
               margin: "12px 0 0",

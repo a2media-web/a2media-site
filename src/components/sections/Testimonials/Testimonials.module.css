@@ -96,5 +96,5 @@
   .section { padding: 56px 16px; }
   .head { margin-bottom: 20px; }
   .tabs { margin: 20px auto 24px; }
-  .tab { padding: 9px 18px; font-size: 13px; }
+  .tab { padding: 12px 18px; min-height: 44px; font-size: 13px; }
 }

@@ -198,6 +198,7 @@
   margin: 0 16px;
   padding: clamp(20px, 2.4vw, 28px) clamp(22px, 2.6vw, 34px) clamp(28px, 3vw, 36px);
   font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  overflow: hidden;
   font-size: clamp(11px, 1.6vw, 15px);
   line-height: 1.7;
   color: var(--a2-night-core);

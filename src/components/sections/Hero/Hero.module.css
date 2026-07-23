@@ -304,7 +304,8 @@
   }
   .btnPrimary, .btnGhost {
     width: auto;
-    padding: 11px 16px;
+    padding: 14px 18px;
+    min-height: 44px;
     font-size: 13px;
     white-space: nowrap;
   }

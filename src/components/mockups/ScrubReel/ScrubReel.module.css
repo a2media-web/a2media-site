@@ -241,9 +241,16 @@
   transition: opacity 280ms ease;
   pointer-events: none;
 }
-.card:hover .playOverlay,
-.card:focus-visible .playOverlay {
-  opacity: 1;
+/* Touch devices have no :hover — show the play affordance at rest so mobile
+   visitors know the cards are tappable. Desktop keeps the hover reveal. */
+@media (hover: none) {
+  .playOverlay { opacity: 0.85; }
+}
+@media (hover: hover) {
+  .card:hover .playOverlay,
+  .card:focus-visible .playOverlay {
+    opacity: 1;
+  }
 }
 
 .playBtn {
