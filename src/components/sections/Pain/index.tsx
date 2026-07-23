@@ -12,7 +12,7 @@ const PAIN_POINTS = [
   },
   {
     title: "You know video works. You just can't prove it yet.",
-    desc: "You keep waiting for the video that will justify all the spend. It's never coming.",
+    desc: "You keep waiting for the ONE video that will justify all the spend. It's never coming.",
   },
 ];
 
