@@ -172,6 +172,18 @@ export default function ScrubReel({
             Any video format you can think of,{" "}
             <span style={{ color: "var(--a2-aqua-teal)" }}>we make it.</span>
           </h2>
+          <p
+            style={{
+              color: "#fff",
+              opacity: 0.7,
+              fontSize: 13.5,
+              letterSpacing: "0.01em",
+              margin: "12px 0 0",
+              fontStyle: "italic",
+            }}
+          >
+            Say it with us as you scroll. &ldquo;ooooh. ahhhhh&rdquo;
+          </p>
         </div>
 
         <div className={styles.viewport}>
