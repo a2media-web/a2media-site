@@ -58,6 +58,23 @@ export default function Guide() {
             </div>
           ))}
         </div>
+
+        <figure className={styles.pullWrap}>
+          <div className={styles.pullMark} aria-hidden>&ldquo;</div>
+          <blockquote className={styles.pullQuote}>
+            Working WITH the A2Media team is exactly how I&apos;d describe it.
+            They helped us frame our message and tell our story the right way.
+            Vendors take orders. Partners make you better.
+          </blockquote>
+          <figcaption className={styles.pullAuthor}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className={styles.pullAvatar} src="/jim.jpeg" alt="Jim Ternyila" />
+            <div>
+              <div className={styles.tName}>Jim Ternyila</div>
+              <div className={styles.tRole}>US General Manager, Infinite Lambda</div>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </section>
   );

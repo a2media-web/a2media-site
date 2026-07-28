@@ -119,6 +119,54 @@
   .tGrid { grid-template-columns: 1fr; }
 }
 
+/* Editorial pull-quote — Jim Ternyila, sits below the 3-card grid.
+   Magazine-style: big italic serif, no card frame, teal rules top + bottom. */
+.pullWrap {
+  margin: 56px auto 0;
+  padding: 40px 32px 44px;
+  max-width: 900px;
+  border-top: 1px solid rgba(40, 223, 232, 0.35);
+  border-bottom: 1px solid rgba(40, 223, 232, 0.35);
+  text-align: center;
+  position: relative;
+}
+.pullMark {
+  font-family: var(--a2-display);
+  font-size: 80px;
+  line-height: 0.6;
+  color: #28DFE8;
+  opacity: 0.55;
+  margin-bottom: 6px;
+}
+.pullQuote {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.45;
+  color: var(--a2-white);
+  margin: 0 auto 24px;
+  max-width: 780px;
+  text-wrap: balance;
+}
+.pullAuthor {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+.pullAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+@media (max-width: 700px) {
+  .pullWrap { padding: 28px 16px 32px; margin-top: 36px; }
+  .pullMark { font-size: 60px; }
+  .pullQuote { font-size: 18px; }
+}
+
 @media (max-width: 700px) {
   .section { padding-left: 16px; padding-right: 16px; }
   .heading {
