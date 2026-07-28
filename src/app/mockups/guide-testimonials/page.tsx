@@ -70,6 +70,29 @@ function Card({ t }: { t: Testimonial }) {
   );
 }
 
+function GuideHead({ label, variant }: { label: string; variant: string }) {
+  return (
+    <>
+      <div style={S.headRow}>
+        <span style={S.mockLabel}>{label}</span>
+        <span style={S.variantChip}>{variant}</span>
+      </div>
+      <h2 style={S.heading}>
+        We know what it&apos;s like to spend $30K{" "}
+        <span style={{ color: TEAL }}>on a video that makes $0.</span>
+      </h2>
+      <p style={S.body}>
+        So we built A2 Media differently. Every video we make starts with one
+        question:
+        <br />
+        <span style={S.bodyEmphasis}>
+          &ldquo;will this actually move someone closer to buying?&rdquo;
+        </span>
+      </p>
+    </>
+  );
+}
+
 function GuideShell({
   label,
   variant,
@@ -84,22 +107,7 @@ function GuideShell({
   return (
     <section style={S.section}>
       <div style={S.inner}>
-        <div style={S.headRow}>
-          <span style={S.mockLabel}>{label}</span>
-          <span style={S.variantChip}>{variant}</span>
-        </div>
-        <h2 style={S.heading}>
-          We know what it&apos;s like to spend $30K{" "}
-          <span style={{ color: TEAL }}>on a video that makes $0.</span>
-        </h2>
-        <p style={S.body}>
-          So we built A2 Media differently. Every video we make starts with one
-          question:
-          <br />
-          <span style={S.bodyEmphasis}>
-            &ldquo;will this actually move someone closer to buying?&rdquo;
-          </span>
-        </p>
+        <GuideHead label={label} variant={variant} />
         <div style={{ ...S.grid, gridTemplateColumns: columns }}>
           {items.map((t) => (
             <Card key={t.name} t={t} />
@@ -110,16 +118,122 @@ function GuideShell({
   );
 }
 
+/* V4: Featured Jim on top (full width), 3 supporting below. */
+function FeaturedTop() {
+  return (
+    <section style={S.section}>
+      <div style={S.inner}>
+        <GuideHead label="VERSION 4" variant="Featured Jim on top + 3 below" />
+        <div style={{ ...S.grid, gridTemplateColumns: "1fr", marginBottom: 0 }}>
+          <FeaturedCard t={JIM} />
+        </div>
+        <div style={{ ...S.grid, gridTemplateColumns: "repeat(3, 1fr)", marginTop: 20 }}>
+          {BASE_TESTIMONIALS.map((t) => (
+            <Card key={t.name} t={t} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* V5: 3 cards + Jim as editorial pull-quote below (no card frame). */
+function EditorialPullQuote() {
+  return (
+    <section style={S.section}>
+      <div style={S.inner}>
+        <GuideHead label="VERSION 5" variant="3 cards + Jim as editorial pull-quote" />
+        <div style={{ ...S.grid, gridTemplateColumns: "repeat(3, 1fr)" }}>
+          {BASE_TESTIMONIALS.map((t) => (
+            <Card key={t.name} t={t} />
+          ))}
+        </div>
+        <div style={S.pullWrap}>
+          <div style={S.pullMark} aria-hidden>&ldquo;</div>
+          <p style={S.pullQuote}>{JIM.quote}</p>
+          <div style={S.pullAuthor}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img style={S.pullAvatar} src={JIM.avatar} alt={JIM.name} />
+            <div>
+              <div style={S.name}>{JIM.name}</div>
+              <div style={S.role}>{JIM.role}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* V6: 4 across with tighter padding + smaller avatar so cards don't feel cramped. */
+function TightFourAcross() {
+  return (
+    <section style={S.section}>
+      <div style={S.inner}>
+        <GuideHead label="VERSION 6" variant="4 across — tighter density" />
+        <div style={{ ...S.grid, gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+          {[...BASE_TESTIMONIALS, JIM].map((t) => (
+            <div key={t.name} style={{ ...S.card, padding: "22px 18px" }}>
+              <p style={{ ...S.quote, fontSize: 15, marginBottom: 18 }}>&ldquo;{t.quote}&rdquo;</p>
+              <div style={{ ...S.author, paddingTop: 14 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img style={{ ...S.avatar, width: 36, height: 36 }} src={t.avatar} alt={t.name} />
+                <div>
+                  <div style={{ ...S.name, fontSize: 13.5 }}>{t.name}</div>
+                  <div style={{ ...S.role, fontSize: 11.5 }}>{t.role}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* V7: All 4 stacked vertically in a single centered column. */
+function StackedVertical() {
+  return (
+    <section style={S.section}>
+      <div style={{ ...S.inner, maxWidth: 760 }}>
+        <GuideHead label="VERSION 7" variant="All 4 stacked vertical (single column)" />
+        <div style={{ ...S.grid, gridTemplateColumns: "1fr", gap: 18 }}>
+          {[...BASE_TESTIMONIALS, JIM].map((t) => (
+            <Card key={t.name} t={t} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FeaturedCard({ t }: { t: Testimonial }) {
+  return (
+    <div style={S.featuredCard}>
+      <div style={S.featuredBadge}>Featured</div>
+      <p style={S.featuredQuote}>&ldquo;{t.quote}&rdquo;</p>
+      <div style={S.author}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img style={{ ...S.avatar, width: 56, height: 56 }} src={t.avatar} alt={t.name} />
+        <div>
+          <div style={{ ...S.name, fontSize: 16 }}>{t.name}</div>
+          <div style={{ ...S.role, fontSize: 13 }}>{t.role}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Page() {
   return (
     <main style={{ background: "#07021F" }}>
       <header style={S.pageHead}>
         <p style={S.pageEyebrow}>Mockup preview</p>
         <h1 style={S.pageTitle}>
-          Guide testimonials · <em style={{ color: TEAL }}>3 vs 4 layouts</em>
+          Guide testimonials · <em style={{ color: TEAL }}>7 layouts</em>
         </h1>
         <p style={S.pageLede}>
-          Same 3 base quotes across all versions. Jim added in V2 &amp; V3
+          Same 3 base quotes across all versions. Jim added from V2 onward
           (trimmed to 173 chars using only his own words). Placeholder text for
           his role — swap in the real one when you decide to ship.
         </p>
@@ -145,6 +259,11 @@ export default function Page() {
         columns="repeat(2, 1fr)"
         items={[...BASE_TESTIMONIALS, JIM]}
       />
+
+      <FeaturedTop />
+      <EditorialPullQuote />
+      <TightFourAcross />
+      <StackedVertical />
     </main>
   );
 }
@@ -293,5 +412,80 @@ const S = {
     color: "rgba(255,255,255,0.72)",
     marginTop: 2,
     lineHeight: 1.3,
+  } as React.CSSProperties,
+
+  // Featured card (V4)
+  featuredCard: {
+    background: "linear-gradient(135deg, rgba(40,223,232,0.12), rgba(90,51,255,0.10))",
+    border: `1px solid ${TEAL}55`,
+    borderRadius: 22,
+    padding: "36px 40px",
+    display: "flex",
+    flexDirection: "column" as const,
+    position: "relative" as const,
+    overflow: "hidden" as const,
+    boxShadow: "0 20px 60px rgba(0,0,0,0.35), 0 0 40px rgba(40,223,232,0.15)",
+  } as React.CSSProperties,
+  featuredBadge: {
+    position: "absolute" as const,
+    top: 16,
+    right: 20,
+    fontSize: 10,
+    letterSpacing: "0.22em",
+    textTransform: "uppercase" as const,
+    fontWeight: 800,
+    color: TEAL,
+    background: "rgba(40,223,232,0.16)",
+    padding: "4px 10px",
+    borderRadius: 999,
+    border: `1px solid ${TEAL}55`,
+  } as React.CSSProperties,
+  featuredQuote: {
+    fontFamily: "var(--a2-display, Georgia, serif)",
+    fontStyle: "italic" as const,
+    fontSize: 22,
+    lineHeight: 1.45,
+    color: "#fff",
+    marginBottom: 28,
+    maxWidth: "88%",
+  } as React.CSSProperties,
+
+  // Pull-quote (V5)
+  pullWrap: {
+    marginTop: 56,
+    padding: "40px 32px",
+    borderTop: `1px solid rgba(40,223,232,0.35)`,
+    borderBottom: `1px solid rgba(40,223,232,0.35)`,
+    textAlign: "center" as const,
+    position: "relative" as const,
+  } as React.CSSProperties,
+  pullMark: {
+    fontFamily: "var(--a2-display, Georgia, serif)",
+    fontSize: 84,
+    lineHeight: 0.6,
+    color: TEAL,
+    opacity: 0.55,
+    marginBottom: 8,
+  } as React.CSSProperties,
+  pullQuote: {
+    fontFamily: "var(--a2-display, Georgia, serif)",
+    fontStyle: "italic" as const,
+    fontSize: "clamp(20px, 2.2vw, 28px)",
+    lineHeight: 1.4,
+    color: "#fff",
+    margin: "0 auto 24px",
+    maxWidth: 780,
+    textWrap: "balance" as const,
+  } as React.CSSProperties,
+  pullAuthor: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: 12,
+  } as React.CSSProperties,
+  pullAvatar: {
+    width: 44,
+    height: 44,
+    borderRadius: "50%",
+    objectFit: "cover" as const,
   } as React.CSSProperties,
 };
