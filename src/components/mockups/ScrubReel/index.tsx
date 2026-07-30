@@ -244,6 +244,27 @@ export default function ScrubReel({
             See pricing <span aria-hidden>→</span>
           </a>
         </div>
+
+        {/* Sits below the footer, only fades in once the visitor has scrubbed
+            through ~85% of the reel. Fades back out if they scroll back up. */}
+        <div
+          className={styles.moreWork}
+          style={{
+            opacity: progress > 0.85 ? 1 : 0,
+            pointerEvents: progress > 0.85 ? "auto" : "none",
+          }}
+          aria-hidden={progress <= 0.85}
+        >
+          <a
+            href="https://fast.wistia.com/embed/channel/fj6gynv9qi"
+            target="_blank"
+            rel="noreferrer"
+            className={styles.moreWorkLink}
+            tabIndex={progress > 0.85 ? 0 : -1}
+          >
+            See even more work →
+          </a>
+        </div>
       </div>
 
       {open ? (

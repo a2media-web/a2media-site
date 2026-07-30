@@ -386,3 +386,27 @@
   .lightbox { padding: 16px; }
   .closeBtn { top: 12px; right: 12px; }
 }
+
+/* "See even more work" CTA — fades in once the reel has been scrubbed through
+   ~85%, hides again if the visitor scrolls back up. Sits below the footer. */
+.moreWork {
+  text-align: center;
+  margin-top: 18px;
+  transition: opacity 500ms ease;
+}
+.moreWorkLink {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  font-family: var(--a2-sans);
+  transition: color 200ms, text-decoration-color 200ms;
+}
+.moreWorkLink:hover {
+  color: var(--a2-aqua-teal);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .moreWork { transition: none; }
+}
