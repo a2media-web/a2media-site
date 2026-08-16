@@ -174,6 +174,40 @@ function V5FinePrint() {
   );
 }
 
+/* V6 — the exact "right energy" line rendered on a letterboard. Two-part:
+   quiet assumption on top, specific consequence on the bottom. */
+function V6TheEnergy() {
+  return (
+    <div style={S.boardShell}>
+      <div style={S.boardGlare} aria-hidden />
+      <div style={S.board}>
+        <div style={S.boardTitle}>House Rules</div>
+        <div style={S.divider} aria-hidden />
+        <p style={{
+          fontFamily: "'Helvetica Neue', Arial, sans-serif",
+          fontSize: 13.5,
+          fontWeight: 600,
+          letterSpacing: "0.12em",
+          textTransform: "uppercase" as const,
+          color: "#F4F1EA",
+          textAlign: "center" as const,
+          lineHeight: 1.6,
+          margin: "0 0 22px",
+          textShadow: "0 1px 0 rgba(0,0,0,0.5)",
+        }}>
+          Base prices assume you&apos;ll let us do our jobs.
+        </p>
+        <div style={S.divider} aria-hidden />
+        <div style={{ ...S.row, marginTop: 18, padding: 0 }}>
+          <span style={S.tier}>Micromanagement</span>
+          <span style={S.dotSpacer} aria-hidden />
+          <span style={{ ...S.price, color: TEAL }}>$500 / hr</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ---------- Page ---------- */
 
 export default function Page() {
@@ -209,6 +243,10 @@ export default function Page() {
 
       <Shell label="OPTION 5" variant="Fine Print (line-item ledger)">
         <V5FinePrint />
+      </Shell>
+
+      <Shell label="OPTION 6" variant="THE ENERGY — 'assume + consequence' on letterboard">
+        <V6TheEnergy />
       </Shell>
     </main>
   );
