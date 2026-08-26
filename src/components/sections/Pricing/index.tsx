@@ -35,7 +35,7 @@ const PLANS: Plan[] = [
   {
     key: "oneoff",
     name: "One-off Video",
-    price: "$3K",
+    price: "$4K",
     unit: "starting price",
     desc: "You tell us the idea or give us raw footage. We make it look expensive.",
     get: [
