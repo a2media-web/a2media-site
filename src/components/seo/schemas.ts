@@ -81,7 +81,7 @@ export const serviceSchema: JsonLdSchema = {
         name: "The 2-Week Jumpstart",
         description:
           "6-month video strategy plus 3 sales-ready videos in 2 weeks. Required first step before the monthly engagement.",
-        price: "8000",
+        price: "10000",
         priceCurrency: "USD",
         eligibleDuration: { "@type": "QuantitativeValue", value: 2, unitCode: "WEE" },
       },
@@ -89,9 +89,14 @@ export const serviceSchema: JsonLdSchema = {
         "@type": "Offer",
         name: "The Video Growth Engine",
         description:
-          "Dedicated video team on a 3 to 6-month engagement. 10 to 12 done-for-you videos per month, 72-hour turnaround, and ongoing strategy. Rates from $15K to $35K per month based on engagement length.",
-        price: "90000",
-        priceCurrency: "USD",
+          "Dedicated video team on a 3 to 6-month engagement. 10 to 12 done-for-you videos per month, 72-hour turnaround, and ongoing strategy. Rates from $15K to $40K per month based on engagement length.",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          minPrice: "15000",
+          maxPrice: "40000",
+          priceCurrency: "USD",
+          unitCode: "MON",
+        },
         eligibleDuration: { "@type": "QuantitativeValue", value: 6, unitCode: "MON" },
       },
     ],

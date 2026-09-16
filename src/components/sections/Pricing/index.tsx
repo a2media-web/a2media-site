@@ -35,7 +35,7 @@ const PLANS: Plan[] = [
   {
     key: "oneoff",
     name: "One-off Video",
-    price: "$4K",
+    price: "$5K",
     unit: "starting price",
     desc: "You tell us the idea or give us raw footage. We make it look expensive.",
     get: [
@@ -50,7 +50,7 @@ const PLANS: Plan[] = [
   {
     key: "jumpstart",
     name: "2-Week Jumpstart",
-    price: "$8K",
+    price: "$10K",
     unit: "one-time",
     desc: "We research your buyer, map out 6 months of video, and give you 3 videos to test.",
     get: [
@@ -67,7 +67,7 @@ const PLANS: Plan[] = [
   {
     key: "engine",
     name: "Video Growth Engine",
-    price: "$15-35K",
+    price: "$15-40K",
     unit: "/ month",
     desc: "We run your whole video department. From creator to script to screen.",
     lead: "Everything in the 2-Week Jumpstart, plus:",
