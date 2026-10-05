@@ -56,9 +56,6 @@ export const metadata: Metadata = {
     "Content That Converts",
     "A2 Media",
   ],
-  alternates: {
-    canonical: "/",
-  },
   formatDetection: {
     email: false,
     address: false,
