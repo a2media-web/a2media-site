@@ -1,0 +1,299 @@
+{
+  "title": "How many videos does it take to close a B2B deal?",
+  "slug": "how-many-videos-to-close-a-deal",
+  "answer": "Plan on 7 to 13 videos to take a B2B buyer from stranger to signed deal: 4-6 that build trust at the top of the funnel, 2-4 that show fit in the middle, and 1-3 that make buying feel safe at the bottom. You don't need all of them on day one. Start with 2-3 per stage, a foundation of 6-9 videos, and build from there.",
+  "status": "published",
+  "category": "foundation",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "targetKeyword": "b2b video marketing statistics",
+  "notionSource": "https://a2-media.notion.site/3217a0163fa4816eb3d4d03b2d3807e8",
+  "faqSchema": true,
+  "body": [
+    {
+      "type": "p",
+      "text": "Everyone keeps telling you to make more video. Your CEO forwards competitor videos every other week, your sales team wants “just a quick explainer,” and deep down you know they're right. The question that rarely gets answered is how many videos it actually takes to turn a stranger into a signed deal. This guide gives you that number, and the logic behind it, to bring to your next budget meeting."
+    },
+    {
+      "type": "h2",
+      "text": "Why isn't “just make more video” useful advice?"
+    },
+    {
+      "type": "p",
+      "text": "Because it skips the part you need to plan: how many videos, of what kind, for which stage of the buying journey. “Post consistently,” “be authentic” and “just start” are all true, but you can't budget, staff or schedule against any of them."
+    },
+    {
+      "type": "p",
+      "text": "It's like telling someone to “just eat healthy” when they asked for a meal plan. You already know you should be doing video. What you need is a number and a mix, so you can plan and execute without guessing."
+    },
+    {
+      "type": "h2",
+      "text": "What do B2B video marketing statistics say about the buying journey?"
+    },
+    {
+      "type": "p",
+      "text": "They say the journey is long, crowded and mostly happens without you. Buyers rack up dozens of interactions over months, read around a dozen pieces of content, and spend only a small share of their time with vendors at all. Here's what the research shows:"
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Interactions",
+          "text": "[Forrester's 2021 buying study](https://www.forrester.com/blogs/three-seismic-shifts-in-buying-behavior-from-forresters-2021-b2b-buying-survey/) found the number of interactions in a buying journey jumped from 17 to 27 during the pandemic."
+        },
+        {
+          "label": "Touchpoints",
+          "text": "[Dreamdata's customer journey data](https://dreamdata.io/b2b-customer-journey) puts the average B2B deal at 76 touchpoints across 3.7 channels, with 272 days from first touch to revenue."
+        },
+        {
+          "label": "Content",
+          "text": "one [FocusVision study](https://www.cleanlink.com/news/article/B2B-Buyers-Crave-Web-Content--25737) found B2B buyers read an average of 13 pieces of content before a purchase decision, 8 of them from vendors."
+        },
+        {
+          "label": "Time with vendors",
+          "text": "[Gartner's B2B buying research](https://www.gartner.com/en/sales/insights/b2b-buying-journey) found buyers spend only 17% of their buying time meeting with potential suppliers, and that time is split across every vendor they're considering."
+        },
+        {
+          "label": "Self-directed research",
+          "text": "[6sense's 2024 buyer research](https://6sense.com/blog/b2b-buyer-journey/) found nearly 70% of the purchase process happens before buyers engage with sellers."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Put together, your buyer does most of their homework without you in the room. They're reading, watching and comparing options long before your sales team gets a shot at the conversation. That's why video matters so much in B2B: it's how you show up in the moments when nobody from your company is talking to them."
+    },
+    {
+      "type": "h2",
+      "text": "What's the framework for planning videos across the funnel?"
+    },
+    {
+      "type": "p",
+      "text": "Trust, then fit, then safety. Your buyer moves through three stages, each stage has one job, and each job needs different videos. This is how we plan it after producing 600+ sales-driven videos for B2B SaaS teams."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Stage",
+        "Videos",
+        "What they're thinking",
+        "Goal"
+      ],
+      "rows": [
+        [
+          "TOFU (Trust)",
+          "4-6",
+          "“I should follow them”",
+          "“These people get it”"
+        ],
+        [
+          "MOFU (Fit)",
+          "2-4",
+          "“Let me share this internally”",
+          "“This could work for us”"
+        ],
+        [
+          "BOFU (Safety)",
+          "1-3",
+          "“Let's book a call”",
+          "“I can justify this spend”"
+        ],
+        [
+          "Total",
+          "7-13",
+          "“Let's hit the goal together”",
+          "From stranger to signed deal"
+        ]
+      ]
+    },
+    {
+      "type": "proprietary",
+      "label": "From the Reveal engagement",
+      "body": "We built Reveal's video strategy from TOFU to BOFU and produced 100+ videos across LinkedIn thought leadership, YouTube education, outbound sales enablement, webinars and more. Buyers started showing up to sales calls already educated. Time to close dropped 40%, from 60 days to 35, and video-attributed deals closed $600K in revenue over 18 months.",
+      "source": "A2 Media, Reveal case study"
+    },
+    {
+      "type": "h2",
+      "text": "What videos build trust at the top of the funnel?"
+    },
+    {
+      "type": "p",
+      "text": "Four to six videos that prove you understand your buyer's problem: myth-busting, “how we think about X” thought leadership, trend breakdowns with a real point of view, and sharp takes on problems your buyer deals with daily. The goal is trust, so hold off on the demo ask here."
+    },
+    {
+      "type": "p",
+      "text": "This is where most of the buying journey happens, since buyers are deep into their research before they contact anyone. You want them walking away thinking, “this company understands my problem.” Proving you know what you're talking about is how you earn the right to their attention."
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Myth-busting",
+          "text": "videos that challenge common beliefs in your industry."
+        },
+        {
+          "label": "Thought leadership",
+          "text": "“how we think about X” videos that show your point of view."
+        },
+        {
+          "label": "Trend breakdowns",
+          "text": "industry trends, with a real opinion attached."
+        },
+        {
+          "label": "Quick takes",
+          "text": "short, sharp responses to problems your buyer hits every day."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "In our experience, a founder or executive voice carries this stage better than a brand account. If yours is camera-shy, [how to get your CEO on camera](/playbook/ceo-on-camera) walks through it."
+    },
+    {
+      "type": "h2",
+      "text": "What videos demonstrate fit in the middle of the funnel?"
+    },
+    {
+      "type": "p",
+      "text": "Two to four videos that show your approach works for someone like them: outcome-focused case studies, high-level process walkthroughs, and side-by-side or before-and-after comparisons. The job is moving a buyer from “I like this team's content” to “maybe this is something we actually need.”"
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Case studies",
+          "text": "real results, focused on outcomes rather than a deep dive."
+        },
+        {
+          "label": "Process walkthroughs",
+          "text": "a high-level look at how you actually do the work."
+        },
+        {
+          "label": "Comparisons",
+          "text": "side-by-side or before-and-after breakdowns."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "This stage matters more than most companies realize, because these are the videos a champion forwards to their boss. Buyers rarely pick a vendor whose content they have never spent time with, so your middle-of-funnel videos are where you show you are the right team for the job."
+    },
+    {
+      "type": "h2",
+      "text": "What videos make buying feel safe at the bottom of the funnel?"
+    },
+    {
+      "type": "p",
+      "text": "One to three videos that lower the personal risk of saying yes: customer testimonials with real specifics, a walkthrough of what working with you looks like, and FAQ videos that handle the objections sales usually fields before a deal signs."
+    },
+    {
+      "type": "p",
+      "text": "By now they like you and they're fairly sure you can help, but they're still hesitant, for good reason. If they pitch this budget internally and it doesn't work out, their credibility takes the hit, and in some cases their job is on the line. Your job at this stage is to make the decision feel safe."
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Customer testimonials",
+          "text": "real people, real results, real specifics."
+        },
+        {
+          "label": "What working with us looks like",
+          "text": "a walkthrough of the first weeks as a customer."
+        },
+        {
+          "label": "FAQ videos",
+          "text": "answers to the objections sales typically handles before prospects sign."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "This is the stage most companies skip. They go from great top-of-funnel content straight to “book a demo” with nothing in between. Don't be most companies. The [video scripting checklist](/playbook/video-script-checklist) helps keep these short and specific."
+    },
+    {
+      "type": "h2",
+      "text": "How many videos do you need to start?"
+    },
+    {
+      "type": "p",
+      "text": "Six to nine: two or three per stage. The full framework adds up to 7-13 videos, but you don't need all of them on day one, and a small set covering every stage will do more for pipeline than a big set stuck at the top."
+    },
+    {
+      "type": "p",
+      "text": "The math is TOFU (4-6) + MOFU (2-4) + BOFU (1-3) = 7-13 videos. That lines up well with FocusVision's finding of 13 pieces of content per buying decision. Here's how we'd sequence it:"
+    },
+    {
+      "type": "ol",
+      "items": [
+        "Make 2-3 trust videos built on the questions and myths your buyers already bring to sales calls.",
+        "Make 2-3 fit videos: at least one outcome-focused case study and one process walkthrough.",
+        "Make 2-3 safety videos: a testimonial, a “what working with us looks like” walkthrough and an objection-handling FAQ.",
+        "Watch which videos sales sends and prospects mention, then fill out each stage toward the full range. [How to measure video ROI](/playbook/measure-video-roi) covers what to track."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Why do video programs that start as campaigns stall?"
+    },
+    {
+      "type": "p",
+      "text": "Because buying is long and nonlinear, and a campaign has an end date. Most companies make three videos, run them for a quarter, measure, and give up when the ROI isn't immediate, right when their buyers are still partway through a journey that can run for months."
+    },
+    {
+      "type": "p",
+      "text": "Your videos need to meet your buyer wherever they are, whether that's the first touchpoint or the fifty-seventh. The companies that do well with video have systems more than talent: logic behind what they publish, coverage of trust, fit and safety, and a process that runs without anyone being the bottleneck. That's how a video library compounds instead of expiring after one quarter. [How to get buy-in for video](/playbook/get-buy-in-for-video) covers turning it into a system leadership keeps funding."
+    },
+    {
+      "type": "h2",
+      "text": "Where do these B2B buying statistics come from?"
+    },
+    {
+      "type": "p",
+      "text": "Each number in this guide links to its source, and they're collected here with what each one measured, so you can cite them accurately in your own deck."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Source",
+        "Finding",
+        "Note"
+      ],
+      "rows": [
+        [
+          "[Forrester, 2021 B2B Buying Study](https://www.forrester.com/blogs/three-seismic-shifts-in-buying-behavior-from-forresters-2021-b2b-buying-survey/)",
+          "Interactions per buying journey rose from 17 to 27",
+          "Measured during the pandemic"
+        ],
+        [
+          "[Dreamdata](https://dreamdata.io/b2b-customer-journey)",
+          "76 touchpoints across 3.7 channels, 272 days to revenue",
+          "Earlier Dreamdata data reported about 62 touches"
+        ],
+        [
+          "[FocusVision](https://www.cleanlink.com/news/article/B2B-Buyers-Crave-Web-Content--25737)",
+          "13 pieces of content per decision, 8 from vendors",
+          "Original study page is offline; reported in 2020 coverage"
+        ],
+        [
+          "[Gartner](https://www.gartner.com/en/sales/insights/b2b-buying-journey)",
+          "17% of buying time spent meeting potential suppliers",
+          "Shared across all vendors being considered"
+        ],
+        [
+          "[6sense, 2024](https://6sense.com/blog/b2b-buyer-journey/)",
+          "Nearly 70% of the purchase process happens before engaging sellers",
+          "From 6sense's buyer experience research"
+        ]
+      ]
+    }
+  ],
+  "closing": {
+    "text": "Seven to thirteen videos, planned across trust, fit and safety, will do more for pipeline than another round of “just make more video.” If you want that plan built around your buyer, our 2-Week Jumpstart maps out 6 months of video and gives you 3 videos to test.",
+    "cta": {
+      "url": "/#Pricing",
+      "anchor": "See the 2-Week Jumpstart →"
+    }
+  }
+}

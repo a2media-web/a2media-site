@@ -30,9 +30,11 @@ export type CtaMode = "sell" | "helpful";
 export type BlogPostBlock =
   | { type: "p"; text: string }
   | { type: "h2"; text: string }
+  | { type: "h3"; text: string }
   | { type: "table"; headers: string[]; rows: string[][] }
   | { type: "ol"; items: string[] }
   | { type: "ul"; items: { label: string; text: string }[] } // label renders bold, followed by a colon
+  | { type: "video"; url: string; title: string; caption?: string } // YouTube, Vimeo, Wistia or LinkedIn embed
   | {
       type: "proprietary";
       label: string; // e.g. "From a real Reveal engagement"

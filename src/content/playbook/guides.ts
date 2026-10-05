@@ -1,5 +1,5 @@
 /**
- * Playbook guide data — typed, hand-authored.
+ * Playbook guide data. One JSON file per guide in ./guides/.
  *
  * Long-form guides migrated from the Notion "A2 Media Video Playbook" and
  * rewritten to the editorial standard in `src/content/blog/_TEMPLATE.md`
@@ -54,44 +54,27 @@ export type PlaybookGuide = {
   };
 };
 
-export const GUIDES: PlaybookGuide[] = [
-  {
-    title: "Template preview: how a playbook guide renders",
-    slug: "template-preview",
-    answer:
-      "This is a placeholder guide that only exists on the local dev server. It shows how a migrated Notion guide will look on a2media.ca: the title as the question people search, this lead paragraph as the direct answer, then question-shaped sections below. Replace it with the first real guide.",
-    status: "draft",
-    category: "foundation",
-    publishedAt: "2026-10-05",
-    updatedAt: "2026-10-05",
-    author: "Ademola Adelakun",
-    faqSchema: true,
-    body: [
-      { type: "h2", text: "What goes in each section?" },
-      {
-        type: "p",
-        text: "Each H2 is a follow-on question, and the paragraph directly under it answers that question on its own. That paragraph is what feeds the FAQ schema, so it should read correctly without the rest of the page.",
-      },
-      {
-        type: "ul",
-        items: [
-          { label: "Paragraphs", text: "One idea per section, two to four paragraphs." },
-          { label: "Lists", text: "Labelled lists like this one render as bullets with a bold label." },
-          { label: "Proof", text: "Real A2 client numbers go in a proprietary block, never invented." },
-        ],
-      },
-      { type: "h2", text: "What happens when it's published?" },
-      {
-        type: "p",
-        text: "Set status to published and the guide appears on the /playbook hub, in the sitemap, and in production builds. Then unpublish the Notion copy so the two pages don't compete in search.",
-      },
-    ],
-    closing: {
-      text: "Every guide ends with the offer its question implies.",
-      cta: { url: "/#Pricing", anchor: "See pricing →" },
-    },
-  },
-];
+// One JSON file per guide in src/content/playbook/guides/, read at build time
+// (server-side only: every consumer is a server component or route), the same
+// way blog auto-posts are loaded.
+function loadGuides(): PlaybookGuide[] {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const fs = require("fs") as typeof import("fs");
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const path = require("path") as typeof import("path");
+  const dir = path.join(process.cwd(), "src/content/playbook/guides");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".json"))
+    .sort()
+    .map(
+      (f) =>
+        JSON.parse(fs.readFileSync(path.join(dir, f), "utf-8")) as PlaybookGuide,
+    );
+}
+
+export const GUIDES: PlaybookGuide[] = loadGuides();
 
 /** Guides visible in this environment: published only in production. */
 export const VISIBLE_GUIDES: PlaybookGuide[] =

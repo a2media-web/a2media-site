@@ -1,0 +1,98 @@
+{
+  "title": "How do you get buy-in for a video marketing budget (and keep it)?",
+  "slug": "get-buy-in-for-video",
+  "answer": "To get a video marketing budget approved and keep it past the first two quarters, start by making sales' lives easier with 2-3 videos that answer their most repeated questions. Then define your buyer as a real person, test ideas unpolished before paying for polish, take bolder swings once you've earned trust, and run video as a system with a cadence and simple metrics leadership can follow.",
+  "status": "published",
+  "category": "foundation",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "targetKeyword": "video marketing budget",
+  "notionSource": "https://a2-media.notion.site/3237a0163fa4817bbd40ca4a3b487a32",
+  "faqSchema": true,
+  "body": [
+    { "type": "p", "text": "Getting budget for video is step one. Keeping it is the real game. You have maybe two quarters before someone asks “what's the ROI on this?”, and if you don't have an answer, the program quietly dies. This is the five-step plan we use to make sure that doesn't happen, in the order we'd run it." },
+
+    { "type": "h2", "text": "Why should your first video budget go to sales?" },
+    { "type": "p", "text": "Because sales is where video pays back fastest, and it's where you win your first internal advocates. Your reps answer the same handful of questions on every call: how does it work, what makes you different, can I see an example. A short video can answer those before the call starts, so the call itself goes to actual selling." },
+    { "type": "p", "text": "Think of your sales team like a restaurant kitchen that's backed up. Every rep is standing at the pass yelling “I need this now.” You can't cook faster, but you can prep the ingredients in advance so the orders fly out. The right sales videos are that prep." },
+    { "type": "p", "text": "The time is there to win back. [Salesforce's State of Sales research](https://www.salesforce.com/news/stories/sales-research-2023/) found reps spend just 28% of their time selling. The rest goes to admin, prep and deal management, and plenty of that prep is re-explaining things a video could cover once. So your first move is sales enablement, ahead of a brand anthem, a product launch video or a trailer:" },
+    { "type": "ul", "items": [
+      { "label": "Top questions", "text": "2-3 videos that answer the questions your reps hear most often." },
+      { "label": "FAQ video", "text": "one FAQ-style video reps can drop straight into email threads." },
+      { "label": "Working with us", "text": "a short walkthrough of what becoming a customer actually looks like." }
+    ] },
+    { "type": "p", "text": "When sales starts seeing results, they become your loudest internal advocates. That's political capital you'll need later, when someone in finance asks what video is doing for the business." },
+    { "type": "proprietary", "label": "From the Reveal engagement", "body": "Reveal came to us with no video, no content marketing and no content team, closing deals in 60 days on outbound and word of mouth. Once reps started sending videos directly to prospects, buyers began showing up to calls already educated. Time to close dropped 40%, from 60 days to 35, and video-attributed deals closed $600K in revenue over 18 months.", "source": "A2 Media, Reveal case study" },
+
+    { "type": "h2", "text": "Why does your video strategy need a real person instead of a persona?" },
+    { "type": "p", "text": "Because a persona tells you who buys, and a real person tells you why they buy. “Mid-market SaaS, 50-200 employees, VP of Marketing” is a targeting filter. It says nothing about what keeps that VP up at night, so videos built on it come out generic." },
+    { "type": "p", "text": "Buying a gift for “adults aged 30-45” is almost impossible. Buying a gift for your best friend is easy. That's the gap between a persona doc and actually knowing your buyer." },
+    { "type": "p", "text": "For your videos to land, you need to know the human watching them. What's their biggest frustration? What did their boss just forward them? What are they Googling at 11pm? Do they spend the week worried they're about to get fired, and if so, why? Lines like “our platform helps teams collaborate better” don't survive contact with that person. Join the conversation already happening in their head, in their world, instead of trying to pull them into yours." },
+    { "type": "p", "text": "When you present the strategy internally, skip the target account list and show a person. Give them a name, and be able to walk through their typical Monday from start to finish. Leadership remembers a person long after they've forgotten the account list." },
+
+    { "type": "h2", "text": "Should your first videos be polished or scrappy?" },
+    { "type": "p", "text": "Scrappy. Test the concept unpolished, find out what resonates, and only then spend money polishing the winners. Quality still matters, but the sequence matters more: test the idea first, then polish what works." },
+    { "type": "p", "text": "Comedians don't write a joke and go straight to the Netflix special. They test it in small clubs for months first. Your video strategy should work the same way." },
+    { "type": "p", "text": "This is where most companies new to video blow it. They get budget and immediately want something cinematic, then spend $30K on a brand film that gets 200 views and everyone quietly agrees didn't work. The other trap is endless revision rounds. Five rounds of feedback on one video feels like the difference between good and great, but at this stage the goal is learning what works, fast. Your buyer doesn't want a commercial. They want a reason to trust you, and trust comes from showing up consistently, which is hard to do when every cut takes a month of debate. So start scrappy:" },
+    { "type": "ol", "items": [
+      "Record a talking-head video on your phone with decent lighting.",
+      "Test your hook, your message and your angle.",
+      "Ship it, watch what resonates, then make more of that."
+    ] },
+    { "type": "p", "text": "Most companies do this backwards: they polish everything and test nothing. If you want structure for that first round, the [video scripting checklist](/playbook/video-script-checklist) covers hooks and structure without slowing you down." },
+
+    { "type": "h2", "text": "When should you take bigger creative swings with video?" },
+    { "type": "p", "text": "Once you have quick wins from sales enablement, a clear picture of your buyer and some evidence of what resonates. At that point you've earned the right to try something bold, and leadership has seen enough results to back you when it feels uncomfortable." },
+    { "type": "p", "text": "Think about the first time your company posted on LinkedIn. It probably felt weird, and someone asked “are we sure about this?” Now you can't imagine not doing it. Video goes the same way, so encourage the team to push past the discomfort. The awkward phase is temporary." },
+    { "type": "p", "text": "This is the step where you:" },
+    { "type": "ul", "items": [
+      { "label": "Series", "text": "launch a recurring series instead of another one-off campaign." },
+      { "label": "Format", "text": "try a format your competitors aren't doing." },
+      { "label": "Stance", "text": "take a real position on something in your industry." }
+    ] },
+    { "type": "p", "text": "An older [Aberdeen Group study](https://www.mediapost.com/publications/article/258537/brands-using-video-grow-revenue-faster-study-says.html) found companies using video in their marketing grew revenue 49% faster than companies that didn't. Treat that as directional, since companies that invest in video tend to be stronger marketers overall. In our experience, the growth comes from three things: a strong point of view, good storytelling and an enemy. Use the acronym ABC to pick your enemy:" },
+    { "type": "ul", "items": [
+      { "label": "Approach", "text": "a bad approach your buyer is stuck using." },
+      { "label": "Belief", "text": "a belief that's holding your buyer back." },
+      { "label": "Competitor", "text": "a competitor whose way of doing things you disagree with." }
+    ] },
+    { "type": "p", "text": "Pick one and position against it. The key word in this step is adjust. Not everything will land with your audience, and that's fine. The companies that figure out video are the ones willing to try 10 things and double down on the 3 that work." },
+
+    { "type": "h2", "text": "How do you keep a video budget from getting cut?" },
+    { "type": "p", "text": "Run video as a system with owners, a cadence and a few simple metrics, so it keeps going the way email does instead of ending like a campaign. Most programs die because the team makes six great videos, runs them for a quarter, and nobody can answer “what's next?”" },
+    { "type": "p", "text": "No company says “we're going to try email this quarter and see how it goes.” Email just runs. Video needs to get to the same place: a system that compounds, with no start and end date. The fix is structure more than creativity, and the system needs an answer for each of these:" },
+    { "type": "ul", "items": [
+      { "label": "On camera", "text": "who's on camera, and who backs them up when they're busy. If that's your CEO, see [how to get your CEO on camera](/playbook/ceo-on-camera)." },
+      { "label": "Cadence", "text": "how often you publish, weekly or biweekly." },
+      { "label": "Formats", "text": "which formats you rotate through." },
+      { "label": "Repurposing", "text": "how one video becomes 3-4 pieces of content." },
+      { "label": "Tracking", "text": "what you measure, and what you deliberately ignore." }
+    ] },
+    { "type": "p", "text": "The system also needs coverage across the buying journey, so you're not making ten awareness videos and nothing for late-stage deals. [How many videos it takes to close a deal](/playbook/how-many-videos-to-close-a-deal) lays out how many you need for trust, fit and safety." },
+
+    { "type": "h2", "text": "What should you measure to prove video is working?" },
+    { "type": "p", "text": "Measure whether video shows up in the deals that close, because perfect attribution isn't possible, even for paid ads. Track four things: whether sales uses the videos, watch-through rates on case studies and demos, deals where prospects mention your videos, and whether deals have moved faster since you started." },
+    { "type": "ul", "items": [
+      { "label": "Sales usage", "text": "are reps actually sending the videos? If they're not, the content is wrong." },
+      { "label": "Watch-through", "text": "how much of your case study and demo videos people actually watch." },
+      { "label": "Deal mentions", "text": "deals where the prospect brought up your videos on their own." },
+      { "label": "Pipeline velocity", "text": "whether deals are closing faster since you started." }
+    ] },
+    { "type": "p", "text": "One [FocusVision study](https://www.cleanlink.com/news/article/B2B-Buyers-Crave-Web-Content--25737) found B2B buyers read an average of 13 pieces of content before making a purchase decision. Your videos are part of that mix. You don't need to prove one video closed a deal. You need to show video keeps turning up in the deals that do. [How to measure video ROI](/playbook/measure-video-roi) has the full CFO-ready version, including a one-page quarterly template." },
+
+    { "type": "h2", "text": "What does the whole buy-in plan look like?" },
+    { "type": "p", "text": "Five steps, run in order, where each one earns the credibility you need for the next. Start with sales, get specific about your buyer, test cheaply, get bold, then make it permanent." },
+    { "type": "table", "headers": ["Step", "What you do", "What it earns you"], "rows": [
+      ["1. Help sales first", "2-3 videos answering reps' most repeated questions", "Sales becomes your internal advocate"],
+      ["2. Put a face on your buyer", "Replace the persona with a named person and their Monday", "Videos that speak to real pain"],
+      ["3. Test raw, then polish", "Phone-shot tests of hooks and angles", "Evidence of what resonates, at low cost"],
+      ["4. Push boundaries", "A series, a new format, a real stance against an enemy", "Differentiation and momentum"],
+      ["5. Build the system", "Owners, cadence, formats, repurposing, four metrics", "A budget that survives the ROI question"]
+    ] }
+  ],
+  "closing": {
+    "text": "You already got the hard yes, so the job now is keeping it. If you'd rather walk into the next budget meeting with a researched buyer, a 6-month video roadmap and 3 videos already being tested, that's what our 2-Week Jumpstart is built for.",
+    "cta": { "url": "/#Pricing", "anchor": "See the 2-Week Jumpstart →" }
+  }
+}

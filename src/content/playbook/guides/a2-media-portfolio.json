@@ -1,0 +1,48 @@
+{
+  "title": "A2 Media portfolio: B2B SaaS video examples",
+  "slug": "a2-media-portfolio",
+  "answer": "The A2 Media portfolio is a library of real videos we've produced for B2B SaaS teams, from short-form ads and product launches to customer stories, animated explainers, executive talking-head videos and episodic YouTube series. Behind the work are results like $600K in video-attributed closed-won revenue at Reveal, 22K+ new subscribers at Auth0 (Okta) and $900K+ in sponsorships for PartnerHacker.",
+  "status": "published",
+  "category": "steal",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "notionSource": "https://a2-media.notion.site/Our-Portfolio-3237a0163fa481ac8272f85fe53ec038",
+  "faqSchema": true,
+  "body": [
+    { "type": "h2", "text": "Where can you watch A2 Media's work?" },
+    { "type": "p", "text": "The channel below holds real videos we've produced for B2B SaaS teams. Browse it for inspiration, or to see what a format looks like before you brief one internally. Every piece started with the same question: how does this video help close deals?" },
+    { "type": "video", "url": "https://fast.wistia.com/embed/channel/fj6gynv9qi", "title": "A2 Media portfolio channel", "caption": "Videos we've produced for B2B SaaS teams." },
+
+    { "type": "h2", "text": "What kinds of videos does A2 Media make?" },
+    { "type": "p", "text": "We make any video format a B2B buyer will watch, as long as it maps to a stage of the funnel and a job for your sales team. These are the formats you'll see most in the channel above." },
+    { "type": "ul", "items": [
+      { "label": "Shorts & Ads", "text": "Reels and paid ads built for the feed. For inspiration from outside our own work, see our [B2B video ad examples](/playbook/b2b-video-ad-examples)." },
+      { "label": "Product Launches", "text": "Keep your customers excited about what's coming." },
+      { "label": "Sizzle Reels", "text": "Trailers that bring the hype." },
+      { "label": "Customer Stories", "text": "Make your customers look good." },
+      { "label": "Sponsored Videos", "text": "Videos your partners can't wait to show off." },
+      { "label": "Storytelling", "text": "Entertain your customers while teaching them." },
+      { "label": "Animated Explainers", "text": "Visualize what cameras can't capture." },
+      { "label": "Talking Head Videos", "text": "Founder and executive thought leadership. If that's your bottleneck, read [how to get your CEO on camera](/playbook/ceo-on-camera)." },
+      { "label": "Brand Refresh", "text": "Turn your new look into an iconic video." },
+      { "label": "Episodic Series", "text": "Keep bringing your prospects back with addictive content." },
+      { "label": "YouTube Series", "text": "Make your audience love learning things with you." }
+    ] },
+
+    { "type": "h2", "text": "What results has the work produced?" },
+    { "type": "p", "text": "The videos in the channel are the visible part. The results come from treating them as a system, with each video mapped to a buyer, a funnel stage and a sales use. Here's what that system produced for three clients." },
+    { "type": "proprietary", "label": "From the Reveal engagement", "body": "Reveal had no video, no content marketing and no content team. We built their engine from scratch: 100+ videos in 1.5 years across LinkedIn thought leadership, YouTube education, outbound sales enablement, top-of-funnel comedy and webinars, plus a 7,000-attendee virtual summit. Video-attributed deals closed $600K in revenue and time to close dropped 40%.", "source": "A2 Media, Reveal case study" },
+    { "type": "proprietary", "label": "From the Auth0 (Okta) engagement", "body": "Auth0's YouTube channel was losing subscribers monthly. We revived it and took them multichannel across YouTube, LinkedIn and TikTok. The result: 22K+ new organic subscribers, 5.2M+ views, and video driving 35% of registrations for the Oktane and Developer Day virtual events.", "source": "A2 Media, Auth0 (Okta) case study" },
+    { "type": "proprietary", "label": "From the PartnerHacker engagement", "body": "We were PartnerHacker's first video hire. We produced 50 pieces of content across webinars, podcasts, short clips and full-funnel video, helped host a 5,000-attendee partnerships webinar, and closed $900K+ in sponsorships. PartnerHacker was acquired 8 months after launch.", "source": "A2 Media, PartnerHacker case study" },
+    { "type": "proprietary", "label": "What the client said", "body": "\"We saw record YouTube numbers in our first month with a2. They helped us create explainer videos, short-form content, and event assets. The team is fast, clear, and genuinely fun to work with. Best video partner we've had in SaaS.\" Greg Mares, Senior Media Specialist, Okta", "source": "A2 Media client testimonial" },
+
+    { "type": "h2", "text": "How should you use these examples?" },
+    { "type": "p", "text": "Use them to pick a format for a specific buyer problem, then plan how many videos it takes to move a deal. A single great video rarely closes anything on its own, so read [how many videos it takes to close a B2B deal](/playbook/how-many-videos-to-close-a-deal) before you brief your first one." },
+    { "type": "p", "text": "And if you're comparing partners, look past the reel. Ask what each video was for and what it did, which is the core of our guide on [how to choose a video agency](/playbook/how-to-choose-a-video-agency)." }
+  ],
+  "closing": {
+    "text": "If one of these formats fits a problem your sales team has right now, the full case studies show how we built each engine.",
+    "cta": { "url": "/#Studies", "anchor": "Read the full case studies →" }
+  }
+}

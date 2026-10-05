@@ -11,7 +11,7 @@ const LINKS = [
   { href: "#Studies", label: "Case Studies" },
   { href: "#Pricing", label: "Pricing" },
   { href: "#work", label: "Our Portfolio" },
-  { href: "https://9yqatx.short.gy/vpYuEX", label: "The B2B Video Playbook", external: true },
+  { href: "/playbook", label: "The B2B Video Playbook", external: false },
 ];
 
 export default function Nav() {
