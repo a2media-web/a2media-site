@@ -4,11 +4,11 @@ import styles from "./Footer.module.css";
 import { useBookingModal } from "@/components/booking/BookingProvider";
 
 const NAV_LINKS = [
-  { label: "Pricing", href: "#Pricing" },
-  { label: "Our Work", href: "#work" },
-  { label: "Process", href: "#our-process" },
-  { label: "Receipts", href: "#before-and-after" },
-  { label: "FAQ", href: "#FAQ-Section" },
+  { label: "Pricing", href: "/#Pricing" },
+  { label: "Our Work", href: "/#work" },
+  { label: "Process", href: "/#our-process" },
+  { label: "Receipts", href: "/#before-and-after" },
+  { label: "FAQ", href: "/#FAQ-Section" },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -20,7 +20,7 @@ const CONNECT_LINKS: ConnectLink[] = [
   { label: "Book a Call", kind: "booking" },
   { label: "Email Us", kind: "link", href: "mailto:ademola@a2media.ca", external: false },
   { label: "LinkedIn", kind: "link", href: "https://www.linkedin.com/in/ademola-adelakun/", external: true },
-  { label: "Our Portfolio", kind: "link", href: "#work", external: false },
+  { label: "Our Portfolio", kind: "link", href: "/#work", external: false },
 ];
 
 export default function Footer() {
