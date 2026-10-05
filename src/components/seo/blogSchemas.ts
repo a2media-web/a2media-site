@@ -33,7 +33,9 @@ export function articleSchema(post: BlogPost): JsonLdSchema {
   };
 }
 
-export function blogPostFaqSchema(post: BlogPost): JsonLdSchema | null {
+export function blogPostFaqSchema(
+  post: Pick<BlogPost, "faqSchema" | "body">,
+): JsonLdSchema | null {
   if (!post.faqSchema) return null;
   // Pair each H2 with the next paragraph (the answer to that H2).
   const pairs: { q: string; a: string }[] = [];

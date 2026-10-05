@@ -142,6 +142,25 @@
   font-weight: 700;
 }
 
+.ul {
+  font-family: var(--a2-sans);
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: rgba(13, 5, 54, 0.84);
+  padding-left: 22px;
+  margin: 0 0 26px;
+}
+.ul li {
+  margin-bottom: 12px;
+}
+.ul li::marker {
+  color: var(--a2-electric-purple);
+}
+.ul strong {
+  font-weight: 700;
+  color: rgba(13, 5, 54, 1);
+}
+
 .tableWrap {
   margin: 0 0 32px;
   border-radius: 14px;
