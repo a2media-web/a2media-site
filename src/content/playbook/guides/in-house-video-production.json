@@ -1,0 +1,92 @@
+{
+  "title": "How do you build in-house video production when you've been voluntold to run it?",
+  "slug": "in-house-video-production",
+  "answer": "Start by admitting the problem is the system, not your effort. In-house video production needs three things at once: B2B SaaS context, a weekly content pace, and someone covering strategy, scripting, editing and distribution together. You can get there with a full-time hire, a patchwork of freelancers, or a specialist partner. Pick the path that stops you from being the connective tissue holding every piece together.",
+  "status": "published",
+  "category": "foundation",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "targetKeyword": "in house video production",
+  "notionSource": "https://a2-media.notion.site/3417a0163fa481358716e554f7d74944",
+  "faqSchema": true,
+  "body": [
+    { "type": "h2", "text": "What does it mean to be the \"voluntold\" video department?" },
+    { "type": "p", "text": "It means you were hired to be a Head of Marketing and somehow became a one-person video studio who also happens to run a marketing team. Nobody posts a job listing that says \"must be willing to edit video at 9pm, chase executives around the building with a camera, and manage three freelancers who don't understand B2B.\" But that's what happens when a company decides it needs video and hands the mandate to marketing without the resources to back it." },
+    { "type": "p", "text": "If that's you, let me describe your Tuesday, and you tell me if I'm wrong." },
+    { "type": "ul", "items": [
+      { "label": "Before coffee", "text": "Your VP sends a competitor's LinkedIn video with the note \"why aren't we doing this?\" The video isn't even great. But it shipped, and you have nothing comparable to point to." },
+      { "label": "10am", "text": "Someone in the leadership meeting asks where video is at. You can admit it's stalled because nobody will commit time, present a plan that needs budget you don't have, or say \"making progress\" and buy another week. You pick \"making progress,\" and you hate that you pick it." },
+      { "label": "2pm", "text": "Your sales lead asks for a few short videos that answer the questions prospects ask on every first call. You know those videos would save the team real time on every call. You also know you can't produce them with what you have." },
+      { "label": "9pm", "text": "You open your laptop \"just to check one thing.\" An hour later you're cutting footage shot three weeks ago in bad lighting, with an exec who rambled and no clear hook. You save a draft you know you'll never publish." }
+    ] },
+    { "type": "p", "text": "That last moment is the one most people building a video program never admit to anyone. It's also the moment a lot of them start searching for a B2B video production partner at 11pm." },
+
+    { "type": "h2", "text": "How do marketing leaders end up running video by accident?" },
+    { "type": "p", "text": "Usually in two steps. First, someone says \"we should do more video,\" often a CEO who just saw a competitor's content or a sales team on its fourth request for a demo walkthrough. Then someone says \"marketing can handle this,\" which means you. Nobody planned it. It just happened, and every fix you tried since then solved one piece and left the rest on your desk." },
+    { "type": "p", "text": "Here are the usual attempts, and why each one stalls." },
+    { "type": "table", "headers": ["What you tried", "What it solved", "Why it stalled"], "rows": [
+      ["The junior video hire", "Editing capacity", "Great at editing, zero B2B context, needed constant direction, and burned out after about six months doing the work of three people"],
+      ["Freelancers (Fiverr, Upwork, a friend of a friend)", "Cheap, flexible production", "Some were talented, none understood B2B SaaS. Every project needed a detailed brief and rounds of \"that's not quite what I meant,\" so you spent more time managing than you would have spent doing it"],
+      ["The big agency", "Beautiful work", "$15-30K per video, six-week timelines, 200 views, and a leadership team asking what they got for the money"],
+      ["The exec DIY attempt", "Authentic founder content", "The first phone video was promising, the second was rushed, and the third never happened because something came up four months ago"],
+      ["AI tools (Descript, Opus Clip, Synthesia)", "Clipping and captions", "They're power tools, not architects. They can't decide what to make, why, or how it connects to your sales cycle"]
+    ] },
+    { "type": "p", "text": "Each attempt gave you production without strategy, strategy without execution, or execution without consistency. You became the accidental video department because nobody else had the time to hold all the pieces together. If the exec piece is the one that keeps breaking, our guide on [getting your CEO on camera](/playbook/ceo-on-camera) covers that problem on its own." },
+
+    { "type": "h2", "text": "Why doesn't more budget or headcount fix in-house video?" },
+    { "type": "p", "text": "Because adding resources to a broken system mostly gives you a more expensive broken system. Most voluntold marketers believe the problem is resources: one more person, one more tool, one more quarter. From what we've seen, the missing piece is a system that covers three things at the same time, whether you build it yourself or bring in a partner." },
+    { "type": "ol", "items": [
+      "B2B SaaS context. Someone who knows your buyer reads a lot before talking to sales. In one survey of B2B tech buyers, [the average buyer consumed 13 pieces of content before choosing a vendor](https://martech.org/b2b-buyers-consume-an-average-of-13-content-pieces-before-deciding-on-a-vendor/). Your videos need to map to that buying journey, and looking good is only part of the job.",
+      "Content-marketing pace. Weekly output on a consistent cadence, instead of campaign-style production where one video takes six weeks. The system has to run without you as the bottleneck.",
+      "The full problem. Strategy, scripting, editing and distribution together. Every earlier attempt failed because it solved one layer."
+    ] },
+    { "type": "p", "text": "When you have all three, you stop being the connective tissue and go back to being the architect. Am I a little biased here? Sure. But you need these three things whether or not you ever work with us." },
+
+    { "type": "h2", "text": "Should you hire in-house, use freelancers, or partner with an agency?" },
+    { "type": "p", "text": "Choose based on your volume and how much coordination you can personally absorb, and be honest about the second one, because that's the part that burns people out. A full-time hire works if video is a permanent function with enough volume to keep one person busy. Freelancers work if budget is tight and volume is low. A specialist partner works if you need the whole system at weekly pace and want to get there in weeks." },
+    { "type": "h3", "text": "Path 1: Build it in-house with a full-time hire" },
+    { "type": "ul", "items": [
+      { "label": "Best if", "text": "You have budget for a $70-100K hire, you're committed to video as a permanent function, and you have the volume to keep one person busy full-time." },
+      { "label": "The math", "text": "$70-100K a year in salary, plus $5-10K a year in tools, $3-5K upfront in equipment, and three to six months of ramp-up." },
+      { "label": "The risk", "text": "A single point of failure. If they leave, you start over. And most hires can edit or strategize, rarely both at a high level, so the strategy usually lands back on you." }
+    ] },
+    { "type": "h3", "text": "Path 2: Cobble together specialists" },
+    { "type": "ul", "items": [
+      { "label": "Best if", "text": "Budget is tight and volume is low, under about five videos a month." },
+      { "label": "The math", "text": "It varies, but it adds up: a freelance editor for cutting, a contractor for scripts, maybe a strategist you call monthly." },
+      { "label": "The risk", "text": "You're still the project manager. That coordination overhead is the reason you're reading this guide." }
+    ] },
+    { "type": "h3", "text": "Path 3: Partner with a specialist agency" },
+    { "type": "ul", "items": [
+      { "label": "Best if", "text": "You need strategy, scripting and editing at content-marketing pace, and you want to go from zero to consistent output in weeks." },
+      { "label": "The math", "text": "A specialist B2B video partner typically runs $10-20K a month, more if they run your whole video department. That gets you a full team with B2B context already loaded and no ramp-up time." },
+      { "label": "The risk", "text": "You depend on an outside partner, and if the relationship doesn't work you have to find another one. Yes, this is where A2 Media fits. I'm also telling you that Path 1 or Path 2 might be right for you." }
+    ] },
+    { "type": "p", "text": "If you're leaning toward Path 3, read [how to choose a video agency](/playbook/how-to-choose-a-video-agency) before you take a single sales call. If you're still weighing a hire, our post on [in-house vs. agency video editors](/blog/in-house-vs-agency-video-editor) goes deeper on the hiring side." },
+
+    { "type": "h2", "text": "What does a full in-house video team actually cost?" },
+    { "type": "p", "text": "A full in-house team costs far more than one salary. A single video hire covers editing for one person's worth of output. Matching the output of a full agency team in-house means hiring editors, a strategist, a copywriter, an on-camera creator and someone to manage it all, and that adds up fast before you count recruiting, ramp time and turnover." },
+    { "type": "proprietary", "label": "What we priced out for a full in-house team", "body": "Building the team that runs a full video engine in-house for six months: 5 senior video editors ($240,000), 1 content strategist ($48,000), 1 copywriter ($42,000), 1 content creator ($36,000), 1 account manager ($40,000), and equipment, software and AI ($30,000). Total: $436K+, before recruiting, ramp time and turnover.", "source": "A2 Media, in-house cost breakdown on a2media.ca" },
+
+    { "type": "h2", "text": "How do you know you're ready to stop doing video yourself?" },
+    { "type": "p", "text": "If three or more of these are true, you've outgrown the accidental video department phase and should pick one of the three paths on purpose instead of drifting between them." },
+    { "type": "ol", "items": [
+      "You've tried rolling out a consistent video strategy a few times and it died each time.",
+      "You're personally spending more than five hours a week on video logistics.",
+      "Your sales team is asking for video content you can't deliver.",
+      "Your competitors are visibly shipping video on LinkedIn or YouTube.",
+      "Leadership asks about video strategy and you don't have a confident answer.",
+      "You have footage sitting in a Drive folder that's never been edited.",
+      "Your content calendar has had a video-shaped hole in it for months."
+    ] },
+    { "type": "p", "text": "Whichever path you choose, protect it the same way. Win sales over first and show progress early, which is the whole idea behind our guide on [getting buy-in for video and keeping it](/playbook/get-buy-in-for-video). Then report on signals leadership cares about, using the approach in [measuring video ROI without perfect attribution](/playbook/measure-video-roi)." },
+
+    { "type": "h2", "text": "What does a working video system look like?" },
+    { "type": "p", "text": "The companies where video works didn't get lucky. They built a system: strategy that maps to the buyer's journey, scripts that sound like real people talking, editing that ships weekly instead of quarterly, and distribution that puts content where the buyer already spends time. You became the video department because nobody else could hold it together. That was true then, and it doesn't have to stay true." }
+  ],
+  "closing": {
+    "text": "You deserve a video system that runs without you staying up at 9pm to hold it together. If you want to see what that system would look like for your buyer before committing to any path, start with a short, fixed-scope project.",
+    "cta": { "url": "/#Pricing", "anchor": "See the 2-Week Jumpstart →" }
+  }
+}

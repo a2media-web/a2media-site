@@ -1,0 +1,60 @@
+{
+  "title": "How do you choose a video agency for B2B SaaS (and what are the red flags)?",
+  "slug": "how-to-choose-a-video-agency",
+  "answer": "Choose a video agency on how it thinks, not on its showreel or its price. On the first call, ask who its clients are, what its process looks like week by week, how much of your time it needs, how it handles strategy, how long one video takes, and what happens when something goes wrong. Walk away from agencies with no B2B experience, a campaign mindset, or no answer on measurement.",
+  "status": "published",
+  "category": "foundation",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "targetKeyword": "how to choose a video agency",
+  "notionSource": "https://a2-media.notion.site/3417a0163fa48118b79fe523aed26b17",
+  "faqSchema": true,
+  "body": [
+    { "type": "h2", "text": "Why is choosing a video agency so hard?" },
+    { "type": "p", "text": "Because most marketing teams were never told what to look for, so they pick on the showreel, which every agency has, and the price, which tells you almost nothing about what you'll get. Most of the companies that come to us tried someone else first and got burned: expensive, slow, beautiful work that got 47 views, or cheap work that looked cheap and went nowhere." },
+    { "type": "p", "text": "Yes, I run a video agency, so I'm biased. I'm writing this anyway, because it's everything I wish our clients had been given before they hired the agency before us. Some of it will make A2 look good. Some of it might rule us out for your situation. Both are fine. I'd rather you find the right partner than hire us for the wrong reasons." },
+
+    { "type": "h2", "text": "What questions should you ask a video agency on the first call?" },
+    { "type": "p", "text": "Ask six questions that test how the agency thinks, and listen for specifics. A good partner answers with names, phases, hours and days. A weak one answers with words like \"flexible,\" \"versatile\" and \"it depends.\" These six separate a real evaluation from a vibes check." },
+    { "type": "table", "headers": ["Question to ask", "Green flag", "Red flag"], "rows": [
+      ["\"Who are your clients, and what industry are they in?\"", "They name companies you've heard of in your space, or companies with similar buying dynamics.", "Clients across ten different industries and a pitch about \"versatility,\" which usually means they haven't specialized in anything."],
+      ["\"Walk me through your process from start to finish.\"", "Clear phases, specific timelines, defined responsibilities. They can tell you what week 1, month 1 and month 3 look like.", "\"We're really flexible and we customize everything.\" Flexibility without a base system means every project gets figured out from scratch."],
+      ["\"What do you need from us, and how much of our time does this take?\"", "A specific number, like \"2 hours a week for the first month, then about 2 hours a month.\"", "\"We'll need your team pretty involved throughout.\" That usually means your team does the thinking while they do the clicking."],
+      ["\"How do you handle strategy, beyond production?\"", "They talk about your buyer before the camera. They ask about your sales cycle, your ICP and your content gaps.", "\"Send us the footage and a brief and we'll make it look great.\" That describes an editing service."],
+      ["\"What does a typical timeline look like for one video?\"", "A specific range, like \"brief to final cut in 5-7 business days.\"", "\"It depends on the complexity,\" with nothing more specific."],
+      ["\"What happens when something goes wrong?\"", "A real answer, like what they do to course-correct when they miss a deadline.", "\"That doesn't really happen with us.\" It does. It happens with everyone."]
+    ] },
+    { "type": "p", "text": "For reference, here's how we answer two of those questions ourselves. Treat it as a benchmark to hold any agency to, us included. You can see the full sequence on [our process](/#our-process)." },
+    { "type": "proprietary", "label": "How A2 answers the time and timeline questions", "body": "After an initial strategy session and a few async check-ins, we handle strategy, scripts, creative direction, editing and publishing. Most clients spend less than 2 hours a week with us, and that time shrinks as we learn their voice. Finished videos come back within 48-72 hours.", "source": "A2 Media, process section on a2media.ca" },
+
+    { "type": "h2", "text": "What are the red flags that kill a B2B video program?" },
+    { "type": "p", "text": "Five red flags show up again and again in the programs that stall: the agency leads with its showreel, has no B2B experience, plans campaigns instead of systems, can't explain how it measures success, or needs more of your time than doing it yourself would. Any one of them is a reason to keep looking." },
+    { "type": "ol", "items": [
+      "Showreel first, questions second. If the first thing they do on the call is share their screen and play videos, they're selling production quality before they understand your problem. A good partner spends the first half of the first call asking about your situation.",
+      "No B2B experience. \"We work with all kinds of companies\" means they don't specialize in any kind. B2B SaaS video has its own constraints: longer sales cycles, multiple decision-makers, technical products and exec buy-in challenges.",
+      "Campaign mindset instead of system mindset. \"Let's plan a campaign for Q2\" is a warning sign. Campaigns have a start and an end, while video programs compound over time. You want a partner who thinks in weekly cadence, recurring series and evergreen content.",
+      "They can't explain how they measure success. If \"how do we know this is working?\" gets you \"views and engagement,\" that's a problem. A real partner tracks pipeline velocity, sales adoption, deal mentions and watch-through rates, the same signals in our guide to [measuring video ROI without perfect attribution](/playbook/measure-video-roi).",
+      "They need more of your time than you'd spend doing it yourself. If you're writing detailed briefs for every video, attending every production call, giving notes on every cut and coordinating every asset internally, you've outsourced the clicking and kept the thinking."
+    ] },
+    { "type": "p", "text": "That last one matters most if you've been running video yourself on nights and weekends. If that's you, start with [what to do when you've been voluntold into in-house video production](/playbook/in-house-video-production), because the right agency should take that load off you, and the wrong one adds to it." },
+
+    { "type": "h2", "text": "How much does a B2B video agency cost?" },
+    { "type": "p", "text": "Expect to pay $10,000 to $20,000 a month for a specialist partner that handles strategy, editing and distribution support and produces 8-15 videos a month. Per-video and project pricing can look cheaper up front, but they're built for one-offs and campaigns, which makes a consistent program harder to sustain. Here are the common models, since most agencies won't share this." },
+    { "type": "table", "headers": ["Pricing model", "Typical range", "Good for", "Bad for"], "rows": [
+      ["Per video", "$1,500-$30,000+ per video", "One-off, high-stakes videos", "Building a consistent content program"],
+      ["Monthly retainer", "$5,000-$20,000 a month", "Consistent programs: a set number of videos plus strategy", "Teams that only need a single asset"],
+      ["Project-based", "$5,000-$50,000 per project", "Campaign work and testing a relationship", "Long-term consistency"],
+      ["Hybrid (starter project + retainer)", "$5,000-$8,000 starter, credited toward the retainer", "Reducing risk on both sides", "Teams unwilling to commit past the trial"]
+    ] },
+    { "type": "p", "text": "We use the hybrid model ourselves: our one-time projects credit toward a monthly plan, and you can see the current numbers on [our pricing](/#Pricing). Whatever you pay, look at the work itself before you sign. Our [portfolio](/playbook/a2-media-portfolio) is one place to calibrate what B2B SaaS video at this level looks like." },
+
+    { "type": "h2", "text": "How do you know you've picked the right video partner?" },
+    { "type": "p", "text": "The right partner makes video feel like every other content channel: planned, produced, shipped, measured and repeated. The wrong one makes video feel like a second job you didn't sign up for. So take your time evaluating, ask the hard questions above, talk to their clients, and trust your gut when something feels off, because it probably is." },
+    { "type": "p", "text": "One more test: ask how they'd help you keep leadership on board after the first few videos ship. A partner who has an answer is thinking about the program surviving its second quarter, which is the problem our guide on [getting buy-in for video](/playbook/get-buy-in-for-video) is built around." }
+  ],
+  "closing": {
+    "text": "Hold every agency you talk to, including us, to the same six questions and five red flags. If you want to compare our answers against the rest, the numbers are public.",
+    "cta": { "url": "/#Pricing", "anchor": "See A2 Media pricing →" }
+  }
+}

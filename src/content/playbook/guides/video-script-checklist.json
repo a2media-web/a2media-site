@@ -1,0 +1,115 @@
+{
+  "title": "How to write a video script for B2B: the scripting checklist",
+  "slug": "video-script-checklist",
+  "answer": "To write a B2B video script, decide three things first: the moment of transformation, the point in one sentence, and how the viewer should feel at the end. Then build it in order: a hook in the first three seconds, credibility and a promise by ten, one idea taught from experience, proof for every claim, and a single CTA. Cut any line the video survives without.",
+  "status": "published",
+  "category": "foundation",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "targetKeyword": "how to write a video script",
+  "notionSource": "https://a2-media.notion.site/3257a0163fa4800da814e42a69ca3f95",
+  "faqSchema": true,
+  "body": [
+    { "type": "h2", "text": "Why do B2B video scripts need their own checklist?" },
+    { "type": "p", "text": "B2B video scripts need their own checklist because your viewer is a buyer with a problem, not a fan looking to be entertained. Most scriptwriting advice online is written for YouTube creators chasing views. Some of it transfers, but a script for a Head of Ops evaluating software has to earn trust, prove a claim and move someone toward a sales conversation. That changes what you open with, what counts as proof and how you end." },
+    { "type": "p", "text": "This is the checklist we run every script through before anyone films, including scripts our clients draft with AI tools. If a script can't pass it, it isn't ready, no matter how polished the wording sounds." },
+
+    { "type": "h2", "text": "What should you decide before you write a word?" },
+    { "type": "p", "text": "Before you write, answer three questions: what changes for the viewer, what the one-sentence point is, and how they should feel when it ends. If you can't answer all three, the script will wander, and a wandering script is the most expensive kind to film because you only find out in the edit." },
+    { "type": "ol", "items": [
+      "What's the moment of transformation? Every script worth filming has one moment where something shifts, either in how the viewer thinks about a problem or in the approach they take to it. Transformation drives every good story, and a good video needs a good story.",
+      "What's the point of the video in one sentence? If you can't say it in one sentence, your viewer won't remember it. Write down the single takeaway you want them to leave with.",
+      "How should the viewer feel when it's over? 'Informed' doesn't count, because that's not a feeling. Should they feel frustrated with their current approach? Relieved there's a simpler way? A little embarrassed they've been overthinking it? We like to believe logic drives action, but emotion makes the call and logic justifies it afterward."
+    ] },
+
+    { "type": "h2", "text": "What's the quick check before you film?" },
+    { "type": "p", "text": "The quick check is ten questions you can run in two minutes. Use it on every script, then use the full breakdown below when something fails or when the video matters enough to slow down." },
+    { "type": "ol", "items": [
+      "Is there a text hook on screen in the first three seconds?",
+      "Does it open mid-action or mid-sentence, with no 'hey everyone' or 'my name is'?",
+      "Does the viewer know what they'll walk away with inside ten seconds?",
+      "Is there one line of credibility early (a number, a result, a client name)?",
+      "Is it one idea, drawn from real experience rather than generic advice?",
+      "Does every claim have proof on screen?",
+      "Is there a payoff the viewer learns, feels or laughs at?",
+      "Could you cut any line and still have the video work? If yes, cut it.",
+      "Is there exactly one CTA?",
+      "Are captions planned?"
+    ] },
+
+    { "type": "h2", "text": "How do you structure a short-form B2B video script?" },
+    { "type": "p", "text": "Structure short-form scripts (LinkedIn, Instagram Reels, TikTok) in this order: text hook on screen, mid-action opening, what you'll learn, a credibility drop, one idea from experience, proof, payoff, then a CTA if you need one. The whole job is to stop the scroll and give one useful idea before the viewer moves on." },
+    { "type": "h3", "text": "The first 3 seconds" },
+    { "type": "ul", "items": [
+      { "label": "Text hook", "text": "Put an in-video title on screen immediately. It does most of the work, because a lot of people scroll with the sound off. Plan it while you write, not in the edit. Here's [an example of a text hook doing its job](https://www.linkedin.com/posts/ademola-adelakun_pov-your-video-hook-sucks-featuring-maggie-activity-7431718252180959232-B840)." },
+      { "label": "First frame", "text": "Make it visually interesting: movement into or on the screen, a face, or something unexpected." },
+      { "label": "Opening line", "text": "Start mid-action or mid-sentence. Skip 'hey guys' and 'my name is.' Pretend you're already halfway through a conversation." }
+    ] },
+    { "type": "h3", "text": "The first 10 seconds" },
+    { "type": "ul", "items": [
+      { "label": "The promise", "text": "Tell them what they'll learn or walk away with, in one sentence. For example: 'By the end of this, you'll know exactly how to...'" },
+      { "label": "Credibility", "text": "If you have credibility on the topic, drop it fast in one line. For example: 'After 600+ videos for B2B SaaS teams...' or 'This is the opener that got our client [X]x more replies.'" }
+    ] },
+    { "type": "h3", "text": "The rest of the video" },
+    { "type": "ul", "items": [
+      { "label": "One idea", "text": "Stick to one idea, and make sure the person watching can act on it right away." },
+      { "label": "Source", "text": "The idea comes from personal experience, a relevant story about someone else, or a real result. Leave generic advice to the LLMs." },
+      { "label": "Proof", "text": "If you make a claim, show it: a screenshot, a result, a before and after. A quick flash on screen counts." },
+      { "label": "Cut test", "text": "If you can cut a line and the video still works, cut it." },
+      { "label": "Payoff", "text": "The viewer learns something, feels something or laughs, ideally within 30 seconds." },
+      { "label": "Captions", "text": "Always on. In [LinkedIn's own research](https://www.linkedin.com/business/marketing/blog/content-marketing/breaking-the-sound-barrier-for-b2b-video-content), 41% of professionals said they're more likely to watch video that includes subtitles." }
+    ] },
+
+    { "type": "h2", "text": "How do you structure a long-form B2B video script?" },
+    { "type": "p", "text": "Structure long-form scripts (YouTube, webinars, product walkthroughs) as: hook them in the first three seconds, give credibility and a promise by ten, lay out the roadmap and stakes by thirty, deliver the body, then close. Long-form gives you room to teach, but the opening still decides whether anyone stays for it." },
+    { "type": "h3", "text": "Before you write" },
+    { "type": "ul", "items": [
+      { "label": "Check what AI says", "text": "Search your topic in your LLM of choice and note what comes up again and again. Then pick a different angle on that common take." },
+      { "label": "Have a take", "text": "If AI could write the same script, it isn't ready yet." },
+      { "label": "Pick the job", "text": "Decide whether this is a views video or a sales video before you write the first line (see the table below)." }
+    ] },
+    { "type": "h3", "text": "The first 10 seconds" },
+    { "type": "ul", "items": [
+      { "label": "Title", "text": "Put an in-video title on screen in the first three seconds. YouTube is the exception, because the thumbnail and title already do that job." },
+      { "label": "Credibility", "text": "Land a credibility statement by second ten: a number, a result or a client name. Ours sounds like: 'I'm Ademola, and we've made 600+ videos for 30+ B2B SaaS brands.'" }
+    ] },
+    { "type": "h3", "text": "The first 30 seconds" },
+    { "type": "ul", "items": [
+      { "label": "Agenda", "text": "Give the roadmap. 'I'm going to walk you through the three things that doubled our response rate' is a roadmap." },
+      { "label": "Stakes", "text": "Tell them what they walk away with if they stay to the end." }
+    ] },
+    { "type": "h3", "text": "The body" },
+    { "type": "ul", "items": [
+      { "label": "Teach from experience", "text": "Tell the story of when you learned the thing you're teaching." },
+      { "label": "Prove it", "text": "Back every claim with proof: screenshots, results, before and afters, client examples. If you say it works, show it." },
+      { "label": "Show, then explain", "text": "Demo it, pull up a real example or do a live walkthrough." },
+      { "label": "Analogy", "text": "Use at least one. A good analogy can replace three paragraphs of explanation." },
+      { "label": "Connectors", "text": "Use 'but' and 'so' instead of 'and then.' It turns a list of events into a story with tension." }
+    ] },
+    { "type": "h3", "text": "The close" },
+    { "type": "ul", "items": [
+      { "label": "One CTA", "text": "Give people more than one option and they get confused and pick none." },
+      { "label": "End with energy", "text": "End mid-conversation. If you gradually wind the video down, people leave before the end." }
+    ] },
+
+    { "type": "h2", "text": "Is your script a views video or a sales video?" },
+    { "type": "p", "text": "Decide this before you write, because the two jobs pull a script in opposite directions. A views video has to be novel and quick. A sales video has to be interesting and simple, and it earns its keep by showing how things actually work." },
+    { "type": "table", "headers": ["", "Views video", "Sales video"], "rows": [
+      ["Job", "Reach new people", "Help a buyer decide"],
+      ["Needs", "A new angle and strong pattern interrupts", "A clear demonstration of how it works"],
+      ["Tone", "Novel and quick", "Interesting and simple"],
+      ["Where it lives", "LinkedIn feed, YouTube", "Sales emails, your site, after a demo"],
+      ["Success looks like", "Watch time and shares", "Prospects showing up to calls already educated"]
+    ] },
+    { "type": "p", "text": "Most B2B teams need more sales videos than they think. If your reps answer the same questions on every call, those questions are your first scripts, and that's the fastest way to [get buy-in for video](/playbook/get-buy-in-for-video) inside your company." },
+    { "type": "proprietary", "label": "From our own scripts", "body": "Our own [video sales letter](/playbook/video-sales-letter) follows this checklist: it opens mid-story, drops a single credibility line, teaches one idea from experience and ends on one CTA. When the person on camera is an executive, we write the script around how they actually talk, which is most of the work in [getting your CEO on camera](/playbook/ceo-on-camera).", "source": "A2 Media" },
+
+    { "type": "h2", "text": "What should you do once the script passes?" },
+    { "type": "p", "text": "Once the script passes, read it out loud once and fix any line you stumble on, because a sentence that's hard to say will be hard to watch. Then film it in short chunks, one or two lines per take. Our guide on [how to film yourself](/playbook/how-to-film-yourself) covers the setup, framing and delivery." }
+  ],
+  "closing": {
+    "text": "A checklist catches weak scripts, but it can't tell you which videos to make in the first place. That's what our 2-Week Jumpstart is for: we map your buyer, pick the videos that move deals and write the scripts with you.",
+    "cta": { "url": "/#Pricing", "anchor": "See the 2-Week Jumpstart →" }
+  }
+}

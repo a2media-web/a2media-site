@@ -1,0 +1,199 @@
+{
+  "title": "How do you make a video sales letter for B2B?",
+  "slug": "video-sales-letter",
+  "answer": "A video sales letter is a two to four minute story-driven video that sells by making the buyer feel understood. For B2B, build it on the Epiphany Bridge: open on a struggle your buyer shares, show the moment your thinking changed, explain the new approach at a high level, prove it with real client results, then invite one next step. Speak to one buyer, not everyone.",
+  "status": "published",
+  "category": "formats",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "targetKeyword": "video sales letter",
+  "notionSource": "https://a2-media.notion.site/29f7a0163fa480e59bb4f9288d276e13",
+  "faqSchema": true,
+  "body": [
+    {
+      "type": "h2",
+      "text": "What is a video sales letter?"
+    },
+    {
+      "type": "p",
+      "text": "A video sales letter (VSL) is a short video, usually one person talking to camera, that does the job of a long-form sales page: it names the buyer's problem, tells a story that reframes it, proves the new approach works and asks for one action. In B2B it usually lives on your pricing or application page, in outbound sequences and in follow-up emails after a first call."
+    },
+    {
+      "type": "p",
+      "text": "The format works because it does what a sales rep does on a good call, except it shows up every time, at the moment the buyer is ready to watch. Here's the one we use to sell A2 Media."
+    },
+    {
+      "type": "video",
+      "url": "https://fast.wistia.net/embed/iframe/yz15eim6ki",
+      "title": "A2 Media: $0 in 93 days",
+      "caption": "Our own video sales letter. The breakdown below walks through how it's built."
+    },
+    {
+      "type": "h2",
+      "text": "What structure should a video sales letter script follow?"
+    },
+    {
+      "type": "p",
+      "text": "Follow the Epiphany Bridge, a storytelling structure Russell Brunson popularized for sales copy. The idea is that people buy on emotion and justify with logic, so instead of listing features you walk the viewer across the same bridge you crossed: from the struggle, through the realization, to the result."
+    },
+    {
+      "type": "ol",
+      "items": [
+        "Start in the struggle. Open mid-story at your lowest point, with the problems and failed fixes your buyer will recognize.",
+        "Show the journey. What pushed you to look for a different answer, and what was at stake?",
+        "Land the epiphany. The one insight that changed how you saw the problem.",
+        "Explain the new approach at a high level. Enough to make sense, not so much that you teach the whole method on camera.",
+        "Prove it. Real results, ideally from people who look like your viewer.",
+        "Invite one next step."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Brunson's [step-by-step guide to the Epiphany Bridge](https://www.russellbrunson.com/blog/the-epiphany-bridge) goes deeper on each stage. The rest of this guide shows how we applied it to a B2B audience."
+    },
+    {
+      "type": "h2",
+      "text": "How does our own VSL script map to that structure?"
+    },
+    {
+      "type": "p",
+      "text": "Our script runs about 650 words and hits every stage of the bridge in order. Here's each beat, what it does for the viewer and the line from the script that carries it."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Beat",
+        "What it does",
+        "From our script"
+      ],
+      "rows": [
+        [
+          "Name the real problem",
+          "Reframes the buyer's pain so they feel seen",
+          "Most marketing teams don't have a video problem. They have a clarity problem."
+        ],
+        [
+          "Agitate",
+          "Describes the treadmill they're on",
+          "Engagement is flat. Leads aren't moving. Your sales team still says no one really knows what we do."
+        ],
+        [
+          "The struggle",
+          "Shows we've been in the same spot",
+          "Two years ago, I made $0 in 93 days."
+        ],
+        [
+          "The epiphany",
+          "The one insight that changed everything",
+          "It was that I was trying to talk to everyone."
+        ],
+        [
+          "The new approach",
+          "High-level method, no step-by-step",
+          "I spent the next 90 days obsessing over one type of customer."
+        ],
+        [
+          "Proof",
+          "Our result, then client results",
+          "We ended up closing five of our biggest deals in 90 days using video content."
+        ],
+        [
+          "The belief shift",
+          "Restates the lesson as a principle",
+          "You can reach a million of the wrong people and sell nothing."
+        ],
+        [
+          "The offer",
+          "What we do, in the buyer's language",
+          "We become your in-house video team."
+        ],
+        [
+          "One CTA",
+          "A single next step",
+          "Apply to work with us below."
+        ]
+      ]
+    },
+    {
+      "type": "proprietary",
+      "label": "From our own VSL",
+      "body": "Ademola went all in on A2 Media with no backup plan and made $0 in 93 days. Then he spent 90 days focused on one type of customer: their fears, goals and objections. In those three months we closed five of our biggest deals using video content, after closing roughly one deal per quarter before.",
+      "source": "A2 Media sales video script"
+    },
+    {
+      "type": "h2",
+      "text": "Why should a VSL speak to one buyer instead of everyone?"
+    },
+    {
+      "type": "p",
+      "text": "A VSL should speak to one buyer because the whole format runs on the viewer thinking 'they get me,' and you can't get that reaction from a script written for everyone. The epiphany in our own script is exactly this: the problem was never work ethic or creativity, it was trying to talk to everyone at once."
+    },
+    {
+      "type": "p",
+      "text": "So before you write, describe one person: their role, what they're worried about this quarter, what they've already tried. If your VSL would make equal sense to a startup founder and an enterprise CMO, it's too generic for either. Reaching a thousand of the right people beats reaching a million of the wrong ones."
+    },
+    {
+      "type": "h2",
+      "text": "How should you use client proof in a VSL?"
+    },
+    {
+      "type": "p",
+      "text": "Use client proof right after your own story, so the viewer sees that the epiphany worked for people like them too. Pick results that are specific, recent and relevant to your buyer, and keep them to two or three. One real number with a client name beats five vague claims."
+    },
+    {
+      "type": "proprietary",
+      "label": "Client proof we use",
+      "body": "At Reveal, video-attributed deals closed $600K in revenue and the sales cycle got 40% shorter (60 days to 35). At Auth0 (Okta), we revived two YouTube channels and added 22K+ subscribers organically, with 5.2M+ total views. Both came from content that taught rather than pitched. See the [full case studies](/#Studies).",
+      "source": "A2 Media, Reveal and Auth0 (Okta) case studies"
+    },
+    {
+      "type": "p",
+      "text": "Notice that both results came from educational content. That's the point of the belief shift near the end of our script: you don't need to go viral, you need to say the right thing to the right person at the right time. If you're unsure how much content a deal actually needs before a VSL can close it, read [how many videos it takes to close a B2B deal](/playbook/how-many-videos-to-close-a-deal)."
+    },
+    {
+      "type": "h2",
+      "text": "What mistakes make a video sales letter fall flat?"
+    },
+    {
+      "type": "p",
+      "text": "Most VSLs fall flat because they open with the company instead of the buyer's problem, or because they try to prove everything at once. The viewer decides in the first few seconds whether this video is about them, so the fixes are mostly about order and focus."
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Opening with yourself",
+          "text": "Open on the buyer's problem. Your story comes second, as proof that you've been there."
+        },
+        {
+          "label": "Skipping the struggle",
+          "text": "Without a low point there's no bridge to cross, and the result feels like a brag."
+        },
+        {
+          "label": "Teaching the whole method",
+          "text": "Explain what changed, not every step. The VSL earns the next conversation; it doesn't replace it."
+        },
+        {
+          "label": "Too many asks",
+          "text": "One CTA. Book a call or apply, never both plus a newsletter."
+        },
+        {
+          "label": "Reading it stiffly",
+          "text": "A VSL only works if it sounds like a person talking. Run it through the [video scripting checklist](/playbook/video-script-checklist) and read it out loud before you film."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "If the person on camera is your founder or CEO, the delivery matters as much as the script. Our guide to [getting your CEO on camera](/playbook/ceo-on-camera) covers how to make that easier on everyone."
+    }
+  ],
+  "closing": {
+    "text": "A good VSL is usually the first video we recommend for a team whose buyers keep asking what you actually do. If you'd like us to write and produce yours, start with a One-off Video.",
+    "cta": {
+      "url": "/#Pricing",
+      "anchor": "See pricing →"
+    }
+  }
+}

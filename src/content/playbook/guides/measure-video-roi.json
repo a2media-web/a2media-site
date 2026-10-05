@@ -1,0 +1,101 @@
+{
+  "title": "How do you measure video ROI without perfect attribution?",
+  "slug": "measure-video-roi",
+  "answer": "Measure video ROI by proving video is present in the deals that close, since no attribution tool can trace a nonlinear B2B buying journey. Track four numbers: pipeline velocity for video-engaged deals against the rest, how often sales shares your videos, how many closed deals mention them, and watch-through rate. Bring them to finance on one page, framed against costs your CFO already approves.",
+  "status": "published",
+  "category": "foundation",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "targetKeyword": "video roi",
+  "notionSource": "https://a2-media.notion.site/3417a0163fa48180a9dbe5dc725c19f3",
+  "faqSchema": true,
+  "body": [
+    { "type": "p", "text": "Your CFO is going to ask “what's the ROI on video?” So let's get the uncomfortable truth out of the way first: you will never get perfect attribution for video. HubSpot can't solve it for you, and neither can Salesforce, or a $200K martech stack with three data analysts. What you can do is build an answer that holds up in a budget meeting." },
+
+    { "type": "h2", "text": "Why can't attribution tools measure video ROI?" },
+    { "type": "p", "text": "Because B2B buying doesn't follow the path attribution models assume. Buyers move between channels, devices and colleagues for months, and most of that activity never touches a trackable link, so the tool credits whatever happened last and misses where the journey started." },
+    { "type": "p", "text": "Picture it. Your buyer watches a LinkedIn video on their phone during lunch. Two weeks later, they read a case study on your site from a Google search. A month after that, a colleague forwards them an email with your demo video. Three weeks later, they book a call. Attribution says the call came from email, but the journey started with a video on their phone, and nobody knows what conversations happened in the weeks they weren't engaging." },
+    { "type": "p", "text": "These journeys are long. [Forrester's 2021 buying study](https://www.forrester.com/blogs/three-seismic-shifts-in-buying-behavior-from-forresters-2021-b2b-buying-survey/) found the number of interactions in a buying journey jumped from 17 to 27 during the pandemic, and [Dreamdata's customer journey data](https://dreamdata.io/b2b-customer-journey) puts the average B2B deal at 76 touchpoints across 3.7 channels, with 272 days from first touch to revenue. Video is woven through that journey in ways no tool fully captures. If you wait for perfect measurement before investing, you'll wait forever." },
+
+    { "type": "h2", "text": "Which metrics prove video ROI to a CFO?" },
+    { "type": "p", "text": "Four: pipeline velocity, sales adoption, deal mentions and watch-through rate. Views and likes don't make the list. Each of the four translates into something a CFO already cares about: revenue arriving sooner, a more productive sales team, or proof that real buyers are paying attention." },
+    { "type": "table", "headers": ["Metric", "Question it answers", "How to track it"], "rows": [
+      ["Pipeline velocity", "Are deals closing faster?", "Days-to-close for video-engaged deals vs. the rest"],
+      ["Sales adoption", "Is sales actually using the videos?", "Video shares per week from CRM activity, or ask in the sales meeting"],
+      ["Deal mentions", "Do prospects bring up the videos?", "Reps tag deals where the prospect mentions a video"],
+      ["Watch-through rate", "Are the right people watching to the end?", "Your video host's analytics, by video type"]
+    ] },
+
+    { "type": "h3", "text": "1. Pipeline velocity: are deals closing faster?" },
+    { "type": "p", "text": "This is the one that ends the argument. Compare average days-to-close for deals where the prospect engaged with video against deals where they didn't. You don't need attribution software. Ask your sales team: “Of the last 10 deals that closed, how many prospects watched our videos or mentioned them?” To see how much of each video people actually watched, host your videos on a tool like Wistia or Vidyard. Both have free plans." },
+    { "type": "p", "text": "If video-engaged deals close 20-30% faster, that's real money arriving sooner. A sales cycle that drops from 90 days to 65 means your team closes more deals per quarter with the same headcount." },
+    { "type": "ul", "items": [
+      { "label": "How to present it", "text": "“Deals where prospects engage with our video content close [X]% faster. On our current pipeline, that's the equivalent of adding a sales rep without the salary.”" }
+    ] },
+    { "type": "proprietary", "label": "From the Reveal engagement", "body": "Before working with us, Reveal's sales team closed deals in 60 days with no marketing air cover. Once reps started sending videos directly to prospects, buyers showed up to calls already educated. Time to close dropped to 35 days, 40% faster, and video-attributed deals closed $600K in revenue over 18 months. That's the pipeline velocity story in one line.", "source": "A2 Media, Reveal case study" },
+
+    { "type": "h3", "text": "2. Sales adoption: is sales actually using the videos?" },
+    { "type": "p", "text": "This one is sneaky because it's a leading indicator. If reps are voluntarily dropping videos into outreach sequences, follow-up emails and Slack conversations with prospects, the content is working. If they're not using it, it isn't, and you'll know months before pipeline numbers tell you." },
+    { "type": "p", "text": "Track it simply: how many times per week are reps sharing video links? Pull it from your CRM's activity log, or just ask in the next sales meeting." },
+    { "type": "ul", "items": [
+      { "label": "How to present it", "text": "“Our sales team used video in [X] prospect conversations last month. That's [X] calls where reps didn't spend the first 20 minutes answering the same questions.”" }
+    ] },
+
+    { "type": "h3", "text": "3. Deal mentions: do prospects bring up the videos?" },
+    { "type": "p", "text": "This one is anecdotal by nature, but it's the metric that removes doubt. Ask reps to tag any deal where the prospect specifically mentioned a video: “I saw your video about [topic],” “my team watched the case study you sent,” or “I've been following your LinkedIn content.” No tool captures these signals automatically, but a rep can report one in 10 seconds during a deal review." },
+    { "type": "ul", "items": [
+      { "label": "How to present it", "text": "“Last quarter, [X] of [Y] closed deals mentioned our video content during the sales process. That's [X]% of revenue influenced by content that costs us less than one sales rep's salary per year.”" }
+    ] },
+
+    { "type": "h3", "text": "4. Watch-through rate: are the right people watching to the end?" },
+    { "type": "p", "text": "Views mean almost nothing. Someone scrolling past your video for two seconds counts as a view on most platforms. Watch-through rate tells you whether people are actually engaged." },
+    { "type": "p", "text": "Our rule of thumb: for sales-enablement videos like case studies, demos and walkthroughs, 50% or more watch-through means the content is landing. For top-of-funnel content like thought leadership and hot takes, 30-40% is strong, because these are strangers with no reason to care about you who chose to keep watching anyway." },
+    { "type": "ul", "items": [
+      { "label": "How to present it", "text": "“Our case study videos hold a [X]% watch-through rate against our 50% target for sales content, so prospects who press play are staying for the story.”" }
+    ] },
+
+    { "type": "h2", "text": "What should you stop tracking?" },
+    { "type": "p", "text": "Stop reporting per-video ROI, view counts and subscriber counts as success metrics. The first can't be measured honestly, and the other two reward reach over the buyers who actually sign contracts." },
+    { "type": "ul", "items": [
+      { "label": "Per-video ROI", "text": "“Video #47 generated $X in revenue” is fiction. No single video closes a deal; it's called a buyer's journey for a reason. Attributing revenue to one video is like trying to figure out which raindrop filled the bucket." },
+      { "label": "Views", "text": "a video with 200 views that gets shared by 3 enterprise prospects is worth far more than one with 50,000 views from people who will never buy." },
+      { "label": "Subscribers", "text": "for B2B, 500 subscribers who are all VPs of Marketing at your target companies beat 50,000 who are marketing students." }
+    ] },
+
+    { "type": "h2", "text": "What should you bring to the video budget meeting?" },
+    { "type": "p", "text": "One page with five sections: investment, pipeline impact, content output, efficiency and next quarter. Fill in the brackets with your own numbers and leave everything else out. A CFO will read one page; they'll skim a deck." },
+    { "type": "table", "headers": ["Section", "What to include"], "rows": [
+      ["Investment", "$[X]/month for [video partner, team or tools] = $[Y]/quarter, [Z] videos produced"],
+      ["Pipeline impact", "Deals with video engagement closed [X]% faster than average; [X] of [Y] closed deals mentioned video content; sales used videos in [X] prospect conversations"],
+      ["Content output", "[X] videos shipped this quarter; [X] clips repurposed for LinkedIn, email and sales; [X] total content assets from [Y] source videos"],
+      ["Efficiency", "About [X] hours saved for sales on repetitive Q&A; [X] prospect questions answered before the first call"],
+      ["Next quarter", "[X] planned videos; focus areas (sales enablement, thought leadership, case studies); expected impact as a specific, measurable goal"]
+    ] },
+    { "type": "p", "text": "If you need a reference point for the investment line, [what SaaS video editing costs](/blog/how-much-does-saas-video-editing-cost) breaks down typical monthly spend by tier." },
+
+    { "type": "h2", "text": "What do you say about video ROI if you only have 60 seconds?" },
+    { "type": "p", "text": "Four sentences: the problem, the proof, the math and the ask. Together they frame video as a business decision instead of a marketing expense, and they fit a hallway conversation or the first five minutes of a meeting." },
+    { "type": "ul", "items": [
+      { "label": "The problem", "text": "“Our sales team spends [X] hours per week answering the same questions a 2-minute video could handle before the first call.”" },
+      { "label": "The proof", "text": "“Last quarter, [X]% of our closed deals involved prospects who engaged with our video content, and those deals closed [X]% faster.”" },
+      { "label": "The math", "text": "“At our current deal size, shortening the sales cycle by even [X] days is worth $[Y] in accelerated revenue per quarter.”" },
+      { "label": "The ask", "text": "“I need $[X]/month to keep this running. That's less than [one SDR's salary / one trade show booth / one quarter of paid ads that stop working when you turn them off].”" }
+    ] },
+    { "type": "p", "text": "The comparison in the ask does the heavy lifting. Video compounds, and paid ads stop the day you switch them off. A trade show lasts two or three days, while a video library works for years. Frame the number against things your CFO already approves, and it suddenly feels small." },
+
+    { "type": "h2", "text": "How do you pitch video ROI before you have any data?" },
+    { "type": "p", "text": "Use third-party research to show why video matters, then propose a small test with a capped downside. CFOs like a limited, known cost paired with an open-ended upside. Honestly, everyone does." },
+    { "type": "ul", "items": [
+      { "label": "Content volume", "text": "one [FocusVision study](https://www.cleanlink.com/news/article/B2B-Buyers-Crave-Web-Content--25737) found B2B buyers read an average of 13 pieces of content before making a purchase decision." },
+      { "label": "Self-directed buying", "text": "[6sense's 2024 buyer research](https://6sense.com/blog/b2b-buyer-journey/) found nearly 70% of the purchase process happens before buyers engage with sellers." },
+      { "label": "Selling time", "text": "[Salesforce's State of Sales research](https://www.salesforce.com/news/stories/sales-research-2023/) found reps spend just 28% of their time selling." },
+      { "label": "Revenue growth", "text": "an older [Aberdeen Group study](https://www.mediapost.com/publications/article/258537/brands-using-video-grow-revenue-faster-study-says.html) found companies using video grew revenue 49% faster than those that didn't. It's directional, but it's widely cited." }
+    ] },
+    { "type": "p", "text": "Pair those with a low-risk first step: “Let's test 5 videos this quarter. If sales uses them and prospects mention them, we scale. If not, we stop. The downside is $[X]. The upside is a sales team that closes faster for the rest of the year.” For what those first five should be, [how to get buy-in for video](/playbook/get-buy-in-for-video) starts with sales enablement, and [how many videos it takes to close a deal](/playbook/how-many-videos-to-close-a-deal) shows how to spread them across the funnel." }
+  ],
+  "closing": {
+    "text": "Prove video shows up in the deals that close, that sales uses it, that prospects mention it, and that deals move faster when it's in the mix. That's the story that keeps the budget, and our 2-Week Jumpstart gets your first test videos into market so you have numbers to bring.",
+    "cta": { "url": "/#Pricing", "anchor": "See the 2-Week Jumpstart →" }
+  }
+}

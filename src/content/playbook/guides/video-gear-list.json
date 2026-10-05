@@ -1,0 +1,413 @@
+{
+  "title": "What video gear does your exec or in-house creator need?",
+  "slug": "video-gear-list",
+  "answer": "Most B2B teams need less gear than they think. Under $500 buys a 4K webcam, a decent USB mic, one light, a stand, foam panels and headphones, which is plenty for a founder recording at a desk. Spend $500 to $1,500 when someone records weekly, and $1,500+ when video is a core channel and the setup needs to look like a studio. Buy audio and light before camera.",
+  "status": "published",
+  "category": "look-good",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "faqSchema": true,
+  "body": [
+    {
+      "type": "h2",
+      "text": "What should you buy first when you equip someone for video?"
+    },
+    {
+      "type": "p",
+      "text": "Buy for sound first, light second and camera third. Viewers forgive a slightly soft image, but they click away from echoey, tinny audio in seconds, and bad lighting makes even a great camera look cheap. So if you're equipping your CEO, a product marketer or an in-house creator, put the money where the viewer notices it."
+    },
+    {
+      "type": "p",
+      "text": "The good news is that none of this needs a production budget. Every kit below fits on a desk, sets up in an afternoon and runs off a laptop. The goal is a setup your exec can sit down at and record without calling anyone for help, because the easier it is to hit record, the more often it happens."
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Audio",
+          "text": "A dedicated mic plus a little acoustic treatment. This is the single biggest jump in perceived quality."
+        },
+        {
+          "label": "Light",
+          "text": "One soft key light in front of the face, then a fill light once you upgrade. Window light is free but changes all day."
+        },
+        {
+          "label": "Camera",
+          "text": "A good 4K webcam covers most needs. Move to a real camera when video is a weekly habit, not a quarterly one."
+        },
+        {
+          "label": "Mounting",
+          "text": "Stands and arms keep the camera at eye level and the desk clear, which matters more than people expect."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Which kit should your team buy?"
+    },
+    {
+      "type": "p",
+      "text": "Match the kit to how often the person records and where the video goes. A founder recording a few LinkedIn clips a month needs the basic kit. Someone filming every week for sales and social should have the intermediate kit. If video is a core channel, or the setup doubles as a podcast studio, go advanced."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Kit",
+        "Budget",
+        "Best for",
+        "Estimated total"
+      ],
+      "rows": [
+        [
+          "Basic",
+          "Under $500",
+          "An exec recording occasional talking-head clips and async updates",
+          "$464 (primary picks) or $290 (budget picks)"
+        ],
+        [
+          "Intermediate",
+          "$500-$1,500",
+          "A weekly recorder: a founder-led series, sales videos, webinars",
+          "$1,519"
+        ],
+        [
+          "Advanced",
+          "$1,500+",
+          "A dedicated in-house creator, podcast or studio-style setup",
+          "$2,390"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "All prices below are approximate as of when we built this list, so check current pricing through the B&H link on each product before you buy."
+    },
+    {
+      "type": "h2",
+      "text": "What's in the basic kit (under $500)?"
+    },
+    {
+      "type": "p",
+      "text": "The basic kit gets an exec from laptop-webcam footage to clean, clear video for under $500. Each category has a primary pick and a cheaper alternative, so choose one of each. The primary picks total about $464 and the budget picks about $290."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Category",
+        "Product",
+        "Price (USD)",
+        "Why this pick"
+      ],
+      "rows": [
+        [
+          "Webcam",
+          "[OBSBOT Meet 2 (4K)](https://www.bhphotovideo.com/c/search?q=obsbot%20meet%202)",
+          "$129",
+          "4K webcam with AI auto-framing. Sharp image, great low-light performance. Best value 4K webcam on the market."
+        ],
+        [
+          "Alt: Webcam",
+          "[Logitech Brio 300 (1080p)](https://www.bhphotovideo.com/c/search?q=logitech%20brio%20300)",
+          "$70",
+          "Solid 1080p webcam with auto light correction. If 4K isn't a priority and you want to save $60. Choose one webcam."
+        ],
+        [
+          "USB Mic",
+          "[Elgato Wave:3](https://www.bhphotovideo.com/c/search?q=elgato%20wave%203)",
+          "$150",
+          "Clipguard prevents distortion, Wave Link software for mixing. Great for talking head + podcast."
+        ],
+        [
+          "Alt: USB Mic",
+          "[Samson Q2U](https://www.bhphotovideo.com/c/search?q=samson%20q2u)",
+          "$70",
+          "Dual USB/XLR dynamic mic. Naturally rejects background noise. Half the price, still sounds great. Choose one mic."
+        ],
+        [
+          "Key Light",
+          "[Logitech Litra Glow](https://www.bhphotovideo.com/c/search?q=logitech%20litra%20glow)",
+          "$60",
+          "TrueSoft technology, compact, desk-mountable. Great starter light with app control."
+        ],
+        [
+          "Alt: Key Light",
+          "[Neewer 18\" Ring Light Kit](https://www.bhphotovideo.com/c/search?q=neewer%2018%20ring%20light)",
+          "$55",
+          "Ring light with stand and phone holder. More light coverage, also works for mobile content. Choose one light."
+        ],
+        [
+          "Desk Stand",
+          "[InnoGear Webcam Stand](https://www.bhphotovideo.com/c/search?q=innogear%20webcam%20stand)",
+          "$20",
+          "Adjustable 8.7-20.9\", weighted metal base, won't tip over. Works for webcam or mic."
+        ],
+        [
+          "Alt: Desk Stand",
+          "[Lamicall Adjustable Desk Stand](https://www.bhphotovideo.com/c/search?q=lamicall%20desk%20stand)",
+          "$25",
+          "Gooseneck design, more flexibility in positioning. Good if your desk setup is tight. Choose one stand."
+        ],
+        [
+          "Acoustic Panels",
+          "[JBER 12-Pack Foam Panels](https://www.bhphotovideo.com/c/search?q=acoustic%20foam%20panels)",
+          "$25",
+          "Covers ~12 sq ft behind your camera. Cuts echo and room reverb noticeably."
+        ],
+        [
+          "Alt: Acoustic Treatment",
+          "[Acoustic foam strips (adhesive)](https://www.bhphotovideo.com/c/search?q=adhesive%20acoustic%20foam)",
+          "$20",
+          "Stick-on strips, less coverage but easier to apply. Good for renters who can't mount panels. Choose one treatment."
+        ],
+        [
+          "Headphones",
+          "[Sony MDR-7506](https://www.bhphotovideo.com/c/search?q=sony%20mdr-7506)",
+          "$80",
+          "Industry standard monitoring headphones. Flat response, comfortable for long sessions."
+        ],
+        [
+          "Alt: Headphones",
+          "[Audio-Technica ATH-M20x](https://www.bhphotovideo.com/c/search?q=audio%20technica%20ath-m20x)",
+          "$50",
+          "Entry-level studio monitors. Less detailed than Sony but solid for the price. Choose one pair."
+        ],
+        [
+          "Kit total",
+          "Estimated total (primary picks)",
+          "$464",
+          ""
+        ],
+        [
+          "Kit total",
+          "Estimated total (budget picks)",
+          "$290",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What's in the intermediate kit ($500 to $1,500)?"
+    },
+    {
+      "type": "p",
+      "text": "The intermediate kit is for someone who records every week. It adds a tracking webcam (or a real camera), a mic that can grow into XLR, and a two-light setup that removes shadows. Pick either the Insta360 webcam or the Sony ZV-1F, not both. The full list comes to about $1,519."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Category",
+        "Product",
+        "Price (USD)",
+        "Why this pick"
+      ],
+      "rows": [
+        [
+          "Webcam",
+          "[Insta360 Link 2 (4K)](https://www.bhphotovideo.com/c/search?q=insta360%20link%202)",
+          "$199",
+          "4K webcam with physical gimbal tracking. Frames you automatically even if you move around. Great if you stand or use a whiteboard."
+        ],
+        [
+          "Alt: Camera",
+          "[Sony ZV-1F](https://www.bhphotovideo.com/c/search?q=sony%20zv-1f)",
+          "$500",
+          "Dedicated vlog camera with USB webcam mode. Massive quality jump over any webcam. Wide f/2.0 lens. Choose the webcam or the camera, not both."
+        ],
+        [
+          "USB/XLR Mic",
+          "[Shure MV7+](https://www.bhphotovideo.com/c/search?q=shure%20mv7%20plus)",
+          "$270",
+          "Dual USB-C and XLR. Grow into XLR later without replacing the mic. Podcast-quality audio."
+        ],
+        [
+          "Key Light",
+          "[Elgato Key Light](https://www.bhphotovideo.com/c/search?q=elgato%20key%20light)",
+          "$180",
+          "App-controlled, 2800 lumens, desk clamp mount. Set-and-forget studio lighting."
+        ],
+        [
+          "Fill Light",
+          "[Logitech Litra Glow](https://www.bhphotovideo.com/c/search?q=logitech%20litra%20glow)",
+          "$60",
+          "Second light to fill shadows. Pairs well with the Elgato Key Light as main."
+        ],
+        [
+          "Desktop Tripod",
+          "[Joby GorillaPod 3K](https://www.bhphotovideo.com/c/search?q=joby%20gorillapod%203k)",
+          "$55",
+          "Flexible legs wrap around anything. Great for desk, shelf or travel setups."
+        ],
+        [
+          "Acoustic Panels",
+          "[Focusound 52-Pack Panels](https://www.bhphotovideo.com/c/search?q=focusound%20acoustic%20panels)",
+          "$45",
+          "Covers ~52 sq ft. Triangular groove design breaks up sound waves effectively."
+        ],
+        [
+          "Headphones",
+          "[Sony MDR-7506](https://www.bhphotovideo.com/c/search?q=sony%20mdr-7506)",
+          "$80",
+          "Industry standard. Same pick as the basic kit, no need to upgrade headphones at this tier."
+        ],
+        [
+          "Backdrop (optional)",
+          "[Elgato Green Screen (collapsible)](https://www.bhphotovideo.com/c/search?q=elgato%20green%20screen)",
+          "$130",
+          "Pull-up green screen, retracts into its case. Instant clean background. Optional, depends on the office setup."
+        ],
+        [
+          "Kit total",
+          "Estimated total",
+          "$1,519",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What's in the advanced kit ($1,500+)?"
+    },
+    {
+      "type": "p",
+      "text": "The advanced kit turns an office into a small studio: an interchangeable-lens camera, a broadcast mic with an interface, two app-controlled lights and diffusers that look good on camera and treat the room. It's the right call for a dedicated in-house creator or a podcast. The full list comes to about $2,390."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Category",
+        "Product",
+        "Price (USD)",
+        "Why this pick"
+      ],
+      "rows": [
+        [
+          "Camera",
+          "[Sony ZV-E10 II (w/ 16-50mm kit lens)](https://www.bhphotovideo.com/c/search?q=sony%20zv-e10%20ii%20kit)",
+          "$900",
+          "Interchangeable lens, 4K/60p, USB-C streaming. Best content creator camera under $1K."
+        ],
+        [
+          "Capture Card (optional)",
+          "[Elgato Cam Link 4K](https://www.bhphotovideo.com/c/search?q=elgato%20cam%20link%204k)",
+          "$100",
+          "For HDMI output at 4K. Use it when you want max quality over USB streaming. Optional, since the camera has USB-C streaming."
+        ],
+        [
+          "XLR Mic",
+          "[Shure SM7dB](https://www.bhphotovideo.com/c/search?q=shure%20sm7db)",
+          "$400",
+          "Built-in preamp, no Cloudlifter needed. The podcast and broadcast standard. Sounds incredible."
+        ],
+        [
+          "Audio Interface",
+          "[Focusrite Scarlett Solo (4th Gen)](https://www.bhphotovideo.com/c/search?q=focusrite%20scarlett%20solo%204th%20gen)",
+          "$120",
+          "Clean preamps, USB-C, dead simple. Pairs perfectly with the SM7dB."
+        ],
+        [
+          "Key Light",
+          "[Elgato Key Light](https://www.bhphotovideo.com/c/search?q=elgato%20key%20light)",
+          "$180",
+          "App-controlled panel, desk clamp. Consistent color temperature for video."
+        ],
+        [
+          "Fill Light",
+          "[Elgato Key Light Mini](https://www.bhphotovideo.com/c/search?q=elgato%20key%20light%20mini)",
+          "$80",
+          "Portable, rechargeable, app-controlled. Perfect as a fill or hair light."
+        ],
+        [
+          "Camera Arm",
+          "[Elgato Master Mount + Flex Arm](https://www.bhphotovideo.com/c/search?q=elgato%20master%20mount)",
+          "$60",
+          "Desk clamp + articulating arm. The camera floats at the right height and saves desk space."
+        ],
+        [
+          "Acoustic Panels",
+          "[UA-Acoustics Sirius Diffusers (6-pack)](https://www.bhphotovideo.com/c/search?q=ua%20acoustics%20sirius)",
+          "$120",
+          "MDF + foam diffusers. Look professional on camera and treat the room acoustics."
+        ],
+        [
+          "Headphones",
+          "[Audio-Technica ATH-M50x](https://www.bhphotovideo.com/c/search?q=audio%20technica%20ath-m50x)",
+          "$150",
+          "Upgrade from the Sony 7506. Tighter bass, more detail, foldable. Studio standard."
+        ],
+        [
+          "Backdrop (optional)",
+          "[Elgato Green Screen XL](https://www.bhphotovideo.com/c/search?q=elgato%20green%20screen%20xl)",
+          "$180",
+          "Extra-wide pull-up green screen for a standing desk or wider shots. Optional, depends on the office setup."
+        ],
+        [
+          "Desk Mic Arm",
+          "[Elgato Wave Mic Arm LP](https://www.bhphotovideo.com/c/search?q=elgato%20wave%20mic%20arm%20lp)",
+          "$100",
+          "Low-profile boom arm. Keeps the mic off the desk and out of the frame."
+        ],
+        [
+          "Kit total",
+          "Estimated total",
+          "$2,390",
+          ""
+        ]
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "How do you set the gear up so it looks good on camera?"
+    },
+    {
+      "type": "p",
+      "text": "Put the camera at eye level, the key light in front of and slightly to the side of the face, and the mic as close to the mouth as the frame allows. Those three choices do more for the final video than any upgrade in the tables above."
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Camera height",
+          "text": "Eye level or a touch above. A laptop camera looking up the nose undercuts every point your exec makes."
+        },
+        {
+          "label": "Light",
+          "text": "Face the light source, never a bright window behind you. Set every light to the same color temperature."
+        },
+        {
+          "label": "Background",
+          "text": "Clean and a little depth behind the speaker. A green screen only helps if someone will actually key it out in the edit."
+        },
+        {
+          "label": "Sound check",
+          "text": "Record 10 seconds and play it back on headphones before every session. It catches hums, echo and the wrong mic input."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "For the on-camera side, read [how to film yourself](/playbook/how-to-film-yourself). If the person in front of the gear is your CEO, [how to get your CEO on camera](/playbook/ceo-on-camera) covers the part no kit can fix."
+    },
+    {
+      "type": "h2",
+      "text": "When is gear not the problem?"
+    },
+    {
+      "type": "p",
+      "text": "Gear is rarely what holds a B2B video program back. Most teams that stall have a perfectly good camera and no plan for what to film, who it's for or how sales will use it. So buy the kit, then spend most of your energy on the strategy and the edit."
+    },
+    {
+      "type": "p",
+      "text": "If your marketing team has quietly become the video department, [the voluntold video department](/playbook/in-house-video-production) walks through what it really takes to run video in-house, and the [in-house vs. agency editor breakdown](/blog/in-house-vs-agency-video-editor) helps you decide who should cut the footage your new kit produces."
+    }
+  ],
+  "closing": {
+    "text": "A good kit makes recording easy, and the next step is making sure your exec looks and sounds natural in front of it.",
+    "cta": {
+      "url": "/playbook/how-to-film-yourself",
+      "anchor": "Read how to film yourself →"
+    }
+  },
+  "notionSource": "https://a2-media.notion.site/Recommended-Gear-List-3237a0163fa48121b210ef12fe3180fe"
+}

@@ -7,6 +7,7 @@
 
 import type { BlogPost } from "@/content/blog/posts";
 import type { JsonLdSchema } from "./JsonLd";
+import { plainText } from "@/lib/inlineText";
 
 const SITE_URL = "https://a2media.ca";
 const ORG_ID = `${SITE_URL}#organization`;
@@ -44,7 +45,7 @@ export function blogPostFaqSchema(
     if (block.type !== "h2") continue;
     const next = post.body[i + 1];
     if (next && next.type === "p") {
-      pairs.push({ q: block.text, a: next.text });
+      pairs.push({ q: block.text, a: plainText(next.text) });
     }
   }
   if (pairs.length === 0) return null;

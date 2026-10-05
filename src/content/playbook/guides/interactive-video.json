@@ -1,0 +1,206 @@
+{
+  "title": "Interactive video marketing: how to build a choose-your-own-adventure sales video",
+  "slug": "interactive-video",
+  "answer": "An interactive sales video lets the buyer pick which short clip to watch next, so they self-educate and self-qualify before talking to sales. Build it from five one to two minute videos: 'Is this you?', 'But what if...?', 'Why should I trust you?', 'Prove that this works' and 'How do we get started?'. Use it in the middle and bottom of the funnel, never at the top.",
+  "status": "published",
+  "category": "formats",
+  "publishedAt": "2026-10-05",
+  "updatedAt": "2026-10-05",
+  "author": "Ademola Adelakun",
+  "targetKeyword": "interactive video marketing",
+  "notionSource": "https://a2-media.notion.site/2ed7a0163fa4803893a8e28cb8003213",
+  "faqSchema": true,
+  "body": [
+    {
+      "type": "h2",
+      "text": "What is a choose-your-own-adventure video?"
+    },
+    {
+      "type": "p",
+      "text": "A choose-your-own-adventure (CYOA) video is a set of short clips connected by on-screen buttons, so the viewer decides what they see next. Instead of one video that tries to answer every question, the buyer picks the question they care about, gets a direct answer, then picks the next one."
+    },
+    {
+      "type": "p",
+      "text": "Your buyers don't want to feel sold to. They want to feel understood and in control. Give them control of the learning journey and they lean in, because every click is them telling you what matters. If you're tired of videos that get watched but don't drive action, this is the format to steal."
+    },
+    {
+      "type": "video",
+      "url": "https://www.youtube.com/embed/0hMMeOzWWo4?rel=0",
+      "title": "Choose-your-own-adventure video walkthrough",
+      "caption": "A short interactive walkthrough Ademola recorded for the original playbook."
+    },
+    {
+      "type": "h2",
+      "text": "What results do interactive videos get?"
+    },
+    {
+      "type": "p",
+      "text": "In our client work, interactive videos have outperformed the linear versions on conversion, watch time and sales cycle length. The reason is simple: a buyer who chose three answers in a row has told you exactly what they care about, and they arrive at the call further along."
+    },
+    {
+      "type": "proprietary",
+      "label": "What we've seen with clients",
+      "body": "Across the interactive videos we've built for clients, we've seen video conversion rates and watch times rise 2-4x, sales cycles shorten by up to 35% and demo click-through rates rise 8-10x.",
+      "source": "A2 Media client work"
+    },
+    {
+      "type": "h2",
+      "text": "When should you use interactive video?"
+    },
+    {
+      "type": "p",
+      "text": "Use interactive video when your sales team keeps answering the same questions and your buyers want to do their homework before a call. It works best in the middle and bottom of the funnel, with prospects who already know they have the problem."
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Repeated questions",
+          "text": "Your reps say they get asked the same questions on every call. Those questions become your clips."
+        },
+        {
+          "label": "Self-educating buyers",
+          "text": "Your buyers want to research on their own before they book a call. Give them the answers in a format they can explore."
+        },
+        {
+          "label": "Decision-ready calls",
+          "text": "You want prospects to show up to calls ready to make a decision, not to hear the basics."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "If you're just getting started with video, the same 'repeated questions' list is the best place to begin. We cover why in [how to get buy-in for video](/playbook/get-buy-in-for-video)."
+    },
+    {
+      "type": "h2",
+      "text": "When should you avoid interactive video?"
+    },
+    {
+      "type": "p",
+      "text": "Avoid it at the top of the funnel, while you're still testing hooks or positioning, and whenever you aren't clear on who your ideal customer is. An interactive video asks for effort from the viewer, and cold audiences won't give it."
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Top of funnel",
+          "text": "Cold viewers haven't decided they care yet, so asking them to click through branches loses them."
+        },
+        {
+          "label": "Still testing",
+          "text": "If you're still testing hooks or positioning, test with simple linear videos first. They're cheaper to change."
+        },
+        {
+          "label": "Fuzzy ICP",
+          "text": "If you aren't clear on your ideal customer profile, you can't write the 'Is this you?' clip, and everything else hangs off it."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "What structure should an interactive sales video follow?"
+    },
+    {
+      "type": "p",
+      "text": "Use five clips, each one to two minutes, and each answering one question a buyer asks before they sign. This is the structure we've had the most success with."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Clip",
+        "The buyer's question",
+        "What it covers",
+        "Buttons"
+      ],
+      "rows": [
+        [
+          "Video 1",
+          "Is this you?",
+          "Call out the most common problems or frustrations your ideal buyer faces, then let them choose which one they want to solve first.",
+          "3 videos"
+        ],
+        [
+          "Video 2",
+          "But what if...?",
+          "Address the top reasons people hesitate to buy. Answer the most frequent questions in a way that builds trust.",
+          "2 videos, 1 CTA"
+        ],
+        [
+          "Video 3",
+          "Why should I trust you?",
+          "Explain what makes your approach, product or support different. Make the buyer the hero of the story and add social proof.",
+          "2 videos, 1 CTA"
+        ],
+        [
+          "Video 4",
+          "Prove that this works",
+          "Share a quick transformation story or testimonial, focused on the before, the after and the result.",
+          "1 video, 2 CTAs"
+        ],
+        [
+          "Video 5",
+          "How do we get started?",
+          "Lay out a three-step process. The first two steps describe what happens right after signing; the third describes the result they'll get.",
+          "1 video, 2 CTAs"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The flow matters as much as the content. Video 1 is the front door and branches three ways, so the buyer immediately picks their own path. The middle clips keep offering more answers alongside a CTA, and the last two lean toward action, with two CTA buttons and only one further video. Every path ends at a decision."
+    },
+    {
+      "type": "p",
+      "text": "Pro tip: interview your sales team to write the scripts. They already know the questions, the objections and the stories that land, so most of your script is sitting in their call notes. Then run each clip through the [video scripting checklist](/playbook/video-script-checklist) so every one opens fast and ends on one clear button."
+    },
+    {
+      "type": "h2",
+      "text": "What do good interactive sales videos look like?"
+    },
+    {
+      "type": "p",
+      "text": "The best way to understand the format is to click through a few. Here are three we built, each for a different job."
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "PowerChord",
+          "text": "An [interactive sales video](https://player.gotolstoy.com/x226dhfgl5thw) that walks prospects through the offer."
+        },
+        {
+          "label": "A2 Media",
+          "text": "Our own [interactive onboarding](https://player.gotolstoy.com/b0bmpnb6t8xxw), which answers new clients' questions before the kickoff call."
+        },
+        {
+          "label": "Reveal",
+          "text": "An [interactive sales video](https://player.gotolstoy.com/raym6ikegyv08) built for Reveal's buyers."
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "And for something lighter: the comedy group Aunty Donna made a [pick-a-path sketch](https://www.grousehouse.tv/pick-a-path.html) that shows how far the format can stretch. It's a good reminder that branching video can be fun as well as useful."
+    },
+    {
+      "type": "h2",
+      "text": "How does an interactive video fit with the rest of your sales content?"
+    },
+    {
+      "type": "p",
+      "text": "An interactive video works best as the step after a buyer is already interested, usually sent by a rep after a first touch or placed on a pricing or demo page. It sits alongside a [video sales letter](/playbook/video-sales-letter), which tells your story, while the interactive video answers the buyer's specific questions."
+    },
+    {
+      "type": "p",
+      "text": "It won't do the job alone. Most deals need several videos across the journey, which we break down in [how many videos it takes to close a B2B deal](/playbook/how-many-videos-to-close-a-deal)."
+    }
+  ],
+  "closing": {
+    "text": "If you'd like one of these built without doing it alone, we can script, film and assemble the whole thing with your sales team's input.",
+    "cta": {
+      "url": "/#Pricing",
+      "anchor": "See pricing →"
+    }
+  }
+}
