@@ -346,6 +346,153 @@ export const POSTS: BlogPost[] = [
       },
     },
   },
+  {
+    question: "How much does an explainer video cost?",
+    slug: "explainer-video-cost",
+    // TODO(Ademola): confirm the One-off Video covers an animated explainer at $5K.
+    answer:
+      "A typical animated explainer video costs $5,400 to $8,500. Those are the median and the outlier-adjusted average from Wyzowl's survey of explainer quotes, which ran from $600 to $250,000. At A2, a one-off explainer starts at $5K. What you should spend depends less on animation style and more on whether the script answers the question your buyer is already asking.",
+    publishedAt: "2026-09-27",
+    updatedAt: "2026-09-27",
+    author: "Ademola Adelakun",
+    cluster: "pricing",
+    clusterLabel: "Pricing & Budgeting",
+    intent: "BOFU",
+    ctaMode: "sell",
+    proprietaryInput: {
+      type: "call-quote",
+      source: "Okta testimonial (Greg Mares, Senior Media Specialist)",
+      detail: "Record YouTube numbers in the first month, including explainer videos",
+    },
+    outboundCitations: [
+      {
+        url: "https://wyzowl.com/explainer-video-cost/",
+        anchor: "Wyzowl explainer video cost survey",
+      },
+      {
+        url: "https://blog.hubspot.com/marketing/explainer-video-cost",
+        anchor: "HubSpot on explainer video cost",
+      },
+      {
+        url: "https://www.squideo.com/how-much-does-an-explainer-video-cost-in-2026",
+        anchor: "Squideo 2026 agency pricing study",
+      },
+    ],
+    internalLinks: [
+      { url: "/#Pricing", anchor: "One-off Video pricing" },
+      {
+        url: "/blog/how-much-does-saas-video-editing-cost",
+        anchor: "what B2B SaaS video editing costs",
+      },
+      {
+        url: "/blog/monthly-video-budget-saas",
+        anchor: "monthly video budget",
+      },
+    ],
+    faqSchema: true,
+    body: [
+      {
+        type: "h2",
+        text: "What does each price point actually buy you?",
+      },
+      {
+        type: "p",
+        text: "The spread in [Wyzowl's explainer pricing survey](https://wyzowl.com/explainer-video-cost/) looks absurd until you see what sits at each level. At the bottom you're buying a template: stock characters, library music, and a script you wrote yourself. In the middle you're buying a studio that writes the script with you, designs custom frames, and books a professional voiceover. At the top you're paying for custom character animation or 3D, usually tied to a brand campaign with media spend behind it.",
+      },
+      {
+        type: "table",
+        headers: ["Price", "Where it sits in the survey", "What it usually buys"],
+        rows: [
+          ["$600", "Lowest quote", "Template animation, your script, stock music"],
+          ["$5,400", "Median quote", "Custom 2D motion graphics, 60 to 90 seconds"],
+          [
+            "$8,457",
+            "Average, top and bottom 5% removed",
+            "Studio-written script, custom illustration, pro voiceover",
+          ],
+          ["$10,983", "Average, all quotes", "Pulled up by a few premium agency projects"],
+          ["$250,000", "Highest quote", "Custom character or 3D animation for a campaign"],
+        ],
+      },
+      {
+        type: "h2",
+        text: "What changes the cost up or down?",
+      },
+      {
+        type: "p",
+        text: "Three things move the number: how long the video runs, the animation style you pick, and how many rounds of revisions it goes through before anyone signs off.",
+      },
+      {
+        type: "ul",
+        items: [
+          {
+            label: "Length",
+            text: "Most B2B SaaS explainers should run 60 to 90 seconds, and every extra 30 seconds adds design and animation hours.",
+          },
+          {
+            label: "Style",
+            text: "Flat motion graphics are the cheapest to produce, custom characters cost more, and 3D costs the most.",
+          },
+          {
+            label: "Revisions",
+            text: "This is where budgets quietly double. If five people need to approve the storyboard, you're paying for every round of their feedback.",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: "The line item most teams underspend on is [the script](/playbook/video-script-checklist). A beautifully animated video that explains the wrong thing is still the wrong video. So if you have to cut budget, cut animation complexity before you cut the time spent figuring out what to say.",
+      },
+      {
+        type: "h2",
+        text: "Is a cheap explainer ever good enough?",
+      },
+      {
+        type: "p",
+        text: "Sometimes, yes. If you need a quick walkthrough for your help center, or you want to test whether a message lands before you invest in it, the cheap version is the right call. Comedians work out new material in small clubs before they record the special, and your messaging works the same way. Test the rough version, see what your buyers respond to, and then pay for polish on the version that already works.",
+      },
+      {
+        type: "p",
+        text: "Where the cheap version fails is anywhere a buyer is judging your company by it. A homepage explainer, or [a video your sales team sends](/playbook/video-sales-letter) to a VP before a demo, is a stand-in for how seriously you take your product. If it looks like a template, the buyer assumes the product was put together the same way.",
+      },
+      {
+        type: "h2",
+        text: "How do you know the explainer was worth it?",
+      },
+      {
+        type: "p",
+        text: "Watch whether your sales team uses it. That's the fastest signal you'll get (more on that in our [guide to measuring video ROI](/playbook/measure-video-roi)). If reps are dropping the explainer into follow-up emails and prospects show up to calls already understanding what you do, it's paying for itself. If it lives on the homepage and nobody mentions it, you bought a nice-looking asset, and that's all you bought.",
+      },
+      {
+        type: "proprietary",
+        label: "From the Okta engagement",
+        body: "\"We saw record YouTube numbers in our first month with a2. They helped us create explainer videos, short-form content, and event assets. The team is fast, clear, and genuinely fun to work with. Best video partner we've had in SaaS.\"",
+        source: "Greg Mares, Senior Media Specialist, Okta",
+      },
+      {
+        type: "proprietary",
+        label: "TODO(Ademola): the Close explainer",
+        body: "TODO: What did the Close animated explainer cost (a range is fine), how long did it take from kickoff to delivery, and what did it do for them? Views, demo requests, or how their sales team used it.",
+        source: "TODO",
+      },
+      {
+        type: "h2",
+        text: "What does A2 charge for an explainer?",
+      },
+      {
+        type: "p",
+        text: "Our One-off Video starts at $5K. You bring the idea, or raw product footage, and we handle the script, design, animation, and edit. You own the finished video and can post it anywhere. TODO(Ademola): confirm what an animated explainer includes at this tier (length, revision rounds, turnaround) and whether it's priced differently from other one-offs.",
+      },
+      {
+        type: "p",
+        text: "If you already know you'll need more than one video, the [2-Week Jumpstart](/#Pricing) at $10K is the better starting point. We research your buyer, map out six months of video, and give you three videos to test, so the explainer gets built alongside the pieces your sales team will send next.",
+      },
+    ],
+    closing: {
+      text: "Most teams overspend on animation and underspend on knowing what to say. If you have the idea and want it built properly the first time, the One-off Video is on the pricing page.",
+      cta: { url: "/#Pricing", anchor: "See One-off Video pricing →" },
+    },
+  },
 ];
 
 // Auto-published posts are written by the publish-check cron as JSON files
