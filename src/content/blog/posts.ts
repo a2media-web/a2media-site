@@ -349,11 +349,13 @@ export const POSTS: BlogPost[] = [
 ];
 
 // Auto-published posts are written by the publish-check cron as JSON files
-// in src/content/blog/auto-posts/. We load them at module evaluation time
+// in src/content/blog/auto-posts/. Hand-written posts can also live as one
+// JSON file each in src/content/blog/hand-posts/ (same BlogPost shape), so
+// new posts don't all edit this file. We load both at module evaluation time
 // (server-side only — all consumers are RSCs / server routes) and merge
 // into a single ALL_POSTS list. POSTS stays exported for backwards-compat
 // with anything that wants only the hardcoded sample posts.
-function loadAutoPosts(): BlogPost[] {
+function loadJsonPosts(subdir: string): BlogPost[] {
   // Dynamic require so tooling that bundles this module for the client side
   // (none today, but as a safety net) wouldn't pull in fs.
   try {
@@ -361,7 +363,7 @@ function loadAutoPosts(): BlogPost[] {
     const fs = require("fs") as typeof import("fs");
     // eslint-disable-next-line @typescript-eslint/no-require-imports
     const path = require("path") as typeof import("path");
-    const dir = path.join(process.cwd(), "src/content/blog/auto-posts");
+    const dir = path.join(process.cwd(), "src/content/blog", subdir);
     if (!fs.existsSync(dir)) return [];
     const files = fs.readdirSync(dir).filter((f) => f.endsWith(".json"));
     return files.map((f) => {
@@ -373,9 +375,11 @@ function loadAutoPosts(): BlogPost[] {
   }
 }
 
-export const AUTO_POSTS: BlogPost[] = loadAutoPosts();
+export const AUTO_POSTS: BlogPost[] = loadJsonPosts("auto-posts");
 
-export const ALL_POSTS: BlogPost[] = [...POSTS, ...AUTO_POSTS];
+export const HAND_POSTS: BlogPost[] = loadJsonPosts("hand-posts");
+
+export const ALL_POSTS: BlogPost[] = [...POSTS, ...HAND_POSTS, ...AUTO_POSTS];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return ALL_POSTS.find((p) => p.slug === slug);

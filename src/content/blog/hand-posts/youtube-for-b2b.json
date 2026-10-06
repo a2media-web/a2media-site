@@ -1,0 +1,76 @@
+{
+  "question": "When does YouTube make sense for a B2B SaaS company?",
+  "slug": "youtube-for-b2b",
+  "answer": "Start a YouTube channel when three things are true: your buyers search YouTube for how-to answers in your category, you can publish one episodic series on a fixed schedule for at least six months, and someone credible will host every episode. Hold off if you need pipeline this quarter or sell to a few hundred named accounts. For B2B, YouTube is a slow, compounding library for buyers who aren't shopping yet.",
+  "publishedAt": "2026-10-06",
+  "updatedAt": "2026-10-06",
+  "author": "Ademola Adelakun",
+  "cluster": "distribution",
+  "clusterLabel": "Distribution & Repurposing",
+  "intent": "TOFU",
+  "ctaMode": "helpful",
+  "proprietaryInput": {
+    "type": "client-stat",
+    "source": "Auth0 (Okta) case study",
+    "detail": "Channel went from losing subscribers monthly to 22K+ new organic subscribers and 5.2M+ views with minimal ad spend"
+  },
+  "outboundCitations": [
+    {
+      "url": "https://support.google.com/youtube/answer/16090438",
+      "anchor": "YouTube Help: how YouTube search works"
+    },
+    {
+      "url": "https://support.google.com/youtube/answer/10246996",
+      "anchor": "YouTube Help: new, casual and regular viewers"
+    },
+    {
+      "url": "https://www.marketingweek.com/peter-weinberg-jon-lombardo-95-5-rule",
+      "anchor": "Marketing Week: the 95:5 rule"
+    }
+  ],
+  "internalLinks": [
+    { "url": "/blog/sales-enablement-video", "anchor": "sales enablement video" },
+    { "url": "/#work", "anchor": "the series we make" }
+  ],
+  "faqSchema": true,
+  "body": [
+    { "type": "h2", "text": "What has to be true before you start a B2B YouTube channel?" },
+    {
+      "type": "p",
+      "text": "Your buyers have to search YouTube for answers in your category, you have to commit to one series on a fixed schedule for six months, and someone credible has to host it every week. Miss any one and the channel stalls at a few hundred subscribers until someone asks in a QBR why you're still paying for it. [YouTube's own documentation](https://support.google.com/youtube/answer/16090438) says search ranks videos on relevance, engagement and expertise signals, so a channel that answers real questions on a schedule beats one that posts whatever marketing shipped that month."
+    },
+    {
+      "type": "ul",
+      "items": [
+        { "label": "Search demand", "text": "type your category's three most common how-to questions into YouTube. If competitors or creators rank with mediocre videos, there's room for you. If nothing comes up, your buyers probably aren't looking there." },
+        { "label": "A named series", "text": "one recurring format with a name, a host and a promise, like a weekly teardown or a ten-minute fix. Random uploads give viewers nothing to come back for." },
+        { "label": "A host", "text": "a founder, a product lead or a dedicated on-camera creator who shows up every episode. People subscribe to a person far more readily than to a logo." },
+        { "label": "Six months of patience", "text": "judge it on [returning viewers](https://support.google.com/youtube/answer/10246996) in YouTube Analytics rather than subscriber count. Viewers who keep coming back are the sign the series is working." }
+      ]
+    },
+    { "type": "h2", "text": "When should a B2B SaaS company not start a YouTube channel?" },
+    {
+      "type": "p",
+      "text": "Don't start one if you need pipeline this quarter, if your whole market is a few hundred named accounts, or if your sales team has no videos to send yet. YouTube works on the [95% of buyers who aren't in market right now](https://www.marketingweek.com/peter-weinberg-jon-lombardo-95-5-rule), which makes it a strong long-term bet and a poor fix for a short-term number. If you sell to 300 enterprise accounts, LinkedIn and direct outreach reach them faster than search will. And if reps still answer the same five questions on every call, [sales enablement video](/blog/sales-enablement-video) pays back sooner, so build that first and turn the best of it into episodes later. The other mistake I see is opening a channel to store webinar recordings and product demos. That's a hosting decision, and viewers can tell nobody is programming the channel."
+    },
+    { "type": "h2", "text": "What does a B2B YouTube channel that works look like?" },
+    {
+      "type": "p",
+      "text": "It looks like a show for one job title: a named series, the same host, and episodes that each answer one question your buyer actually searches for, published on the same day every week. The trust-building videos in [how many videos it takes to close a deal](/playbook/how-many-videos-to-close-a-deal) are the raw material, and YouTube is where they compound. A channel that's been losing ground can turn around once it has that structure, even after years of paid views."
+    },
+    {
+      "type": "proprietary",
+      "label": "From the Auth0 (Okta) engagement",
+      "body": "When we started with Auth0 in February 2024, its YouTube channel was losing subscribers every month. Years of paid ad spend had inflated view counts while organic engagement stayed flat. We launched focused developer education series instead of chasing virality, and the channel went to 22K+ new organic subscribers and 5.2M+ views with minimal ad spend. Video also drove 35% of registrations for the Oktane and Developer Day virtual events. Greg Mares, Senior Media Specialist at Okta: \"We saw record YouTube numbers in our first month with a2.\"",
+      "source": "A2 Media, Auth0 (Okta) case study"
+    },
+    {
+      "type": "p",
+      "text": "Structure drove the turnaround, with almost no help from ad spend. Developers found an episode that solved their problem, then came back for the next one because they knew another was coming. That's why the episodic series is the format we build most YouTube work around, and you can see examples of [the series we make](/#work) on our homepage."
+    }
+  ],
+  "closing": {
+    "text": "If all three conditions hold, start the channel and give it six months before you judge it. If the missing piece is a host, solve that first, because a series lives or dies on the person in front of the camera.",
+    "cta": { "url": "/playbook/ceo-on-camera", "anchor": "How to get your CEO on camera →" }
+  }
+}

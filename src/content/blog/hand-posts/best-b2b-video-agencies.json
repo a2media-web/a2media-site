@@ -1,0 +1,206 @@
+{
+  "question": "What are the best B2B video agencies?",
+  "slug": "best-b2b-video-agencies",
+  "answer": "The best B2B video agencies for SaaS teams are A2 Media for an ongoing, pipeline-focused video program, Venture Videos and Sandwich for high-stakes launch films, Vidico for high-volume creative across formats, Umault for bold B2B ads, and Outmost Studio or Demo Duck for animated explainers. Pick on fit: one big film, a steady stream of videos, or animation. We're A2 Media, so we list ourselves first.",
+  "publishedAt": "2026-10-06",
+  "updatedAt": "2026-10-06",
+  "author": "Ademola Adelakun",
+  "cluster": "team",
+  "clusterLabel": "Hiring & Team",
+  "intent": "BOFU",
+  "ctaMode": "sell",
+  "proprietaryInput": {
+    "type": "client-stat",
+    "source": "Reveal case study",
+    "detail": "$600K closed-won attributed to video, sales cycle cut 40% (60 to 35 days), 100+ videos"
+  },
+  "outboundCitations": [
+    {
+      "url": "https://www.venturevideos.com/",
+      "anchor": "Venture Videos"
+    },
+    {
+      "url": "https://vidico.com/",
+      "anchor": "Vidico"
+    },
+    {
+      "url": "https://umault.com/",
+      "anchor": "Umault"
+    },
+    {
+      "url": "https://sandwich.co/",
+      "anchor": "Sandwich"
+    },
+    {
+      "url": "https://outmost.studio/",
+      "anchor": "Outmost Studio"
+    }
+  ],
+  "internalLinks": [
+    {
+      "url": "/#Studies",
+      "anchor": "our case studies"
+    },
+    {
+      "url": "/blog/in-house-vs-agency-video-editor",
+      "anchor": "in-house vs. agency"
+    },
+    {
+      "url": "/blog/how-much-does-saas-video-editing-cost",
+      "anchor": "what video editing costs"
+    }
+  ],
+  "faqSchema": true,
+  "body": [
+    {
+      "type": "p",
+      "text": "A quick disclosure before the list: A2 Media wrote this, and we put ourselves first. I've tried to make the rest of it useful anyway, which means saying plainly where another agency is a better fit than we are. Every fact about the other agencies comes from their own websites, and we only show pricing where they publish it."
+    },
+    {
+      "type": "h2",
+      "text": "How did we pick these agencies?"
+    },
+    {
+      "type": "p",
+      "text": "We only included agencies that say on their own site that they make video for B2B or tech companies, show real work for that kind of buyer, and specialise in video rather than offering it as one service among twenty. That rules out generalist marketing shops. If you want the full set of questions to ask on a first call, and the red flags to walk away from, they're in our guide on [how to choose a video agency](/playbook/how-to-choose-a-video-agency)."
+    },
+    {
+      "type": "h2",
+      "text": "Which B2B video agencies are worth shortlisting?"
+    },
+    {
+      "type": "p",
+      "text": "These seven cover the three things a B2B SaaS marketing team usually buys: an ongoing video program, a single high-stakes film, or animation. The table is the short version. Pricing only appears where the agency publishes it."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Agency",
+        "Best for",
+        "What they make",
+        "Public pricing"
+      ],
+      "rows": [
+        [
+          "A2 Media",
+          "Ongoing pipeline video",
+          "Strategy, scripts, weekly videos",
+          "From $5K; $15-40K/mo"
+        ],
+        [
+          "Venture Videos",
+          "Complex SaaS launches",
+          "Launch, explainer, customer films",
+          "Not published"
+        ],
+        [
+          "Vidico",
+          "Volume across formats",
+          "Explainers, ads, motion, live action",
+          "Not published"
+        ],
+        [
+          "Umault",
+          "Bold B2B ads",
+          "Video ad campaigns",
+          "Not published"
+        ],
+        [
+          "Sandwich",
+          "Launch films for tech",
+          "Commercials, explainers",
+          "Not published"
+        ],
+        [
+          "Outmost Studio",
+          "Animated explainers",
+          "Animation, brand films",
+          "From £10K-£25K+"
+        ],
+        [
+          "Demo Duck",
+          "Animation or live action",
+          "Explainers, ads, testimonials",
+          "Not published"
+        ]
+      ]
+    },
+    {
+      "type": "h3",
+      "text": "1. A2 Media"
+    },
+    {
+      "type": "p",
+      "text": "We run video as an ongoing program for B2B SaaS teams: buyer research, a 6-month roadmap, scripts, then finished videos within 72 hours, every week. We've delivered 600+ videos. Pricing is public: a One-off Video starts at $5K, the 2-Week Jumpstart is $10K, and the Video Growth Engine runs $15-40K a month. We're the wrong pick if you want one cinematic brand film and nothing after it. See [our case studies](/#Studies) for the full results."
+    },
+    {
+      "type": "proprietary",
+      "label": "From the Reveal engagement",
+      "body": "Reveal had no video and no content team. We built their program from scratch and produced 100+ videos. Video-attributed deals closed $600K, and their sales cycle dropped 40%, from 60 days to 35. For Okta's Auth0 channel we added 22K+ subscribers and 5.2M+ views, and PartnerHacker closed $900K+ in sponsorships.",
+      "source": "A2 Media, Reveal, Auth0 (Okta) and PartnerHacker case studies"
+    },
+    {
+      "type": "h3",
+      "text": "2. Venture Videos"
+    },
+    {
+      "type": "p",
+      "text": "[Venture Videos](https://www.venturevideos.com/) makes launch videos, explainers and customer films, and says it typically works with established B2B SaaS companies with complex products. It has offices in New York and the UK. If you have one major launch where the film has to be excellent, they're a strong fit."
+    },
+    {
+      "type": "h3",
+      "text": "3. Vidico"
+    },
+    {
+      "type": "p",
+      "text": "[Vidico](https://vidico.com/) calls itself the creative production team for growing tech brands, making explainers, motion graphics, ad creative and live action. It has offices in Melbourne, Sydney, New York, Dubai and Singapore. Good for teams that need lots of polished assets across formats and markets."
+    },
+    {
+      "type": "h3",
+      "text": "4. Umault"
+    },
+    {
+      "type": "p",
+      "text": "[Umault](https://umault.com/) is a boutique B2B video ad agency near Chicago that is openly against boring corporate video. If your problem is ads that look like everyone else's, and you want a creative swing, talk to them."
+    },
+    {
+      "type": "h3",
+      "text": "5. Sandwich"
+    },
+    {
+      "type": "p",
+      "text": "[Sandwich](https://sandwich.co/) is a Los Angeles studio that makes launch and explainer films for technology companies, and describes its work as commercials people like. For a big-budget brand moment, they're a better fit than we are."
+    },
+    {
+      "type": "h3",
+      "text": "6. Outmost Studio"
+    },
+    {
+      "type": "p",
+      "text": "[Outmost Studio](https://outmost.studio/) is a Norwich, UK animation studio making explainers, brand stories and motion graphics, with SaaS and fintech among its sectors. It publishes a starting range of £10K-£25K+ for a professional explainer. If you want pure animation, a specialist like this beats a live-action team."
+    },
+    {
+      "type": "h3",
+      "text": "7. Demo Duck"
+    },
+    {
+      "type": "p",
+      "text": "[Demo Duck](https://www.demoduck.com/) is a Chicago studio making animated explainers, live action, digital ads and testimonials. It suits teams that want one partner able to switch between animation and filmed work project by project."
+    },
+    {
+      "type": "h2",
+      "text": "How do you choose between them?"
+    },
+    {
+      "type": "p",
+      "text": "Start with what you're buying. If it's one launch film, shortlist Venture Videos, Sandwich or Vidico. If it's animation, go to Outmost Studio or Demo Duck. If it's a steady stream of videos that sales actually uses, you need a program, and that's what we built A2 for. My opinion: most SaaS teams over $10M ARR get more from 40 good videos a year than one great one, because buyers need to see you repeatedly before a call. Before you sign, compare it against hiring ([in-house vs. agency](/blog/in-house-vs-agency-video-editor)) and check [what video editing costs](/blog/how-much-does-saas-video-editing-cost)."
+    }
+  ],
+  "closing": {
+    "text": "If you need one film, hire a film studio. If you need video to keep showing up in your pipeline every week, our pricing is public, so you can see what that costs before you talk to anyone.",
+    "cta": {
+      "url": "/#Pricing",
+      "anchor": "See A2 Media pricing →"
+    }
+  }
+}
