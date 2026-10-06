@@ -1,0 +1,82 @@
+{
+  "question": "How do you build a video content strategy for B2B SaaS?",
+  "slug": "video-content-strategy",
+  "answer": "A video content strategy is a written plan for which videos you make, for which buyer, in what order, where they go and how you'll know they worked. For B2B SaaS, build it from six decisions: one pipeline goal, one buyer, a format ladder that starts with videos sales can send and climbs to a recurring series, a cadence you can sustain, distribution chosen before production, and three metrics reviewed every quarter.",
+  "publishedAt": "2026-10-06",
+  "updatedAt": "2026-10-06",
+  "author": "Ademola Adelakun",
+  "cluster": "strategy",
+  "clusterLabel": "B2B SaaS Video Strategy",
+  "intent": "MOFU",
+  "ctaMode": "sell",
+  "proprietaryInput": {
+    "type": "client-stat",
+    "source": "Reveal case study",
+    "detail": "TOFU-to-BOFU video strategy built from scratch: 100+ videos in 18 months, $600K closed-won attributed to video, sales cycle 60 to 35 days"
+  },
+  "outboundCitations": [
+    { "url": "https://www.gartner.com/en/sales/insights/b2b-buying-journey", "anchor": "Gartner's B2B buying research" },
+    { "url": "https://marketingscience.info/the-955-rule-is-the-new-6040-rule", "anchor": "the Ehrenberg-Bass 95:5 rule" },
+    { "url": "https://wistia.com/learn/marketing/video-marketing-statistics", "anchor": "Wistia's 2026 State of Video Report" }
+  ],
+  "internalLinks": [
+    { "url": "/blog/first-video-b2b-saas-company-should-make", "anchor": "what to make first" },
+    { "url": "/blog/how-many-videos-per-month-b2b-saas", "anchor": "how many videos to make each month" },
+    { "url": "/#Studies", "anchor": "the Reveal case study" }
+  ],
+  "faqSchema": true,
+  "body": [
+    { "type": "h2", "text": "What goes into a B2B video content strategy?" },
+    { "type": "p", "text": "Six decisions, written down on one page, in this order. Most teams skip straight to formats, which is why they end up with a folder of nice videos nobody sends. The goal and the buyer come first because they decide everything else. That matters more in B2B than anywhere, because [Gartner's B2B buying research](https://www.gartner.com/en/sales/insights/b2b-buying-journey) found buyers spend only 17% of their buying time with suppliers. Your videos are how you show up in the other 83%." },
+    {
+      "type": "table",
+      "headers": ["Decision", "The question it answers", "What a good answer looks like"],
+      "rows": [
+        ["Goal", "What should video change in the business?", "One pipeline outcome, like shorter sales cycles or more demo requests from target accounts"],
+        ["Audience", "Who exactly is watching?", "One buyer role, described by their problems, not their firmographics"],
+        ["Formats", "What do we make, and in what order?", "A ladder of 4-6 formats, starting with what sales can use this month"],
+        ["Cadence", "How often do we publish?", "A number you can hold for six months without heroics"],
+        ["Distribution", "Where does each video go?", "A channel picked for every video before the script is written"],
+        ["Measurement", "How do we know it worked?", "Three numbers, reviewed quarterly, that a CFO would accept"]
+      ]
+    },
+    { "type": "p", "text": "On audience, remember that most of the people who watch won't buy this quarter. [The Ehrenberg-Bass 95:5 rule](https://marketingscience.info/the-955-rule-is-the-new-6040-rule) estimates only 5% of B2B buyers are in market at any time. So the plan needs some videos that help close live deals and some that make you the obvious name when the other 95% come back." },
+    { "type": "h2", "text": "What should you make first, and then what?" },
+    { "type": "p", "text": "Start at the bottom of the funnel and climb. Videos that help live deals show results in weeks, which buys you the time and budget to build the slower, compounding top-of-funnel work. We've already written about [what to make first](/blog/first-video-b2b-saas-company-should-make), and our guide to [how many videos it takes to close a deal](/playbook/how-many-videos-to-close-a-deal) breaks the mix down by funnel stage. The ladder below is the order we'd build it in." },
+    {
+      "type": "ol",
+      "items": [
+        "Customer stories. Proof your reps can send into deals that are open right now.",
+        "Talking-head answers to the three to five questions sales hears on every call, recorded by the people buyers will meet.",
+        "An animated explainer for the part of your product a camera can't show. See [what an explainer video is](/blog/what-is-an-explainer-video) for which type fits.",
+        "Shorts and ads cut from the first three rungs, so distribution starts before you spend on new production.",
+        "An episodic or YouTube series built on the topics the first four rungs proved your buyers care about.",
+        "Product launch videos, slotted in when the roadmap calls for them rather than on a schedule."
+      ]
+    },
+    { "type": "p", "text": "The series comes fifth on purpose. It's the rung that compounds the most, but it's also the one that dies quietly if you launch it before you know which topics land." },
+    {
+      "type": "proprietary",
+      "label": "The ladder in practice at Reveal",
+      "body": "Reveal had no video, no content team and a 60-day sales cycle running on outbound alone. We built their video strategy from bottom to top of the funnel: outbound sales enablement, LinkedIn thought leadership, YouTube education and more, 100+ videos in 18 months. Reps sent videos to prospects, buyers arrived at calls already educated, and video-attributed deals closed $600K while the sales cycle dropped to 35 days. The full story is in [the Reveal case study](/#Studies).",
+      "source": "A2 Media, Reveal case study"
+    },
+    { "type": "h2", "text": "How often should you publish, and where?" },
+    { "type": "p", "text": "Publish at a pace you can hold for six months, and pick the channel before you write the script. Consistency beats volume, and we cover the right range in [how many videos to make each month](/blog/how-many-videos-per-month-b2b-saas). For channels, most B2B teams already lean on LinkedIn: in [Wistia's 2026 State of Video Report](https://wistia.com/learn/marketing/video-marketing-statistics), 8 in 10 teams said it's their primary place to share video. Give every video a home before it's made:" },
+    {
+      "type": "ul",
+      "items": [
+        { "label": "LinkedIn", "text": "reach and memory with the 95% who aren't buying yet. Short cuts and talking heads." },
+        { "label": "YouTube", "text": "search and AI answers for the questions buyers research alone. Series and explainers. More in [YouTube for B2B](/blog/youtube-for-b2b)." },
+        { "label": "Sales outreach", "text": "customer stories and question-answer videos sent by reps inside open deals." },
+        { "label": "Website", "text": "the animated explainer and two or three customer stories on the pages buyers check before a demo." }
+      ]
+    },
+    { "type": "h2", "text": "How do you know the strategy is working?" },
+    { "type": "p", "text": "You track whether video shows up in the deals that close, and you review the plan every quarter. Views tell you distribution is working, but they say little about whether the strategy is. Watch pipeline velocity on video-engaged deals, how often sales actually sends your videos, and how many closed deals mention them. Our guide to [measuring video ROI](/playbook/measure-video-roi) shows how to track each one without perfect attribution. Then use the quarterly review to cut the rung that isn't pulling its weight and put that budget into the one that is." }
+  ],
+  "closing": {
+    "text": "A strategy that lives in someone's head turns into random acts of video by month three. Write the six decisions down, start with what sales can send, and climb from there. If you'd rather have it built for you, the 2-Week Jumpstart does exactly this: we research your buyer, map six months of video, and hand you three videos to test.",
+    "cta": { "url": "/#Pricing", "anchor": "See the 2-Week Jumpstart →" }
+  }
+}

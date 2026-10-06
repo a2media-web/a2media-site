@@ -1,0 +1,83 @@
+{
+  "question": "What is an explainer video?",
+  "slug": "what-is-an-explainer-video",
+  "answer": "An explainer video is a short video, usually 60 to 120 seconds, that shows a buyer what a product does and why it matters to them. Most follow the same arc: the problem, how the product solves it, why you, and what to do next. For B2B SaaS, the main types are animated motion graphics, live-action, screencast demos, whiteboard, character animation and interactive. Pick the type based on what your buyer can't picture yet.",
+  "publishedAt": "2026-10-06",
+  "updatedAt": "2026-10-06",
+  "author": "Ademola Adelakun",
+  "cluster": "formats",
+  "clusterLabel": "Format Playbooks",
+  "intent": "TOFU",
+  "ctaMode": "helpful",
+  "proprietaryInput": {
+    "type": "call-quote",
+    "source": "Okta client testimonial (Greg Mares, Senior Media Specialist) and Auth0 (Okta) case study",
+    "detail": "Okta credits A2 with explainer videos, short-form and event assets alongside record YouTube numbers in month one; the wider Auth0 engagement reached 5.2M+ views and 22K+ new subscribers"
+  },
+  "outboundCitations": [
+    { "url": "https://www.vyond.com/blog/what-is-an-explainer-video/", "anchor": "Vyond's definition of an explainer video" },
+    { "url": "https://www.techsmith.com/blog/explainer-video/", "anchor": "TechSmith's explainer video guide" },
+    { "url": "https://www.wyzowl.com/video-marketing-statistics/", "anchor": "Wyzowl's video marketing statistics" }
+  ],
+  "internalLinks": [
+    { "url": "/#work", "anchor": "the formats we make" },
+    { "url": "/blog/first-video-b2b-saas-company-should-make", "anchor": "what to make first" },
+    { "url": "/blog/video-content-strategy", "anchor": "a video content strategy" }
+  ],
+  "faqSchema": true,
+  "body": [
+    { "type": "h2", "text": "What makes a video an explainer video?" },
+    { "type": "p", "text": "An explainer video has one job: make a buyer understand what you do in the time it takes to finish a coffee. That separates it from its neighbors. A brand film makes people feel something, a product demo shows a user how to click through the tool, and a customer story proves it worked for someone else. An explainer sits before all of those. [Vyond's definition](https://www.vyond.com/blog/what-is-an-explainer-video/) puts it at one to two minutes, and [TechSmith's explainer video guide](https://www.techsmith.com/blog/explainer-video/) breaks a one-minute version into a 10-second hook, a 40-second explanation and a closing call to action." },
+    { "type": "p", "text": "Buyers expect them. In [Wyzowl's video marketing statistics](https://www.wyzowl.com/video-marketing-statistics/), 96% of people say they've watched an explainer video to learn more about a product or service. So for a B2B SaaS team, the useful question is which kind to make, and for which moment in the deal." },
+    { "type": "h2", "text": "What are the main types of explainer videos?" },
+    { "type": "p", "text": "There are six types worth knowing by name, because they're the vocabulary an agency will use when you brief them. Each one is good at showing a different kind of thing, so the right choice depends on what your buyer needs to see." },
+    {
+      "type": "table",
+      "headers": ["Type", "What it looks like", "Best for in B2B SaaS", "Watch out for"],
+      "rows": [
+        ["Animated 2D / motion graphics", "Designed shapes, UI and type moving to a voiceover", "Abstract products: data flows, security, APIs, integrations", "Generic stock-style animation that looks like every competitor"],
+        ["Live-action", "Real people and places on camera", "When your team, founder or customers are the reason to trust you", "Shoot costs and scheduling; hard to update when the product changes"],
+        ["Screencast / product demo", "Screen recording of the product with narration", "Feature explainers, onboarding, sales follow-ups", "Turning into a click-by-click tour before the buyer cares"],
+        ["Whiteboard", "A hand drawing the idea as it's explained", "Teaching a new concept or category step by step", "It reads as dated if the visuals are generic"],
+        ["Character animation", "Illustrated characters acting out a scenario", "Showing the buyer's day before and after your product", "Cartoon tone can undercut an enterprise deal"],
+        ["Interactive", "Short clips the viewer chooses between", "Mid and late funnel buyers who want to self-educate", "It needs a clear question map before anything is filmed"]
+      ]
+    },
+    { "type": "p", "text": "Interactive explainers deserve their own note, because they work differently from the other five. We cover how to plan one in our [interactive video guide](/playbook/interactive-video)." },
+    { "type": "h2", "text": "Which type of explainer should a B2B SaaS team use?" },
+    { "type": "p", "text": "Use animated motion graphics for your main product explainer, and use screencasts for everything feature-level. That's my default for most $10M+ ARR SaaS companies, because the hardest thing to explain in B2B software is usually invisible: data moving between systems, a risk that didn't happen, a workflow that now runs itself. Animation lets you show what cameras can't capture. Live-action earns its place when the people are the product, like a services-heavy platform or a founder-led brand. The full animated vs. live-action trade-off deserves its own post, but the short rule is this: if buyers can't picture it, animate it, and if they need to trust a face, film it." },
+    { "type": "p", "text": "Then match the type to where the video will live:" },
+    {
+      "type": "ul",
+      "items": [
+        { "label": "Homepage and category pages", "text": "a 60 to 90-second animated explainer of the core problem and how you solve it." },
+        { "label": "Sales follow-up", "text": "a two-minute screencast that answers the question the prospect asked on the call." },
+        { "label": "Paid social", "text": "a 15 to 30-second cut of the animated version, captioned, with the hook in the first three seconds." },
+        { "label": "Onboarding", "text": "short screencasts per feature, kept plain so you can re-record them when the UI changes." }
+      ]
+    },
+    {
+      "type": "proprietary",
+      "label": "What an Okta client said",
+      "body": "Greg Mares, Senior Media Specialist at Okta: \"We saw record YouTube numbers in our first month with a2. They helped us create explainer videos, short-form content, and event assets.\" Explainers were one part of that mix, sitting next to the series and short-form work that took the Auth0 channel to 5.2M+ views and 22K+ new subscribers. Our animated explainer for Close is on the reel of [the formats we make](/#work).",
+      "source": "A2 Media, Okta testimonial and Auth0 (Okta) case study"
+    },
+    { "type": "h2", "text": "What should you have ready before you brief an explainer video?" },
+    { "type": "p", "text": "You need five answers on one page, and most teams show up with none of them. Get these right and any good agency can build the video. Leave them vague and you'll pay for revision rounds instead." },
+    {
+      "type": "ol",
+      "items": [
+        "The problem, in the words your buyer uses on sales calls, not the words on your positioning doc.",
+        "One buyer. Name the role and what their Monday looks like.",
+        "The one thing they should remember if they forget everything else.",
+        "Where it will live: homepage, sales email, paid social or onboarding. That decides the length and the type.",
+        "The next step you want them to take when it ends."
+      ]
+    },
+    { "type": "p", "text": "Run your script against our [video script checklist](/playbook/video-script-checklist) before production starts, and if you're picking a partner, [how to choose a video agency](/playbook/how-to-choose-a-video-agency) covers what to ask. Cost depends heavily on the type you choose, and we cover pricing separately. One more thing: an explainer is a single asset. It works best as one rung in [a video content strategy](/blog/video-content-strategy), and for most teams it's the second video, after a customer story. We explain why in [what to make first](/blog/first-video-b2b-saas-company-should-make)." }
+  ],
+  "closing": {
+    "text": "Most explainer videos fail before anyone opens an animation tool, because the script tries to say everything. Write for one buyer, one problem and one takeaway, then pick the type that shows it best. If you're drafting your first script, start with the checklist we use on every project.",
+    "cta": { "url": "/playbook/video-script-checklist", "anchor": "The video script checklist →" }
+  }
+}

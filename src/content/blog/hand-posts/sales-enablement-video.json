@@ -1,0 +1,165 @@
+{
+  "question": "How should B2B sales teams use sales enablement video?",
+  "slug": "sales-enablement-video",
+  "answer": "A sales enablement video is a short video a rep sends to one prospect to move one deal forward. Map them to the places deals stall: a personal intro before the first call, a forwardable recap after discovery, objection answers and a customer story during evaluation, and an onboarding walkthrough before signature. Reps send them one-to-one from their own inbox. Measure days-to-close for deals where prospects watched, not views.",
+  "publishedAt": "2026-10-06",
+  "updatedAt": "2026-10-06",
+  "author": "Ademola Adelakun",
+  "cluster": "distribution",
+  "clusterLabel": "Distribution & Repurposing",
+  "intent": "MOFU",
+  "ctaMode": "sell",
+  "proprietaryInput": {
+    "type": "client-stat",
+    "source": "Reveal case study",
+    "detail": "Reps sent videos directly to prospects; time to close dropped 40% (60 to 35 days) and video-attributed deals closed $600K over 18 months"
+  },
+  "outboundCitations": [
+    {
+      "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-sales-survey-finds-61-percent-of-b2b-buyers-prefer-a-rep-free-buying-experience",
+      "anchor": "Gartner: 61% of B2B buyers prefer a rep-free buying experience"
+    },
+    {
+      "url": "https://www.salesforce.com/news/stories/sales-research-2023/",
+      "anchor": "Salesforce State of Sales research"
+    },
+    {
+      "url": "https://vidyard.com/video-analytics",
+      "anchor": "Vidyard video analytics and view notifications"
+    }
+  ],
+  "internalLinks": [
+    {
+      "url": "/#Studies",
+      "anchor": "Reveal case study"
+    },
+    {
+      "url": "/blog/first-video-b2b-saas-company-should-make",
+      "anchor": "the first video a SaaS company should make"
+    },
+    {
+      "url": "/blog/youtube-for-b2b",
+      "anchor": "when YouTube makes sense for B2B"
+    }
+  ],
+  "faqSchema": true,
+  "body": [
+    {
+      "type": "h2",
+      "text": "Which sales enablement videos should you make for each deal stage?"
+    },
+    {
+      "type": "p",
+      "text": "Make one video for each place your deals usually stall, and start with five. Deals stall in predictable spots: the prospect ignores the first email, the champion can't explain you to their boss, an objection surfaces late, the CFO wants proof from a company like theirs, or the buying committee worries about rollout. Each of those gets its own video. Reps record some on a webcam in a minute, and marketing produces the rest once for the whole team."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Deal stage",
+        "Video",
+        "Length",
+        "Who's on camera"
+      ],
+      "rows": [
+        [
+          "First touch",
+          "Personal intro that names the prospect's company and one specific problem",
+          "30-60 seconds",
+          "The rep, on their webcam"
+        ],
+        [
+          "After discovery",
+          "Recap the champion can forward internally, with the problem in the prospect's own words",
+          "2-3 minutes",
+          "The rep or AE, with a screen share"
+        ],
+        [
+          "Evaluation",
+          "Answers to the 3-5 objections your reps hear on every call",
+          "60-90 seconds each",
+          "A sales or product leader, produced by marketing"
+        ],
+        [
+          "Business case",
+          "Customer story from a company that looks like the prospect",
+          "90 seconds to 2 minutes",
+          "The customer, produced by marketing"
+        ],
+        [
+          "Decision",
+          "What the first 90 days after signing look like",
+          "2-3 minutes",
+          "Your onboarding or CS lead, produced by marketing"
+        ]
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The forwardable recap is the one most teams skip, and it's the one I'd make first. [Gartner found 61% of B2B buyers prefer a rep-free buying experience](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-sales-survey-finds-61-percent-of-b2b-buyers-prefer-a-rep-free-buying-experience), so most of your deal gets argued in meetings you aren't invited to. Your champion has to pitch you to finance and security without you in the room, and a three-minute recap does that better than a deck they'll paraphrase. If you're starting from nothing, the objection videos come next, and we cover [which two or three to give sales first](/playbook/get-buy-in-for-video) in the buy-in playbook. The customer story slot is the same asset we recommend as [the first video a SaaS company should make](/blog/first-video-b2b-saas-company-should-make). For a longer, story-driven piece that sells on its own, script a [video sales letter](/playbook/video-sales-letter)."
+    },
+    {
+      "type": "h2",
+      "text": "How do reps actually send sales videos in a deal?"
+    },
+    {
+      "type": "p",
+      "text": "Reps send them one-to-one, from their own inbox or LinkedIn messages, with a single line explaining why this video matters to this person. The same customer story that gets ignored in a marketing nurture gets watched when the rep the prospect spoke to yesterday sends it with a note like: you asked how rollout works for a 400-person team, here's the two-minute answer. Here's the routine that keeps it from becoming one more chore."
+    },
+    {
+      "type": "ol",
+      "items": [
+        "Put the library where reps already work, in a pinned Slack channel or inside the CRM, sorted by deal stage rather than upload date.",
+        "Host videos on a tool with per-viewer tracking. [Vidyard's view notifications](https://vidyard.com/video-analytics), for example, tell the rep who watched and how much, so the follow-up lands while the prospect is still thinking about you.",
+        "Keep the email to two sentences and use a thumbnail with the rep's face, so it reads as a person reaching out rather than an ad.",
+        "Time the follow-up to the watch notification. A prospect who watched the whole onboarding video is telling you they're ready to talk about pricing and timelines.",
+        "Review the library with sales leadership once a month. If a video hasn't been sent in 30 days, rewrite it or retire it."
+      ]
+    },
+    {
+      "type": "proprietary",
+      "label": "From the Reveal engagement",
+      "body": "Reveal came to us with no video, no content marketing and no content team. Their reps were closing deals in about 60 days on outbound and word of mouth alone. We built a library of 100+ videos over 18 months, including outbound sales enablement, and reps started sending videos directly to prospects. Buyers began showing up to calls already educated. Time to close dropped 40%, from 60 days to 35, and video-attributed deals closed $600K in revenue.",
+      "source": "A2 Media, Reveal case study"
+    },
+    {
+      "type": "h2",
+      "text": "What should you measure to prove sales enablement video works?"
+    },
+    {
+      "type": "p",
+      "text": "Measure days-to-close for deals where the prospect watched a video against deals where they didn't. That's the number a CRO cares about, and it's the one that moved at Reveal. Views are close to meaningless here, because the audience for any single sales video is one buying committee. Track three supporting numbers alongside it, and when finance wants the full picture, [our guide to measuring video ROI](/playbook/measure-video-roi) shows how to put it on one page."
+    },
+    {
+      "type": "ul",
+      "items": [
+        {
+          "label": "Sales adoption",
+          "text": "how many videos reps send each week, from CRM activity or your video host. If reps aren't sending them, fix the content before you blame the reps."
+        },
+        {
+          "label": "Watch depth",
+          "text": "how much of each video prospects actually watch. A recap watched to the end by three people at one account means your champion forwarded it."
+        },
+        {
+          "label": "Deal mentions",
+          "text": "opportunities where the prospect brings up a video on a call, tagged by the rep. A short list of named deals persuades a CFO more than any dashboard."
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Who should pay for sales enablement video, sales or marketing?"
+    },
+    {
+      "type": "p",
+      "text": "Split it: marketing produces the videos, sales owns sending them, and at least part of the budget should come from sales or RevOps. When marketing funds everything, sales videos lose to brand campaigns in every planning cycle. When sales carries part of the cost, the videos get tied to the numbers sales is measured on, cycle time and win rate, and reps have a reason to use them. [Salesforce's State of Sales research](https://www.salesforce.com/news/stories/sales-research-2023/) found reps spend only 28% of their time selling, so a video that answers a question once, for every deal, is buying back selling time. Marketing should still own production, because the strongest sales videos get recut for LinkedIn and, later, a public series once [YouTube makes sense for your company](/blog/youtube-for-b2b)."
+    }
+  ],
+  "closing": {
+    "text": "Pull your last ten slipped or lost deals, find where each one stalled, and make one video for that moment. Then have reps send them one-to-one and compare days-to-close after a quarter. The Reveal study shows what that looked like end to end, from the first sales video to the $600K.",
+    "cta": {
+      "url": "/#Studies",
+      "anchor": "Read the Reveal case study →"
+    }
+  }
+}
