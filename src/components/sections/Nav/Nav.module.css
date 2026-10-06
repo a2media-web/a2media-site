@@ -42,6 +42,7 @@
 
 .menu a {
   font-size: 14.5px;
+  white-space: nowrap;
   font-weight: 500;
   color: var(--a2-night-core);
   transition: color var(--a2-dur-base) var(--a2-ease-standard);
@@ -50,6 +51,7 @@
 
 .cta {
   display: inline-flex;
+  white-space: nowrap;
   align-items: center;
   gap: 6px;
   padding: 12px 22px;
@@ -100,7 +102,8 @@
 }
 .overlay a:hover { color: var(--a2-electric-purple); }
 
-@media (max-width: 920px) {
+/* Below this the six links + CTA no longer fit on one line. */
+@media (max-width: 1080px) {
   .menu, .cta { display: none; }
   .burger { display: inline-flex; }
 }

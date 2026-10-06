@@ -12,6 +12,7 @@ const LINKS = [
   { href: "#Pricing", label: "Pricing" },
   { href: "#work", label: "Our Portfolio" },
   { href: "/playbook", label: "The B2B Video Playbook", external: false },
+  { href: "/blog", label: "Blog", external: false },
 ];
 
 export default function Nav() {
