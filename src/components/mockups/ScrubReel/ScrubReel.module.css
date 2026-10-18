@@ -395,17 +395,39 @@
   transition: opacity 500ms ease;
 }
 .moreWorkLink {
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.65);
-  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.02em;
   text-decoration: none;
   font-family: var(--a2-sans);
-  transition: color 200ms, text-decoration-color 200ms;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--a2-radius-pill);
+  transition: color 200ms, border-color 200ms;
+}
+.moreWorkPlay {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.92);
+  padding-left: 2px;
+  transition: border-color 200ms, color 200ms;
 }
 .moreWorkLink:hover {
   color: var(--a2-aqua-teal);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  border-color: var(--a2-aqua-teal);
+}
+.moreWorkLink:hover .moreWorkPlay {
+  color: var(--a2-aqua-teal);
+  border-color: var(--a2-aqua-teal);
 }
 @media (prefers-reduced-motion: reduce) {
   .moreWork { transition: none; }
