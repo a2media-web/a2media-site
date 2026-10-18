@@ -395,6 +395,7 @@
   transition: opacity 500ms ease;
 }
 .moreWorkLink {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -407,9 +408,34 @@
   font-family: var(--a2-sans);
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: var(--a2-radius-pill);
+  overflow: hidden; /* clip the sheen to the pill */
   transition: color 200ms, border-color 200ms;
 }
+/* Guarantee-section sheen sweep, 2s loop. One diagonal light pass per cycle. */
+.moreWorkSheen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 34%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  pointer-events: none;
+  z-index: 0;
+  animation: moreWorkSheen 2s ease-in-out infinite;
+}
+@keyframes moreWorkSheen {
+  0%, 52%   { transform: translateX(-130%) skewX(-18deg); opacity: 0; }
+  56%       { opacity: 1; }
+  78%       { transform: translateX(330%) skewX(-18deg); opacity: 1; }
+  79%, 100% { transform: translateX(330%) skewX(-18deg); opacity: 0; }
+}
+.moreWorkText {
+  position: relative;
+  z-index: 1;
+}
 .moreWorkPlay {
+  position: relative;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -431,4 +457,5 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .moreWork { transition: none; }
+  .moreWorkSheen { animation: none; opacity: 0; }
 }

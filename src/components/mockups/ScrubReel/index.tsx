@@ -262,12 +262,13 @@ export default function ScrubReel({
             className={styles.moreWorkLink}
             tabIndex={progress > 0.85 ? 0 : -1}
           >
+            <span className={styles.moreWorkSheen} aria-hidden />
             <span className={styles.moreWorkPlay} aria-hidden>
               <svg viewBox="0 0 12 12" width="9" height="9" fill="currentColor">
                 <path d="M2 1v10l9-5z" />
               </svg>
             </span>
-            See even more work
+            <span className={styles.moreWorkText}>See even more work</span>
           </a>
         </div>
       </div>
