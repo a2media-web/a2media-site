@@ -8,7 +8,7 @@ import { ALL_POSTS } from "@/content/blog/posts";
 import styles from "./BlogIndex.module.css";
 
 export const metadata: Metadata = {
-  title: "Blog — A2 Media",
+  title: "Blog",
   description:
     "Direct answers to the questions B2B SaaS marketing leaders ask about video strategy, pricing, hiring, formats, distribution, and measurement.",
 };
@@ -53,6 +53,7 @@ export default function BlogIndexPage() {
                   <span aria-hidden>·</span>
                   <time dateTime={post.publishedAt}>
                     {new Date(post.publishedAt).toLocaleDateString("en-US", {
+                      timeZone: "UTC",
                       year: "numeric",
                       month: "short",
                       day: "numeric",
