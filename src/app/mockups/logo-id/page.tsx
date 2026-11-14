@@ -11,11 +11,11 @@ import styles from "@/components/sections/LogoStrip/LogoStrip.module.css";
 const NEW_LOGOS: Logo[] = [
   { name: "Ceros", domain: "ceros.com", src: "/logos/ceros.webp", scale: 1.0 },
   { name: "SingleStore", domain: "singlestore.com", src: "/logos/singlestore.png", scale: 0.95 },
-  { name: "CreatorIQ", domain: "creatoriq.com", src: "/logos/creatoriq.png", scale: 1.0 },
+  { name: "CreatorIQ", domain: "creatoriq.com", src: "/logos/creatoriq.png", scale: 1.5 },
   { name: "ZEISS", domain: "zeiss.com", src: "/logos/zeiss.png", scale: 0.8 },
-  { name: "Stage 2 Capital", domain: "stage2.capital", src: "/logos/stage2capital.webp", scale: 1.05 },
+  { name: "Stage 2 Capital", domain: "stage2.capital", src: "/logos/stage2capital.webp", scale: 1.31 },
   { name: "Tavus", domain: "tavus.io", src: "/logos/tavus.png", scale: 0.8 },
-  { name: "nilus", domain: "nilus.io", src: "/logos/nilus.png", scale: 1.3 },
+  { name: "nilus", domain: "nilus.io", src: "/logos/nilus.png", scale: 2.28 },
 ];
 
 const ALL = [...LOGOS, ...NEW_LOGOS];
