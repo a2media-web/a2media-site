@@ -6,9 +6,9 @@ const TRUST_LOGOS = [
   { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/65e9e913df3011054a62442e_Okta_Logo_White_Medium.png", alt: "Okta" },
   { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/64cc83f851512b1224dc1573_SHOP_BIG.D-bc80c1f3.png", alt: "Shopify", className: "shopify" },
   { src: "https://cdn.prod.website-files.com/64bfb907363259218e796320/67f1d717fe36ab2b51b4d2a4_chili%20piper.png", alt: "Chili Piper", className: "chili" },
-  { src: "/logos/stage2capital.webp", alt: "Stage 2 Capital", className: "stage2 hideOnMobile" },
-  { src: "/logos/Slate.png", alt: "Slate", className: "slate" },
   { src: "/logos/zeiss.png", alt: "ZEISS", className: "zeiss hideOnMobile" },
+  { src: "/logos/Slate.png", alt: "Slate", className: "slate" },
+  { src: "/logos/stage2capital.webp", alt: "Stage 2 Capital", className: "stage2 hideOnMobile" },
 ];
 
 export default function Hero() {
