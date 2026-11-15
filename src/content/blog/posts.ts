@@ -32,6 +32,7 @@ export type BlogPostBlock =
   | { type: "h2"; text: string }
   | { type: "table"; headers: string[]; rows: string[][] }
   | { type: "ol"; items: string[] }
+  | { type: "ul"; items: { label: string; text: string }[] } // label renders bold, followed by a colon
   | {
       type: "proprietary";
       label: string; // e.g. "From a real Reveal engagement"
