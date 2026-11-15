@@ -259,6 +259,8 @@
   max-width: 175px;
   transform: scale(1.5);
   transform-origin: center;
+  /* scale() overflows the layout box and bleeds left into Slate; nudge right. */
+  margin-left: 26px;
 }
 
 @media (max-width: 700px) {

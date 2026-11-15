@@ -81,6 +81,15 @@ export const LOGOS: Logo[] = [
     scale: 1.45,
     desktopOnly: true,
   },
+  // Added Nov 2026 — scales approved off the /mockups/logo-id preview.
+  { name: "Ceros", domain: "ceros.com", src: "/logos/ceros.webp", scale: 1.0 },
+  { name: "SingleStore", domain: "singlestore.com", src: "/logos/singlestore.png", scale: 0.95 },
+  { name: "CreatorIQ", domain: "creatoriq.com", src: "/logos/creatoriq.png", scale: 1.5 },
+  { name: "ZEISS", domain: "zeiss.com", src: "/logos/zeiss.png", scale: 0.8 },
+  { name: "Stage 2 Capital", domain: "stage2.capital", src: "/logos/stage2capital.webp", scale: 1.31 },
+  { name: "Tavus", domain: "tavus.io", src: "/logos/tavus.png", scale: 0.8 },
+  // Square/stacked mark, so it needs a big boost to hold weight in a horizontal strip.
+  { name: "nilus", domain: "nilus.io", src: "/logos/nilus.png", scale: 2.28 },
 ];
 
 export function logoSrc(logo: Logo): string | null {
