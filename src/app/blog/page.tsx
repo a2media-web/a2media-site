@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Blog — A2 Media",
   description:
     "Direct answers to the questions B2B SaaS marketing leaders ask about video strategy, pricing, hiring, formats, distribution, and measurement.",
+  alternates: {
+    canonical: "/blog",
+  },
 };
 
 export default function BlogIndexPage() {

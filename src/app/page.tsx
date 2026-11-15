@@ -27,6 +27,13 @@ import {
   breadcrumbSchema,
 } from "@/components/seo/schemas";
 import { FAQ_PLAIN, SCRUB_VIDEOS } from "@/components/sections/FAQ/_shared";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   const pageSchemas = [
