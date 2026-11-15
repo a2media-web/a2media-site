@@ -257,7 +257,8 @@
 .trustRow img.stage2 {
   height: 20px;
   max-width: 175px;
-  transform: scale(1.5);
+  /* nudge down 2px to sit level with the rest of the row */
+  transform: translateY(2px) scale(1.5);
   transform-origin: center;
   /* scale() overflows the layout box and bleeds left into Slate; nudge right. */
   margin-left: 26px;
