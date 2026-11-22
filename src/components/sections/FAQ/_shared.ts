@@ -11,6 +11,11 @@ export type FaqEntry = { q: string; a: string };
 
 export const FAQ_PLAIN: FaqEntry[] = [
   {
+    q: "Do you use AI?",
+    a:
+      "Doesn't everybody? We use AI to speed up the parts of our process that used to eat hours, so more of our time goes into the fun, creative stuff. But AI is only as good as the person steering it. After creating hundreds of videos for brands, we know what good looks like, and what poo-poo AI slop looks like. Because we have taste.",
+  },
+  {
     q: "How much of our time will this actually take?",
     a:
       "4 to 6 hours per month. AKA minimal. We built our process so you can stay focused on running your business. After an initial strategy session and a few async check-ins, we handle almost everything: strategy, scripts, creative direction, editing, and publishing. Most clients spend less than 2 hours a week with us, and that time gets shorter as we learn your voice and brand.",

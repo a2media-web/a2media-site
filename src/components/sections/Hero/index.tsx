@@ -40,7 +40,8 @@ export default function Hero() {
         </h1>
 
         <p className={styles.sub}>
-          We study the shit out of your buyers. Then ideate, build, and edit the videos that convert them without them ever feeling sold to.
+          These days, anyone can make a video.<br className={styles.subBreak} />{" "}
+          We&apos;re the team that makes sure your videos convert.
         </p>
 
         <div className={styles.ctas}>

@@ -302,7 +302,10 @@
   .lineDesktop { display: none; }
   .lineMobile { display: flex; }
 
-  .sub { font-size: 16px; line-height: 1.55; max-width: 36ch; }
+  .sub { font-size: 16px; line-height: 1.55; max-width: 34ch; }
+  /* Drop the desktop sentence break on mobile and let text-wrap: balance
+     flow both sentences into even lines (avoids an orphaned "convert."). */
+  .subBreak { display: none; }
 
   .ctas {
     flex-direction: row;

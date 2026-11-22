@@ -6,6 +6,18 @@ import { useBookingModal } from "@/components/booking/BookingProvider";
 
 const QA: { q: string; a: React.ReactNode }[] = [
   {
+    q: "Do you use AI?",
+    a: (
+      <p>
+        Doesn&apos;t everybody? We use AI to speed up the parts of our process
+        that used to eat hours, so more of our time goes into the fun, creative
+        stuff. But AI is only as good as the person steering it. After creating
+        hundreds of videos for brands, we know what good looks like, and what
+        poo-poo AI slop looks like. Because we have taste.
+      </p>
+    ),
+  },
+  {
     q: "How much of our time will this actually take?",
     a: (
       <>
