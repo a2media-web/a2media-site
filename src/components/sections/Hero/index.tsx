@@ -41,7 +41,7 @@ export default function Hero() {
 
         <p className={styles.sub}>
           These days, anyone can make a video.<br className={styles.subBreak} />{" "}
-          We&apos;re the team that makes sure your videos convert.
+          We&apos;re the team that makes sure yours convert.
         </p>
 
         <div className={styles.ctas}>

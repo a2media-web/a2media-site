@@ -302,9 +302,16 @@
   .lineDesktop { display: none; }
   .lineMobile { display: flex; }
 
-  .sub { font-size: 16px; line-height: 1.55; max-width: 34ch; }
+  .sub {
+    font-size: 15px;
+    line-height: 1.5;
+    /* Wide enough to use the real screen width so both sentences land in
+       exactly two balanced lines (a narrow ch-cap was forcing a 3rd line
+       on real devices). */
+    max-width: 42ch;
+  }
   /* Drop the desktop sentence break on mobile and let text-wrap: balance
-     flow both sentences into even lines (avoids an orphaned "convert."). */
+     flow both sentences into two even lines. */
   .subBreak { display: none; }
 
   .ctas {
