@@ -303,16 +303,14 @@
   .lineMobile { display: flex; }
 
   .sub {
-    font-size: 15px;
+    /* Keep the sentence-per-line split on mobile: the forced break stays
+       visible, and the font scales down on narrow screens so the longer
+       second sentence holds a single line (two lines total). */
+    font-size: clamp(12.5px, 3.6vw, 15px);
     line-height: 1.5;
-    /* Wide enough to use the real screen width so both sentences land in
-       exactly two balanced lines (a narrow ch-cap was forcing a 3rd line
-       on real devices). */
-    max-width: 42ch;
+    max-width: none;
+    text-wrap: pretty;
   }
-  /* Drop the desktop sentence break on mobile and let text-wrap: balance
-     flow both sentences into two even lines. */
-  .subBreak { display: none; }
 
   .ctas {
     flex-direction: row;
