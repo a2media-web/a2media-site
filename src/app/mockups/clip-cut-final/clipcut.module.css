@@ -1,0 +1,83 @@
+/* Clip Cut — 3 final treatments (mockup). No eyebrow.
+   Dark-mode-first. Electric Purple leads (frames, arrow); Aqua Teal is the
+   payoff pop (the "35", the cut edge). No Electric Neon. */
+
+.page { background: var(--a2-night-deep); color: var(--a2-white); font-family: var(--a2-sans); }
+
+.intro { max-width: 820px; margin: 0 auto; padding: 68px 24px 8px; text-align: center; }
+.introKicker { font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--a2-electric-purple-soft); margin: 0 0 12px; }
+.introTitle { font-size: clamp(24px, 4vw, 36px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 12px; }
+.introBody { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.62); max-width: 620px; margin: 0 auto; }
+
+.sec {
+  position: relative;
+  background: var(--a2-night-core);
+  color: var(--a2-white);
+  padding: clamp(72px, 12vh, 128px) 24px clamp(80px, 13vh, 136px);
+  overflow: hidden;
+  isolation: isolate;
+}
+.sec::before {
+  content: "";
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: min(640px, 80%); height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(90, 51, 255, 0.5) 50%, transparent);
+}
+.sec::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(680px 320px at 50% -4%, rgba(90, 51, 255, 0.18) 0%, transparent 72%);
+}
+.inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; text-align: center; }
+.tag {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.9); padding: 7px 15px; border-radius: var(--a2-radius-pill);
+  background: rgba(13, 5, 54, 0.6); border: 1px solid rgba(143, 69, 238, 0.45); margin-bottom: 26px;
+}
+.tag b { color: var(--a2-aqua-teal); font-weight: 800; }
+.heading {
+  font-size: clamp(28px, 5vw, 48px); font-weight: 700; line-height: 1.08;
+  letter-spacing: -0.02em; margin: 0 0 40px; text-wrap: balance;
+}
+.heading .teal { color: var(--a2-aqua-teal); text-shadow: 0 0 36px rgba(40, 223, 232, 0.35); }
+
+/* big stat: 60 (gray) -> 35 (teal), same size */
+.stat {
+  display: flex; align-items: center; justify-content: center; gap: clamp(12px, 2.6vw, 26px);
+  font-size: clamp(50px, 10vw, 108px); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em;
+}
+.stat .from { color: rgba(255, 255, 255, 0.4); }
+.stat .from.strike { text-decoration: line-through; text-decoration-thickness: 0.06em; }
+.stat .arrow { color: var(--a2-electric-purple-soft); font-weight: 800; }
+.stat .to { color: var(--a2-aqua-teal); font-variant-numeric: tabular-nums; text-shadow: 0 0 46px rgba(40, 223, 232, 0.4); }
+.statUnit { font-size: clamp(15px, 2.2vw, 22px); font-weight: 600; color: var(--a2-white); margin-top: 14px; }
+
+/* filmstrip */
+.strip { position: relative; width: min(720px, 92vw); margin: 34px auto 0; display: flex; gap: 4px; height: 72px; }
+.frame {
+  flex: 1 1 0; border-radius: 5px;
+  background: linear-gradient(160deg, rgba(90,51,255,0.92), rgba(143,69,238,0.86));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14); position: relative;
+  will-change: transform, opacity;
+}
+.frame::after {
+  content: ""; position: absolute; top: 5px; left: 50%; transform: translateX(-50%);
+  width: 58%; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.22);
+}
+.cutMark { position: absolute; top: -12px; bottom: -12px; width: 2px; background: var(--a2-aqua-teal); box-shadow: 0 0 14px rgba(40,223,232,0.9); z-index: 5; }
+.cutMark span { position: absolute; top: -27px; left: 50%; transform: translateX(-50%); font-size: 16px; filter: drop-shadow(0 0 6px rgba(40,223,232,0.7)); }
+/* snap-closed end cap (mockup 2) */
+.endCap { position: absolute; top: -12px; bottom: -12px; width: 4px; border-radius: 3px; background: var(--a2-aqua-teal); box-shadow: 0 0 18px rgba(40,223,232,0.95); z-index: 6; }
+.endCap::before { content: "35d"; position: absolute; top: -26px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 800; letter-spacing: 0.02em; color: var(--a2-aqua-teal); }
+.ghostEnd { position: absolute; top: -8px; bottom: -8px; width: 2px; border-left: 2px dashed rgba(255,255,255,0.25); z-index: 4; }
+
+.sub {
+  font-family: var(--a2-display); font-style: italic; font-weight: 500;
+  font-size: clamp(17px, 2.4vw, 25px); color: rgba(255,255,255,0.78);
+  margin: 32px auto 0; max-width: 560px;
+}
+
+@media (max-width: 700px) {
+  .strip { height: 56px; gap: 3px; }
+  .heading { margin-bottom: 30px; }
+}
