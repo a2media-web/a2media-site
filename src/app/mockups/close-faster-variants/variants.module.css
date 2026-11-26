@@ -1,0 +1,191 @@
+/* Close-Faster — 4 Timeline Trim variations, shown below Pain (mockup).
+   Dark-mode-first. Electric Purple leads; Aqua Teal is the payoff pop.
+   No Electric Neon (never mix green + teal). */
+
+.sec {
+  position: relative;
+  background: var(--a2-night-core);
+  color: var(--a2-white);
+  padding: clamp(64px, 11vh, 120px) 24px clamp(72px, 12vh, 128px);
+  overflow: hidden;
+  isolation: isolate;
+}
+.sec::before { /* hairline divider between stacked variants */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(640px, 80%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(90, 51, 255, 0.5) 50%, transparent);
+}
+.sec::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(680px 320px at 50% -4%, rgba(90, 51, 255, 0.18) 0%, transparent 72%);
+}
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 7px 15px;
+  border-radius: var(--a2-radius-pill);
+  background: rgba(13, 5, 54, 0.6);
+  border: 1px solid rgba(143, 69, 238, 0.45);
+  margin-bottom: 24px;
+}
+.tag b { color: var(--a2-aqua-teal); font-weight: 800; }
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--a2-electric-purple-soft);
+  margin: 0 0 14px;
+}
+.heading {
+  font-size: clamp(26px, 4.6vw, 44px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0 0 34px;
+  text-wrap: balance;
+}
+.heading .teal { color: var(--a2-aqua-teal); text-shadow: 0 0 36px rgba(40, 223, 232, 0.35); }
+.sub {
+  font-family: var(--a2-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(16px, 2.3vw, 23px);
+  color: rgba(255, 255, 255, 0.76);
+  margin: 32px auto 0;
+  max-width: 560px;
+}
+.ticks { position: absolute; inset: 0; display: flex; justify-content: space-between; padding: 0 4px; pointer-events: none; }
+.ticks span { width: 1px; background: rgba(255, 255, 255, 0.08); }
+
+/* ========== V1 — Dual-lane filmstrip ========== */
+.lanes { width: min(720px, 90vw); margin: 0 auto; display: flex; flex-direction: column; gap: 26px; }
+.laneHead { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; font-size: 13px; font-weight: 600; }
+.laneHead .name { color: rgba(255, 255, 255, 0.82); letter-spacing: 0.02em; }
+.laneHead .dim { color: rgba(255, 255, 255, 0.45); }
+.laneHead .tealTxt { color: var(--a2-aqua-teal); }
+.lane {
+  position: relative;
+  height: 58px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+.laneClip {
+  position: absolute;
+  top: 8px; bottom: 8px; left: 8px;
+  border-radius: 8px;
+  display: flex; align-items: center; padding-left: 15px;
+  font-size: 12.5px; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden;
+}
+.laneClip.gray { background: repeating-linear-gradient(90deg, rgba(255,255,255,0.14) 0 2px, rgba(255,255,255,0.07) 2px 22px); color: rgba(255,255,255,0.7); }
+.laneClip.purple { background: linear-gradient(90deg, rgba(90,51,255,0.92), rgba(143,69,238,0.92)); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18); }
+.laneGhost {
+  position: absolute; top: 8px; bottom: 8px; right: 8px;
+  border-radius: 8px;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.055) 0 8px, rgba(255,255,255,0.02) 8px 16px);
+  border: 1px dashed rgba(255,255,255,0.18);
+}
+.playhead { position: absolute; top: -5px; bottom: -5px; width: 2px; background: var(--a2-aqua-teal); box-shadow: 0 0 14px rgba(40,223,232,0.9); }
+.playhead::before { content: ""; position: absolute; top: -5px; left: -5px; width: 12px; height: 12px; border-radius: 3px; background: var(--a2-aqua-teal); }
+.cutCallout {
+  margin: 20px auto 0;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 700; letter-spacing: 0.04em;
+  color: var(--a2-aqua-teal);
+  padding: 7px 14px; border-radius: var(--a2-radius-pill);
+  background: rgba(40, 223, 232, 0.08); border: 1px solid rgba(40, 223, 232, 0.35);
+}
+
+/* ========== V2 — Stage gantt ========== */
+.gantt { width: min(640px, 92vw); margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.gRow { display: grid; grid-template-columns: 112px 1fr; align-items: center; gap: 14px; }
+.gName { text-align: right; font-size: 13.5px; font-weight: 600; color: rgba(255,255,255,0.72); }
+.gTrack { position: relative; height: 26px; border-radius: 7px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); overflow: hidden; }
+.gBar {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  border-radius: 7px;
+  background: linear-gradient(90deg, var(--a2-electric-purple), var(--a2-electric-purple-soft));
+  display: flex; align-items: center; justify-content: flex-end; padding-right: 9px;
+  font-size: 11px; font-weight: 700; color: #fff;
+}
+.gTotal { margin-top: 24px; font-size: clamp(30px, 6vw, 52px); font-weight: 900; letter-spacing: -0.02em; }
+.gTotal .to { color: var(--a2-aqua-teal); font-variant-numeric: tabular-nums; text-shadow: 0 0 40px rgba(40,223,232,0.4); }
+.gTotal .u { font-size: 0.42em; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 0.04em; }
+.gWas { font-size: 14px; color: rgba(255,255,255,0.4); text-decoration: line-through; margin-top: 4px; }
+
+/* ========== V3 — Minimal scrubber ========== */
+/* extra top room so the "Day 35 · closed" flag (which rises above the
+   track) clears the headline */
+.scrub { width: min(680px, 92vw); margin: 92px auto 0; }
+.scrubTrack { position: relative; height: 10px; border-radius: 6px; background: rgba(255,255,255,0.08); }
+.scrubFill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 6px; background: linear-gradient(90deg, var(--a2-electric-purple), var(--a2-aqua-teal)); }
+.scrubGhost { position: absolute; top: -8px; bottom: -8px; width: 2px; background: rgba(255,255,255,0.3); }
+.scrubGhostLbl { position: absolute; top: -34px; transform: translateX(-50%); font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.45); white-space: nowrap; }
+.scrubMarker { position: absolute; top: -9px; bottom: -9px; width: 3px; border-radius: 3px; background: var(--a2-aqua-teal); box-shadow: 0 0 16px rgba(40,223,232,0.9); }
+.scrubFlag {
+  position: absolute; top: -52px; transform: translateX(-50%);
+  background: var(--a2-aqua-teal); color: #04121a;
+  font-size: 12px; font-weight: 800; letter-spacing: 0.02em;
+  padding: 6px 11px; border-radius: 8px; white-space: nowrap;
+}
+.scrubFlag::after { content: ""; position: absolute; left: 50%; bottom: -5px; transform: translateX(-50%) rotate(45deg); width: 10px; height: 10px; background: var(--a2-aqua-teal); }
+.axis { position: relative; height: 26px; margin-top: 12px; }
+.axisTick { position: absolute; transform: translateX(-50%); font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.4); }
+.axisTick::before { content: ""; position: absolute; top: -14px; left: 50%; width: 1px; height: 7px; background: rgba(255,255,255,0.18); }
+
+/* ========== V4 — Clip cut ========== */
+.strip { position: relative; width: min(720px, 92vw); margin: 0 auto; display: flex; gap: 4px; height: 70px; }
+.frame {
+  flex: 1 1 0;
+  border-radius: 5px;
+  background: linear-gradient(160deg, rgba(90,51,255,0.9), rgba(143,69,238,0.85));
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14);
+  position: relative;
+}
+.frame::after { /* sprocket hole hint */
+  content: ""; position: absolute; top: 5px; left: 50%; transform: translateX(-50%);
+  width: 60%; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.22);
+}
+.frame.cut { background: linear-gradient(160deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06)); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14); }
+.cutMark {
+  position: absolute; top: -10px; bottom: -10px; width: 2px;
+  background: var(--a2-aqua-teal); box-shadow: 0 0 14px rgba(40,223,232,0.9); z-index: 5;
+}
+.cutMark span {
+  position: absolute; top: -26px; left: 50%; transform: translateX(-50%);
+  font-size: 15px; filter: drop-shadow(0 0 6px rgba(40,223,232,0.7));
+}
+.stripTotal { margin-top: 26px; font-size: clamp(30px, 6vw, 52px); font-weight: 900; letter-spacing: -0.02em; }
+.stripTotal .to { color: var(--a2-aqua-teal); font-variant-numeric: tabular-nums; text-shadow: 0 0 40px rgba(40,223,232,0.4); }
+.stripTotal .u { font-size: 0.42em; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 0.04em; }
+
+@media (max-width: 700px) {
+  .gRow { grid-template-columns: 86px 1fr; gap: 10px; }
+  .gName { font-size: 12px; }
+  .strip { height: 56px; }
+  .lane { height: 50px; }
+}
