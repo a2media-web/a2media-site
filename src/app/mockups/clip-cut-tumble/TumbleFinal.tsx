@@ -120,7 +120,7 @@ export default function TumbleFinal() {
           ))}
         </div>
 
-        <p className={styles.sub}>because their prospects trusted them before the first call.</p>
+        <p className={styles.sub}>because their prospects trust them before the first call.</p>
       </div>
     </section>
   );
