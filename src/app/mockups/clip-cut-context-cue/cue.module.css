@@ -1,0 +1,40 @@
+/* Scroll-Cue Connector — the seam between Close-Faster and Guide.
+   Vertical purple->teal line, a glowing teal dot that falls, a bouncing
+   chevron. Negative margins pull it into the two sections' padding so it
+   fills the dead gap instead of adding to it. */
+
+.cue {
+  position: relative;
+  height: 190px;
+  margin: -46px 0; /* sit inside the existing section padding */
+  background: var(--a2-night-core);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.line {
+  position: absolute; top: 40px; bottom: 66px; left: 50%; transform: translateX(-50%);
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(90,51,255,0.85) 28%, rgba(40,223,232,0.85) 100%);
+}
+.dot {
+  position: absolute; left: 50%; top: 40px; width: 9px; height: 9px; border-radius: 50%;
+  margin-left: -4.5px; background: var(--a2-aqua-teal); box-shadow: 0 0 14px rgba(40,223,232,0.95);
+  animation: cueFall 2.4s cubic-bezier(0.6, 0, 0.4, 1) infinite;
+}
+@keyframes cueFall {
+  0% { top: 40px; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { top: 118px; opacity: 0; }
+}
+.chevron {
+  position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+  color: var(--a2-aqua-teal); animation: cueBounce 2.4s ease-in-out infinite;
+}
+@keyframes cueBounce { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 6px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .dot, .chevron { animation: none; }
+}
