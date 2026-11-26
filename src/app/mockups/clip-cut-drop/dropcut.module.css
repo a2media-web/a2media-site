@@ -60,12 +60,14 @@
   width: 58%; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.22);
 }
 
-/* sub sits above the falling frames and is pure white */
+/* sub sits above the falling frames and is pure white — small, upright,
+   sans; sized to hold one line on desktop */
 .sub {
   position: relative; z-index: 4;
-  font-family: var(--a2-display); font-style: italic; font-weight: 500;
-  font-size: clamp(17px, 2.4vw, 25px); color: var(--a2-white);
-  margin: 40px auto 0; max-width: 580px;
+  font-family: var(--a2-sans); font-style: normal; font-weight: 500;
+  font-size: clamp(13px, 1.6vw, 16px); color: var(--a2-white);
+  letter-spacing: 0.01em;
+  margin: 36px auto 0; max-width: none;
 }
 
 @media (max-width: 700px) {
