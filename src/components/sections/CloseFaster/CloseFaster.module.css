@@ -32,13 +32,20 @@
 /* the real Guide, pulled up to sit behind the panel and crossfade in */
 .guideLift { position: relative; z-index: 1; margin-top: -76vh; }
 
-@media (max-width: 700px) {
+/* mobile: a normal section (no scroll-jack) that fades its content in and
+   plays the count on scroll-into-view; Guide flows normally after it */
+.mobileSec { position: relative; background: var(--a2-night-core); min-height: 86vh; display: flex; align-items: center; justify-content: center; padding: 76px 24px; }
+.mobileSec .inner { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,0.61,0.36,1); }
+.mobileSec.shown .inner { opacity: 1; transform: none; }
+
+@media (max-width: 767px) {
   .heading { margin-bottom: 30px; }
   .cal { width: 182px; height: 166px; }
   .calNum { font-size: 72px; margin-top: 18px; }
   .sub { margin-top: 30px; }
-  .guideLift { margin-top: -72vh; }
+  .guideLift { margin-top: 0; }
 }
+@media (prefers-reduced-motion: reduce) { .mobileSec .inner { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
   .landed .calNum, .landed .calBase, .landed::after { animation: none; }
   .landed .calNum { color: var(--a2-aqua-teal); text-shadow: 0 0 40px rgba(40,223,232,0.7); }
