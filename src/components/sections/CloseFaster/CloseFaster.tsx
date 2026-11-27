@@ -1,11 +1,13 @@
 "use client";
 
-/* CloseFaster — Calendar Tear-Off, sticky (same technique as StickyCurtain so
-   it stays smooth on mobile): a 100vh sticky inside a tall section, the count
-   60 -> 35 is driven by scroll progress (A2 glow on landing), it holds, then
-   fades out via opacity. No vh-transforms, no negative margins. */
+/* CloseFaster — Calendar Tear-Off as a sticky "modal" overlay. A 100vh sticky
+   calendar pins and the scroll drives the count 60 -> 35 (A2 glow on landing);
+   it then FADES OUT via opacity to reveal the real Guide sitting directly
+   behind it -> no gap, no division. StickyCurtain technique (no vh-transforms,
+   no sticky-on-section-height) so it stays smooth and pins on mobile. */
 
 import { useEffect, useRef, useState } from "react";
+import Guide from "@/components/sections/Guide";
 import styles from "./CloseFaster.module.css";
 
 const clamp01 = (n: number) => Math.max(0, Math.min(1, n));
@@ -39,39 +41,42 @@ export default function CloseFaster() {
   }, []);
 
   const a = range(p, 0.14, 0.52);      // scroll drives the count
-  // No fade-to-blank: the calendar stays visible and drifts up as the sticky
-  // releases, scrolling straight into Guide (same bg -> no blank gap). Matches
-  // the "With a Video Engine" section.
-  const exitUp = range(p, 0.82, 1);
-  const ty = -exitUp * 70;             // px (mobile-safe)
-  const opacity = 1 - exitUp * 0.35;   // a touch of fade on the way up, never to blank
-  const landed = a >= 0.985 && exitUp < 0.3;
+  const fade = range(p, 0.72, 0.97);   // calendar fades out to reveal Guide behind
+  const opacity = 1 - fade;
+  const landed = a >= 0.985 && fade < 0.2;
 
   return (
     <section className={styles.section} id="close-faster">
-      <div className={styles.morphArea} ref={ref}>
-        <div className={styles.sticky}>
-          <div className={styles.stage} style={{ opacity, transform: `translateY(${ty}px)` }}>
-          <h2 className={styles.heading}>
-            Our clients close deals <span className={styles.teal}>40% faster.</span>
-          </h2>
-          <div className={`${styles.cal} ${landed ? styles.landed : ""}`} aria-label={`${days(a)} days to close, down from 60`}>
-            <div className={styles.calBase}>
-              <div className={styles.calNum}>{days(a)}</div>
-              <div className={styles.calUnit}>days to close</div>
+      {/* calendar sticky overlay — pins and fades out (z-index 2, on top) */}
+      <div className={styles.pinZone} ref={ref}>
+        <div className={styles.calSticky} style={{ opacity }}>
+          <div className={styles.stage}>
+            <h2 className={styles.heading}>
+              Our clients close deals <span className={styles.teal}>40% faster.</span>
+            </h2>
+            <div className={`${styles.cal} ${landed ? styles.landed : ""}`} aria-label={`${days(a)} days to close, down from 60`}>
+              <div className={styles.calBase}>
+                <div className={styles.calNum}>{days(a)}</div>
+                <div className={styles.calUnit}>days to close</div>
+              </div>
+              <div className={styles.calHdr}>Average sales cycle</div>
+              {Array.from({ length: 6 }).map((_, i) => {
+                const t = i / 6;
+                const fly = range(a, t, t + 0.34);
+                return (
+                  <div key={i} className={styles.calPage} aria-hidden style={{ transform: `perspective(640px) rotateX(${-fly * 118}deg) translateY(${-fly * 48}px)`, opacity: 1 - fly, zIndex: 10 - i }} />
+                );
+              })}
             </div>
-            <div className={styles.calHdr}>Average sales cycle</div>
-            {Array.from({ length: 6 }).map((_, i) => {
-              const t = i / 6;
-              const fly = range(a, t, t + 0.34);
-              return (
-                <div key={i} className={styles.calPage} aria-hidden style={{ transform: `perspective(640px) rotateX(${-fly * 118}deg) translateY(${-fly * 48}px)`, opacity: 1 - fly, zIndex: 10 - i }} />
-              );
-            })}
-          </div>
-          <p className={styles.sub}>because their prospects trust them before the first call.</p>
+            <p className={styles.sub}>because their prospects trust them before the first call.</p>
           </div>
         </div>
+      </div>
+
+      {/* Guide sits behind the overlay (z-index 1), pulled up so it's already
+          centered in view as the calendar fades -> revealed, no gap */}
+      <div className={styles.guideReveal}>
+        <Guide />
       </div>
     </section>
   );

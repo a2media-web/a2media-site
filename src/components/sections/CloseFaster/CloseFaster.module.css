@@ -3,12 +3,20 @@
    mobile). Dark-mode-first. */
 
 .section { position: relative; background: var(--a2-night-core); }
-.morphArea { position: relative; height: 165vh; }
-.sticky {
+
+/* Guide sits behind the calendar overlay, pulled up so it's revealed (not
+   gapped) as the overlay fades. z-index 1 keeps it under the sticky. */
+.guideReveal { position: relative; z-index: 1; margin-top: -78vh; }
+
+/* scroll room for the pin; the sticky overlay lives inside (StickyCurtain
+   nesting — height on the div, NOT the section, so it pins on mobile). */
+.pinZone { position: relative; z-index: 2; height: 172vh; }
+.calSticky {
   position: sticky; top: 0; height: 100vh; overflow: hidden;
   background: var(--a2-night-core);
   display: flex; align-items: center; justify-content: center;
   padding: 40px 24px;
+  will-change: opacity;
 }
 .stage { position: relative; width: 100%; max-width: 900px; margin: 0 auto; text-align: center; will-change: opacity; }
 
