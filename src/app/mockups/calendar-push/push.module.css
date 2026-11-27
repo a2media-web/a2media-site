@@ -1,0 +1,35 @@
+/* Calendar Tear-Off in the sticky push. Clip-cut holds centered, then lifts
+   up while the next section rises up to take its place. */
+
+.wrap { position: relative; z-index: 2; height: 150vh; }
+.sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: var(--a2-night-core); }
+
+.guideBehind { position: absolute; inset: 0; z-index: 1; overflow: hidden; display: flex; flex-direction: column; justify-content: center; will-change: transform; }
+.guidePreview { width: 100%; max-width: 760px; margin: 0 auto; text-align: center; padding: 0 24px; }
+.guideH { font-size: clamp(26px, 4.6vw, 46px); font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; margin: 0 auto; max-width: 680px; color: var(--a2-white); }
+.guideH em { font-family: var(--a2-display); font-style: italic; font-weight: 500; color: var(--a2-aqua-teal); }
+.guideSub { font-size: 15px; color: rgba(255,255,255,0.6); margin: 18px auto 0; max-width: 520px; }
+.guideQ { font-family: var(--a2-display); font-style: italic; font-weight: 500; font-size: clamp(16px,2.2vw,22px); color: var(--a2-white); margin: 12px auto 0; }
+
+.panel { position: absolute; inset: 0; z-index: 2; background: var(--a2-night-core); display: flex; align-items: center; justify-content: center; will-change: transform; }
+.inner { position: relative; width: 100%; max-width: 900px; margin: 0 auto; text-align: center; padding: 0 24px; will-change: transform, opacity; }
+.heading { font-size: clamp(27px, 5vw, 50px); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 40px; }
+.heading .teal { color: var(--a2-aqua-teal); text-shadow: 0 0 36px rgba(40,223,232,0.35); }
+.sub { font-size: clamp(14px,1.6vw,17px); font-weight: 500; color: var(--a2-white); letter-spacing: 0.01em; margin: 40px auto 0; text-wrap: balance; }
+.sub .pur { color: var(--a2-aqua-teal); }
+@media (min-width: 701px) { .sub { white-space: nowrap; } }
+
+/* calendar */
+.cal { position: relative; width: 208px; height: 188px; margin: 0 auto; }
+.calBase { position: absolute; inset: 0; border-radius: 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 26px 64px rgba(7,2,31,0.5); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.calHdr { position: absolute; top: 0; left: 0; right: 0; height: 38px; border-radius: 18px 18px 0 0; background: linear-gradient(90deg, var(--a2-electric-purple), var(--a2-electric-purple-soft)); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; z-index: 4; }
+.calNum { font-size: 86px; font-weight: 900; line-height: 1; margin-top: 22px; font-variant-numeric: tabular-nums; color: var(--a2-white); }
+.calUnit { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 6px; }
+.calPage { position: absolute; left: 0; right: 0; top: 38px; bottom: 0; border-radius: 0 0 18px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); transform-origin: top center; will-change: transform, opacity; backface-visibility: hidden; }
+
+@media (max-width: 700px) {
+  .heading { margin-bottom: 30px; }
+  .cal { width: 182px; height: 166px; }
+  .calNum { font-size: 72px; margin-top: 18px; }
+  .sub { margin-top: 30px; }
+}
