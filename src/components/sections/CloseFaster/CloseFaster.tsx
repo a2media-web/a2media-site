@@ -45,6 +45,8 @@ function Inner({ a, landed, style }: { a: number; landed: boolean; style?: React
 function useProgress(ref: RefObject<HTMLDivElement | null>) {
   const [p, setP] = useState(0);
   useEffect(() => {
+    // desktop version is display:none on mobile — don't run its scroll math there
+    if (window.matchMedia("(max-width: 767px)").matches) { return; }
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setP(0.5); return; }
     let raf = 0;
     const update = () => {
@@ -112,20 +114,19 @@ function Mobile() {
   }, []);
   const landed = a >= 0.985;
   return (
-    <section className={`${styles.mobileSec} ${shown ? styles.shown : ""}`} ref={ref} id="close-faster">
+    <section className={`${styles.mobileSec} ${shown ? styles.shown : ""}`} ref={ref}>
       <Inner a={a} landed={landed} />
     </section>
   );
 }
 
+/* Render both; CSS media queries decide which is visible (no JS swap, so the
+   desktop sticky can never leak onto mobile). */
 export default function CloseFaster() {
-  const [mode, setMode] = useState<"d" | "m">("d");
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 767px)");
-    const upd = () => setMode(mq.matches ? "m" : "d");
-    upd();
-    mq.addEventListener("change", upd);
-    return () => mq.removeEventListener("change", upd);
-  }, []);
-  return mode === "m" ? <Mobile /> : <Desktop />;
+  return (
+    <>
+      <Desktop />
+      <Mobile />
+    </>
+  );
 }

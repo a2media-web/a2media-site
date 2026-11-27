@@ -38,7 +38,10 @@
 .mobileSec .inner { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,0.61,0.36,1); }
 .mobileSec.shown .inner { opacity: 1; transform: none; }
 
+/* desktop sticky only >=768; mobile normal section only <=767 */
+@media (min-width: 768px) { .mobileSec { display: none; } }
 @media (max-width: 767px) {
+  .wrap { display: none; }
   .heading { margin-bottom: 30px; }
   .cal { width: 182px; height: 166px; }
   .calNum { font-size: 72px; margin-top: 18px; }
