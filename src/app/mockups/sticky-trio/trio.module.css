@@ -1,0 +1,56 @@
+/* Three close-faster concepts as sticky scroll sections (scroll drives the
+   animation), framed by Pain tail + Guide head. Dark-mode-first. */
+
+.page { background: var(--a2-night-core); color: var(--a2-white); font-family: var(--a2-sans); }
+.intro { max-width: 820px; margin: 0 auto; padding: 56px 24px 8px; text-align: center; }
+.introKicker { font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--a2-electric-purple-soft); margin: 0 0 12px; }
+.introBody { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.62); max-width: 640px; margin: 0 auto; }
+
+.painTail { background: var(--a2-clear-gray); color: var(--a2-night-core); min-height: 30vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 40px 24px; }
+.painTail h3 { font-size: clamp(22px, 3.6vw, 34px); font-weight: 800; letter-spacing: -0.02em; margin: 0; }
+.painTail h3 span { display: block; }
+.guideHead { background: var(--a2-night-core); min-height: 42vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 48px 24px; }
+.guideHead h3 { font-size: clamp(22px, 3.6vw, 34px); font-weight: 700; letter-spacing: -0.02em; margin: 0 auto; max-width: 620px; }
+.guideHead h3 em { font-family: var(--a2-display); font-style: italic; font-weight: 500; color: var(--a2-aqua-teal); }
+.guideHead p { font-size: 14px; color: rgba(255,255,255,0.6); margin: 14px auto 0; }
+
+.wrap { position: relative; height: 200vh; }
+.sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: var(--a2-night-core); display: flex; align-items: center; justify-content: center; }
+.tag { position: absolute; z-index: 30; top: 22px; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.9); padding: 6px 13px; border-radius: 999px; background: rgba(7,2,31,0.7); border: 1px solid rgba(143,69,238,0.45); }
+.tag b { color: var(--a2-aqua-teal); font-weight: 800; }
+.inner { position: relative; z-index: 1; width: 100%; max-width: 900px; margin: 0 auto; text-align: center; padding: 0 24px; will-change: transform, opacity; }
+
+/* ---- Kinetic ---- */
+.kEyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--a2-electric-purple-soft); margin: 0 0 18px; }
+.kBig { font-size: clamp(100px, 22vw, 280px); font-weight: 900; line-height: 0.84; letter-spacing: -0.05em; color: var(--a2-aqua-teal); text-shadow: 0 0 90px rgba(40,223,232,0.4); font-variant-numeric: tabular-nums; }
+.kMid { font-size: clamp(26px, 4.6vw, 48px); font-weight: 700; letter-spacing: -0.02em; margin-top: 6px; }
+.kSub { font-size: 15px; color: rgba(255,255,255,0.65); margin: 26px auto 0; max-width: 480px; }
+.kSub b { color: var(--a2-white); font-weight: 600; }
+
+/* ---- Race ---- */
+.raceHead { text-align: center; font-size: clamp(22px, 3.4vw, 36px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 44px; }
+.raceHead .teal { color: var(--a2-aqua-teal); }
+.raceRow { margin-bottom: 26px; }
+.raceLabel { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px; font-size: 14px; font-weight: 600; }
+.raceLabel .muted { color: rgba(255,255,255,0.5); } .raceLabel .win { color: var(--a2-aqua-teal); }
+.raceTrack { position: relative; height: 34px; border-radius: 9px; background: rgba(255,255,255,0.06); overflow: hidden; }
+.raceFill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 9px; }
+.raceFill.slow { background: repeating-linear-gradient(90deg, rgba(255,255,255,0.16) 0 10px, rgba(255,255,255,0.08) 10px 20px); }
+.raceFill.fast { background: linear-gradient(90deg, var(--a2-electric-purple), var(--a2-aqua-teal)); }
+.raceFlag { position: absolute; top: 50%; transform: translateY(-50%); font-size: 12px; font-weight: 800; color: var(--a2-aqua-teal); white-space: nowrap; }
+.raceAxis { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 8px; }
+
+/* ---- Original clip-cut ---- */
+.heading { font-size: clamp(28px, 5vw, 50px); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 34px; }
+.heading .teal { color: var(--a2-aqua-teal); text-shadow: 0 0 36px rgba(40,223,232,0.35); }
+.stat { display: flex; align-items: center; justify-content: center; gap: clamp(12px,2.6vw,26px); font-size: clamp(48px,9vw,104px); font-weight: 900; letter-spacing: -0.03em; line-height: 0.95; }
+.stat .from { color: rgba(255,255,255,0.4); } .stat .arrow { color: var(--a2-electric-purple-soft); }
+.stat .to { color: var(--a2-aqua-teal); font-variant-numeric: tabular-nums; text-shadow: 0 0 46px rgba(40,223,232,0.4); }
+.statUnit { font-size: clamp(15px,2.2vw,22px); font-weight: 600; margin-top: 14px; }
+.strip { width: min(620px, 86%); margin: 32px auto 0; display: flex; gap: 4px; height: 58px; }
+.frame { flex: 1 1 0; border-radius: 5px; position: relative; background: linear-gradient(160deg, rgba(90,51,255,0.92), rgba(143,69,238,0.86)); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14); }
+.frame::after { content: ""; position: absolute; top: 5px; left: 50%; transform: translateX(-50%); width: 58%; height: 3px; border-radius: 2px; background: rgba(255,255,255,0.22); }
+.sub { font-size: clamp(13px,1.5vw,16px); font-weight: 500; color: var(--a2-white); margin: 30px auto 0; text-wrap: balance; }
+@media (min-width: 701px) { .sub { white-space: nowrap; } }
+
+@media (max-width: 700px) { .strip { height: 48px; } }
