@@ -13,8 +13,8 @@ import {
   ALL_POSTS,
   getPostBySlug,
   getSisterPosts,
-  type BlogPostBlock,
 } from "@/content/blog/posts";
+import { ContentBlock, readMinutes } from "@/components/content/ContentBlock";
 import styles from "./BlogPost.module.css";
 
 export async function generateStaticParams() {
@@ -89,7 +89,7 @@ export default async function BlogPostPage(
         <article className={styles.body}>
           <div className={styles.bodyInner}>
             {post.body.map((block, i) => (
-              <Block key={i} block={block} />
+              <ContentBlock key={i} block={block} />
             ))}
           </div>
         </article>
@@ -168,66 +168,3 @@ function CtaLink({
   );
 }
 
-function Block({ block }: { block: BlogPostBlock }) {
-  switch (block.type) {
-    case "h2":
-      return <h2 className={styles.h2}>{block.text}</h2>;
-    case "p":
-      return <p className={styles.p}>{block.text}</p>;
-    case "ol":
-      return (
-        <ol className={styles.ol}>
-          {block.items.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ol>
-      );
-    case "table":
-      return (
-        <div className={styles.tableWrap}>
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                {block.headers.map((h, i) => (
-                  <th key={i}>{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {block.rows.map((row, ri) => (
-                <tr key={ri}>
-                  {row.map((cell, ci) => (
-                    <td key={ci}>{cell}</td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      );
-    case "proprietary":
-      return (
-        <aside className={styles.proprietary}>
-          <p className={styles.proprietaryLabel}>{block.label}</p>
-          <p className={styles.proprietaryBody}>{block.body}</p>
-          <p className={styles.proprietarySource}>{block.source}</p>
-        </aside>
-      );
-  }
-}
-
-function readMinutes(post: { body: BlogPostBlock[]; answer: string }): number {
-  const wordCount = post.body
-    .flatMap((b) => {
-      if (b.type === "p" || b.type === "h2") return [b.text];
-      if (b.type === "ol") return b.items;
-      if (b.type === "table")
-        return [...b.headers, ...b.rows.flatMap((r) => r)];
-      if (b.type === "proprietary") return [b.label, b.body, b.source];
-      return [];
-    })
-    .join(" ")
-    .split(/\s+/).length;
-  const total = wordCount + post.answer.split(/\s+/).length;
-  return Math.max(1, Math.round(total / 220));
-}
