@@ -1,0 +1,57 @@
+/* Five alternative visuals for "60 -> 35 days", to drop into the sticky push.
+   Dark-mode-first. Electric Purple leads, Aqua Teal is the payoff. */
+
+.page { background: var(--a2-night-deep); color: var(--a2-white); font-family: var(--a2-sans); }
+.intro { max-width: 820px; margin: 0 auto; padding: 60px 24px 10px; text-align: center; }
+.introKicker { font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--a2-electric-purple-soft); margin: 0 0 12px; }
+.introBody { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.62); max-width: 640px; margin: 0 auto; }
+
+.sec { position: relative; min-height: 92vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 70px 24px; background: var(--a2-night-core); border-top: 1px solid rgba(255,255,255,0.06); }
+.tag { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.9); padding: 6px 13px; border-radius: 999px; background: rgba(7,2,31,0.7); border: 1px solid rgba(143,69,238,0.45); }
+.tag b { color: var(--a2-aqua-teal); font-weight: 800; }
+.head { font-size: clamp(22px, 3.4vw, 34px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 40px; }
+.head .teal { color: var(--a2-aqua-teal); }
+.stage { position: relative; display: flex; flex-direction: column; align-items: center; }
+.readout { margin-top: 30px; font-weight: 900; letter-spacing: -0.02em; font-size: clamp(30px, 5vw, 52px); line-height: 1; }
+.readout .to { color: var(--a2-aqua-teal); font-variant-numeric: tabular-nums; text-shadow: 0 0 40px rgba(40,223,232,0.4); }
+.readout .u { font-size: 0.42em; font-weight: 700; color: rgba(255,255,255,0.72); }
+.was { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 8px; }
+.was s { color: rgba(255,255,255,0.4); }
+.note { font-family: var(--a2-display); font-style: italic; font-weight: 500; font-size: clamp(15px,2.1vw,21px); color: rgba(255,255,255,0.72); margin: 26px auto 0; max-width: 520px; }
+
+/* 1 · Hourglass */
+.glass { filter: drop-shadow(0 0 30px rgba(90,51,255,0.3)); }
+
+/* 2 · Clock */
+.clock { filter: drop-shadow(0 0 34px rgba(40,223,232,0.25)); }
+
+/* 3 · Calendar */
+.cal { position: relative; width: 190px; height: 170px; }
+.calBase { position: absolute; inset: 0; border-radius: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 24px 60px rgba(7,2,31,0.5); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.calHdr { position: absolute; top: 0; left: 0; right: 0; height: 34px; border-radius: 16px 16px 0 0; background: linear-gradient(90deg, var(--a2-electric-purple), var(--a2-electric-purple-soft)); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; }
+.calNum { font-size: 76px; font-weight: 900; line-height: 1; margin-top: 18px; font-variant-numeric: tabular-nums; }
+.calUnit { font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-top: 4px; }
+.calPage { position: absolute; left: 0; right: 0; top: 34px; bottom: 0; border-radius: 0 0 16px 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); transform-origin: top center; will-change: transform, opacity; }
+
+/* 4 · Measuring tape */
+.tape { width: min(640px, 88vw); }
+.tapeTrack { position: relative; height: 56px; border-radius: 10px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); overflow: hidden; }
+.tapeFill { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, var(--a2-electric-purple), var(--a2-aqua-teal)); border-radius: 10px 4px 4px 10px; }
+.tapeFill::after { content: ""; position: absolute; inset: 0; background-image: repeating-linear-gradient(90deg, rgba(0,0,0,0.18) 0 1px, transparent 1px 10px); }
+.tapeSaved { position: absolute; top: 0; bottom: 0; right: 0; background: repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 8px, rgba(255,255,255,0.02) 8px 16px); }
+.tapeTab { position: absolute; top: -6px; bottom: -6px; width: 5px; border-radius: 3px; background: #fff; box-shadow: 0 0 14px rgba(255,255,255,0.6); }
+.tapeTab span { position: absolute; top: -26px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: 800; color: var(--a2-aqua-teal); white-space: nowrap; }
+.tapeAxis { display: flex; justify-content: space-between; margin-top: 10px; font-size: 11px; color: rgba(255,255,255,0.4); }
+
+/* 5 · Express line */
+.metro { width: min(680px, 90vw); }
+.metroLine { position: relative; height: 90px; }
+.rail { position: absolute; left: 2%; right: 2%; height: 4px; border-radius: 4px; top: 30px; background: rgba(255,255,255,0.12); }
+.railExpress { position: absolute; left: 2%; height: 4px; border-radius: 4px; top: 30px; background: linear-gradient(90deg, var(--a2-electric-purple), var(--a2-aqua-teal)); box-shadow: 0 0 14px rgba(40,223,232,0.5); }
+.station { position: absolute; top: 24px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: var(--a2-night-core); border: 3px solid rgba(255,255,255,0.3); }
+.station.done { border-color: var(--a2-aqua-teal); background: var(--a2-aqua-teal); }
+.stationLbl { position: absolute; top: 52px; transform: translateX(-50%); font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.55); white-space: nowrap; }
+.train { position: absolute; top: 18px; margin-left: -16px; width: 32px; height: 28px; border-radius: 7px; background: linear-gradient(160deg, #fff, #cfe9ff); box-shadow: 0 0 18px rgba(40,223,232,0.7); display: grid; place-items: center; font-size: 13px; }
+.ghostTrain { position: absolute; top: 20px; margin-left: -12px; width: 24px; height: 22px; border-radius: 6px; background: rgba(255,255,255,0.18); }
+
+@media (max-width: 700px) { .head { margin-bottom: 30px; } }
