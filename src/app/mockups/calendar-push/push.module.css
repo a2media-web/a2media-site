@@ -27,6 +27,30 @@
 .calUnit { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 6px; }
 .calPage { position: absolute; left: 0; right: 0; top: 38px; bottom: 0; border-radius: 0 0 18px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); transform-origin: top center; will-change: transform, opacity; backface-visibility: hidden; }
 
+/* landed on 35 — A2 pulsing glow on the number + card */
+.landed .calNum { color: var(--a2-aqua-teal); animation: numPulse 1.7s ease-in-out infinite; }
+.landed .calBase { animation: cardPulse 1.7s ease-in-out infinite; }
+.landed::after {
+  content: ""; position: absolute; inset: -20px; border-radius: 30px; z-index: -1; pointer-events: none;
+  animation: haloPulse 1.7s ease-in-out infinite;
+}
+@keyframes numPulse {
+  0%, 100% { text-shadow: 0 0 20px rgba(40,223,232,0.55), 0 0 44px rgba(90,51,255,0.3); }
+  50% { text-shadow: 0 0 40px rgba(40,223,232,0.95), 0 0 80px rgba(90,51,255,0.6); }
+}
+@keyframes cardPulse {
+  0%, 100% { box-shadow: 0 26px 64px rgba(7,2,31,0.5), 0 0 0 1px rgba(143,69,238,0.45), 0 0 34px rgba(90,51,255,0.35); }
+  50% { box-shadow: 0 26px 64px rgba(7,2,31,0.5), 0 0 0 1.5px rgba(40,223,232,0.75), 0 0 64px rgba(40,223,232,0.5); }
+}
+@keyframes haloPulse {
+  0%, 100% { box-shadow: 0 0 60px 6px rgba(90,51,255,0.22); opacity: 0.7; }
+  50% { box-shadow: 0 0 110px 18px rgba(40,223,232,0.3); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landed .calNum, .landed .calBase, .landed::after { animation: none; }
+  .landed .calNum { color: var(--a2-aqua-teal); text-shadow: 0 0 40px rgba(40,223,232,0.7); }
+}
+
 @media (max-width: 700px) {
   .heading { margin-bottom: 30px; }
   .cal { width: 182px; height: 166px; }

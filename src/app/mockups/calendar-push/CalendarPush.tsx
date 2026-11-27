@@ -51,6 +51,7 @@ export default function CalendarPush() {
   const guideY = lerp(40, 0, exit);
   const guideOpacity = win(p, 0.74, 0.98); // next section fades in as it rises
   const innerOpacity = Math.min(1, enterIn * 1.3) * (1 - fade);
+  const landed = a >= 0.985 && fade < 0.4; // pulse once it lands on 35 (until it fades out)
 
   return (
     <div className={styles.wrap} ref={ref}>
@@ -73,7 +74,7 @@ export default function CalendarPush() {
               Our clients close deals <span className={styles.teal}>40% faster.</span>
             </h2>
 
-            <div className={styles.cal} aria-label={`${days(a)} days to close, down from 60`}>
+            <div className={`${styles.cal} ${landed ? styles.landed : ""}`} aria-label={`${days(a)} days to close, down from 60`}>
               <div className={styles.calBase}>
                 <div className={styles.calNum} style={{ fontVariantNumeric: "tabular-nums" }}>{days(a)}</div>
                 <div className={styles.calUnit}>days to close</div>
