@@ -6,12 +6,13 @@
 
 /* Guide sits behind the calendar overlay, pulled up so it's revealed (not
    gapped) as the overlay fades. z-index 1 keeps it under the sticky. */
-.guideReveal { position: relative; z-index: 1; margin-top: -79vh; }
+.guideReveal { position: relative; z-index: 1; margin-top: -82vh; }
 
 /* scroll room for the pin; the sticky overlay lives inside (StickyCurtain
    nesting — height on the div, NOT the section, so it pins on mobile).
-   Travel = height - 100vh = 120vh (was 72vh): ~40% slower scroll-through. */
-.pinZone { position: relative; z-index: 2; height: 220vh; }
+   Travel = height - 100vh = 200vh (was 72vh): ~64% slower scroll-through,
+   matching StickyCurtain's length. */
+.pinZone { position: relative; z-index: 2; height: 300vh; }
 .calSticky {
   position: sticky; top: 0; height: 100vh; overflow: hidden;
   background: var(--a2-night-core);
