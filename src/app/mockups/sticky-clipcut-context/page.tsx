@@ -6,6 +6,7 @@ import Hero from "@/components/sections/Hero";
 import Pain from "@/components/sections/Pain";
 import Guide from "@/components/sections/Guide";
 import StickyClipCut from "./StickyClipCut";
+import styles from "./stickyClip.module.css";
 
 export default function Page() {
   return (
@@ -13,7 +14,9 @@ export default function Page() {
       <Hero />
       <Pain />
       <StickyClipCut />
-      <Guide />
+      <div className={styles.guideOverlap}>
+        <Guide />
+      </div>
     </main>
   );
 }

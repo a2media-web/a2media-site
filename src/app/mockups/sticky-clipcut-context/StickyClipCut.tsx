@@ -50,11 +50,14 @@ function tumbleStyle(j: number, t: number): React.CSSProperties {
 export default function StickyClipCut() {
   const ref = useRef<HTMLDivElement>(null);
   const p = useProgress(ref);
-  const enter = win(p, 0.04, 0.24);
-  const exit = win(p, 0.78, 0.96);
-  const a = win(p, 0.26, 0.74); // scroll drives the cut
+  const enter = win(p, 0.04, 0.22);
+  const a = win(p, 0.24, 0.56); // scroll drives the cut; finishes before the handoff
+  // As the next section scrolls up to cover from the bottom, the clip-cut
+  // lifts off the top and fades, so they cross cleanly (no lingering headline,
+  // no empty gap).
+  const exit = win(p, 0.56, 0.78);
   const opacity = Math.min(1, enter * 1.3) * (1 - exit);
-  const ty = lerp(30, 0, enter) - lerp(0, 90, exit);
+  const ty = lerp(30, 0, enter) - lerp(0, 150, exit);
 
   return (
     <div className={styles.wrap} ref={ref}>

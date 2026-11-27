@@ -1,12 +1,15 @@
 /* Clip-Cut as a sticky scroll section (scroll drives the cut). Full-bleed,
    pins while in view, enter/hold/exit. Dark-mode-first. */
 
-.wrap { position: relative; height: 190vh; }
+.wrap { position: relative; z-index: 1; height: 160vh; }
 .sticky {
   position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden;
   background: var(--a2-night-core);
   display: flex; align-items: center; justify-content: center;
 }
+/* the next section pulls up and covers the clip-cut as you scroll out,
+   so there's no empty gap — you scroll straight into it */
+.guideOverlap { position: relative; z-index: 2; margin-top: -72vh; background: var(--a2-night-core); }
 .inner { position: relative; z-index: 1; width: 100%; max-width: 900px; margin: 0 auto; text-align: center; padding: 0 24px; will-change: transform, opacity; }
 
 .heading { font-size: clamp(28px, 5vw, 50px); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 34px; }
