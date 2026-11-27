@@ -38,16 +38,20 @@ export default function CloseFaster() {
     };
   }, []);
 
-  const a = range(p, 0.12, 0.44);   // scroll drives the count
-  const fade = range(p, 0.8, 0.98); // then it fades out
-  const opacity = 1 - fade;
-  const landed = a >= 0.985 && fade < 0.25;
+  const a = range(p, 0.14, 0.52);      // scroll drives the count
+  // No fade-to-blank: the calendar stays visible and drifts up as the sticky
+  // releases, scrolling straight into Guide (same bg -> no blank gap). Matches
+  // the "With a Video Engine" section.
+  const exitUp = range(p, 0.82, 1);
+  const ty = -exitUp * 70;             // px (mobile-safe)
+  const opacity = 1 - exitUp * 0.35;   // a touch of fade on the way up, never to blank
+  const landed = a >= 0.985 && exitUp < 0.3;
 
   return (
     <section className={styles.section} id="close-faster">
       <div className={styles.morphArea} ref={ref}>
         <div className={styles.sticky}>
-          <div className={styles.stage} style={{ opacity }}>
+          <div className={styles.stage} style={{ opacity, transform: `translateY(${ty}px)` }}>
           <h2 className={styles.heading}>
             Our clients close deals <span className={styles.teal}>40% faster.</span>
           </h2>
