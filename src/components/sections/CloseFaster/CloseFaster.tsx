@@ -44,9 +44,10 @@ export default function CloseFaster() {
   const landed = a >= 0.985 && fade < 0.25;
 
   return (
-    <section className={styles.section} ref={ref} id="close-faster">
-      <div className={styles.sticky}>
-        <div className={styles.stage} style={{ opacity }}>
+    <section className={styles.section} id="close-faster">
+      <div className={styles.morphArea} ref={ref}>
+        <div className={styles.sticky}>
+          <div className={styles.stage} style={{ opacity }}>
           <h2 className={styles.heading}>
             Our clients close deals <span className={styles.teal}>40% faster.</span>
           </h2>
@@ -65,6 +66,7 @@ export default function CloseFaster() {
             })}
           </div>
           <p className={styles.sub}>because their prospects trust them before the first call.</p>
+          </div>
         </div>
       </div>
     </section>

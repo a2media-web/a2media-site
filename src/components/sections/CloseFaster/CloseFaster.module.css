@@ -2,7 +2,8 @@
    sticky, opacity-driven, no vh-transforms / negative margins -> smooth on
    mobile). Dark-mode-first. */
 
-.section { position: relative; height: 220vh; background: var(--a2-night-core); }
+.section { position: relative; background: var(--a2-night-core); }
+.morphArea { position: relative; height: 220vh; }
 .sticky {
   position: sticky; top: 0; height: 100vh; overflow: hidden;
   background: var(--a2-night-core);
