@@ -1,13 +1,16 @@
-/* CloseFaster — Calendar Tear-Off in a sticky push between Pain and Guide.
-   The calendar pins centered, the scroll drives the count 60 -> 35 (A2 glow
-   on landing), holds, then fades + lifts while the real Guide (pulled up
-   behind, .guideLift) crossfades in. Dark-mode-first. */
+/* CloseFaster — Calendar Tear-Off sticky (StickyCurtain technique: 100vh
+   sticky, opacity-driven, no vh-transforms / negative margins -> smooth on
+   mobile). Dark-mode-first. */
 
-.wrap { position: relative; z-index: 2; height: 200vh; }
-.sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: transparent; }
-.panel { position: absolute; inset: 0; z-index: 2; background: var(--a2-night-core); display: flex; align-items: center; justify-content: center; will-change: transform, opacity; }
+.section { position: relative; height: 220vh; background: var(--a2-night-core); }
+.sticky {
+  position: sticky; top: 0; height: 100vh; overflow: hidden;
+  background: var(--a2-night-core);
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 24px;
+}
+.stage { position: relative; width: 100%; max-width: 900px; margin: 0 auto; text-align: center; will-change: opacity; }
 
-.inner { position: relative; width: 100%; max-width: 900px; margin: 0 auto; text-align: center; padding: 0 24px; }
 .heading { font-size: clamp(27px, 5vw, 50px); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 40px; color: var(--a2-white); }
 .heading .teal { color: var(--a2-aqua-teal); text-shadow: 0 0 36px rgba(40,223,232,0.35); }
 .sub { font-size: clamp(14px,1.6vw,17px); font-weight: 500; color: var(--a2-white); letter-spacing: 0.01em; margin: 40px auto 0; text-wrap: balance; }
@@ -29,26 +32,12 @@
 @keyframes cardPulse { 0%,100% { box-shadow: 0 26px 64px rgba(7,2,31,0.5), 0 0 0 1px rgba(143,69,238,0.45), 0 0 34px rgba(90,51,255,0.35); } 50% { box-shadow: 0 26px 64px rgba(7,2,31,0.5), 0 0 0 1.5px rgba(40,223,232,0.75), 0 0 64px rgba(40,223,232,0.5); } }
 @keyframes haloPulse { 0%,100% { box-shadow: 0 0 60px 6px rgba(90,51,255,0.22); opacity: 0.7; } 50% { box-shadow: 0 0 110px 18px rgba(40,223,232,0.3); opacity: 1; } }
 
-/* the real Guide, pulled up to sit behind the panel and crossfade in */
-.guideLift { position: relative; z-index: 1; margin-top: -76vh; }
-
-/* mobile: a normal section (no scroll-jack) that fades its content in and
-   plays the count on scroll-into-view; Guide flows normally after it */
-.mobileSec { position: relative; background: var(--a2-night-core); min-height: 86vh; display: flex; align-items: center; justify-content: center; padding: 76px 24px; }
-.mobileSec .inner { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22,0.61,0.36,1); }
-.mobileSec.shown .inner { opacity: 1; transform: none; }
-
-/* desktop sticky only >=768; mobile normal section only <=767 */
-@media (min-width: 768px) { .mobileSec { display: none; } }
 @media (max-width: 767px) {
-  .wrap { display: none; }
   .heading { margin-bottom: 30px; }
   .cal { width: 182px; height: 166px; }
   .calNum { font-size: 72px; margin-top: 18px; }
   .sub { margin-top: 30px; }
-  .guideLift { margin-top: 0; }
 }
-@media (prefers-reduced-motion: reduce) { .mobileSec .inner { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) {
   .landed .calNum, .landed .calBase, .landed::after { animation: none; }
   .landed .calNum { color: var(--a2-aqua-teal); text-shadow: 0 0 40px rgba(40,223,232,0.7); }
