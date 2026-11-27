@@ -1,0 +1,45 @@
+/* CloseFaster — Calendar Tear-Off in a sticky push between Pain and Guide.
+   The calendar pins centered, the scroll drives the count 60 -> 35 (A2 glow
+   on landing), holds, then fades + lifts while the real Guide (pulled up
+   behind, .guideLift) crossfades in. Dark-mode-first. */
+
+.wrap { position: relative; z-index: 2; height: 200vh; }
+.sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: transparent; }
+.panel { position: absolute; inset: 0; z-index: 2; background: var(--a2-night-core); display: flex; align-items: center; justify-content: center; will-change: transform, opacity; }
+
+.inner { position: relative; width: 100%; max-width: 900px; margin: 0 auto; text-align: center; padding: 0 24px; }
+.heading { font-size: clamp(27px, 5vw, 50px); font-weight: 700; line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 40px; color: var(--a2-white); }
+.heading .teal { color: var(--a2-aqua-teal); text-shadow: 0 0 36px rgba(40,223,232,0.35); }
+.sub { font-size: clamp(14px,1.6vw,17px); font-weight: 500; color: var(--a2-white); letter-spacing: 0.01em; margin: 40px auto 0; text-wrap: balance; }
+@media (min-width: 701px) { .sub { white-space: nowrap; } }
+
+/* calendar */
+.cal { position: relative; width: 208px; height: 188px; margin: 0 auto; }
+.calBase { position: absolute; inset: 0; border-radius: 18px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 26px 64px rgba(7,2,31,0.5); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.calHdr { position: absolute; top: 0; left: 0; right: 0; height: 38px; border-radius: 18px 18px 0 0; background: linear-gradient(90deg, var(--a2-electric-purple), var(--a2-electric-purple-soft)); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; z-index: 4; color: var(--a2-white); }
+.calNum { font-size: 86px; font-weight: 900; line-height: 1; margin-top: 22px; font-variant-numeric: tabular-nums; color: var(--a2-white); }
+.calUnit { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 6px; }
+.calPage { position: absolute; left: 0; right: 0; top: 38px; bottom: 0; border-radius: 0 0 18px 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); transform-origin: top center; will-change: transform, opacity; backface-visibility: hidden; }
+
+/* landed on 35 — A2 pulsing glow */
+.landed .calNum { color: var(--a2-aqua-teal); animation: numPulse 1.7s ease-in-out infinite; }
+.landed .calBase { animation: cardPulse 1.7s ease-in-out infinite; }
+.landed::after { content: ""; position: absolute; inset: -20px; border-radius: 30px; z-index: -1; pointer-events: none; animation: haloPulse 1.7s ease-in-out infinite; }
+@keyframes numPulse { 0%,100% { text-shadow: 0 0 20px rgba(40,223,232,0.55), 0 0 44px rgba(90,51,255,0.3); } 50% { text-shadow: 0 0 40px rgba(40,223,232,0.95), 0 0 80px rgba(90,51,255,0.6); } }
+@keyframes cardPulse { 0%,100% { box-shadow: 0 26px 64px rgba(7,2,31,0.5), 0 0 0 1px rgba(143,69,238,0.45), 0 0 34px rgba(90,51,255,0.35); } 50% { box-shadow: 0 26px 64px rgba(7,2,31,0.5), 0 0 0 1.5px rgba(40,223,232,0.75), 0 0 64px rgba(40,223,232,0.5); } }
+@keyframes haloPulse { 0%,100% { box-shadow: 0 0 60px 6px rgba(90,51,255,0.22); opacity: 0.7; } 50% { box-shadow: 0 0 110px 18px rgba(40,223,232,0.3); opacity: 1; } }
+
+/* the real Guide, pulled up to sit behind the panel and crossfade in */
+.guideLift { position: relative; z-index: 1; margin-top: -76vh; }
+
+@media (max-width: 700px) {
+  .heading { margin-bottom: 30px; }
+  .cal { width: 182px; height: 166px; }
+  .calNum { font-size: 72px; margin-top: 18px; }
+  .sub { margin-top: 30px; }
+  .guideLift { margin-top: -72vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .landed .calNum, .landed .calBase, .landed::after { animation: none; }
+  .landed .calNum { color: var(--a2-aqua-teal); text-shadow: 0 0 40px rgba(40,223,232,0.7); }
+}

@@ -1,6 +1,8 @@
 import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
 import Pain from "@/components/sections/Pain";
+import CloseFaster from "@/components/sections/CloseFaster/CloseFaster";
+import cfStyles from "@/components/sections/CloseFaster/CloseFaster.module.css";
 import Guide from "@/components/sections/Guide";
 import LogoStrip from "@/components/sections/LogoStrip";
 import Receipts from "@/components/sections/Receipts";
@@ -41,7 +43,10 @@ export default function Home() {
       <Nav />
       <Hero />
       <Pain />
-      <Guide />
+      <CloseFaster />
+      <div className={cfStyles.guideLift}>
+        <Guide />
+      </div>
       <LogoStrip />
       <Receipts />
       <ScrubReel />
