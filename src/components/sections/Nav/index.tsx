@@ -7,10 +7,10 @@ import styles from "./Nav.module.css";
 const A2_LOGO = "/a2-logo-mark.png";
 
 const LINKS = [
-  { href: "#our-process", label: "Our Process" },
-  { href: "#Studies", label: "Case Studies" },
-  { href: "#Pricing", label: "Pricing" },
-  { href: "#work", label: "Our Portfolio" },
+  { href: "/#our-process", label: "Our Process" },
+  { href: "/#Studies", label: "Case Studies" },
+  { href: "/#Pricing", label: "Pricing" },
+  { href: "/#work", label: "Our Portfolio" },
   { href: "https://9yqatx.short.gy/vpYuEX", label: "The B2B Video Playbook", external: true },
 ];
 
@@ -46,9 +46,9 @@ export default function Nav() {
           )}
         </nav>
 
-        <a href="#Pricing" className={styles.cta}>
+        <Link href="/#Pricing" className={styles.cta}>
           See if We&apos;re a Fit <span aria-hidden>→</span>
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -79,9 +79,9 @@ export default function Nav() {
             {l.label}
           </a>
         ))}
-        <a href="#Pricing" onClick={() => setOpen(false)}>
+        <Link href="/#Pricing" onClick={() => setOpen(false)}>
           See if We&apos;re a Fit →
-        </a>
+        </Link>
       </nav>
     </header>
   );
