@@ -1,7 +1,7 @@
 /* Calendar Tear-Off in the sticky push. Clip-cut holds centered, then lifts
    up while the next section rises up to take its place. */
 
-.wrap { position: relative; z-index: 2; height: 150vh; }
+.wrap { position: relative; z-index: 2; height: 200vh; }
 .sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: var(--a2-night-core); }
 
 .guideBehind { position: absolute; inset: 0; z-index: 1; overflow: hidden; display: flex; flex-direction: column; justify-content: center; will-change: transform; }

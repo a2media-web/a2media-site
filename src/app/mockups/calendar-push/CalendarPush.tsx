@@ -10,7 +10,7 @@ import styles from "./push.module.css";
 const clamp01 = (n: number) => Math.max(0, Math.min(1, n));
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
 const win = (p: number, a: number, b: number) => clamp01((p - a) / (b - a));
-const easeOut = (p: number) => 1 - Math.pow(1 - p, 3);
+const easeInOut = (p: number) => (p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2);
 
 function useProgress(ref: RefObject<HTMLDivElement | null>) {
   const [p, setP] = useState(0);
@@ -39,19 +39,24 @@ export default function CalendarPush() {
   const ref = useRef<HTMLDivElement>(null);
   const p = useProgress(ref);
 
-  const enterIn = win(p, 0.04, 0.2);
-  const a = win(p, 0.22, 0.56); // scroll drives the tear-off / count
-  const exit = easeOut(win(p, 0.6, 1)); // the push
+  const enterIn = win(p, 0.04, 0.16);
+  const a = win(p, 0.18, 0.44); // count finishes early...
+  // ...then it HOLDS on 35 from ~0.44 to ~0.7 (a couple of scrolls) before
+  // the push, which eases gently and fades, so it's not abrupt.
+  const exit = easeInOut(win(p, 0.7, 1));
+  const fade = win(p, 0.7, 0.9); // calendar fades out as it lifts
 
   const contentTy = lerp(26, 0, enterIn);
   const panelY = -exit * 100;
-  const guideY = lerp(42, 0, exit);
+  const guideY = lerp(40, 0, exit);
+  const guideOpacity = win(p, 0.74, 0.98); // next section fades in as it rises
+  const innerOpacity = Math.min(1, enterIn * 1.3) * (1 - fade);
 
   return (
     <div className={styles.wrap} ref={ref}>
       <div className={styles.sticky}>
         {/* next section rises up */}
-        <div className={styles.guideBehind} style={{ transform: `translateY(${guideY}vh)` }} aria-hidden={exit < 0.5}>
+        <div className={styles.guideBehind} style={{ transform: `translateY(${guideY}vh)`, opacity: guideOpacity }} aria-hidden={exit < 0.5}>
           <div className={styles.guidePreview}>
             <h2 className={styles.guideH}>
               We know what it&apos;s like to spend $30K <em>on a video that makes $0.</em>
@@ -63,7 +68,7 @@ export default function CalendarPush() {
 
         {/* calendar panel lifts up */}
         <div className={styles.panel} style={{ transform: `translateY(${panelY}vh)` }}>
-          <div className={styles.inner} style={{ opacity: Math.min(1, enterIn * 1.3), transform: `translateY(${contentTy}px)` }}>
+          <div className={styles.inner} style={{ opacity: innerOpacity, transform: `translateY(${contentTy}px)` }}>
             <h2 className={styles.heading}>
               Our clients close deals <span className={styles.teal}>40% faster.</span>
             </h2>
