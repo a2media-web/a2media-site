@@ -26,9 +26,9 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  if (!post) return { title: "Not found — A2 Media" };
+  if (!post) return { title: "Not found" };
   return {
-    title: `${post.question} — A2 Media`,
+    title: post.question,
     description: post.answer,
     authors: [{ name: post.author }],
     openGraph: {
@@ -56,7 +56,7 @@ export default async function BlogPostPage(
 
   const formattedPublished = new Date(post.publishedAt).toLocaleDateString(
     "en-US",
-    { year: "numeric", month: "long", day: "numeric" },
+    { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" },
   );
 
   return (
