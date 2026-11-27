@@ -1,0 +1,99 @@
+/* Five from-scratch ways to say "we close deals faster". Dark-mode-first.
+   Electric Purple leads, Aqua Teal is the payoff pop. */
+
+.page { background: var(--a2-night-core); color: var(--a2-white); font-family: var(--a2-sans); }
+.intro { max-width: 820px; margin: 0 auto; padding: 56px 24px 8px; text-align: center; }
+.introKicker { font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--a2-electric-purple-soft); margin: 0 0 12px; }
+.introBody { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.62); max-width: 640px; margin: 0 auto; }
+
+.block { position: relative; border-top: 1px solid rgba(255,255,255,0.06); }
+.tag {
+  position: absolute; z-index: 20; top: 18px; left: 50%; transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.9); padding: 6px 13px; border-radius: 999px;
+  background: rgba(7, 2, 31, 0.7); border: 1px solid rgba(143, 69, 238, 0.45);
+}
+.tag b { color: var(--a2-aqua-teal); font-weight: 800; }
+
+/* ============ 1 · Kinetic Headline ============ */
+.kinetic { padding: 120px 24px 104px; text-align: center; }
+.kEyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.26em; text-transform: uppercase; color: var(--a2-electric-purple-soft); margin: 0 0 20px; }
+.kBig { font-size: clamp(90px, 20vw, 260px); font-weight: 900; line-height: 0.86; letter-spacing: -0.05em; color: var(--a2-aqua-teal); text-shadow: 0 0 80px rgba(40,223,232,0.35); }
+.kMid { font-size: clamp(26px, 4.4vw, 44px); font-weight: 700; letter-spacing: -0.02em; margin-top: 8px; }
+.kSub { font-size: 15px; color: rgba(255,255,255,0.65); margin: 26px auto 0; max-width: 480px; }
+.kSub b { color: var(--a2-white); font-weight: 600; }
+
+/* ============ 2 · The Race ============ */
+.race { padding: 100px 24px; max-width: 880px; margin: 0 auto; }
+.raceHead { text-align: center; font-size: clamp(22px, 3.4vw, 34px); font-weight: 700; letter-spacing: -0.02em; margin: 0 0 44px; }
+.raceHead .teal { color: var(--a2-aqua-teal); }
+.raceRow { margin-bottom: 26px; }
+.raceLabel { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 9px; font-size: 14px; font-weight: 600; }
+.raceLabel .muted { color: rgba(255,255,255,0.5); }
+.raceLabel .win { color: var(--a2-aqua-teal); }
+.raceTrack { position: relative; height: 34px; border-radius: 9px; background: rgba(255,255,255,0.06); overflow: hidden; }
+.raceFill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 9px; width: 0; transition: width 1.5s cubic-bezier(0.3, 0.8, 0.3, 1); }
+.raceFill.slow { background: repeating-linear-gradient(90deg, rgba(255,255,255,0.16) 0 10px, rgba(255,255,255,0.08) 10px 20px); transition-duration: 2.3s; }
+.raceFill.fast { background: linear-gradient(90deg, var(--a2-electric-purple), var(--a2-aqua-teal)); }
+.inview .raceFill.slow { width: 100%; }
+.inview .raceFill.fast { width: 58.3%; }
+.raceFlag {
+  position: absolute; top: 50%; transform: translate(10px, -50%); left: 58.3%;
+  font-size: 12px; font-weight: 800; color: var(--a2-aqua-teal); white-space: nowrap; opacity: 0; transition: opacity 0.4s 1.2s;
+}
+.inview .raceFlag { opacity: 1; }
+.raceAxis { display: flex; justify-content: space-between; font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 8px; }
+
+/* ============ 3 · Deal-Stage UI ============ */
+.ui { padding: 96px 24px; display: flex; justify-content: center; }
+.dealCard {
+  width: min(460px, 92vw); border-radius: 18px; overflow: hidden;
+  background: rgba(255,255,255,0.045); backdrop-filter: blur(12px);
+  border: 1px solid rgba(143,69,238,0.3); box-shadow: 0 30px 80px rgba(7,2,31,0.55);
+}
+.dealTop { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.dealName { font-size: 15px; font-weight: 700; }
+.dealName span { display: block; font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.5); }
+.wonBadge { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; color: #04121a; background: var(--a2-electric-neon); padding: 6px 11px; border-radius: 999px; }
+.dealStages { padding: 10px 18px 6px; }
+.stageRow { display: flex; align-items: center; gap: 12px; padding: 11px 0; font-size: 14px; font-weight: 600; }
+.stageRow .dot { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; background: var(--a2-electric-purple); color: #fff; font-size: 12px; flex: none; }
+.stageRow .day { margin-left: auto; font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 600; }
+.dealFooter { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-top: 1px solid rgba(255,255,255,0.08); background: rgba(90,51,255,0.1); }
+.dealFooter .big { font-size: 22px; font-weight: 900; } .dealFooter .big b { color: var(--a2-aqua-teal); }
+.dealFooter .chip { font-size: 12px; font-weight: 800; color: var(--a2-aqua-teal); background: rgba(40,223,232,0.12); border: 1px solid rgba(40,223,232,0.35); padding: 6px 11px; border-radius: 999px; }
+
+/* ============ 4 · Split Diptych ============ */
+.diptych { display: grid; grid-template-columns: 1fr 1fr; min-height: 58vh; }
+.dHalf { padding: 80px 40px; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.dBefore { background: #0b0730; color: rgba(255,255,255,0.55); }
+.dAfter { background: radial-gradient(120% 120% at 50% 0%, rgba(90,51,255,0.25), transparent 70%), var(--a2-night-core); position: relative; }
+.dAfter::before { content: ""; position: absolute; left: 0; top: 14%; bottom: 14%; width: 1px; background: linear-gradient(180deg, transparent, rgba(40,223,232,0.6), transparent); }
+.dKick { font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin: 0 0 16px; }
+.dBefore .dKick { color: rgba(255,255,255,0.4); } .dAfter .dKick { color: var(--a2-electric-purple-soft); }
+.dNum { font-size: clamp(54px, 9vw, 96px); font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+.dAfter .dNum { color: var(--a2-aqua-teal); text-shadow: 0 0 50px rgba(40,223,232,0.35); }
+.dCaption { font-size: 15px; margin-top: 16px; } .dAfter .dCaption { color: var(--a2-white); }
+
+/* ============ 5 · Live Ticker Band ============ */
+.ticker {
+  position: relative; overflow: hidden; padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1);
+  background: linear-gradient(90deg, rgba(90,51,255,0.08), rgba(40,223,232,0.05));
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.tickerRow { display: flex; width: max-content; animation: tick 26s linear infinite; }
+.tickerRow > span { display: inline-flex; align-items: center; }
+.tItem { display: inline-flex; align-items: center; gap: 12px; padding: 0 30px; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); white-space: nowrap; }
+.tItem b { color: var(--a2-aqua-teal); font-weight: 900; }
+.tItem i { color: var(--a2-electric-purple-soft); font-style: normal; }
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) { .tickerRow { animation: none; } }
+@media (max-width: 760px) {
+  .diptych { grid-template-columns: 1fr; }
+  .dHalf { padding: 56px 28px; min-height: 42vh; }
+  .dAfter::before { display: none; }
+}
